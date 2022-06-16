@@ -13,194 +13,21 @@
 <section style="padding-top: 5%; padding-bottom:5%;">
     <div id="portfolio">
         <div class="container">
-            <h1 class="mb-5" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Jebres</h1>
+            @foreach ($galeri as $g)
+            <h1 class="mb-5" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">{{ $g->judul }}</h1>
             <div class="row" style="margin-bottom: 7%;">
+                @foreach (explode('|', $g->gambar) as $image)                                                            
                 <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
                     <div class="card" style="max-height: 400px;">
-                        <a class="portfolio-box" href="assets/gallery/02.jpg">
-                            <img class="img-fluid" src="assets/gallery/02.jpg" alt="..." />
+                        <a class="portfolio-box" href="{{ $image }}">
+                            <img class="img-fluid" src="{{ $image }}" alt="..." />
                         </a>
                     </div>
                 </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/01.jpg">
-                            <img class="img-fluid" src="assets/gallery/01.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <div class="card">
-                            <a class="portfolio-box" href="assets/gallery/03.jpg">
-                                <img class="img-fluid" src="assets/gallery/03.jpg" alt="..." />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/04.jpg">
-                            <img class="img-fluid" src="assets/gallery/04.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <a class="portfolio-box" href="assets/gallery/02.jpg">
-                            <img class="img-fluid" src="assets/gallery/02.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/01.jpg">
-                            <img class="img-fluid" src="assets/gallery/01.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <div class="card">
-                            <a class="portfolio-box" href="assets/gallery/03.jpg">
-                                <img class="img-fluid" src="assets/gallery/03.jpg" alt="..." />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/04.jpg">
-                            <img class="img-fluid" src="assets/gallery/04.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
+                @endforeach
+                
             </div>
-            <h1 class="mb-5" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Kentingan</h1>
-            <div class="row" style="margin-bottom: 7%;">
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <a class="portfolio-box" href="assets/gallery/02.jpg">
-                            <img class="img-fluid" src="assets/gallery/02.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/01.jpg">
-                            <img class="img-fluid" src="assets/gallery/01.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <div class="card">
-                            <a class="portfolio-box" href="assets/gallery/03.jpg">
-                                <img class="img-fluid" src="assets/gallery/03.jpg" alt="..." />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/04.jpg">
-                            <img class="img-fluid" src="assets/gallery/04.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <a class="portfolio-box" href="assets/gallery/02.jpg">
-                            <img class="img-fluid" src="assets/gallery/02.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/01.jpg">
-                            <img class="img-fluid" src="assets/gallery/01.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <div class="card">
-                            <a class="portfolio-box" href="assets/gallery/03.jpg">
-                                <img class="img-fluid" src="assets/gallery/03.jpg" alt="..." />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/04.jpg">
-                            <img class="img-fluid" src="assets/gallery/04.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <h1 class="mb-5" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Solo Baru</h1>
-            <div class="row" style="margin-bottom: 7%;">
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <a class="portfolio-box" href="assets/gallery/02.jpg">
-                            <img class="img-fluid" src="assets/gallery/02.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/01.jpg">
-                            <img class="img-fluid" src="assets/gallery/01.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <div class="card">
-                            <a class="portfolio-box" href="assets/gallery/03.jpg">
-                                <img class="img-fluid" src="assets/gallery/03.jpg" alt="..." />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/04.jpg">
-                            <img class="img-fluid" src="assets/gallery/04.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <a class="portfolio-box" href="assets/gallery/02.jpg">
-                            <img class="img-fluid" src="assets/gallery/02.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/01.jpg">
-                            <img class="img-fluid" src="assets/gallery/01.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card" style="max-height: 400px;">
-                        <div class="card">
-                            <a class="portfolio-box" href="assets/gallery/03.jpg">
-                                <img class="img-fluid" src="assets/gallery/03.jpg" alt="..." />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-4 col-sm-12 col-lg-3 col-md-3">
-                    <div class="card">
-                        <a class="portfolio-box" href="assets/gallery/04.jpg">
-                            <img class="img-fluid" src="assets/gallery/04.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
+           @endforeach
             </div>
             <nav aria-label="..." style="margin-top: 10%;">
                 <ul class="pagination justify-content-center">
