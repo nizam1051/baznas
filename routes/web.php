@@ -40,9 +40,9 @@ Route::get('/sejarah-organisasi', function () {
 Route::get('/zakat', function () {
     return view('bayar.zakat');
 });
-Route::get('/kabar-zakat', function () {
-    return view('kabar.kabar-zakat');
-});
+// Route::get('/kabar-zakat', function () {
+//     return view('kabar.kabar-zakat');
+// });
 Route::get('/inspirasi', function () {
     return view('kabar.inspirasi');
 });
@@ -84,8 +84,9 @@ Route::get('/layanan-pembayaran', function () {
 });
 
 
-Route::get('berita', [KabarController::class, 'Berita']);
-Route::get('galeri', [KabarController::class, 'Galeri']);
+Route::get('kabar-zakat', [KabarController::class, 'KabarZakat']);
+Route::get('artikel', [KabarController::class, 'Artikel']);
+Route::get('inspirasi', [KabarController::class, 'Inspirasi']);
 
 // Backend
 Route::get('login', [AuthController::class, 'login'])->name('login');
@@ -101,6 +102,27 @@ Route::middleware('auth')->group(function () {
             Route::get('berita/edit/{beritaID}', [AdmKabarController::class, 'editBerita']);
             Route::post('berita/update/{beritaID}', [AdmKabarController::class, 'updateBerita']);
             Route::get('berita/delete/{beritaID}', [AdmKabarController::class, 'destroyBerita']);
+
+            Route::get('artikel', [AdmKabarController::class, 'indexArtikel'])->name('index.artikel');
+            Route::get('artikel/add', [AdmKabarController::class, 'createArtikel'])->name('add.artikel');
+            Route::post('artikel/store', [AdmKabarController::class, 'storeArtikel'])->name('store.artikel');
+            Route::get('artikel/edit/{artikelID}', [AdmKabarController::class, 'editArtikel']);
+            Route::post('artikel/update/{artikelID}', [AdmKabarController::class, 'updateArtikel']);
+            Route::get('artikel/delete/{artikelID}', [AdmKabarController::class, 'destroyArtikel']);
+
+            Route::get('inspirasi', [AdmKabarController::class, 'indexInspirasi'])->name('index.inspirasi');
+            Route::get('inspirasi/add', [AdmKabarController::class, 'createInspirasi'])->name('add.inspirasi');
+            Route::post('inspirasi/store', [AdmKabarController::class, 'storeInspirasi'])->name('store.inspirasi');
+            Route::get('inspirasi/edit/{inspirasiID}', [AdmKabarController::class, 'editInspirasi']);
+            Route::post('inspirasi/update/{inspirasiID}', [AdmKabarController::class, 'updateInspirasi']);
+            Route::get('inspirasi/delete/{inspirasiID}', [AdmKabarController::class, 'destroyInspirasi']);
+
+            Route::get('kabarzakat', [AdmKabarController::class, 'indexKabarZakat'])->name('index.kabarzakat');
+            Route::get('kabarzakat/add', [AdmKabarController::class, 'createKabarZakat'])->name('add.kabarzakat');
+            Route::post('kabarzakat/store', [AdmKabarController::class, 'storeKabarZakat'])->name('store.kabarzakat');
+            Route::get('kabarzakat/edit/{kabarzakatID}', [AdmKabarController::class, 'editKabarZakat']);
+            Route::post('kabarzakat/update/{kabarzakatID}', [AdmKabarController::class, 'updateKabarZakat']);
+            Route::get('kabarzakat/delete/{kabarzakatID}', [AdmKabarController::class, 'destroyKabarZakat']);
 
             Route::get('galeri', [AdmKabarController::class, 'indexGaleri'])->name('index.galeri');
             Route::get('galeri/add', [AdmKabarController::class, 'createGaleri'])->name('add.galeri');

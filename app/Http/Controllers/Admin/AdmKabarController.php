@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Berita;
+use App\Models\Galeri;
+use App\Models\Artikel;
+use App\Models\Inspirasi;
+use App\Models\KabarZakat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
-use App\Models\Galeri;
 
 class AdmKabarController extends Controller
 {
@@ -102,6 +105,279 @@ class AdmKabarController extends Controller
             return redirect()->back()->with('success', 'Berita Delete Successfully');
         } else {
             Berita::find($beritaID)->delete();
+            return redirect()->back()->with('success', 'Berita Delete Successfully');
+        }
+    }
+
+    public function indexKabarZakat()
+    {
+        $kabarzakat = KabarZakat::latest()->paginate(10);
+        return view('admin.kabarzakat.index', compact('kabarzakat'));
+    }
+
+    public function createKabarZakat()
+    {
+        return view('admin.KabarZakat.add');
+    }
+
+    public function storeKabarZakat(Request $request)
+    {
+        $validated = $request->validate(
+            [
+                'judul' => 'required|unique:berita',
+                'deskripsi' => 'required',
+                'gambar' => 'required|mimes:jpg,jpeg,png',
+            ]
+
+        );
+
+        $gambar = $request->file('gambar');
+        $name_gen = hexdec(uniqid()) . '.' . $gambar->getClientOriginalExtension();
+        // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
+
+        $gambar->move(public_path('uploads/kabarzakat'), $name_gen);
+        $last_img = 'uploads/kabarzakat/' . $name_gen;
+
+        KabarZakat::insert([
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $last_img,
+            'created_at' => Carbon::now()
+        ]);
+
+        return redirect()->route('index.kabarzakat')->with('success', 'Berita Sukses Ditambahkan');
+    }
+
+    public function editKabarZakat($kabarzakatID)
+    {
+        $kabarzakat = KabarZakat::find($kabarzakatID);
+        // return $berita;
+        return view('admin.kabarzakat.edit', compact('kabarzakat'));
+    }
+
+    public function updateKabarZakat(Request $request, $kabarzakatID)
+    {
+        $kabarzakat = KabarZakat::find($kabarzakatID);
+
+        $old_image = $request->old_image;
+        $kabarzakat_image = $request->file('gambar');
+
+        if ($kabarzakat_image) {
+
+            $name_gen = hexdec(uniqid()) . '.' . $kabarzakat_image->getClientOriginalExtension();
+            $kabarzakat_image->move(public_path('uploads/kabarzakat'), $name_gen);
+            $last_img = 'uploads/kabarzakat/' . $name_gen;
+            if (file_exists($old_image)) {
+                @unlink($old_image);
+            }
+            $kabarzakat->update([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+                'gambar' => $last_img,
+            ]);
+
+            return redirect()->back()->with('success', 'Berita Updated Successfully');
+        } else {
+            $kabarzakat->update([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+            ]);
+
+            return redirect()->back()->with('success', 'Berita Updated Successfully');
+        }
+    }
+
+    public function destroyKabarZakat($kabarzakatID)
+    {
+        $kabarzakat = KabarZakat::find($kabarzakatID);
+        if (file_exists($kabarzakat->gambar)) {
+            unlink($kabarzakat->gambar);
+            KabarZakat::find($kabarzakatID)->delete();
+            return redirect()->back()->with('success', 'Berita Delete Successfully');
+        } else {
+            KabarZakat::find($kabarzakatID)->delete();
+            return redirect()->back()->with('success', 'Berita Delete Successfully');
+        }
+    }
+
+    public function indexArtikel()
+    {
+        $artikel = Artikel::latest()->paginate(10);
+        return view('admin.artikel.index', compact('artikel'));
+    }
+
+    public function createArtikel()
+    {
+        return view('admin.artikel.add');
+    }
+
+    public function storeArtikel(Request $request)
+    {
+        $validated = $request->validate(
+            [
+                'judul' => 'required|unique:berita',
+                'deskripsi' => 'required',
+                'gambar' => 'required|mimes:jpg,jpeg,png',
+            ]
+
+        );
+
+        $gambar = $request->file('gambar');
+        $name_gen = hexdec(uniqid()) . '.' . $gambar->getClientOriginalExtension();
+        // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
+
+        $gambar->move(public_path('uploads/artikel'), $name_gen);
+        $last_img = 'uploads/artikel/' . $name_gen;
+
+        Artikel::insert([
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $last_img,
+            'created_at' => Carbon::now()
+        ]);
+
+        return redirect()->route('index.artikel')->with('success', 'Berita Sukses Ditambahkan');
+    }
+
+    public function editArtikel($artikelID)
+    {
+        $artikel = Artikel::find($artikelID);
+        // return $berita;
+        return view('admin.artikel.edit', compact('artikel'));
+    }
+
+    public function updateArtikel(Request $request, $artikelID)
+    {
+        $artikel = Artikel::find($artikelID);
+
+        $old_image = $request->old_image;
+        $artikel_image = $request->file('gambar');
+
+        if ($artikel_image) {
+
+            $name_gen = hexdec(uniqid()) . '.' . $artikel_image->getClientOriginalExtension();
+            $artikel_image->move(public_path('uploads/artikel'), $name_gen);
+            $last_img = 'uploads/artikel/' . $name_gen;
+            if (file_exists($old_image)) {
+                @unlink($old_image);
+            }
+            $artikel->update([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+                'gambar' => $last_img,
+            ]);
+
+            return redirect()->back()->with('success', 'Berita Updated Successfully');
+        } else {
+            $artikel->update([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+            ]);
+
+            return redirect()->back()->with('success', 'Berita Updated Successfully');
+        }
+    }
+
+    public function destroyArtikel($artikelID)
+    {
+        $artikel = Artikel::find($artikelID);
+        if (file_exists($artikel->gambar)) {
+            unlink($artikel->gambar);
+            Artikel::find($artikelID)->delete();
+            return redirect()->back()->with('success', 'Berita Delete Successfully');
+        } else {
+            Artikel::find($artikelID)->delete();
+            return redirect()->back()->with('success', 'Berita Delete Successfully');
+        }
+    }
+
+    public function indexInspirasi()
+    {
+        $inspirasi = Inspirasi::latest()->paginate(10);
+        return view('admin.inspirasi.index', compact('inspirasi'));
+    }
+
+    public function createInspirasi()
+    {
+        return view('admin.inspirasi.add');
+    }
+
+    public function storeInspirasi(Request $request)
+    {
+        $validated = $request->validate(
+            [
+                'judul' => 'required|unique:berita',
+                'deskripsi' => 'required',
+                'gambar' => 'required|mimes:jpg,jpeg,png',
+            ]
+
+        );
+
+        $gambar = $request->file('gambar');
+        $name_gen = hexdec(uniqid()) . '.' . $gambar->getClientOriginalExtension();
+        // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
+
+        $gambar->move(public_path('uploads/inspirasi'), $name_gen);
+        $last_img = 'uploads/inspirasi/' . $name_gen;
+
+        Inspirasi::insert([
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $last_img,
+            'created_at' => Carbon::now()
+        ]);
+
+        return redirect()->route('index.inspirasi')->with('success', 'Berita Sukses Ditambahkan');
+    }
+
+    public function editInspirasi($inspirasiID)
+    {
+        $inspirasi = Inspirasi::find($inspirasiID);
+        // return $berita;
+        return view('admin.inspirasi.edit', compact('inspirasi'));
+    }
+
+    public function updateInspirasi(Request $request, $inspirasiID)
+    {
+        $inspirasi = Inspirasi::find($inspirasiID);
+
+        $old_image = $request->old_image;
+        $inspirasi_image = $request->file('gambar');
+
+        if ($inspirasi_image) {
+
+            $name_gen = hexdec(uniqid()) . '.' . $inspirasi_image->getClientOriginalExtension();
+            $inspirasi_image->move(public_path('uploads/inspirasi'), $name_gen);
+            $last_img = 'uploads/inspirasi/' . $name_gen;
+            if (file_exists($old_image)) {
+                @unlink($old_image);
+            }
+            $inspirasi->update([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+                'gambar' => $last_img,
+            ]);
+
+            return redirect()->back()->with('success', 'Berita Updated Successfully');
+        } else {
+            $inspirasi->update([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+            ]);
+
+            return redirect()->back()->with('success', 'Berita Updated Successfully');
+        }
+    }
+
+    public function destroyInspirasi($inspirasiID)
+    {
+        $inspirasi = Inspirasi::find($inspirasiID);
+        if (file_exists($inspirasi->gambar)) {
+            unlink($inspirasi->gambar);
+            Inspirasi::find($inspirasiID)->delete();
+            return redirect()->back()->with('success', 'Berita Delete Successfully');
+        } else {
+            Inspirasi::find($inspirasiID)->delete();
             return redirect()->back()->with('success', 'Berita Delete Successfully');
         }
     }

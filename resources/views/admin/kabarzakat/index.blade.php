@@ -18,13 +18,13 @@
                     <div class="section-header">
                         <h1>Admin Page</h1>
                     </div>
-                    <a href="{{ route('add.galeri') }}" class="btn btn-success mb-1"><i class="fa fa-plus" aria-hidden="true"></i> Input Galeri </a>
+                    <a href="{{ route('add.kabarzakat') }}" class="btn btn-success mb-1"><i class="fa fa-plus" aria-hidden="true"></i> Input Kabar Zakat </a>
                     <div class="section-body">
                         <div class="row">
-                            <div class="col-12" style="width: 100%;">
+                            <div class="col-12 ">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Tabel Galeri</h4>
+                                        <h4>Tabel Kabar Zakat</h4>
                                     </div>
                                     <div class="card-body">
                                         @if (session('success'))
@@ -35,13 +35,13 @@
                                             </button>
                                         </div>
                                         @endif
-                                      
                                         <div class="table-responsive">
                                             <table class="table table-bordered table-md" id="myTable">
                                                 <thead class="thead-dark">
                                                     <tr>
                                                         <th scope="col">No</th>
                                                         <th scope="col">Judul</th>
+                                                        <th scope="col" width="">Deskripsi</th>
                                                         <th scope="col">Gambar</th>
                                                         <th scope="col">Action</th>
                                                     </tr>
@@ -50,23 +50,19 @@
                                                     @php
                                                     $no=1;
                                                     @endphp
-                                                    @foreach ($galeri as $g)
+                                                    @foreach ($kabarzakat as $b)
                                                     <tr>
                                                         <th scope="row">{{ $no++ }}</th>
-                                                        <td>{{ $g->judul }}</td>
-                                                       
-                                                        <td style="">
-                                                            @foreach (explode('|', $g->gambar) as $image)
-                                                            <img src="{{ asset($image) }}" alt=""
-                                                                style="height: 40px; width:70px;">                                                             
-                                                            @endforeach
-                                                        </td>
+                                                        <td>{{ $b->judul }}</td>
+                                                        <td>{{ $b->deskripsi }}</td>
+                                                        <td><img src="{{ asset($b->gambar) }}" alt=""
+                                                                style="height: 40px; width:70px;"></td>
                                                         <td>
-                                                            <a href="{{ url('admin/galeri/edit/'.$g->id) }}"
+                                                            <a href="{{ url('admin/kabarzakat/edit/'.$b->id) }}"
                                                                 class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-edit fa-2x"></i>
                                                             </a>
-                                                            <a  href="{{ url('admin/galeri/delete/'.$g->id) }}"
+                                                            <a  href="{{ url('admin/kabarzakat/delete/'.$b->id) }}"
                                                                 class="btn btn-transparent text-center text-dark" >
                                                                 <i class="fas fa-trash-alt fa-2x"></i>
                                                             </a>
@@ -75,7 +71,7 @@
                                                     @endforeach
                                                 </tbody>
                                             </table>
-                                            {{ $galeri->links() }}
+                                            {{ $kabarzakat->links() }}
                                         </div>
 
                                     </div>
@@ -94,11 +90,9 @@
 
     @include('admin.stisla.script')
 </body>
-
 <script type="text/javascript">
     $(document).ready( function () {
     $('#myTable').DataTable();
 } );
 </script>
-
 </html>
