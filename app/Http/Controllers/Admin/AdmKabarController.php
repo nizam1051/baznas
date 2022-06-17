@@ -160,20 +160,27 @@ class AdmKabarController extends Controller
     {
         $galeri = Galeri::find($galeriID);
 
-        $old_image = $request->old_image;
+        $old_image[] = $request->old_image;
         $galeri_image = $request->file('gambar');
 
-        if ($galeri_image) {
 
-            $name_gen = hexdec(uniqid()) . '.' . $galeri_image->getClientOriginalExtension();
-            $galeri_image->move(public_path('uploads/galeri'), $name_gen);
-            $last_img = 'uploads/galeri/' . $name_gen;
-            if (file_exists($old_image)) {
-                @unlink($old_image);
+
+
+        if ($galeri_image) {
+            foreach ($galeri_image as $multi_img) {
+
+                $name_gen = hexdec(uniqid()) . '.' . $multi_img->getClientOriginalExtension();
+                $multi_img->move(public_path('uploads/galeri'), $name_gen);
+                $last_img[] = 'uploads/galeri/' . $name_gen;
+                // foreach($old_image as $multi_old){
+                //     if (file_exists($multi_old)) {
+                //         @unlink($multi_old);
+                //     }
+                // }
             }
             $galeri->update([
                 'judul' => $request->judul,
-                'gambar' => $last_img,
+                'gambar' => implode("|", $last_img),
             ]);
 
             return redirect()->back()->with('success', 'Galeri Updated Successfully');

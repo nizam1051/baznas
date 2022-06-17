@@ -27,7 +27,7 @@
             </div>          
             @endforeach
         </div>
-        <nav aria-label="..." style="margin-top: 10%;">
+        <nav aria-label="..." style="margin-top: 15%;">
             <ul class="pagination justify-content-center">
                 <li class="page-item">
                     <a class="page-link text-white" href="#" tabindex="-1" aria-disabled="true" style="background-color: #01502D;">Previous</a>

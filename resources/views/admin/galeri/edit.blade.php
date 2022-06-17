@@ -29,7 +29,7 @@
                                         <form action="{{ url('admin/galeri/update/'.$galeri->id) }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
-                                            <input type="hidden" name="old_image" value="{{ $galeri->gambar }}">
+                                            <input type="hidden" name="old_image[]" value="{{ $galeri->gambar }}">
                                             <div class="form-group row mb-4">
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
@@ -42,10 +42,16 @@
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar</label>
                                                 <div class="col-sm-12 col-md-7">
-                                                    <input type="file" class="form-control" name="gambar" >
-                                                    <img src="{{ asset($galeri->gambar) }}" alt=""
+                                                    <input type="file" class="form-control" name="gambar[]" multiple>
+                                                    
+                                                    @foreach (explode('|', $galeri->gambar) as $image)
+                                                    <img src="{{ asset($image) }}" alt=""
+                                                    @endforeach
+                                                   
                                                         style="height: 200px; width:400px;" class="mt-4">
                                                 </div>
+                                                {{-- <img src="{{ asset($image) }}" alt=""
+                                                    style="height: 40px; width:70px;">                                                              --}}
                                             </div>
     
                                             <div class="form-group row mb-4">
