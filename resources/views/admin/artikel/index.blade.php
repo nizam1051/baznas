@@ -39,11 +39,12 @@
                                             <table class="table table-bordered table-md" id="myTable">
                                                 <thead class="thead-dark">
                                                     <tr>
-                                                        <th scope="col">No</th>
+                                                        <th scope="col" style="width: 5%">No</th>
                                                         <th scope="col">Judul</th>
                                                         <th scope="col" width="">Deskripsi</th>
-                                                        <th scope="col">Gambar</th>
-                                                        <th scope="col">Action</th>
+                                                        <th scope="col" style="width: 10%">Gambar</th>
+                                                        <th scope="col" style="width: 5%">Status</th>
+                                                        <th scope="col" style="width: 15%">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -56,11 +57,24 @@
                                                         <td>{{ $b->judul }}</td>
                                                         <td>{{ $b->deskripsi }}</td>
                                                         <td><img src="{{ asset($b->gambar) }}" alt=""
-                                                                style="height: 40px; width:70px;"></td>
+                                                                style="height: 40px; width:70px;">
+                                                        </td>
+                                                        <td style="text-align: center">
+                                                            @if ($b->status == 'ACTIVE')
+                                                            <span class="badge badge-success">Aktif</span>
+                                                            @else
+                                                            <span class="badge badge-danger">Nonaktif</span>
+                                                            @endif
+                                                        </td>
                                                         <td>
+                                                            
                                                             <a href="{{ url('admin/artikel/edit/'.$b->id) }}"
                                                                 class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-edit fa-2x"></i>
+                                                            </a>
+                                                            <a  href="{{ url('admin/artikel/status/'.$b->id) }}"
+                                                                class="btn btn-transparent text-center text-dark" >
+                                                                <i class="fas fa-power-off"></i>
                                                             </a>
                                                             <a  href="{{ url('admin/artikel/delete/'.$b->id) }}"
                                                                 class="btn btn-transparent text-center text-dark" >

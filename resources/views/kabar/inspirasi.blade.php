@@ -14,6 +14,7 @@
     <div class="container">
         <div class="row">
             @foreach ($inspirasi as $b)
+            @if ($b->status == 'ACTIVE')
             <div class="mb-4 col-sm-12 col-lg-4 col-md-4">
                 <div class="card" style="max-height: 400px;">
                     <img src="{{ asset($b->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; min-height: 250px; max-height: 300px;">
@@ -25,6 +26,7 @@
                     </div>
                 </div>
             </div>          
+            @endif          
             @endforeach
         </div>
         <nav aria-label="..." style="margin-top: 15%;">

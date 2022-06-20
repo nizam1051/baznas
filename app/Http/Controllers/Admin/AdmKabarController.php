@@ -109,6 +109,8 @@ class AdmKabarController extends Controller
         }
     }
 
+
+
     public function indexKabarZakat()
     {
         $kabarzakat = KabarZakat::latest()->paginate(10);
@@ -151,7 +153,6 @@ class AdmKabarController extends Controller
     public function editKabarZakat($kabarzakatID)
     {
         $kabarzakat = KabarZakat::find($kabarzakatID);
-        // return $berita;
         return view('admin.kabarzakat.edit', compact('kabarzakat'));
     }
 
@@ -198,6 +199,14 @@ class AdmKabarController extends Controller
             KabarZakat::find($kabarzakatID)->delete();
             return redirect()->back()->with('success', 'Berita Delete Successfully');
         }
+    }
+
+    public function statusKabarZakat($kabarzakatID)
+    {
+        $kabarzakat = KabarZakat::find($kabarzakatID);
+        $kabarzakat->status == 'ACTIVE' ? $kabarzakat->update(['status' => 'INACTIVE']) : $kabarzakat->update(['status' => 'ACTIVE']);
+        // return $kabarzakat->status;
+        return redirect()->back()->with('success', 'Status Data Artikel berhasil Dirubah');
     }
 
     public function indexArtikel()
@@ -291,6 +300,14 @@ class AdmKabarController extends Controller
         }
     }
 
+    public function statusArtikel($artikelID)
+    {
+        $artikel = Artikel::find($artikelID);
+        $artikel->status == 'ACTIVE' ? $artikel->update(['status' => 'INACTIVE']) : $artikel->update(['status' => 'ACTIVE']);
+        // return $kabarzakat->status;
+        return redirect()->back()->with('success', 'Status Data Artikel berhasil Dirubah');
+    }
+
     public function indexInspirasi()
     {
         $inspirasi = Inspirasi::latest()->paginate(10);
@@ -380,6 +397,14 @@ class AdmKabarController extends Controller
             Inspirasi::find($inspirasiID)->delete();
             return redirect()->back()->with('success', 'Berita Delete Successfully');
         }
+    }
+
+    public function statusInspirasi($inspirasiID)
+    {
+        $inspirasi = Inspirasi::find($inspirasiID);
+        $inspirasi->status == 'ACTIVE' ? $inspirasi->update(['status' => 'INACTIVE']) : $inspirasi->update(['status' => 'ACTIVE']);
+        // return $kabarzakat->status;
+        return redirect()->back()->with('success', 'Status Data Artikel berhasil Dirubah');
     }
 
     public function indexGaleri()

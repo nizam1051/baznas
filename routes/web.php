@@ -102,6 +102,7 @@ Route::middleware('auth')->group(function () {
             Route::get('berita/edit/{beritaID}', [AdmKabarController::class, 'editBerita']);
             Route::post('berita/update/{beritaID}', [AdmKabarController::class, 'updateBerita']);
             Route::get('berita/delete/{beritaID}', [AdmKabarController::class, 'destroyBerita']);
+            Route::get('berita/status/{beritaID}', [AdmKabarController::class, 'statusBerita']);
 
             Route::get('artikel', [AdmKabarController::class, 'indexArtikel'])->name('index.artikel');
             Route::get('artikel/add', [AdmKabarController::class, 'createArtikel'])->name('add.artikel');
@@ -109,6 +110,7 @@ Route::middleware('auth')->group(function () {
             Route::get('artikel/edit/{artikelID}', [AdmKabarController::class, 'editArtikel']);
             Route::post('artikel/update/{artikelID}', [AdmKabarController::class, 'updateArtikel']);
             Route::get('artikel/delete/{artikelID}', [AdmKabarController::class, 'destroyArtikel']);
+            Route::get('artikel/status/{artikelID}', [AdmKabarController::class, 'statusArtikel']);
 
             Route::get('inspirasi', [AdmKabarController::class, 'indexInspirasi'])->name('index.inspirasi');
             Route::get('inspirasi/add', [AdmKabarController::class, 'createInspirasi'])->name('add.inspirasi');
@@ -116,6 +118,7 @@ Route::middleware('auth')->group(function () {
             Route::get('inspirasi/edit/{inspirasiID}', [AdmKabarController::class, 'editInspirasi']);
             Route::post('inspirasi/update/{inspirasiID}', [AdmKabarController::class, 'updateInspirasi']);
             Route::get('inspirasi/delete/{inspirasiID}', [AdmKabarController::class, 'destroyInspirasi']);
+            Route::get('inspirasi/status/{inspirasiID}', [AdmKabarController::class, 'statusInspirasi']);
 
             Route::get('kabarzakat', [AdmKabarController::class, 'indexKabarZakat'])->name('index.kabarzakat');
             Route::get('kabarzakat/add', [AdmKabarController::class, 'createKabarZakat'])->name('add.kabarzakat');
@@ -123,6 +126,7 @@ Route::middleware('auth')->group(function () {
             Route::get('kabarzakat/edit/{kabarzakatID}', [AdmKabarController::class, 'editKabarZakat']);
             Route::post('kabarzakat/update/{kabarzakatID}', [AdmKabarController::class, 'updateKabarZakat']);
             Route::get('kabarzakat/delete/{kabarzakatID}', [AdmKabarController::class, 'destroyKabarZakat']);
+            Route::get('kabarzakat/status/{kabarzakatID}', [AdmKabarController::class, 'statusKabarZakat']);
 
             Route::get('galeri', [AdmKabarController::class, 'indexGaleri'])->name('index.galeri');
             Route::get('galeri/add', [AdmKabarController::class, 'createGaleri'])->name('add.galeri');
