@@ -444,13 +444,13 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarKabar" style="border-top: #01502D; border-style: solid;">
-                            <li><a class="dropdown-item" href="/berita">Berita</a></li>
+                            {{-- <li><a class="dropdown-item" href="/berita">Berita</a></li>
                             <li><a class="dropdown-item" href="/galeri">Galeri</a></li>
                             <li><a class="dropdown-item" href="/pendistribusian">Pendistribusian</a></li>
-                            <li><a class="dropdown-item" href="/video-kegiatan">Video Kegiatan</a></li>
-                            <li><a class="dropdown-item" href="/kabar-zakat">Kabar Zakat</a></li>
-                            <li><a class="dropdown-item" href="/article">Artikel</a></li>
-                            <li><a class="dropdown-item" href="/inspirasi">Inspirasi</a></li>
+                            <li><a class="dropdown-item" href="/video-kegiatan">Video Kegiatan</a></li> --}}
+                            <li><a class="dropdown-item" href="{{ url('kabar-zakat') }}">Kabar Zakat</a></li>
+                            <li><a class="dropdown-item" href="{{ url('artikel') }}">Artikel</a></li>
+                            <li><a class="dropdown-item" href="{{ url('inspirasi') }}">Inspirasi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link text-dark" href="/hubungi-kami">Hubungi</a></li>

@@ -34,22 +34,22 @@
                                             </button>
                                         </div>
                                         @endif
-                                        <form action="{{ url('admin/berita/update/'.$berita->id) }}" method="POST"
+                                        <form action="{{ url('admin/kabarzakat/update/'.$kabarzakat->id) }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
-                                            <input type="hidden" name="old_image" value="{{ $berita->gambar }}">
+                                            <input type="hidden" name="old_image" value="{{ $kabarzakat->gambar }}">
                                             <div class="form-group row mb-4">
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
                                                 <div class="col-sm-12 col-md-7">
-                                                    <input type="text" class="form-control" name="judul" value="{{ $berita->judul }}">
+                                                    <input type="text" class="form-control" name="judul" value="{{ $kabarzakat->judul }}">
                                                 </div>
                                             </div>
                                             <div class="form-group row mb-4">
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Deskripsi</label>
                                                 <div class="col-sm-12 col-md-7">
-                                                    <textarea style="height: 150px;" name="deskripsi" class="form-control summernote-simple">{{ $berita->deskripsi }}</textarea>
+                                                    <textarea style="height: 150px;" name="deskripsi" class="form-control summernote-simple">{{ $kabarzakat->deskripsi }}</textarea>
                                                 </div>
                                             </div>
 
@@ -58,7 +58,7 @@
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar</label>
                                                 <div class="col-sm-12 col-md-7">
                                                     <input type="file" class="form-control" name="gambar" >
-                                                    <img src="{{ asset($berita->gambar) }}" alt=""
+                                                    <img src="{{ asset($kabarzakat->gambar) }}" alt=""
                                                         style="height: 200px; width:400px;" class="mt-4">
                                                 </div>
                                             </div>

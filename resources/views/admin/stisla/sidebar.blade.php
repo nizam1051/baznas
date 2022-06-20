@@ -1,7 +1,7 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <a href="#">Dealer-SBR</a>
+        <a href="#">Baznas</a>
       </div>
       <div class="sidebar-brand sidebar-brand-sm">
         <a href="#">SBR</a>
@@ -12,33 +12,41 @@
           <li>
             <a class="nav-link" href="{{ url('/admin') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
           </li>
-            <li>
-              <a class="nav-link" href="{{ url('admin/berita') }}"><i class="fas fa-motorcycle fa-lg"></i> <span>Data Berita</span></a>
+          {{-- <li class="dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Kabar</span></a>
+            <ul class="dropdown-menu">
+              
+            </ul>
+          </li> --}}
+            
+          </li>           
+           <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-newspaper"></i> <span>Kabar</span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="nav-link" href="{{ url('admin/kabarzakat') }}"> <span>Data Kabar Zakat</span></a>
+                </li>
+                <li>
+                  <a class="nav-link" href="{{ url('admin/artikel') }}"> <span>Data Artikel</span></a>
+                </li>
+                <li>
+                  <a class="nav-link" href="{{ url('admin/inspirasi') }}"> <span>Data Inspirasi</span></a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a class="nav-link" href="{{ url('admin/galeri') }}"><i class="fas fa-cog"></i> <span>Data Galeri</span></a>
-            </li>
-            <li>
-              <a class="nav-link" href="{{ url('admin/dealer') }}"><i class="fas fa-building"></i> <span>Data Pendistribusian</span></a>
-            </li>
-            <li>
-              <a class="nav-link" href="{{ url('admin/yamalube') }}"><i class="fas fa-oil-can"></i> <span>Data Video Kegiatan</span></a>
-            </li>
-            <li>
-              <a class="nav-link" href="{{ url('admin/yamalube') }}"><i class="fas fa-oil-can"></i> <span>Data Kabar Zakat</span></a>
-            </li>
-            <li>
-              <a class="nav-link" href="{{ url('admin/yamalube') }}"><i class="fas fa-oil-can"></i> <span>Data Artikel</span></a>
-            </li>
-            <li>
-              <a class="nav-link" href="{{ url('admin/yamalube') }}"><i class="fas fa-oil-can"></i> <span>Data Inspirasi</span></a>
+           <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-holding-usd"></i> <span>Layanan</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="nav-link" href="{{ url('admin/inspirasi') }}"> <span>Rekening</span></a>
+                </li>
+                <li>
+                  <a class="nav-link" href="{{ url('admin/inspirasi') }}"> <span>Layanan Pembayaran</span></a>
+                </li>
+              </ul>
             </li>
         @endif
       </ul>
-{{--         <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-          <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-            <i class="fas fa-rocket"></i> Documentation
-          </a>
-        </div> --}}
+
     </aside>
   </div>
