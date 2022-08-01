@@ -95,4 +95,29 @@ class BerandaController extends Controller
     {
         return view('layanan.layanan-pembayaran');
     }
+
+    public function indexFitrah()
+    {
+        return view('index-fitrah');
+    }
+
+    public function indexMaal()
+    {
+        return view('index-maal');
+    }
+
+    public function indexFidyah()
+    {
+        return view('index-fidyah');
+    }
+
+    public function indexQurban()
+    {
+        return view('index-qurban');
+    }
+
+    public function indexInfaq()
+    {
+        return view('index-infaq');
+    }
 }

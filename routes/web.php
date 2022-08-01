@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KabarController;
+use App\Http\Controllers\KalkulatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,18 @@ Route::controller(BerandaController::class)->group(function(){
     Route::get('/rekening-fidyah','rekeningFidyah'); 
     Route::get('/rekening-sedekah','rekeningSedekah'); 
     Route::get('/layanan-pembayaran','layananPembayaran'); 
+    Route::get('/index-fitrah','indexFitrah'); 
+    Route::get('/index-maal','indexMaal'); 
+    Route::get('/index-fidyah','indexFidyah'); 
+    Route::get('/index-qurban','indexQurban'); 
+    Route::get('/index-infaq','indexInfaq'); 
 });
+
+Route::post('/index-fitrah',[KalkulatorController::class,'calcFitrah']);
+Route::post('/index-maal',[KalkulatorController::class,'calcMaal']);
+Route::post('/index-fidyah',[KalkulatorController::class,'calcFidyah']);
+Route::post('/index-qurban',[KalkulatorController::class,'calcQurban']);
+Route::post('/index-infaq',[KalkulatorController::class,'calcInfaq']);
 // Route::get('/berita', function () {
 //     return view('kabar.berita');
 // });
