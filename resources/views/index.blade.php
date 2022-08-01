@@ -45,35 +45,35 @@
                     <hr class="divider divider-light" />
                     <div class="row">
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
-                            <div class="card" style="border-radius: 15px; max-height: 400px;">
-                                <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px; max-height: 300px;">
-                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
-                                    <h5 class="card-title">{{ $distKabar->judul }}</h5>
-                                    <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        {{ $distKabar->deskripsi }}</p>
-                                    <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
+                            <div class="card" style="border-radius: 15px;">
+                                <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
+                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 25vh;">
+                                    <a href="" style="color: #2E3192; opacity: 0.7;"><h5 class="card-title">{{ $distKabar->judul }}</h5></a>
+                                    <div class="card-text carrousel-preview">
+                                        {!! \Illuminate\Support\Str::words($distKabar->deskripsi, 10, $end='...') !!}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
-                            <div class="card" style="border-radius: 15px; max-height: 400px;">
-                                <img src="{{ asset($distArtikel->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px; max-height: 300px;">
-                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
-                                    <h5 class="card-title">{{ $distArtikel->judul }}</h5>
-                                    <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        {{ $distArtikel->deskripsi }}</p>
-                                    <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
+                            <div class="card" style="border-radius: 15px;">
+                                <img src="{{ asset($distArtikel->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
+                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 25vh;">
+                                    <a href="" style="color: #2E3192; opacity: 0.7;"><h5 class="card-title">{{ $distArtikel->judul }}</h5></a>
+                                    <div class="card-text carrousel-preview">
+                                        {!! \Illuminate\Support\Str::words($distArtikel->deskripsi, 10, $end='...') !!}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
-                            <div class="card" style="border-radius: 15px; max-height: 400px;">
-                                <img src="{{ asset($distInspirasi->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px;max-height: 300px;">
-                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
-                                    <h5 class="card-title">{{ $distInspirasi->judul }}</h5>
-                                    <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        {{ $distInspirasi->deskripsi }}</p>
-                                    <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
+                            <div class="card" style="border-radius: 15px;">
+                                <img src="{{ asset($distInspirasi->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
+                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 25vh;">
+                                    <a href="" style="color: #2E3192; opacity: 0.7;"><h5 class="card-title">{{ $distInspirasi->judul }}</h5></a>
+                                    <div class="card-text carrousel-preview">
+                                        {!! \Illuminate\Support\Str::words($distInspirasi->deskripsi, 10, $end='...') !!}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +356,7 @@
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
                                                 <h5 class="card-title" style="text-align: left;">{{ $k->judul }}</h5>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    {{ $k->deskripsi }}</p>
+                                                    {!! $k->deskripsi !!}</p>
                                                 <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
                                             </div>
                                         </div>
@@ -389,11 +389,11 @@
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
                                         <div class="card" style="border-radius: 15px; width: 100%;">
                                             <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
-                                            <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">{{ $i->judul }}</h5>
+                                            <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 27vh; padding-bottom: 5px;">
+                                                <a href="" style="color: #2E3192"><h6 class="card-title" style="text-align: left;">{{ $i->judul }}</h6></a>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    {{ $i->deskripsi }}</p>
-                                                <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
+                                                    {!! \Illuminate\Support\Str::words($i->deskripsi, 10, $end='...') !!}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>

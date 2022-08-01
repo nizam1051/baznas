@@ -22,8 +22,8 @@
 <link rel="stylesheet" href="{{ asset('Stisla/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('Stisla/node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css') }}">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
-  
-
+{{-- CK Editor --}}
+<script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
 <!-- Template CSS -->
 <link rel="stylesheet" href="{{ asset('Stisla/assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('Stisla/assets/css/components.css') }}">
