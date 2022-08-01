@@ -278,26 +278,13 @@
                         <div class="card-body" style="border: none; background-color: transparent;">
                             <div>&nbsp;</div>
                             <div class="row">
+                                @foreach ($galeri as $g)
                                 <div class="col-md-6 mt-2">
                                     <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="assets/gallery/01a.jpg" alt="01a" style="border-radius: 15px; height: 150px;">
+                                        <img src="{{ $g->gambar }}" alt="{{ $g->judul }}" style="border-radius: 15px; height: 150px;">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mt-2">
-                                    <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="assets/gallery/02a.jpg" alt="02a" style="border-radius: 15px; height: 150px;">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-2">
-                                    <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="assets/gallery/03a.jpg" alt="03a" style="border-radius: 15px; height: 150px;">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-2">
-                                    <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="assets/gallery/04a.jpg" alt="03a" style="border-radius: 15px; height: 150px;">
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
