@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
+use App\Models\Inspirasi;
+use App\Models\KabarZakat;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $kabar = KabarZakat::latest()->take(3)->get();
+        $artikel = Artikel::latest()->take(3)->get();
+        $inspirasi = Inspirasi::latest()->take(3)->get();
+        return view('index',compact('kabar','artikel','inspirasi'));
     }
 
     public function legalitas()
