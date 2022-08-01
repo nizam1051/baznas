@@ -45,6 +45,12 @@ Route::controller(BerandaController::class)->group(function(){
     Route::get('/index-fidyah','indexFidyah'); 
     Route::get('/index-qurban','indexQurban'); 
     Route::get('/index-infaq','indexInfaq'); 
+    Route::get('/program-kkn','programKKN'); 
+    Route::get('/program-beasiswa','programBeasiswa'); 
+    Route::get('/program-distribusi','programDistribusi'); 
+    Route::get('/program-pemberdayaan','programPemberdayaan'); 
+    Route::get('/program-santunan','programSantunan'); 
+    Route::get('/program-subsidi','programSubsidi'); 
 });
 
 Route::post('/index-fitrah',[KalkulatorController::class,'calcFitrah']);
