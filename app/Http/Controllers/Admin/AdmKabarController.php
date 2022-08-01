@@ -113,7 +113,7 @@ class AdmKabarController extends Controller
 
     public function indexKabarZakat()
     {
-        $kabarzakat = KabarZakat::latest()->paginate(10);
+        $kabarzakat = KabarZakat::latest()->get();
         return view('admin.kabarzakat.index', compact('kabarzakat'));
     }
 
@@ -128,7 +128,7 @@ class AdmKabarController extends Controller
             [
                 'judul' => 'required|unique:berita',
                 'deskripsi' => 'required',
-                'gambar' => 'required|mimes:jpg,jpeg,png',
+                'gambar' => 'required|mimes:jpg,jpeg,png|max:10240',
             ]
 
         );
@@ -147,7 +147,7 @@ class AdmKabarController extends Controller
             'created_at' => Carbon::now()
         ]);
 
-        return redirect()->route('index.kabarzakat')->with('success', 'Berita Sukses Ditambahkan');
+        return redirect()->route('index.kabarzakat')->with('success', 'Kabar Zakat Sukses Ditambahkan');
     }
 
     public function editKabarZakat($kabarzakatID)
