@@ -14,7 +14,10 @@ class BerandaController extends Controller
         $kabar = KabarZakat::latest()->take(3)->get();
         $artikel = Artikel::latest()->take(3)->get();
         $inspirasi = Inspirasi::latest()->take(3)->get();
-        return view('index',compact('kabar','artikel','inspirasi'));
+        $distKabar = KabarZakat::latest()->first();
+        $distArtikel = Artikel::latest()->first();
+        $distInspirasi = Inspirasi::latest()->first();
+        return view('index',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi'));
     }
 
     public function legalitas()
