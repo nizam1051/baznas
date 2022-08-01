@@ -139,26 +139,61 @@ class BerandaController extends Controller
 
     public function indexFitrah()
     {
-        return view('index-fitrah');
+        $kabar = KabarZakat::latest()->take(3)->get();
+        $artikel = Artikel::latest()->take(3)->get();
+        $inspirasi = Inspirasi::latest()->take(3)->get();
+        $distKabar = KabarZakat::latest()->first();
+        $distArtikel = Artikel::latest()->first();
+        $distInspirasi = Inspirasi::latest()->first();
+        $galeri = Galeri::latest()->take(4)->get();
+        return view('index-fitrah',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri'));
     }
 
     public function indexMaal()
     {
-        return view('index-maal');
+        $kabar = KabarZakat::latest()->take(3)->get();
+        $artikel = Artikel::latest()->take(3)->get();
+        $inspirasi = Inspirasi::latest()->take(3)->get();
+        $distKabar = KabarZakat::latest()->first();
+        $distArtikel = Artikel::latest()->first();
+        $distInspirasi = Inspirasi::latest()->first();
+        $galeri = Galeri::latest()->take(4)->get();
+        return view('index-maal',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri'));
     }
 
     public function indexFidyah()
     {
-        return view('index-fidyah');
+        $kabar = KabarZakat::latest()->take(3)->get();
+        $artikel = Artikel::latest()->take(3)->get();
+        $inspirasi = Inspirasi::latest()->take(3)->get();
+        $distKabar = KabarZakat::latest()->first();
+        $distArtikel = Artikel::latest()->first();
+        $distInspirasi = Inspirasi::latest()->first();
+        $galeri = Galeri::latest()->take(4)->get();
+        return view('index-fidyah',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri'));
     }
 
     public function indexQurban()
     {
-        return view('index-qurban');
+        $kabar = KabarZakat::latest()->take(3)->get();
+        $artikel = Artikel::latest()->take(3)->get();
+        $inspirasi = Inspirasi::latest()->take(3)->get();
+        $distKabar = KabarZakat::latest()->first();
+        $distArtikel = Artikel::latest()->first();
+        $distInspirasi = Inspirasi::latest()->first();
+        $galeri = Galeri::latest()->take(4)->get();
+        return view('index-qurban',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri'));
     }
 
     public function indexInfaq()
     {
-        return view('index-infaq');
+        $kabar = KabarZakat::latest()->take(3)->get();
+        $artikel = Artikel::latest()->take(3)->get();
+        $inspirasi = Inspirasi::latest()->take(3)->get();
+        $distKabar = KabarZakat::latest()->first();
+        $distArtikel = Artikel::latest()->first();
+        $distInspirasi = Inspirasi::latest()->first();
+        $galeri = Galeri::latest()->take(4)->get();
+        return view('index-infaq',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri'));
     }
 }

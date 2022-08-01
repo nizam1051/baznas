@@ -46,34 +46,33 @@
                     <div class="row">
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
                             <div class="card" style="border-radius: 15px; max-height: 400px;">
-                                <img src="assets/img/baznas.jpeg" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px; max-height: 300px;">
+                                <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px; max-height: 300px;">
                                 <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
-                                    <h5 class="card-title">Baznas Surakarta</h5>
+                                    <h5 class="card-title">{{ $distKabar->judul }}</h5>
                                     <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        Baznas Surakarta adalah Badan Amil Zakat Nasional (BAZNAS) yang dibentuk di kota
-                                        Surakarta</p>
+                                        {{ $distKabar->deskripsi }}</p>
                                     <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
                             <div class="card" style="border-radius: 15px; max-height: 400px;">
-                                <img src="assets/img/zakat.jpg" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px; max-height: 300px;">
+                                <img src="{{ asset($distArtikel->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px; max-height: 300px;">
                                 <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
-                                    <h5 class="card-title">Kegiatan Zakat</h5>
+                                    <h5 class="card-title">{{ $distArtikel->judul }}</h5>
                                     <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        Potret kegiatan Baznas Surakarta dalam hal zakat bersama masyarakat</p>
+                                        {{ $distArtikel->deskripsi }}</p>
                                     <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
                             <div class="card" style="border-radius: 15px; max-height: 400px;">
-                                <img src="assets/img/infaq.jpg" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px;max-height: 300px;">
+                                <img src="{{ asset($distInspirasi->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; min-height: 250px;max-height: 300px;">
                                 <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
-                                    <h5 class="card-title">Bayar Infaq</h5>
+                                    <h5 class="card-title">{{ $distInspirasi->judul }}</h5>
                                     <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        Pembayaran infaq yang dilakukan bersama Baznas Surakarta</p>
+                                        {{ $distInspirasi->deskripsi }}</p>
                                     <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
                                 </div>
                             </div>
@@ -287,26 +286,13 @@
                         <div class="card-body" style="border: none; background-color: transparent;">
                             <div>&nbsp;</div>
                             <div class="row">
+                                @foreach ($galeri as $g)
                                 <div class="col-md-6 mt-2">
                                     <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="assets/gallery/01a.jpg" alt="01a" style="border-radius: 15px; height: 150px;">
+                                        <img src="{{ $g->gambar }}" alt="{{ $g->judul }}" style="border-radius: 15px; height: 150px;">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mt-2">
-                                    <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="assets/gallery/02a.jpg" alt="02a" style="border-radius: 15px; height: 150px;">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-2">
-                                    <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="assets/gallery/03a.jpg" alt="03a" style="border-radius: 15px; height: 150px;">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-2">
-                                    <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="assets/gallery/04a.jpg" alt="03a" style="border-radius: 15px; height: 150px;">
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -371,121 +357,55 @@
                             <div class="carousel-item active">
                                 <!--Card-->
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
+                                    @foreach ($kabar as $k)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
                                         <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/baznas.jpeg" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
+                                            <img src="{{ asset($k->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Baznas Surakarta</h5>
+                                                <h5 class="card-title" style="text-align: left;">{{ $k->judul }}</h5>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Baznas adalah Badan Amil Zakat Nasional yang dibentuk di kota
-                                                    Surakarta.</p>
+                                                    {{ $k->deskripsi }}</p>
                                                 <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/zakat.jpg" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
-                                            <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Kegiatan Zakat</h5>
-                                                <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Potret kegiatan Baznas Surakarta dalam hal zakat bersama masyarakat
-                                                </p>
-                                                <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/infaq.jpg  " class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
-                                            <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Bayar Infaq</h5>
-                                                <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Pembayaran infaq yang dilakukan bersama Baznas Surakarta.</p>
-                                                <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <!--Card-->
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
+                                    @foreach ($artikel as $a)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
                                         <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/baznas.jpeg" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
+                                            <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Baznas Surakarta</h5>
+                                                <h5 class="card-title" style="text-align: left;">{{ $a->judul }}</h5>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Baznas adalah Badan Amil Zakat Nasional yang dibentuk di kota
-                                                    Surakarta.</p>
+                                                    {{ $a->deskripsi }}</p>
                                                 <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/zakat.jpg" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
-                                            <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Kegiatan Zakat</h5>
-                                                <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Potret kegiatan Baznas Surakarta dalam hal zakat bersama masyarakat
-                                                </p>
-                                                <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/infaq.jpg  " class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
-                                            <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Bayar Infaq</h5>
-                                                <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Pembayaran infaq yang dilakukan bersama Baznas Surakarta.</p>
-                                                <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <!--Card-->
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
+                                    @foreach ($inspirasi as $i)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
                                         <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/baznas.jpeg" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
+                                            <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Baznas Surakarta</h5>
+                                                <h5 class="card-title" style="text-align: left;">{{ $i->judul }}</h5>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Baznas adalah Badan Amil Zakat Nasional yang dibentuk di kota
-                                                    Surakarta.</p>
+                                                    {{ $i->deskripsi }}</p>
                                                 <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/zakat.jpg" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
-                                            <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Kegiatan Zakat</h5>
-                                                <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Potret kegiatan Baznas Surakarta dalam hal zakat bersama masyarakat
-                                                </p>
-                                                <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
-                                            <img src="assets/img/infaq.jpg  " class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
-                                            <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">Bayar Infaq</h5>
-                                                <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    Pembayaran infaq yang dilakukan bersama Baznas Surakarta.</p>
-                                                <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
