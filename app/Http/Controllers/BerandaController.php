@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artikel;
+use App\Models\Galeri;
 use App\Models\Inspirasi;
 use App\Models\KabarZakat;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class BerandaController extends Controller
         $distKabar = KabarZakat::latest()->first();
         $distArtikel = Artikel::latest()->first();
         $distInspirasi = Inspirasi::latest()->first();
-        return view('index',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi'));
+        $galeri = Galeri::latest()->take(4)->get();
+        return view('index',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri'));
     }
 
     public function legalitas()

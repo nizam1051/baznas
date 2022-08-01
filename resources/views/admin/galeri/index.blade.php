@@ -35,7 +35,6 @@
                                             </button>
                                         </div>
                                         @endif
-                                      
                                         <div class="table-responsive">
                                             <table class="table table-bordered table-md" id="myTable">
                                                 <thead class="thead-dark">
@@ -54,7 +53,6 @@
                                                     <tr>
                                                         <th scope="row">{{ $no++ }}</th>
                                                         <td>{{ $g->judul }}</td>
-                                                       
                                                         <td style="">
                                                             @foreach (explode('|', $g->gambar) as $image)
                                                             <img src="{{ asset($image) }}" alt=""
