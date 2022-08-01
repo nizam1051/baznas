@@ -424,13 +424,13 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: #01502D; border-style: solid;">
-                            <li><a class="dropdown-item" href="program-kkn.html">Program KKN</a></li>
-                            <li><a class="dropdown-item" href="program-santunan.html">Program Santunan</a></li>
-                            <li><a class="dropdown-item" href="program-ekonomi.html">Program Pemberdayaan Ekonomi</a>
+                            <li><a class="dropdown-item" href="{{ url('program-kkn') }}">Program KKN</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-santunan') }}">Program Santunan</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-pemberdayaan') }}">Program Pemberdayaan Ekonomi</a>
                             </li>
-                            <li><a class="dropdown-item" href="program-beasiswa.html">Program Beasiswa</a></li>
-                            <li><a class="dropdown-item" href="program-subsidi.html">Program Bantuan Subsidi</a></li>
-                            <li><a class="dropdown-item" href="program-distribusi.html">Program Pendistribusian
+                            <li><a class="dropdown-item" href="{{ url('program-beasiswa') }}">Program Beasiswa</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-subsidi') }}">Program Bantuan Subsidi</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-distribusi') }}">Program Pendistribusian
                                     Zakat</a></li>
                         </ul>
                     </li>

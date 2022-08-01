@@ -96,6 +96,36 @@ class BerandaController extends Controller
         return view('layanan.layanan-pembayaran');
     }
 
+    public function programKKN()
+    {
+        return view('program.program-kkn');
+    }
+
+    public function programBeasiswa()
+    {
+        return view('program.program-beasiswa');
+    }
+
+    public function programDistribusi()
+    {
+        return view('program.program-distribusi');
+    }
+
+    public function programPemberdayaan()
+    {
+        return view('program.program-permberdayaan');
+    }
+
+    public function programSantunan()
+    {
+        return view('program.program-santunan');
+    }
+
+    public function programSubsidi()
+    {
+        return view('program.program-subsidi');
+    }
+
     public function indexFitrah()
     {
         return view('index-fitrah');
