@@ -41,6 +41,14 @@
     </script>
     <!--Style-->
     <style>
+        /* Preview Bacaan */
+        .carrousel-preview{
+            background-color: #FF9900;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            font-size: clamp(1rem, 1vw, 3rem);
+        }
+
         /*Bagian tentang kami*/
         .text-content {
             text-align: justify;
