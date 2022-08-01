@@ -36,8 +36,8 @@
                                         </div>
                                         @endif
                                         <div class="table-responsive">
-                                            <table class="table table-bordered table-md" id="myTable">
-                                                <thead class="thead-dark">
+                                            <table class="table table-striped" id="table-1">
+                                                <thead>
                                                     <tr>
                                                         <th scope="col" style="width: 5%">No</th>
                                                         <th scope="col">Judul</th>
@@ -82,11 +82,8 @@
                                                         </td>
                                                     </tr>
                                                     @endforeach
-                                                </tbody>
                                             </table>
-                                            {{ $kabarzakat->links() }}
                                         </div>
-
                                     </div>
                                     <!-- This is where your code ends -->
                                 </div>

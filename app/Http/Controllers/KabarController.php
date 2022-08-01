@@ -14,6 +14,7 @@ class KabarController extends Controller
     public function KabarZakat()
     {
         $kabar_zakat = KabarZakat::latest()->paginate(6);
+        // return $kabar_zakat;
         return view('kabar.kabar-zakat', compact('kabar_zakat'));
     }
 

@@ -4,7 +4,9 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\AdmKabarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KabarController;
+use App\Http\Controllers\KalkulatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,71 +21,44 @@ use App\Http\Controllers\KabarController;
 
 //Front End
 
-Route::get('/', function () {
-    return view('index');
+Route::controller(BerandaController::class)->group(function(){
+    Route::get('/','index');
+    Route::get('/legalitas','legalitas');
+    Route::get('/visi-misi','visiMisi');
+    Route::get('/struktur-organisasi','strukturOrganisasi');
+    Route::get('/organisasi','organisasi');
+    Route::get('/sejarah-organisasi','sejarahOrganisasi');
+    Route::get('/zakat','zakat');
+    Route::get('/inspirasi','inspirasi'); 
+    Route::get('/article','article'); 
+    Route::get('/pendistribusian','pendistribusian'); 
+    Route::get('/video-kegiatan','videoKegiatan'); 
+    Route::get('/hubungi-kami','hubungiKami'); 
+    Route::get('/404','notFound'); 
+    Route::get('/rekening-zakat','rekeningZakat'); 
+    Route::get('/rekening-infak','rekeningInfak'); 
+    Route::get('/rekening-fidyah','rekeningFidyah'); 
+    Route::get('/rekening-sedekah','rekeningSedekah'); 
+    Route::get('/layanan-pembayaran','layananPembayaran'); 
+    Route::get('/index-fitrah','indexFitrah'); 
+    Route::get('/index-maal','indexMaal'); 
+    Route::get('/index-fidyah','indexFidyah'); 
+    Route::get('/index-qurban','indexQurban'); 
+    Route::get('/index-infaq','indexInfaq'); 
 });
-Route::get('/legalitas', function () {
-    return view('tentang-kami/legalitas');
-});
-Route::get('/visi-misi', function () {
-    return view('tentang-kami/visi-misi');
-});
-Route::get('/struktur-organisasi', function () {
-    return view('tentang-kami/struktur-organisasi');
-});
-Route::get('/organisasi', function () {
-    return view('tentang-kami/organisasi');
-});
-Route::get('/sejarah-organisasi', function () {
-    return view('tentang-kami/sejarah-organisasi');
-});
-Route::get('/zakat', function () {
-    return view('bayar.zakat');
-});
-// Route::get('/kabar-zakat', function () {
-//     return view('kabar.kabar-zakat');
-// });
-Route::get('/inspirasi', function () {
-    return view('kabar.inspirasi');
-});
-Route::get('/article', function () {
-    return view('kabar.article');
-});
-Route::get('/pendistribusian', function () {
-    return view('kabar.pendistribusian');
-});
+
+Route::post('/index-fitrah',[KalkulatorController::class,'calcFitrah']);
+Route::post('/index-maal',[KalkulatorController::class,'calcMaal']);
+Route::post('/index-fidyah',[KalkulatorController::class,'calcFidyah']);
+Route::post('/index-qurban',[KalkulatorController::class,'calcQurban']);
+Route::post('/index-infaq',[KalkulatorController::class,'calcInfaq']);
 // Route::get('/berita', function () {
 //     return view('kabar.berita');
 // });
-Route::get('/video-kegiatan', function () {
-    return view('kabar.video-kegiatan');
-});
+
 // Route::get('/galeri', function () {
 //     return view('galeri');
 // });
-Route::get('/hubungi-kami', function () {
-    return view('hubungi-kami');
-});
-Route::get('/404', function () {
-    return view('404');
-});
-Route::get('/rekening-zakat', function () {
-    return view('layanan.rekening-zakat');
-});
-Route::get('/rekening-infak', function () {
-    return view('layanan.rekening-infak');
-});
-Route::get('/rekening-sedekah', function () {
-    return view('layanan.rekening-sedekah');
-});
-Route::get('/rekening-fidyah', function () {
-    return view('layanan.rekening-fidyah');
-});
-Route::get('/layanan-pembayaran', function () {
-    return view('layanan.layanan-pembayaran');
-});
-
-
 Route::get('kabar-zakat', [KabarController::class, 'KabarZakat']);
 Route::get('artikel', [KabarController::class, 'Artikel']);
 Route::get('inspirasi', [KabarController::class, 'Inspirasi']);

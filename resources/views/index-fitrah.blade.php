@@ -138,7 +138,7 @@
                 <div class="col-lg-12 text-center">
                     <div>&nbsp;</div>
                     <div>&nbsp;</div>
-                    <h2 class="text" style="color: #01502D;">KALKULATOR ZAKAT</h2>
+                    <h2 class="text" style="color: #01502D;">KALKULATOR ZAKAT FITRAH</h2>
                     <div class="row">
                         <div class="col-md-6 mt-5">
                             <div class="card">
@@ -146,36 +146,35 @@
                                     <h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b>
                                     </h5>
                                     <div>&nbsp;</div>
-                                    <p class="card-text" style="color: white; text-align: left;">Silahkan diisi dengan
-                                        pendapatan bulanan Anda. Perhitungan Nishob tetap didasarkan pada nishob emas 85
-                                        gr yang dihitung bulanan</p>
+                                    <p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan harga beras 1 Kg di kota anda</p>
                                     <div>&nbsp;</div>
-                                    <p class="card-text" style="color: white; text-align: left;">Pendapatan(Gaji
-                                        Bulanan)</p>
-                                    <div class="col-auto">
-                                        <div class="input-group">
-                                            <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="autoSizingInputGroup">
+                                    <form action="{{ url('index-fitrah') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <p class="card-text" style="color: white; text-align: left;">Harga Beras (1 Kg)</p>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Rp</div>
+                                                <input type="number" min="0" class="form-control" id="autoSizingInputGroup" name="harga">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <p class="card-text" style="color: white; text-align: left;">Pendapatan lain bulanan
-                                        (optional)</p>
-                                    <div class="col-auto">
-                                        <div class="input-group">
-                                            <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="autoSizingInputGroup">
+                                        <p class="card-text" style="color: white; text-align: left;">Besaran Zakat Fitrah</p>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Kg</div>
+                                                <input type="text" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <p class="card-text" style="color: white; text-align: left;">Hutang/Cicilan bulanan
-                                        (opsional)</p>
-                                    <div class="col-auto">
-                                        <div class="input-group">
-                                            <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="autoSizingInputGroup">
-                                        </div>
-                                    </div>
-                                    <div>&nbsp;</div>
-                                    <a href="#" class="btn btn-primary2" style="background-color: #FF9900; border-color: #FF9900;">Hitung</a>
+                                        {{-- <p class="card-text" style="color: white; text-align: left;">Hutang/Cicilan bulanan
+                                            (opsional)</p>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Rp</div>
+                                                <input type="text" class="form-control" id="autoSizingInputGroup">
+                                            </div>
+                                        </div> --}}
+                                        <div>&nbsp;</div>
+                                        <button type="submit" class="btn btn-primary2" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -183,8 +182,8 @@
                             <div class="container">
                                 <h6 style="color: black; text-align: left;"><b>Jenis Zakat</b></h6>
                                 <select class="form-select" id="autoSizingSelect" onchange="location = this.value;">
-                                    <option value="#" selected>Pilih Jenis Zakat</option>
-                                    <option value="{{ url('/index-fitrah') }}">Zakat Fitrah</option>
+                                    {{-- <option value="#" selected>Pilih Jenis Zakat</option> --}}
+                                    <option value="{{ url('/index-fitrah') }}" selected>Zakat Fitrah</option>
                                     <option value="{{ url('/index-maal') }}">Zakat Maal</option>
                                     <option value="{{ url('/index-fidyah') }}">Zakat Fidyah</option>
                                     <option value="{{ url('/index-qurban') }}">Qurban</option>
@@ -198,15 +197,24 @@
                                     menjelang idul fitri. Pada prinsipnya, zakat fitrah haruslah dikeluarkan sebelum sholat
                                     idul fitri dilangsungkan. Hal tersebut yang menjadi pembeda zakat fitrah dengan zakat
                                     lainnya.</p>
-                                <h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>
+                                <h6 style="color: black; text-align: left;"><b>Nilai Zakat Fitrah</b></h6>
+                                @if (session('total'))
                                 <div class="col-auto">
                                     <div class="input-group">
                                         <div class="input-group-text">Rp</div>
-                                        <input type="text" class="form-control" id="autoSizingInputGroup">
+                                        <input type="text" class="form-control" value="{{ number_format(session('total')) }}" id="autoSizingInputGroup" readonly>
                                     </div>
                                 </div>
+                                @else
+                                <div class="col-auto">
+                                    <div class="input-group">
+                                        <div class="input-group-text">Rp</div>
+                                        <input type="text" class="form-control" value="0" id="autoSizingInputGroup" readonly>
+                                    </div>
+                                </div>
+                                @endif
                                 <div>&nbsp;</div>
-                                <a href="#" class="btn btn-primary2 text-white" style="background-color: #2E3192; border-color: #2E3192;">Hitung</a>
+                                {{-- <a href="#" class="btn btn-primary2 text-white" style="background-color: #2E3192; border-color: #2E3192;">Hitung</a> --}}
                             </div>
                         </div>
                     </div>
