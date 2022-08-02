@@ -29,28 +29,28 @@ Route::controller(BerandaController::class)->group(function(){
     Route::get('/organisasi','organisasi');
     Route::get('/sejarah-organisasi','sejarahOrganisasi');
     Route::get('/zakat','zakat');
-    Route::get('/inspirasi','inspirasi'); 
-    Route::get('/article','article'); 
-    Route::get('/pendistribusian','pendistribusian'); 
-    Route::get('/video-kegiatan','videoKegiatan'); 
-    Route::get('/hubungi-kami','hubungiKami'); 
-    Route::get('/404','notFound'); 
-    Route::get('/rekening-zakat','rekeningZakat'); 
-    Route::get('/rekening-infak','rekeningInfak'); 
-    Route::get('/rekening-fidyah','rekeningFidyah'); 
-    Route::get('/rekening-sedekah','rekeningSedekah'); 
-    Route::get('/layanan-pembayaran','layananPembayaran'); 
-    Route::get('/index-fitrah','indexFitrah'); 
-    Route::get('/index-maal','indexMaal'); 
-    Route::get('/index-fidyah','indexFidyah'); 
-    Route::get('/index-qurban','indexQurban'); 
-    Route::get('/index-infaq','indexInfaq'); 
-    Route::get('/program-kkn','programKKN'); 
-    Route::get('/program-beasiswa','programBeasiswa'); 
-    Route::get('/program-distribusi','programDistribusi'); 
-    Route::get('/program-pemberdayaan','programPemberdayaan'); 
-    Route::get('/program-santunan','programSantunan'); 
-    Route::get('/program-subsidi','programSubsidi'); 
+    Route::get('/inspirasi','inspirasi');
+    Route::get('/article','article');
+    Route::get('/pendistribusian','pendistribusian');
+    Route::get('/video-kegiatan','videoKegiatan');
+    Route::get('/hubungi-kami','hubungiKami');
+    Route::get('/404','notFound');
+    Route::get('/rekening-zakat','rekeningZakat');
+    Route::get('/rekening-infak','rekeningInfak');
+    Route::get('/rekening-fidyah','rekeningFidyah');
+    Route::get('/rekening-sedekah','rekeningSedekah');
+    Route::get('/layanan-pembayaran','layananPembayaran');
+    Route::get('/index-fitrah','indexFitrah');
+    Route::get('/index-maal','indexMaal');
+    Route::get('/index-fidyah','indexFidyah');
+    Route::get('/index-qurban','indexQurban');
+    Route::get('/index-infaq','indexInfaq');
+    Route::get('/program-kkn','programKKN');
+    Route::get('/program-beasiswa','programBeasiswa');
+    Route::get('/program-distribusi','programDistribusi');
+    Route::get('/program-pemberdayaan','programPemberdayaan');
+    Route::get('/program-santunan','programSantunan');
+    Route::get('/program-subsidi','programSubsidi');
 });
 
 Route::post('/index-fitrah',[KalkulatorController::class,'calcFitrah']);
@@ -58,14 +58,8 @@ Route::post('/index-maal',[KalkulatorController::class,'calcMaal']);
 Route::post('/index-fidyah',[KalkulatorController::class,'calcFidyah']);
 Route::post('/index-qurban',[KalkulatorController::class,'calcQurban']);
 Route::post('/index-infaq',[KalkulatorController::class,'calcInfaq']);
-// Route::get('/berita', function () {
-//     return view('kabar.berita');
-// });
-
-// Route::get('/galeri', function () {
-//     return view('galeri');
-// });
 Route::get('kabar-zakat', [KabarController::class, 'KabarZakat']);
+Route::get('kabar-zakat-detail/{id}', [KabarController::class, 'DetailKabarZakat']);
 Route::get('artikel', [KabarController::class, 'Artikel']);
 Route::get('inspirasi', [KabarController::class, 'Inspirasi']);
 

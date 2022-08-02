@@ -47,9 +47,9 @@
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
                             <div class="card" style="border-radius: 15px;">
                                 <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
-                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 25vh;">
-                                    <a href="" style="color: #2E3192; opacity: 0.7;"><h5 class="card-title">{{ $distKabar->judul }}</h5></a>
-                                    <div class="card-text carrousel-preview">
+                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 20vh;">
+                                    <a href="{{url('kabar-zakat-detail/'.$distKabar->id)}}" style="color: #2E3192; opacity: 0.7;"><h5 class="card-title">{{ $distKabar->judul }}</h5></a>
+                                    <div class="card-text carrousel-preview mt-5">
                                         {!! \Illuminate\Support\Str::words($distKabar->deskripsi, 10, $end='...') !!}
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
                             <div class="card" style="border-radius: 15px;">
                                 <img src="{{ asset($distArtikel->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
-                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 25vh;">
+                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 20vh;">
                                     <a href="" style="color: #2E3192; opacity: 0.7;"><h5 class="card-title">{{ $distArtikel->judul }}</h5></a>
                                     <div class="card-text carrousel-preview">
                                         {!! \Illuminate\Support\Str::words($distArtikel->deskripsi, 10, $end='...') !!}
@@ -69,7 +69,7 @@
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
                             <div class="card" style="border-radius: 15px;">
                                 <img src="{{ asset($distInspirasi->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
-                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 25vh;">
+                                <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 20vh;">
                                     <a href="" style="color: #2E3192; opacity: 0.7;"><h5 class="card-title">{{ $distInspirasi->judul }}</h5></a>
                                     <div class="card-text carrousel-preview">
                                         {!! \Illuminate\Support\Str::words($distInspirasi->deskripsi, 10, $end='...') !!}
@@ -140,7 +140,7 @@
                     <h2 class="text" style="color: #01502D;">KALKULATOR ZAKAT</h2>
                     <div class="row">
                         <div class="col-md-6 mt-5">
-                            <div class="card">
+                            <div class="card" id="showform">
                                 <div class="card-body" style="background-color: #01502D;">
                                     <h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b>
                                     </h5>
@@ -181,13 +181,19 @@
                         <div class="col-md-6 mt-5">
                             <div class="container">
                                 <h6 style="color: black; text-align: left;"><b>Jenis Zakat</b></h6>
-                                <select class="form-select" id="autoSizingSelect" onchange="location = this.value;">
-                                    <option value="#" selected>Pilih Jenis Zakat</option>
+                                <select class="form-select" id="countzakat">
+                                    {{-- <option value="#" selected>Pilih Jenis Zakat</option>
                                     <option value="{{ url('/index-fitrah') }}">Zakat Fitrah</option>
                                     <option value="{{ url('/index-maal') }}">Zakat Maal</option>
                                     <option value="{{ url('/index-fidyah') }}">Zakat Fidyah</option>
                                     <option value="{{ url('/index-qurban') }}">Qurban</option>
-                                    <option value="{{ url('/index-infaq') }}">Infaq</option>
+                                    <option value="{{ url('/index-infaq') }}">Infaq</option> --}}
+                                    <option value="#" selected>Pilih Jenis Zakat</option>
+                                    <option value="fitrah">Zakat Fitrah</option>
+                                    <option value="maal">Zakat Maal</option>
+                                    <option value="fidyah">Zakat Fidyah</option>
+                                    <option value="qurban">Qurban</option>
+                                    <option value="infaq">Infaq</option>
                                 </select>
                                 <div>&nbsp;</div>
                                 <h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>
@@ -201,7 +207,7 @@
                                 <div class="col-auto">
                                     <div class="input-group">
                                         <div class="input-group-text">Rp</div>
-                                        <input type="text" class="form-control" id="autoSizingInputGroup">
+                                        <input type="text" class="form-control" id="resultFitrah">
                                     </div>
                                 </div>
                                 <div>&nbsp;</div>
@@ -354,10 +360,9 @@
                                         <div class="card" style="border-radius: 15px; width: 100%;">
                                             <img src="{{ asset($k->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
-                                                <h5 class="card-title" style="text-align: left;">{{ $k->judul }}</h5>
+                                                <a href="{{url('kabar-zakat-detail/'.$k->id)}}" style="color: #2E3192"><h6 class="card-title" style="text-align: left;"><h5 class="card-title" style="text-align: left;">{{ $k->judul }}</h5></a>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
                                                     {!! $k->deskripsi !!}</p>
-                                                <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
                                             </div>
                                         </div>
                                     </div>
@@ -372,6 +377,7 @@
                                         <div class="card" style="border-radius: 15px; width: 100%;">
                                             <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
+                                                <a href="" style="color: #2E3192"><h6 class="card-title" style="text-align: left;">
                                                 <h5 class="card-title" style="text-align: left;">{{ $a->judul }}</h5>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
                                                     {{ $a->deskripsi }}</p>

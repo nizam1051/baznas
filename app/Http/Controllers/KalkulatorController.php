@@ -7,17 +7,26 @@ use Illuminate\Support\Facades\Validator;
 
 class KalkulatorController extends Controller
 {
-    public function calcFitrah()
+    public function calcFitrah(Request $request)
     {
-        $validator = Validator::make(request()->all(),[
-            'harga' => 'required|numeric|min:1',
-        ]);
-        if($validator->fails())
-        {
-            return redirect('index-fitrah')->withInput()->withErrors($validator);
+        $price = $request->get('price');
+        $weight = $request->get('weight');
+        $response = '';
+        if($price != NULL && $weight != NULL){
+            $response = $price * $weight;
+        }else{
+            $response = 'Oopsss';
         }
-        $total = request('harga') * 2.5;
-        return redirect('index-fitrah')->with('total',$total);
+        return $response;
+        // $validator = Validator::make(request()->all(),[
+        //     'harga' => 'required|numeric|min:1',
+        // ]);
+        // if($validator->fails())
+        // {
+        //     return redirect('index-fitrah')->withInput()->withErrors($validator);
+        // }
+        // $total = request('harga') * 2.5;
+        // return redirect('index-fitrah')->with('total',$total);
     }
 
     public function calcMaal()
