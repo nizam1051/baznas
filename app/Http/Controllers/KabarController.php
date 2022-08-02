@@ -33,4 +33,10 @@ class KabarController extends Controller
         $galeri = Galeri::latest()->paginate(6);
         return view('galeri', compact('galeri'));
     }
+
+    public function DetailKabarZakat($id){
+        $data = KabarZakat::find($id);
+        // return $data;
+        return view('kabar.kabar-zakat-detail', compact('data'));
+    }
 }

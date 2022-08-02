@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Baznas Surakarta</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -13,12 +14,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
     <!--Pihak Ke 3-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -26,7 +29,8 @@
     <!--Icon-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -35,392 +39,33 @@
                 autoDisplay: false
             }, 'google_translate_element');
         }
+
     </script>
+    {{-- Style --}}
+    <link href="{{ asset('css/basnaz.css') }}" rel="stylesheet">
     <!--Chart-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
-    <!--Style-->
-    <style>
-        /* Preview Bacaan */
-        .carrousel-preview{
-            background-color: #FF9900;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            font-size: clamp(1rem, 1vw, 3rem);
-        }
-
-        /*Bagian tentang kami*/
-        .text-content {
-            text-align: justify;
-            font-size: clamp(11px, 1vw, 24px);
-        }
-
-        /*Hero Section*/
-        .hero-section {
-            background-image: url('./assets/img/kraton.png');
-        }
-
-        .nav-link {
-            font-size: clamp(5px, 2vw, 22px);
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        @media (min-width: 1200px) {
-            .nav-item {
-                margin-right: auto;
-                margin-left: auto;
-            }
-
-            /*Hero*/
-            .heading {
-                font-size: clamp(22px, 5vw, 48px);
-                color: white;
-                font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-                font-weight: bold;
-                vertical-align: middle;
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                padding-left: 10%;
-            }
-
-            #hr-hero {
-                width: 500px;
-                transform: translateX(11%);
-                color: #FF9900;
-                height: 5px;
-                opacity: 1;
-            }
-
-            .image-footer {
-                width: 153px;
-                height: 143px;
-            }
-
-            .heading-center {
-                margin-top: 50px;
-            }
-
-            #youtube {
-                width: 560px;
-                height: 315px;
-            }
-
-            .imagefooter {
-                width: 100%;
-                height: auto;
-            }
-
-            .form-zakat {
-                padding: 10%;
-                width: 100%;
-                height: auto;
-                position: relative;
-                transform: translateY(8%);
-            }
-
-            .row-zakat {
-                width: 100%;
-                padding-left: 35px;
-                padding-right: 35px;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .row-zakat {
-                padding: 0;
-            }
-
-            .carousel-control-prev {
-                display: none;
-            }
-
-            .carousel-control-next {
-                display: none;
-            }
-
-            .imagefooter {
-                width: 100%;
-                height: auto;
-            }
-
-            #navbarResponsive {
-                margin-top: 20px;
-            }
-
-            .carousel-item img {
-                height: 500px;
-            }
-
-            .form-zakat {
-                padding: 3%;
-                width: 100%;
-                height: auto;
-                margin-top: 25%;
-                margin-bottom: 5%;
-            }
-
-            .heading {
-                font-size: clamp(20px, 5vw, 48px);
-                color: white;
-                font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-                font-weight: bold;
-                vertical-align: middle;
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                padding-left: 10%;
-            }
-
-            #hr-hero {
-                width: 60px;
-                color: #FF9900;
-                height: 5px;
-                opacity: 1;
-            }
-
-            .image-footer {
-                width: 100px;
-                height: auto;
-            }
-
-            .heading-center {
-                margin-top: 20px;
-            }
-
-            #youtube {
-                width: 100%;
-                height: auto;
-            }
-
-            #myChart {
-                display: none;
-            }
-
-            .image-infaq {
-                display: none;
-            }
-
-            #bayar-zakat {
-                display: none;
-            }
-        }
-
-        /*Footer*/
-        .footer-clean {
-            background-color: #01502D;
-            color: white;
-        }
-
-        .footer-clean h3 {
-            margin-top: 0;
-            margin-bottom: 12px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .footer-clean ul {
-            padding: 0;
-            list-style: none;
-            line-height: 1.6;
-            font-size: 18px;
-            margin-bottom: 0;
-        }
-
-        .footer-clean ul a {
-            color: inherit;
-            text-decoration: none;
-            opacity: 0.8;
-        }
-
-        .footer-clean ul a:hover {
-            opacity: 1;
-        }
-
-        .footer-clean .item.social {
-            text-align: center;
-        }
-
-        .item-menu {
-            text-align: left;
-            font-size: 20px;
-            ;
-        }
-
-        @media (max-width: 767px) {
-            .footer-clean .item {
-                text-align: left;
-                padding-bottom: 20px;
-            }
-
-            #hide-content {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .footer-clean .item.social {
-                text-align: center;
-            }
-        }
-
-        .footer-clean .item.social>a {
-            font-size: 24px;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            display: inline-block;
-            text-align: center;
-            border-radius: 50%;
-            border: 1px solid black;
-            margin-left: 10px;
-            margin-top: 22px;
-            color: inherit;
-            opacity: 0.75;
-        }
-
-        .footer-clean .item.social>a:hover {
-            opacity: 0.9;
-        }
-
-        @media (max-width: 991px) {
-            .footer-clean .item.social>a {
-                margin-top: 40px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .footer-clean .item.social>a {
-                margin-top: 10px;
-            }
-        }
-
-        .end-copyright .copyright {
-            font-size: clamp(10px, 2vw, 17px);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            opacity: 1;
-            font-weight: normal;
-            color: white;
-        }
-
-        .end-copyright {
-            background-color: #053922;
-            padding-top: 18px;
-            padding-bottom: 5px;
-        }
-
-        .heading-left {
-            color: #FF9900;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 500;
-            font-size: clamp(13px, 3vw, 18px);
-        }
-
-        .content-left {
-            color: white;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: normal;
-            font-size: clamp(10px, 1vw, 15px);
-        }
-
-        .form-check-label {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: clamp(12px, 3vw, 14px);
-            font-weight: normal;
-            color: white;
-        }
-
-        .heading-center {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: clamp(10px, 2vw, 24px);
-            font-weight: 600;
-            color: #FF9900;
-        }
-
-        .card-title {
-            font-size: clamp(10px, 2vw, 24px);
-            font-weight: 600;
-        }
-
-        .card-text {
-            font-size: clamp(10px, 2vw, 14px);
-            font-weight: normal;
-        }
-
-        /*Form*/
-        /*Content*/
-        .image-bottom {
-            margin-top: 12%;
-        }
-
-        .form-check-label {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: clamp(12px, 3vw, 14px);
-            font-weight: normal;
-            color: white;
-        }
-
-
-        /*This Page*/
-        .heading-form {
-            width: fit-content;
-        }
-
-        #hr-form {
-            color: #FF9900;
-            height: 4px;
-            opacity: 1;
-        }
-
-        .text-form {
-            font-size: clamp(15px, 2vw, 24px);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: bold;
-        }
-
-        .form-control {
-            background-color: #E2E2E2;
-            border: none;
-            height: 58px;
-            font-size: clamp(10px, 2vw, 16px);
-        }
-
-        .arab {
-            font-size: clamp(15px, 2vw, 36px);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 400;
-        }
-
-        .latin {
-            font-size: clamp(12px, 1vw, 18px);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: normal;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .form-zakat {
-            border: solid;
-            border-color: black;
-            border-radius: 30px;
-        }
-    </style>
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" id="mainNav" style="color: white; border-bottom: #01502D; border-style: solid;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" id="mainNav"
+        style="color: white; border-bottom: #01502D; border-style: solid;">
         <div class="container">
-            <a class="navbar-brand" href="#"><img style="width: 60%;" src="assets/img/portfolio/logo/logo2.png" /></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand" href="#"><img style="width: 60%;"
+                    src="{{ asset('assets/img/portfolio/logo/logo2.png') }}" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav my-2 col-lg-12">
                     <li class="nav-item"><a class="nav-link text-dark" href="/">Beranda</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarOrganisasi" data-bs-toggle="dropdown" aria-expanded="false">Tentang Kami</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarOrganisas" style="border-top: #01502D; border-style: solid;">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarOrganisasi"
+                            data-bs-toggle="dropdown" aria-expanded="false">Tentang Kami</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarOrganisas"
+                            style="border-top: #01502D; border-style: solid;">
                             <li><a class="dropdown-item" href="/legalitas">Legalitas</a></li>
                             <li><a class="dropdown-item" href="/visi-misi">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a></li>
@@ -430,48 +75,67 @@
                     </li>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: #01502D; border-style: solid;">
+                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">Program</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                            style="border-top: #01502D; border-style: solid;">
                             <li><a class="dropdown-item" href="{{ url('program-kkn') }}">Program KKN</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-santunan') }}">Program Santunan</a></li>
-                            <li><a class="dropdown-item" href="{{ url('program-pemberdayaan') }}">Program Pemberdayaan Ekonomi</a>
+                            <li><a class="dropdown-item" href="{{ url('program-pemberdayaan') }}">Program Pemberdayaan
+                                    Ekonomi</a>
                             </li>
                             <li><a class="dropdown-item" href="{{ url('program-beasiswa') }}">Program Beasiswa</a></li>
-                            <li><a class="dropdown-item" href="{{ url('program-subsidi') }}">Program Bantuan Subsidi</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-subsidi') }}">Program Bantuan Subsidi</a>
+                            </li>
                             <li><a class="dropdown-item" href="{{ url('program-distribusi') }}">Program Pendistribusian
                                     Zakat</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarLayanan" data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarLayanan" style="border-top: #01502D; border-style: solid;">
+                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarLayanan"
+                            data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarLayanan"
+                            style="border-top: #01502D; border-style: solid;">
                             <li><a class="dropdown-item" href="/rekening-zakat">Rekening Zakat</a></li>
                             <li><a class="dropdown-item" href="/layanan-pembayaran">Layanan Pembayaran</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarKabar" style="border-top: #01502D; border-style: solid;">
-                            {{-- <li><a class="dropdown-item" href="/berita">Berita</a></li>
-                            <li><a class="dropdown-item" href="/galeri">Galeri</a></li>
-                            <li><a class="dropdown-item" href="/pendistribusian">Pendistribusian</a></li>
-                            <li><a class="dropdown-item" href="/video-kegiatan">Video Kegiatan</a></li> --}}
+                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar"
+                            data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarKabar"
+                            style="border-top: #01502D; border-style: solid;">
                             <li><a class="dropdown-item" href="{{ url('kabar-zakat') }}">Kabar Zakat</a></li>
                             <li><a class="dropdown-item" href="{{ url('artikel') }}">Artikel</a></li>
                             <li><a class="dropdown-item" href="{{ url('inspirasi') }}">Inspirasi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link text-dark" href="/hubungi-kami">Hubungi</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="/zakat"><button class=" btn btn-primary" style="border-radius: 10px;">
+                    <li class="nav-item"><a class="nav-link text-dark" href="/zakat"><button class=" btn btn-primary"
+                                style="border-radius: 10px;">
                                 <i class="fas fa-wallet"></i> Bayar Zakat</button>
                         </a></li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Pilih Bahasa</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarKabar" style="border-top: #01502D; border-style: solid;">
-                            <li><a class="dropdown-item" href="#"><img src="./assets/img/ina.png" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">ID</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="./assets/img/arab.png" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">Arab</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="./assets/img/en.png" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">EN</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="./assets/img/chin.png" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">CHI</a></li>
+                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar"
+                            data-bs-toggle="dropdown" aria-expanded="false">Pilih Bahasa</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarKabar"
+                            style="border-top: #01502D; border-style: solid;">
+                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/ina.png') }}"
+                                        class="border-0 border-circle"
+                                        style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
+                                        alt="">ID</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/en.png') }}"
+                                        class="border-0 border-circle"
+                                        style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
+                                        alt="">Arab</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/en.png') }}"
+                                        class="border-0 border-circle"
+                                        style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
+                                        alt="">EN</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/chin.png') }}"
+                                        class="border-0 border-circle"
+                                        style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
+                                        alt="">CHI</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -510,16 +174,16 @@
                 </ul>
                 <div class="row">
                     <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="assets/img/baznas.png" class="imagefooter" alt="">
+                        <img src="{{asset('assets/img/baznas.png')}}" class="imagefooter" alt="">
                     </div>
                     <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="assets/img/uns.png" class="imagefooter" alt="">
+                        <img src="{{asset('assets/img/uns.png')}}" class="imagefooter" alt="">
                     </div>
                     <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="assets/img/logo-sv.png" class="imagefooter" alt="">
+                        <img src="{{asset('assets/img/logo-sv.png')}}" class="imagefooter" alt="">
                     </div>
                     <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="assets/img/solo2.png" class="imagefooter" alt="">
+                        <img src="{{asset('assets/img/solo2.png')}}" class="imagefooter" alt="">
                     </div>
                 </div>
             </div>
@@ -527,19 +191,25 @@
                 <ul>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
-                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1" value="option1" />
+                            <input style="background-color: white;" checked
+                                class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1"
+                                value="option1" />
                             <label class="form-check-label" for="inlineCheckbox1">Kebijakan Privasi</label>
                         </div>
                     </li>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
-                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1" value="option1" />
+                            <input style="background-color: white;" checked
+                                class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1"
+                                value="option1" />
                             <label class="form-check-label" for="inlineCheckbox1">Syarat & Ketentuan</label>
                         </div>
                     </li>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
-                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1" value="option1" />
+                            <input style="background-color: white;" checked
+                                class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1"
+                                value="option1" />
                             <label class="form-check-label" for="inlineCheckbox1">FAQ</label>
                         </div>
                     </li>
@@ -584,7 +254,7 @@
                 </ul>
             </div>
             <div class="col-md-4 mt-2 pb-2">
-                <img src="assets/img/map.png" style="width: 100%; height: auto;">
+                <img src="{{asset('assets/img/map.png')}}" style="width: 100%; height: auto;">
             </div>
         </div>
     </div>
@@ -596,25 +266,170 @@
         </center>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- SimpleLightbox plugin JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 <!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+<script src="{{ asset('js/scripts.js') }}"></script>
+<script src="{{ asset('js/zakat.js') }}"></script>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <!-- * *                               SB Forms JS                               * *-->
 <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-<script src="../js/js/chart.js/dist/Chart.min.js"></script>
+<script>
+    var alert = '';
+    function resetErrors(){
+        $('#showErrors').empty();
+        alert = '';
+    }
+    // Zakat Fitrah
+    $(document).ready(function () {
+        $(document).on('click', '#hitungFitrah', function () {
+            var price = $('#priceFitrah').val();
+            var weight = 2.5;
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-fitrah') }}",
+                method: 'POST',
+                data: {
+                    price: price,
+                    weight: weight,
+                },
+                success: function (response) {
+                    $('#resultFitrah').val(response);
+                }
+            })
+        });
+    });
 
-<!-- Template JS File -->
-<script src="../js/js/scripts.js"></script>
-<script src="../js/custom.js"></script>
+    // Zakat Maal
+    $(document).ready(function () {
+        $(document).on('click', '#hitungMaal', function () {
+            var gajiPokok = $('#gajiPokok').val();
+            var tunjangan = $('#tunjangan').val();
+            var hutang = $('#hutang').val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-maal') }}",
+                method: 'POST',
+                data: {
+                    gajiPokok: gajiPokok,
+                    tunjangan: tunjangan,
+                    hutang: hutang,
+                },
+                success: function (response) {
+                    resetErrors()
+                    if(response.errors){
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                        }
+                        $('#showErrors').html(alert);
+                        // alert(response.errors);
+                    }else{
+                        $('#resultFitrah').val(response);
+                    }
+                }
+            })
+        });
+    });
 
-<!-- Page Specific JS File -->
+    // Zakat Fidyah
+    $(document).ready(function () {
+        $(document).on('click', '#hitungFidyah', function () {
+            var day = $('#day').val();
+            var soul = $('#soul').val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-fidyah') }}",
+                method: 'POST',
+                data: {
+                    hari: day,
+                    jiwa: soul,
+                },
+                success: function (response) {
+                    resetErrors()
+                    if(response.errors){
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                        }
+                        $('#showErrors').html(alert);
+                    }else{
+                        $('#resultFitrah').val(response);
+                    }
+                }
+            })
+        });
+    });
 
+    // Qurban
+    $(document).ready(function () {
+        $(document).on('click', '#hitungQurban', function () {
+            var qurban = $('#qurban').val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-qurban') }}",
+                method: 'POST',
+                data: {
+                    jenisQurban: qurban,
+                },
+                success: function (response) {
+                    resetErrors()
+                    if(response.errors){
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                        }
+                        $('#showErrors').html(alert);
+                    }else{
+                        $('#resultFitrah').val(response);
+                    }
+                }
+            })
+        });
+    });
+
+    // Infaq
+    $(document).ready(function () {
+        $(document).on('click', '#hitungInfaq', function () {
+            var gaji = $('#gaji').val();
+            var tunjangan = $('#tunjangan').val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-infaq') }}",
+                method: 'POST',
+                data: {
+                    gaji: gaji,
+                    tunjangan: tunjangan,
+                },
+                success: function (response) {
+                    resetErrors()
+                    if(response.errors){
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                        }
+                        $('#showErrors').html(alert);
+                    }else{
+                        $('#resultFitrah').val(response);
+                    }
+                }
+            })
+        });
+    });
+</script>
 <script>
     var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
     var yValues = [0, 0, 0, 0];
@@ -639,6 +454,7 @@
             }
         }
     });
+
 </script>
 
 </html>
