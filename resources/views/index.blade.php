@@ -210,8 +210,7 @@
                                         <input type="text" class="form-control" id="resultFitrah">
                                     </div>
                                 </div>
-                                <div>&nbsp;</div>
-                                <a href="#" class="btn btn-primary2 text-white" style="background-color: #2E3192; border-color: #2E3192;">Hitung</a>
+                                <div id="showErrors">&nbsp;</div>
                             </div>
                         </div>
                     </div>

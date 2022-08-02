@@ -266,28 +266,28 @@
         </center>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- SimpleLightbox plugin JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 <!-- Core theme JS-->
 <script src="{{ asset('js/scripts.js') }}"></script>
+<script src="{{ asset('js/zakat.js') }}"></script>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <!-- * *                               SB Forms JS                               * *-->
 <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-{{-- <script src="../js/js/chart.js/dist/Chart.min.js"></script>
-
-<!-- Template JS File -->
-<script src="../js/js/scripts.js"></script>
-<script src="../js/custom.js"></script> --}}
-
-{{-- Script Perhitungan --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+    var alert = '';
+    function resetErrors(){
+        $('#showErrors').empty();
+        alert = '';
+    }
+    // Zakat Fitrah
     $(document).ready(function () {
         $(document).on('click', '#hitungFitrah', function () {
             var price = $('#priceFitrah').val();
@@ -304,145 +304,131 @@
                 },
                 success: function (response) {
                     $('#resultFitrah').val(response);
-                    console.log(response);
                 }
             })
         });
+    });
 
-        $(document).on('change', '#countzakat', function () {
-            var select = $(this).val();
-            var form = '';
-            if (select == 'fitrah') {
-                form = '<div class="card-body" style="background-color: #01502D;">' +
-                    '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b></h5>' +
-                    '<div>&nbsp;</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan harga beras 1 Kg di kota anda</p>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Harga Beras (1 Kg)</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">Rp</div>' +
-                    '<input type="number" class="form-control" id="priceFitrah">' +
-                    '</div>' +
-                    '</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Besaran Zakat Fitrah</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">Kg</div>' +
-                    '<input type="text" class="form-control" id="weightFitrah" value="2,5" readonly>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div>&nbsp;</div>' +
-                    '<button type="button" class="btn btn-primary2" id="hitungFitrah" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>' +
-                    '</div>';
-            } else if (select == 'maal') {
-                form = '<div class="card-body" style="background-color: #01502D;">' +
-                    '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b></h5>' +
-                    '<div>&nbsp;</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan gaji anda perbulan</p>' +
-                    '<div>&nbsp;</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Gaji Pokok Perbulan</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">Rp</div>' +
-                    '<input type="number" min="0" class="form-control" id="autoSizingInputGroup" name="gaji">' +
-                    '</div>' +
-                    '</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">Rp</div>' +
-                    '<input type="number" min="0" class="form-control" id="autoSizingInputGroup" name="hutang">' +
-                    '</div>' +
-                    '</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Besaran Zakat Maal</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">%</div>' +
-                    '<input type="text" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div>&nbsp;</div>' +
-                    '<button type="submit" class="btn btn-primary2" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>' +
-                    '</div>';
-            } else if (select == 'fidyah') {
-                form = '<div class="card-body" style="background-color: #01502D;">' +
-                    '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b></h5>' +
-                    '<div>&nbsp;</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan hutang puasa anda</p>' +
-                    '<div>&nbsp;</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Total hari tidak berpuasa</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">Hari</div>' +
-                    '<input type="number" min="1" class="form-control" id="autoSizingInputGroup" name="hari">' +
-                    '</div>' +
-                    '</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Total jiwa</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">Rp</div>' +
-                    '<input type="text" class="form-control" id="autoSizingInputGroup" value="50.000" readonly>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div>&nbsp;</div>' +
-                    '<button type="submit" class="btn btn-primary2" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>' +
-                    '</div>';
-            } else if (select == 'qurban') {
-                form = '<div class="card-body" style="background-color: #01502D;">' +
-                    '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Qurban</b></h5>' +
-                    '<div>&nbsp;</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Pilih Jenis Qurban</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<select class="form-select" id="autoSizingSelect" name="qurban">' +
-                    '<option value="A">Domba/Kambing Al-Kautsar</option>' +
-                    '<option value="B">Domba/Kambing Firdaus</option>' +
-                    '<option value="C">Sapi Al-Kautsar</option>' +
-                    '</select>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div>&nbsp;</div>' +
-                    '<button type="submit" class="btn btn-primary2" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>' +
-                    '</div>';
-            } else if (select == 'infaq') {
-                form = '<div class="card-body" style="background-color: #01502D;">' +
-                    '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Infaq</b></h5>' +
-                    '<div>&nbsp;</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan gaji anda perbulan</p>' +
-                    '<div>&nbsp;</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Gaji Pokok Perbulan</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">Rp</div>' +
-                    '<input type="number" min="0" class="form-control" id="autoSizingInputGroup" name="gaji">' +
-                    '</div>' +
-                    '</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">Rp</div>' +
-                    '<input type="number" min="0" class="form-control" id="autoSizingInputGroup" name="tunjangan">' +
-                    '</div>' +
-                    '</div>' +
-                    '<p class="card-text" style="color: white; text-align: left;">Besaran Infaq Perbulan</p>' +
-                    '<div class="col-auto">' +
-                    '<div class="input-group">' +
-                    '<div class="input-group-text">%</div>' +
-                    '<input type="text" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div>&nbsp;</div>' +
-                    '<button type="submit" class="btn btn-primary2" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>' +
-                    '</div>';
-            } else {
-                form = '<div class="alert alert-danger" role="alert">' +
-                    'Ooops!' +
-                    '</div>';
-            }
-            $('#showform').html(form);
+    // Zakat Maal
+    $(document).ready(function () {
+        $(document).on('click', '#hitungMaal', function () {
+            var gajiPokok = $('#gajiPokok').val();
+            var tunjangan = $('#tunjangan').val();
+            var hutang = $('#hutang').val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-maal') }}",
+                method: 'POST',
+                data: {
+                    gajiPokok: gajiPokok,
+                    tunjangan: tunjangan,
+                    hutang: hutang,
+                },
+                success: function (response) {
+                    resetErrors()
+                    if(response.errors){
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                        }
+                        $('#showErrors').html(alert);
+                        // alert(response.errors);
+                    }else{
+                        $('#resultFitrah').val(response);
+                    }
+                }
+            })
         });
     });
 
+    // Zakat Fidyah
+    $(document).ready(function () {
+        $(document).on('click', '#hitungFidyah', function () {
+            var day = $('#day').val();
+            var soul = $('#soul').val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-fidyah') }}",
+                method: 'POST',
+                data: {
+                    hari: day,
+                    jiwa: soul,
+                },
+                success: function (response) {
+                    resetErrors()
+                    if(response.errors){
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                        }
+                        $('#showErrors').html(alert);
+                    }else{
+                        $('#resultFitrah').val(response);
+                    }
+                }
+            })
+        });
+    });
+
+    // Qurban
+    $(document).ready(function () {
+        $(document).on('click', '#hitungQurban', function () {
+            var qurban = $('#qurban').val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-qurban') }}",
+                method: 'POST',
+                data: {
+                    jenisQurban: qurban,
+                },
+                success: function (response) {
+                    resetErrors()
+                    if(response.errors){
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                        }
+                        $('#showErrors').html(alert);
+                    }else{
+                        $('#resultFitrah').val(response);
+                    }
+                }
+            })
+        });
+    });
+
+    // Infaq
+    $(document).ready(function () {
+        $(document).on('click', '#hitungInfaq', function () {
+            var gaji = $('#gaji').val();
+            var tunjangan = $('#tunjangan').val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-infaq') }}",
+                method: 'POST',
+                data: {
+                    gaji: gaji,
+                    tunjangan: tunjangan,
+                },
+                success: function (response) {
+                    resetErrors()
+                    if(response.errors){
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                        }
+                        $('#showErrors').html(alert);
+                    }else{
+                        $('#resultFitrah').val(response);
+                    }
+                }
+            })
+        });
+    });
 </script>
 <script>
     var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];

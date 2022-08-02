@@ -15,7 +15,7 @@ class KalkulatorController extends Controller
         if($price != NULL && $weight != NULL){
             $response = $price * $weight;
         }else{
-            $response = 'Oopsss';
+            $response = '<b>Ooops!</b>pilih jenis zakat';
         }
         return $response;
         // $validator = Validator::make(request()->all(),[
@@ -29,46 +29,52 @@ class KalkulatorController extends Controller
         // return redirect('index-fitrah')->with('total',$total);
     }
 
-    public function calcMaal()
+    public function calcMaal(Request $request)
     {
-        $validator = Validator::make(request()->all(),[
-            'gaji' => 'required|numeric|min:1',
-            'tunjangan' => 'required|numeric|min:0',
-            'hutang' => 'required|numeric|min:0',
+        $validator = Validator::make($request->all(),[
+            'gajiPokok' => 'required|numeric|min:1000',
+            'tunjangan' => 'required|numeric|min:1000',
+            'hutang' => 'required|numeric|min:1000',
         ]);
         if($validator->fails())
         {
-            return redirect('index-maal')->withInput()->withErrors($validator);
+            return response()->json(['errors'=>$validator->errors()->all()]);
         }
-        $harga = request('gaji') + request('tunjangan') - request('cicilan');
+        $gaji = $request->get('gajiPokok');
+        $tunjangan = $request->get('tunjangan');
+        $hutang = $request->get('hutang');
+        $harga = $gaji + $tunjangan - $hutang;
         $total = $harga * 2.5 / 100;
-        return redirect('index-maal')->with('total',$total);
+        return $total;
     }
 
-    public function calcFidyah()
+    public function calcFidyah(Request $request)
     {
-        $validator = Validator::make(request()->all(),[
-            'hari' => 'required|numeric|min:1',
+        $validator = Validator::make($request->all(),[
             'jiwa' => 'required|numeric|min:1',
+            'hari' => 'required|numeric|min:1',
         ]);
         if($validator->fails())
         {
-            return redirect('index-fidyah')->withInput()->withErrors($validator);
+            return response()->json(['errors'=>$validator->errors()->all()]);
         }
-        $total = request('hari') * request('jiwa') * 50000;
-        return redirect('index-fidyah')->with('total',$total);
+        $day = $request->get('jiwa');
+        $soul = $request->get('hari');
+        $total = $day * $soul * 50000;
+        return $total;
     }
 
-    public function calcQurban()
+    public function calcQurban(Request $request)
     {
         $validator = Validator::make(request()->all(),[
-            'qurban' => 'required',
+            'jenisQurban' => 'required',
         ]);
         if($validator->fails())
         {
-            return redirect('index-qurban')->withInput()->withErrors($validator);
+            return response()->json(['errors'=>$validator->errors()->all()]);
         }
-        switch(request('qurban'))
+        $qurban = $request->get('jenisQurban');
+        switch($qurban)
         {
             case 'A' :
                 $total = 2200000;
@@ -82,21 +88,23 @@ class KalkulatorController extends Controller
             default :
                 $total = 0;
         }
-        return redirect('index-qurban')->with('total',$total);
+        return $total;
     }
 
-    public function calcInfaq()
+    public function calcInfaq(Request $request)
     {
         $validator = Validator::make(request()->all(),[
-            'gaji' => 'required|numeric|min:1',
+            'gaji' => 'required|numeric|min:1000',
             'tunjangan' => 'required|numeric|min:0',
         ]);
         if($validator->fails())
         {
-            return redirect('index-infaq')->withInput()->withErrors($validator);
+            return response()->json(['errors'=>$validator->errors()->all()]);
         }
-        $harga = request('gaji') + request('tunjangan');
+        $gaji = $request->get('gaji');
+        $tunjangan = $request->get('tunjangan');
+        $harga = $gaji + $tunjangan;
         $total = $harga * 2.5 / 100;
-        return redirect('index-infaq')->with('total',$total);
+        return $total;
     }
 }
