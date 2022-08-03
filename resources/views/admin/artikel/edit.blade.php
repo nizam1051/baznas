@@ -62,7 +62,7 @@
                                                         style="height: 200px; width:400px;" class="mt-4">
                                                 </div>
                                             </div>
-    
+
                                             <div class="form-group row mb-4">
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
@@ -84,8 +84,10 @@
             </footer>
         </div>
     </div>
-
     @include('admin.stisla.script')
+    <script>
+        CKEDITOR.replace('deskripsi');
+    </script>
 </body>
 
 </html>
