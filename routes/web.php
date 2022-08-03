@@ -61,7 +61,9 @@ Route::post('/index-infaq',[KalkulatorController::class,'calcInfaq']);
 Route::get('kabar-zakat', [KabarController::class, 'KabarZakat']);
 Route::get('kabar-zakat-detail/{id}', [KabarController::class, 'DetailKabarZakat']);
 Route::get('artikel', [KabarController::class, 'Artikel']);
+Route::get('article-detail/{id}', [KabarController::class, 'detailArtikel']);
 Route::get('inspirasi', [KabarController::class, 'Inspirasi']);
+Route::get('inspirasi-detail/{id}', [KabarController::class, 'detailInspirasi']);
 
 // Backend
 Route::get('login', [AuthController::class, 'login'])->name('login');
