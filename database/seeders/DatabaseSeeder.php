@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             InspirasiSeeder::class,
             ArtikelSeeder::class,
             GaleriSeeder::class,
+            PenyaluranSeeder::class,
+            DataZisSeeder::class,
         ]);
     }
 }

@@ -602,7 +602,7 @@ progress {
 .img-fluid {
   width: 100%;
   height: auto;
-  min-height: 250px; 
+  min-height: 250px;
   max-height: 300px;
 }
 
@@ -4566,6 +4566,10 @@ textarea.form-control-lg {
 
 .card-text:last-child {
   margin-bottom: 0;
+}
+
+.card-text.carrousel-preview{
+    font-size: clamp(16px, 1vw, 19px);
 }
 
 .card-link + .card-link {
@@ -11359,7 +11363,7 @@ hr.persegi {
 			position: absolute;
 			border-bottom: 5px solid #01502D;
 			width: 100px;
-			right: -130px;	
+			right: -130px;
 			top: 50%;
 		}
 

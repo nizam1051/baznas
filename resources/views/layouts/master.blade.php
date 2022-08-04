@@ -283,7 +283,8 @@
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <script>
     var alert = '';
-    function resetErrors(){
+
+    function resetErrors() {
         $('#showErrors').empty();
         alert = '';
     }
@@ -328,13 +329,15 @@
                 },
                 success: function (response) {
                     resetErrors()
-                    if(response.errors){
+                    if (response.errors) {
                         for (let i = 0; i < response.errors.length; i++) {
-                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                            alert +=
+                                '<div class="alert alert-warning fade show mt-3" role="alert">' +
+                                response.errors[i] + '</div>'
                         }
                         $('#showErrors').html(alert);
                         // alert(response.errors);
-                    }else{
+                    } else {
                         $('#resultFitrah').val(response);
                     }
                 }
@@ -359,12 +362,14 @@
                 },
                 success: function (response) {
                     resetErrors()
-                    if(response.errors){
+                    if (response.errors) {
                         for (let i = 0; i < response.errors.length; i++) {
-                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                            alert +=
+                                '<div class="alert alert-warning fade show mt-3" role="alert">' +
+                                response.errors[i] + '</div>'
                         }
                         $('#showErrors').html(alert);
-                    }else{
+                    } else {
                         $('#resultFitrah').val(response);
                     }
                 }
@@ -387,12 +392,14 @@
                 },
                 success: function (response) {
                     resetErrors()
-                    if(response.errors){
+                    if (response.errors) {
                         for (let i = 0; i < response.errors.length; i++) {
-                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                            alert +=
+                                '<div class="alert alert-warning fade show mt-3" role="alert">' +
+                                response.errors[i] + '</div>'
                         }
                         $('#showErrors').html(alert);
-                    }else{
+                    } else {
                         $('#resultFitrah').val(response);
                     }
                 }
@@ -417,44 +424,44 @@
                 },
                 success: function (response) {
                     resetErrors()
-                    if(response.errors){
+                    if (response.errors) {
                         for (let i = 0; i < response.errors.length; i++) {
-                            alert += '<div class="alert alert-warning fade show mt-3" role="alert">'+response.errors[i]+'</div>'
+                            alert +=
+                                '<div class="alert alert-warning fade show mt-3" role="alert">' +
+                                response.errors[i] + '</div>'
                         }
                         $('#showErrors').html(alert);
-                    }else{
+                    } else {
                         $('#resultFitrah').val(response);
                     }
                 }
             })
         });
     });
+
 </script>
+@if (!empty($fitrah) && !empty($infaq) && !empty($sedekah) && !empty($fidyah))
 <script>
     var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
-    var yValues = [0, 0, 0, 0];
+    var yValues = [{!! $fitrah !!}, {!! $infaq !!}, {!! $sedekah !!}, {!! $fidyah !!}];
     var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
-
     new Chart("myChart", {
-        type: "bar",
-        data: {
-            labels: xValues,
-            datasets: [{
-                backgroundColor: barColors,
-                data: yValues
-            }]
-        },
-        options: {
-            legend: {
-                display: false
-            },
-            title: {
-                display: false,
-                text: "World Wine Production 2018"
-            }
+    type: "pie",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: "Laporan Data"
         }
-    });
-
+    }
+})
 </script>
+@endif
 
 </html>

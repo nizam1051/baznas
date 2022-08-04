@@ -15,11 +15,11 @@
         <div class="row">
             @foreach ($kabar_zakat as $b)
             @if ($b->status == 'ACTIVE')
-            <div class="col-sm-12 col-lg-4 col-md-4 col-12" style="padding: 2%">
-                <div class="card">
+            <div class="col-sm-12 col-lg-4 col-md-4 col-12" style="padding: 2%;">
+                <div class="card" style="display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
                     <img src="{{ asset($b->gambar) }}" class="card-img-top" alt=""
                         style="background-color: #FF9900; height: 40vh;">
-                    <div class="card-body" style="background-color: #FF9900;">
+                    <div class="card-body">
                         <h5 class="card-title">{{ $b->judul }}</h5>
                         <p class="card-text">
                             {!! \Illuminate\Support\Str::words($b->deskripsi, 10, $end='...') !!}

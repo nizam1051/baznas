@@ -16,16 +16,16 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/img/korosel4.png" class="d-block w-100" alt="...">
+                        <img src="{{url('assets/img/korosel4.png')}}" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/img/korosel3.png" class="d-block w-100" alt="...">
+                        <img src="{{url('assets/img/korosel3.png')}}" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/img/korosel2.png" class="d-block w-100" alt="...">
+                        <img src="{{url('assets/img/korosel2.png')}}" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/img/korosel1.png" class="d-block w-100" alt="...">
+                        <img src="{{url('assets/img/korosel1.png')}}" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -116,7 +116,7 @@
                         <div class="mb-2"><img src="assets/img/portfolio/logo/penerima.png"
                                 style="max-width: 300px; max-height: autox;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h5 mb-2" style="color: #FF9900;">PENERIMA</h3>
-                        <p class="h2 mb-2" style="color: #FF9900;"><b>*</b></p>
+                        <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->penerima}}</b></p>
                         <div>&nbsp;</div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                         <div class="mb-2"><img src="assets/img/portfolio/logo/himpunan.png"
                                 style="max-width: 300px; max-height: auto;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h5 mb-2" style="color: #FF9900;">PENGHIMPUNAN</h3>
-                        <p class="h2 mb-2" style="color: #FF9900;"><b>*</b></p>
+                        <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->penghimpun}}</b></p>
                         <div>&nbsp;</div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                         <div class="mb-2"><img src="assets/img/portfolio/logo/dana.png"
                                 style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h6 mb-2" style="color: #FF9900;">DANA YANG TERSALURKAN</h3>
-                        <p class="h2 mb-2" style="color: #FF9900;"><b>*</b></p>
+                        <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->dana_tersalurkan}}</b></p>
                         <div>&nbsp;</div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                         <div class="mb-2"><img src="assets/img/portfolio/logo/donatur.png"
                                 style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h5 mb-2" style="color: #FF9900;">DONATUR</h3>
-                        <p class="h2 mb-2" style="color: #FF9900;"><b>*</b></p>
+                        <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->donatur}}</b></p>
                         <div>&nbsp;</div>
                     </div>
                 </div>
@@ -354,27 +354,27 @@
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Zakat Fitrah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$fitrah}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Infaq</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$infaq}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Sedekah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$sedekah}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Fidyah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$fidyah}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Total</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$fidyah+$sedekah+$infaq+$fitrah}}</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -401,7 +401,7 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($kabar as $k)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
+                                        <div class="card" style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
                                             <img src="{{ asset($k->gambar) }}" class="card-img-top" alt=""
                                                 style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body"
@@ -425,7 +425,7 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($artikel as $a)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
+                                        <div class="card" style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
                                             <img src="{{ asset($a->gambar) }}" class="card-img-top" alt=""
                                                 style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body"
@@ -450,7 +450,7 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($inspirasi as $i)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%;">
+                                        <div class="card" style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
                                             <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius:
                                             15px; height: 250px;">
                                             <div class="card-body"

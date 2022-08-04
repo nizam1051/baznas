@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Artikel;
 use App\Models\Galeri;
+use App\Models\Artikel;
+use App\Models\DataZis;
 use App\Models\Inspirasi;
 use App\Models\KabarZakat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BerandaController extends Controller
 {
@@ -19,7 +21,12 @@ class BerandaController extends Controller
         $distArtikel = Artikel::latest()->first();
         $distInspirasi = Inspirasi::latest()->first();
         $galeri = Galeri::latest()->take(4)->get();
-        return view('index',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri'));
+        $penyalur = DB::table('penyaluran')->first();
+        $fitrah = DataZis::where('kategori', 'fitrah')->sum('price');
+        $infaq = DataZis::where('kategori', 'infaq')->sum('price');
+        $sedekah = DataZis::where('kategori', 'sedekah')->sum('price');
+        $fidyah = DataZis::where('kategori', 'fidyah')->sum('price');
+        return view('index',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah'));
     }
 
     public function legalitas()
