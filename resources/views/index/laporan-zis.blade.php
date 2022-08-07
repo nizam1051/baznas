@@ -18,13 +18,21 @@
                     <div class="section-header">
                         <h1>Admin Page</h1>
                     </div>
-                    <a href="{{ route('add.artikel') }}" class="btn btn-success mb-1"><i class="fa fa-plus" aria-hidden="true"></i> Input Artikel </a>
+                    <div class="form-group col-md-4 col-12 col-sm-12 col-lg-4">
+                        <label for="zis">Pilih Kategori</label>
+                        <select class="form-control" id="zis">
+                            <option value="" selected>Pilih Kategori Zis</option>
+                            @foreach ($category as $c)
+                                <option value="{{$c->id}}">{{$c->display}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="section-body">
                         <div class="row">
                             <div class="col-12 ">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Tabel Artikel</h4>
+                                        <h4>Laporan Data Zis</h4>
                                     </div>
                                     <div class="card-body">
                                         @if (session('success'))
@@ -40,43 +48,28 @@
                                                 <thead class="thead-dark">
                                                     <tr>
                                                         <th scope="col" style="width: 5%">No</th>
-                                                        <th scope="col">Judul</th>
-                                                        <th scope="col" width="">Deskripsi</th>
-                                                        <th scope="col" style="width: 10%">Gambar</th>
-                                                        <th scope="col" style="width: 5%">Status</th>
-                                                        <th scope="col" style="width: 15%">Action</th>
+                                                        <th scope="col">Kategori</th>
+                                                        <th scope="col" width="">Nominal</th>
+                                                        <th scope="col">Date</th>
+                                                        <th scope="col">Action</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    @php
-                                                    $no=1;
-                                                    @endphp
-                                                    @foreach ($artikel as $b)
+                                                <tbody id="resultzis">
+                                                    @foreach ($data as $b)
                                                     <tr>
-                                                        <th scope="row">{{ $no++ }}</th>
-                                                        <td>{{ $b->judul }}</td>
-                                                        <td>{{ $b->deskripsi }}</td>
-                                                        <td><img src="{{ asset($b->gambar) }}" alt=""
-                                                                style="height: 40px; width:70px;">
-                                                        </td>
-                                                        <td style="text-align: center">
-                                                            @if ($b->status == 'ACTIVE')
-                                                            <span class="badge badge-success">Aktif</span>
-                                                            @else
-                                                            <span class="badge badge-danger">Nonaktif</span>
-                                                            @endif
+                                                        <th scope="row">{{ $loop->iteration }}</th>
+                                                        <td>{{ $b->category->display }}</td>
+                                                        <td>{{ $b->price }}</td>
+                                                        <td>
+                                                            {{$b->created_at}}
                                                         </td>
                                                         <td>
 
-                                                            <a href="{{ url('admin/artikel/edit/'.$b->id) }}"
+                                                            <a href="{{ url('admin/data-zis/edit/'.$b->id) }}"
                                                                 class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-edit fa-2x"></i>
                                                             </a>
-                                                            <a  href="{{ url('admin/artikel/status/'.$b->id) }}"
-                                                                class="btn btn-transparent text-center text-dark" >
-                                                                <i class="fas fa-power-off"></i>
-                                                            </a>
-                                                            <a  href="{{ url('admin/artikel/delete/'.$b->id) }}"
+                                                            <a  href="{{ url('admin/data-zis/delete/'.$b->id) }}"
                                                                 class="btn btn-transparent text-center text-dark" >
                                                                 <i class="fas fa-trash-alt fa-2x"></i>
                                                             </a>
@@ -85,7 +78,6 @@
                                                     @endforeach
                                                 </tbody>
                                             </table>
-                                            {{ $artikel->links() }}
                                         </div>
 
                                     </div>
@@ -101,12 +93,26 @@
             </footer>
         </div>
     </div>
-
     @include('admin.stisla.script')
+    <script>
+        $(document).ready(function () {
+            $(document).on('change', '#zis', function () {
+                var data = $('#zis').val();
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "{{ url('/data-zis-ajax') }}",
+                    method: 'POST',
+                    data: {
+                        id: data,
+                    },
+                    success: function (response) {
+                        $('#resultzis').html(response);
+                    }
+                })
+            });
+        });
+    </script>
 </body>
-<script type="text/javascript">
-    $(document).ready( function () {
-    $('#myTable').DataTable();
-} );
-</script>
 </html>

@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('laporan_zis', function (Blueprint $table) {
+        Schema::create('category_data', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('kategori')->constrained('category_data')->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('price');
+            $table->string('name');
+            $table->string('display');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('laporan_zis');
+        Schema::dropIfExists('category_data');
     }
 };

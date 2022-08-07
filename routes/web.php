@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\AdmKabarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KabarController;
 use App\Http\Controllers\KalkulatorController;
@@ -70,6 +71,7 @@ Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'storeLogin']);
 Route::middleware('auth')->group(function () {
     Route::middleware('is.admin')->group(function () {
+        Route::post('data-zis-ajax/', [AjaxController::class, 'getDataZisCategory']);
         Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
             Route::get('logout', [AuthController::class, 'logout'])->name('logout');
             Route::get('/', [HomeController::class, 'index']);
@@ -111,6 +113,14 @@ Route::middleware('auth')->group(function () {
             Route::get('galeri/edit/{galeriID}', [AdmKabarController::class, 'editGaleri']);
             Route::post('galeri/update/{galeriID}', [AdmKabarController::class, 'updateGaleri']);
             Route::get('galeri/delete/{galeriID}', [AdmKabarController::class, 'destroyGaleri']);
+
+            Route::get('dana-tersalurkan/', [BerandaController::class, 'editDanaTersalurkan']);
+            Route::post('dana-tersalurkan/', [BerandaController::class, 'storeDanaTersalurkan']);
+
+            Route::get('laporan-zis/', [BerandaController::class, 'indexLaporanZis']);
+            Route::get('data-zis/edit/{id}', [BerandaController::class, 'editLaporanZis']);
+            Route::post('data-zis/edit/{id}', [BerandaController::class, 'updateLaporanZis']);
+            Route::get('data-zis/delete/{id}', [BerandaController::class, 'deleteLaporanZis']);
         });
     });
 });
