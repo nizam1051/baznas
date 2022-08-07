@@ -130,7 +130,6 @@ class AdmKabarController extends Controller
                 'deskripsi' => 'required',
                 'gambar' => 'required|mimes:jpg,jpeg,png|max:10240',
             ]
-
         );
 
         $gambar = $request->file('gambar');
