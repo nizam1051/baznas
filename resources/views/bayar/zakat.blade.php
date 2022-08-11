@@ -41,9 +41,11 @@
                             <label for="select-zakat" class="form-label">Jenis Zakat</label>
                             <select class="form-select form-control text-muted" aria-label="Default select example" id="select-zakat">
                                 <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="1">Fitrah</option>
+                                <option value="2">Maal</option>
+                                <option value="3">Fidyah</option>
+                                <option value="3">Qurban</option>
+                                <option value="3">Infaq</option>
                             </select>
                         </div>
                         <div class="form-group mt-4">

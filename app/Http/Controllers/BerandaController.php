@@ -23,7 +23,7 @@ class BerandaController extends Controller
         $distArtikel = Artikel::latest()->first();
         $distInspirasi = Inspirasi::latest()->first();
         $galeri = Galeri::latest()->take(4)->get();
-        $penyalur = DB::table('penyaluran')->first();
+        $penyalur = DB::table('penyaluran')->latest('id')->first();
         $fitrah = DataZis::where('kategori', 1)->sum('price');
         $infaq = DataZis::where('kategori', 2)->sum('price');
         $sedekah = DataZis::where('kategori', 3)->sum('price');
@@ -144,6 +144,11 @@ class BerandaController extends Controller
     public function programSubsidi()
     {
         return view('program.program-subsidi');
+    }
+
+    public function layananPembayaran()
+    {
+        return view('layanan.layanan-pembayaran');
     }
 
     // public function indexFitrah()

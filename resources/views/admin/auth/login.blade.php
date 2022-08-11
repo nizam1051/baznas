@@ -33,7 +33,7 @@
             <div class="d-flex flex-wrap align-items-stretch">
                 <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
                     <div class="p-4 m-3">
-                        <img src="{{ asset('assets/images/LOGO SBR.png') }}" alt="logo" width="80"
+                        <img src="{{ asset('assets/img/baznas.png') }}" alt="logo" width="200"
                             class="shadow-light rounded-circle mb-5 mt-2">
                         <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Login Panel Baznas</span>
                         </h4>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-12 order-lg-2 order-1 min-vh-100 background-walk-y position-relative overlay-gradient-bottom"
-                    data-background="{{ asset('assets/images/sbrsolo.jpg') }}">
+                    data-background="{{ asset('assets/img/korosel4.png') }}">
                     {{-- <div class="absolute-bottom-left index-2">
                         <div class="text-light p-5 pb-2">
                             <div class="mb-5 pb-3">

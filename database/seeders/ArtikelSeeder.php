@@ -17,22 +17,25 @@ class ArtikelSeeder extends Seeder
     {
         collect([
             [
-                'judul' => 'Gak ngono a cel hehehehehe?',
-                'deskripsi' => 'Gaopo cel, ayu iku pilihan',
-                'gambar' => 'uploads/artikel/mikel.jpeg',
+                'judul' => 'Ini adalah judul tapi masih pake kata dummy',
+                'deskripsi' => 'Ini adalah deskripsi tapi masih pake kata dummy dan ini nanti bisa di edit oleh administrator di halaman admin',
+                'gambar' => 'assets/img/infaq.jpg',
             ],
-            [
-                'judul' => 'Gaopo dik, ayu iku pilihan',
-                'deskripsi' => 'Gaopo dik, ayu iku pilihan',
-                'gambar' => 'uploads/artikel/diki.png',
-            ],
-            [
-                'judul' => 'Koe kok iso geh iku pie tan',
-                'deskripsi' => 'Gaopo tan, ayu iku pilihan',
-                'gambar' => 'uploads/artikel/nathan.jpeg',
-            ],
+            // [
+            //     'judul' => 'Gaopo dik, ayu iku pilihan',
+            //     'deskripsi' => 'Gaopo dik, ayu iku pilihan',
+            //     'gambar' => 'uploads/artikel/diki.png',
+            // ],
+            // [
+            //     'judul' => 'Koe kok iso geh iku pie tan',
+            //     'deskripsi' => 'Gaopo tan, ayu iku pilihan',
+            //     'gambar' => 'uploads/artikel/nathan.jpeg',
+            // ],
         ])->each(function($artikel){
-            Artikel::create($artikel);
+            for($i=0 ; $i<3 ; $i++)
+            {
+                Artikel::create($artikel);
+            }
         });
     }
 }

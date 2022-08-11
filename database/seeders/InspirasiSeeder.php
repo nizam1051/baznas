@@ -17,22 +17,15 @@ class InspirasiSeeder extends Seeder
     {
         collect([
             [
-                'judul' => 'Koe kok iso geh iku pie tan',
-                'deskripsi' => 'Gaopo tan, ayu iku pilihan',
-                'gambar' => 'uploads/inspirasi/nathan.jpeg',
-            ],
-            [
-                'judul' => 'Gak ngono a cel hehehehehe?',
-                'deskripsi' => 'Gaopo cel, ayu iku pilihan',
-                'gambar' => 'uploads/inspirasi/mikel.jpeg',
-            ],
-            [
-                'judul' => 'Gaopo dik, ayu iku pilihan',
-                'deskripsi' => 'Gaopo dik, ayu iku pilihan',
-                'gambar' => 'uploads/inspirasi/diki.png',
+                'judul' => 'Ini adalah judul tapi masih pake kata dummy',
+                'deskripsi' => 'Ini adalah deskripsi tapi masih pake kata dummy dan ini nanti bisa di edit oleh administrator di halaman admin',
+                'gambar' => 'assets/img/infaq.jpg',
             ],
         ])->each(function($inspirasi){
-            Inspirasi::create($inspirasi);
+            for($i=0 ; $i<3 ; $i++)
+            {
+                Inspirasi::create($inspirasi);
+            }
         });
     }
 }
