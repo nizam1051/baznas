@@ -17,22 +17,25 @@ class KabarSeeder extends Seeder
     {
         collect([
             [
-                'judul' => 'Gaopo dik, ayu iku pilihan',
-                'deskripsi' => 'Gaopo dik, ayu iku pilihan',
-                'gambar' => 'uploads/kabarzakat/diki.png',
+                'judul' => 'Ini adalah judul tapi masih pake kata dummy',
+                'deskripsi' => 'Ini adalah deskripsi tapi masih pake kata dummy dan ini nanti bisa di edit oleh administrator di halaman admin',
+                'gambar' => 'assets/img/infaq.jpg',
             ],
-            [
-                'judul' => 'Koe kok iso geh iku pie tan',
-                'deskripsi' => 'Gaopo tan, ayu iku pilihan',
-                'gambar' => 'uploads/kabarzakat/nathan.jpeg',
-            ],
-            [
-                'judul' => 'Gak ngono a cel hehehehehe?',
-                'deskripsi' => 'Gaopo cel, ayu iku pilihan',
-                'gambar' => 'uploads/kabarzakat/mikel.jpeg',
-            ],
+            // [
+            //     'judul' => 'Koe kok iso geh iku pie tan',
+            //     'deskripsi' => 'Gaopo tan, ayu iku pilihan',
+            //     'gambar' => 'uploads/kabarzakat/nathan.jpeg',
+            // ],
+            // [
+            //     'judul' => 'Gak ngono a cel hehehehehe?',
+            //     'deskripsi' => 'Gaopo cel, ayu iku pilihan',
+            //     'gambar' => 'uploads/kabarzakat/mikel.jpeg',
+            // ],
         ])->each(function($kabar){
-            KabarZakat::create($kabar);
+            for($i=0 ; $i<3 ; $i++)
+            {
+                KabarZakat::create($kabar);
+            }
         });
     }
 }

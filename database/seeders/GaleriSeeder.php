@@ -17,23 +17,26 @@ class GaleriSeeder extends Seeder
     {
         collect([
             [
-                'judul' => 'Gak ngono a cel hehehehehe?',
-                'gambar' => 'uploads/galeri/mikel.jpeg',
+                'judul' => 'Ini adalah judul tapi masih pake kata dummy',
+                'gambar' => 'assets/img/infaq.jpg',
             ],
-            [
-                'judul' => 'Gaopo dik, ayu iku pilihan',
-                'gambar' => 'uploads/galeri/diki.png',
-            ],
-            [
-                'judul' => 'Koe kok iso geh iku pie tan',
-                'gambar' => 'uploads/galeri/nathan.jpeg',
-            ],
-            [
-                'judul' => 'Gah gah gah',
-                'gambar' => 'uploads/galeri/ridwan.jpg',
-            ],
+            // [
+            //     'judul' => 'Gaopo dik, ayu iku pilihan',
+            //     'gambar' => 'uploads/galeri/diki.png',
+            // ],
+            // [
+            //     'judul' => 'Koe kok iso geh iku pie tan',
+            //     'gambar' => 'uploads/galeri/nathan.jpeg',
+            // ],
+            // [
+            //     'judul' => 'Gah gah gah',
+            //     'gambar' => 'uploads/galeri/ridwan.jpg',
+            // ],
         ])->each(function($galeri){
-            Galeri::create($galeri);
+            for($i=0 ; $i<4 ; $i++)
+            {
+                Galeri::create($galeri);
+            }
         });
     }
 }
