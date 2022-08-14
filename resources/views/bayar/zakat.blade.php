@@ -76,8 +76,8 @@
                         </div>
                         <div class="form-group mt-4">
                             <label for="nominal-zakat" class="form-label">Nominal Zakat</label>
-                            <input type="number" min="1" placeholder="Masukan nominal min Rp 10.000"
-                                class="form-control text-muted" id="nominal-zakat" name="nominal">
+                            <input type="text" min="1" placeholder="Masukan nominal min Rp 10.000"
+                                class="form-control text-muted" id="nominalzakat" name="nominal">
                         </div>
                         <div class="form-group mt-4">
                             <label for="nominal-zakat" class="form-label">Bukti Pembayaran</label>
@@ -124,7 +124,7 @@
                                     “Saya berniat sengaja mengeluarkan zakat fardhu karena Allah Ta’ala”
                                 </div>
                                 {{-- <div class="btn mt-5 p-3 text-white" style="border-radius: 10px; background-color: #FF9900;" data-bs-toggle="modal" data-bs-target="#exampleModal">LANJUTKAN PEMBAYARAN</div> --}}
-                                <button type="submit" class="btn btn-success">Bayar Zakat</button>
+                                <button type="button" id="testzakat" class="btn btn-success">Bayar Zakat</button>
                             </center>
                         </div>
                     </form>
@@ -372,3 +372,27 @@
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).on('keyup', '#nominalzakat', function () {
+        rupiah = $('#nominalzakat').val();
+        $('#nominalzakat').val(formatRupiah(rupiah, 'Rp. '));
+    });
+
+    function formatRupiah(angka, prefix) {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split = number_string.split(','),
+            sisa = split[0].length % 3,
+            rupiah = split[0].substr(0, sisa),
+            ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+    }
+</script>

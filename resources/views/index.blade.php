@@ -68,37 +68,6 @@
                             </div>
                         </div>
                         @endforeach
-                        {{-- <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
-                            <div class="card" style="border-radius: 15px;">
-                                <img src="{{ asset($distArtikel->gambar) }}" class="card-img-top" alt=""
-                                    style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
-                                <div class="card-body"
-                                    style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 20vh;">
-                                    <a href="{{url('article-detail/'.$distArtikel->id)}}" style="color: #2E3192; opacity: 0.7;">
-                                        <h5 class="font-highlight">{{ $distArtikel->judul }}</h5>
-                                    </a>
-                                    <div class="card-text carrousel-preview">
-                                        {!! \Illuminate\Support\Str::words($distArtikel->deskripsi, 10, $end='...') !!}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
-                            <div class="card" style="border-radius: 15px;">
-                                <img src="{{ asset($distInspirasi->gambar) }}" class="card-img-top" alt=""
-                                    style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
-                                <div class="card-body"
-                                    style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 20vh;">
-                                    <a href="{{url('inspirasi-detail/'.$distInspirasi->id)}}" style="color: #2E3192; opacity: 0.7;">
-                                        <h5 class="font-highlight">{{ $distInspirasi->judul }}</h5>
-                                    </a>
-                                    <div class="card-text carrousel-preview">
-                                        {!! \Illuminate\Support\Str::words($distInspirasi->deskripsi, 10, $end='...')
-                                        !!}
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                         <div>&nbsp;</div>
                         <br>
                         <a href="#" style="color: black; margin-top: 3%;"><b>Lihat Lebih Banyak</b></a>
@@ -180,7 +149,7 @@
                                     <div class="col-auto">
                                         <div class="input-group">
                                             <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="autoSizingInputGroup">
+                                            <input type="text" class="form-control" id="priceFitrah">
                                         </div>
                                     </div>
                                     <p class="card-text" style="color: white; text-align: left;">Pendapatan lain bulanan
@@ -356,27 +325,32 @@
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Zakat Fitrah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($fitrah)}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                            {{number_format($fitrah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Infaq</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($infaq)}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                            {{number_format($infaq)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Sedekah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($sedekah)}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                            {{number_format($sedekah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Fidyah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($fidyah)}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                            {{number_format($fidyah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Total</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($fidyah+$sedekah+$infaq+$fitrah)}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                            {{number_format($fidyah+$sedekah+$infaq+$fitrah)}}</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -403,7 +377,8 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($kabar as $k)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
+                                        <div class="card"
+                                            style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
                                             <img src="{{ asset($k->gambar) }}" class="card-img-top" alt=""
                                                 style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body"
@@ -427,7 +402,8 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($artikel as $a)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
+                                        <div class="card"
+                                            style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
                                             <img src="{{ asset($a->gambar) }}" class="card-img-top" alt=""
                                                 style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body"
@@ -452,7 +428,8 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($inspirasi as $i)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card" style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
+                                        <div class="card"
+                                            style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
                                             <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius:
                                             15px; height: 250px;">
                                             <div class="card-body"
@@ -501,22 +478,6 @@
                             </center>
                         </div>
                         <div class="card-body" style="border: none; background-color: transparent;">
-                            {{-- <p class="text-dark" style="font-size:18px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                            text-align: center; position: relative; position: relative;
-                            top: 45%;
-                            transform: translateY(-50%); margin-left: 3%; margin-right: 3%; margin-bottom: 10%;">
-                                Zakat Anda kami salurkan kepada yang jauh lebih membutuhkan dengan berbagai macam
-                                program kami <br>
-                                yang telah disiapkan oleh BAZNAS BAZIS SURAKARTA
-                            </p>
-                            <div class="input-group mt-5 mb-3" style="padding-left: 20%; padding-right: 20%;">
-                                <input type="text" style="height: 58px;" class="form-control border-0 bg-white"
-                                    placeholder="Rp. Masukan Nominal" aria-label="Recipient's username"
-                                    aria-describedby="basic-addon2">
-                                <span class="input-group-text p-0" id="basic-addon2">
-                                    <button class="btn btn-primary" style="width: 100%; height: 100%;">Zakat</button>
-                                </span>
-                            </div> --}}
                             @if(sizeof($bayar) > 0)
                             <div class="table-responsive mt-5">
                                 <table class="table table-bordered table-md" id="myTable">

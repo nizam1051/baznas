@@ -291,7 +291,7 @@
     // Zakat Fitrah
     $(document).ready(function () {
         $(document).on('click', '#hitungFitrah', function () {
-            var price = $('#priceFitrah').val();
+            var price = $('#priceFitrah').val().replace(/[^0-9]/g,'');
             var weight = 2.5;
             $.ajax({
                 headers: {
@@ -313,9 +313,9 @@
     // Zakat Maal
     $(document).ready(function () {
         $(document).on('click', '#hitungMaal', function () {
-            var gajiPokok = $('#gajiPokok').val();
-            var tunjangan = $('#tunjangan').val();
-            var hutang = $('#hutang').val();
+            var gajiPokok = $('#gajiPokok').val().replace(/[^0-9]/g,'');
+            var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g,'');
+            var hutang = $('#hutang').val().replace(/[^0-9]/g,'');
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -348,8 +348,8 @@
     // Zakat Fidyah
     $(document).ready(function () {
         $(document).on('click', '#hitungFidyah', function () {
-            var day = $('#day').val();
-            var soul = $('#soul').val();
+            var day = $('#day').val()
+            var soul = $('#soul').val()
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -410,8 +410,8 @@
     // Infaq
     $(document).ready(function () {
         $(document).on('click', '#hitungInfaq', function () {
-            var gaji = $('#gaji').val();
-            var tunjangan = $('#tunjangan').val();
+            var gaji = $('#gaji').val().replace(/[^0-9]/g,'');
+            var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g,'');
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -443,24 +443,68 @@
 @if (!empty($fitrah) && !empty($infaq) && !empty($sedekah) && !empty($fidyah))
 <script>
     var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
-    var yValues = [{!! $fitrah !!}, {!! $infaq !!}, {!! $sedekah !!}, {!! $fidyah !!}];
+    var yValues = [{!!$fitrah!!}, {!!$infaq!!}, {!!$sedekah!!}, {!!$fidyah!!}];
     var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
     new Chart("myChart", {
-    type: "pie",
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-    },
-    options: {
-        title: {
-        display: true,
-        text: "Laporan Data"
+        type: "pie",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Laporan Data"
+            }
         }
+    })
+
+</script>
+<script type="text/javascript">
+    // Fitrah
+    $(document).on('keyup', '#priceFitrah', function () {
+        rupiah = $('#priceFitrah').val();
+        $('#priceFitrah').val(formatRupiah(rupiah, 'Rp. '));
+    });
+    // Maal
+    $(document).on('keyup', '#gajiPokok', function () {
+        rupiah = $('#gajiPokok').val();
+        $('#gajiPokok').val(formatRupiah(rupiah, 'Rp. '));
+    });
+    $(document).on('keyup', '#tunjangan', function () {
+        rupiah = $('#tunjangan').val();
+        $('#tunjangan').val(formatRupiah(rupiah, 'Rp. '));
+    });
+    $(document).on('keyup', '#hutang', function () {
+        rupiah = $('#hutang').val();
+        $('#hutang').val(formatRupiah(rupiah, 'Rp. '));
+    });
+    // Infaq
+    $(document).on('keyup', '#gaji', function () {
+        rupiah = $('#gaji').val();
+        $('#gaji').val(formatRupiah(rupiah, 'Rp. '));
+    });
+
+    function formatRupiah(angka, prefix) {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split = number_string.split(','),
+            sisa = split[0].length % 3,
+            rupiah = split[0].substr(0, sisa),
+            ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+        // tambahkan titik jika yang di input sudah menjadi angka ribuan
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
     }
-})
+
 </script>
 @endif
 

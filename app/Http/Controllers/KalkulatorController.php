@@ -17,16 +17,7 @@ class KalkulatorController extends Controller
         }else{
             $response = '<b>Ooops!</b>pilih jenis zakat';
         }
-        return $response;
-        // $validator = Validator::make(request()->all(),[
-        //     'harga' => 'required|numeric|min:1',
-        // ]);
-        // if($validator->fails())
-        // {
-        //     return redirect('index-fitrah')->withInput()->withErrors($validator);
-        // }
-        // $total = request('harga') * 2.5;
-        // return redirect('index-fitrah')->with('total',$total);
+        return number_format($response,2,',','.');
     }
 
     public function calcMaal(Request $request)
@@ -45,7 +36,7 @@ class KalkulatorController extends Controller
         $hutang = $request->get('hutang');
         $harga = $gaji + $tunjangan - $hutang;
         $total = $harga * 2.5 / 100;
-        return $total;
+        return number_format($total,2,',','.');;
     }
 
     public function calcFidyah(Request $request)
@@ -61,7 +52,7 @@ class KalkulatorController extends Controller
         $day = $request->get('jiwa');
         $soul = $request->get('hari');
         $total = $day * $soul * 50000;
-        return $total;
+        return number_format($total,2,',','.');
     }
 
     public function calcQurban(Request $request)
@@ -88,7 +79,7 @@ class KalkulatorController extends Controller
             default :
                 $total = 0;
         }
-        return $total;
+        return number_format($total,2,',','.');
     }
 
     public function calcInfaq(Request $request)
@@ -105,6 +96,6 @@ class KalkulatorController extends Controller
         $tunjangan = $request->get('tunjangan');
         $harga = $gaji + $tunjangan;
         $total = $harga * 2.5 / 100;
-        return $total;
+        return number_format($total,2,',','.');
     }
 }
