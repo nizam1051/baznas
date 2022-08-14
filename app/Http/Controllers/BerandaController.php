@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Galeri;
 use App\Models\Artikel;
-use App\Models\CategoryData;
 use App\Models\DataZis;
+use App\Models\Rekening;
 use App\Models\Inspirasi;
 use App\Models\KabarZakat;
-use Carbon\Carbon;
+use App\Models\CategoryData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -28,7 +29,7 @@ class BerandaController extends Controller
         $infaq = DataZis::where('kategori', 2)->sum('price');
         $sedekah = DataZis::where('kategori', 3)->sum('price');
         $fidyah = DataZis::where('kategori', 4)->sum('price');
-        return view('index',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah'));
+        return view('index', compact('kabar', 'artikel', 'inspirasi', 'distArtikel', 'distKabar', 'distInspirasi', 'galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah'));
     }
 
     public function legalitas()
@@ -93,22 +94,26 @@ class BerandaController extends Controller
 
     public function rekeningZakat()
     {
-        return view('layanan.rekening-zakat');
+        $rek = Rekening::all();
+        return view('layanan.rekening-zakat', compact('rek'));
     }
 
     public function rekeningInfak()
     {
-        return view('layanan.rekening-infak');
+        $rek = Rekening::all();
+        return view('layanan.rekening-infak', compact('rek'));
     }
 
     public function rekeningSedekah()
     {
-        return view('layanan.rekening-sedekah');
+        $rek = Rekening::all();
+        return view('layanan.rekening-sedekah', compact('rek'));
     }
 
     public function rekeningFidyah()
     {
-        return view('layanan.rekening-fidyah');
+        $rek = Rekening::all();
+        return view('layanan.rekening-fidyah', compact('rek'));
     }
 
     public function rekeningPembayaran()
@@ -211,12 +216,14 @@ class BerandaController extends Controller
     //     return view('index-infaq',compact('kabar','artikel','inspirasi','distArtikel','distKabar','distInspirasi','galeri'));
     // }
 
-    public function editDanaTersalurkan(){
+    public function editDanaTersalurkan()
+    {
         $data = DB::table('penyaluran')->latest('updated_at')->first();
-        return view('index.data-penyaluran',compact('data'));
+        return view('index.data-penyaluran', compact('data'));
     }
 
-    public function storeDanaTersalurkan(Request $request){
+    public function storeDanaTersalurkan(Request $request)
+    {
         $validated = $request->validate(
             [
                 'penerima' => 'required|min:0|numeric',
@@ -226,7 +233,7 @@ class BerandaController extends Controller
             ]
         );
 
-        if(!$validated){
+        if (!$validated) {
             return redirect()->back()->withErrors($validated)->withInput();
         }
 
@@ -243,19 +250,22 @@ class BerandaController extends Controller
         return redirect()->back()->with('success', 'Penyaluran Sukses Di Update');
     }
 
-    public function indexLaporanZis(){
+    public function indexLaporanZis()
+    {
         $data = DataZis::all();
         $category = CategoryData::all();
-        return view('index.laporan-zis',compact('data', 'category'));
+        return view('index.laporan-zis', compact('data', 'category'));
     }
 
-    public function editLaporanZis($id){
+    public function editLaporanZis($id)
+    {
         $data = DataZis::find($id);
         $category = CategoryData::all();
-        return view('index.edit-laporan-zis',compact('data', 'category'));
+        return view('index.edit-laporan-zis', compact('data', 'category'));
     }
 
-    public function updateLaporanZis($id, Request $request){
+    public function updateLaporanZis($id, Request $request)
+    {
         $validated = $request->validate(
             [
                 'kategori' => 'required|numeric',
@@ -263,7 +273,7 @@ class BerandaController extends Controller
             ]
         );
 
-        if(!$validated){
+        if (!$validated) {
             return redirect()->back()->withErrors($validated)->withInput();
         }
 
@@ -275,7 +285,8 @@ class BerandaController extends Controller
         return redirect()->back()->with('success', 'Laporan Zis Sukses Di Update');
     }
 
-    public function deleteLaporanZis($id){
+    public function deleteLaporanZis($id)
+    {
         DataZis::find($id)->delete();
         return redirect()->back()->with('success', 'Laporan Zis Sukses Di Hapus');
     }

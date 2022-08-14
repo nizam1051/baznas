@@ -17,8 +17,20 @@ class GaleriSeeder extends Seeder
     {
         collect([
             [
-                'judul' => 'Ini adalah judul tapi masih pake kata dummy',
+                'judul' => 'Infaq',
                 'gambar' => 'assets/img/infaq.jpg',
+            ],
+            [
+                'judul' => 'Zakat',
+                'gambar' => 'assets/img/zakat.jpg',
+            ],
+            [
+                'judul' => 'Baznas',
+                'gambar' => 'assets/img/baznas.jpeg',
+            ],
+            [
+                'judul' => 'Gibran',
+                'gambar' => 'assets/img/gibran.jpg',
             ],
             // [
             //     'judul' => 'Gaopo dik, ayu iku pilihan',
@@ -32,11 +44,11 @@ class GaleriSeeder extends Seeder
             //     'judul' => 'Gah gah gah',
             //     'gambar' => 'uploads/galeri/ridwan.jpg',
             // ],
-        ])->each(function($galeri){
-            for($i=0 ; $i<4 ; $i++)
-            {
-                Galeri::create($galeri);
-            }
+        ])->each(function ($galeri) {
+            // for ($i = 0; $i < 4; $i++) {
+            //     Galeri::create($galeri);
+            // }
+            Galeri::create($galeri);
         });
     }
 }

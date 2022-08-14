@@ -48,10 +48,7 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-holding-usd"></i> <span>Layanan</a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a class="nav-link" href="{{ url('admin/inspirasi') }}"> <span>Rekening</span></a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{{ url('admin/inspirasi') }}"> <span>Layanan Pembayaran</span></a>
+                        <a class="nav-link" href="{{ url('admin/layanan/rekening') }}"> <span>Rekening</span></a>
                     </li>
                 </ul>
             </li>

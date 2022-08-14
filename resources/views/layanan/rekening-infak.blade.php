@@ -64,22 +64,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($rek as $key => $r)
                             <tr>
-                                <th scope="row">1</th>
-                                <td><img src="assets/img/bj.png" width="135px" height="45px" alt=""></td>
-                                <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly value="5023036655"></td>
+                                <th scope="row">{{ $key+1 }}</th>
+                                <td><img src="{{ $r->image }}" width="135px" height="45px" alt=""></td>
+                                <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly value="{{ $r->no_rek }}"></td>
                                 <td>
                                     <center><a href="" onclick="handleClick()"><i class="fas fa-copy"></i></a></center>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td><img src="assets/img/bsi.png" width="135px" height="45px" alt=""></td>
-                                <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly value="158158587"></td>
-                                <td>
-                                    <center><a href="" onclick="handleClick()"><i class="fas fa-copy"></i></a></center>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
