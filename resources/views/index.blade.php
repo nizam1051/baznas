@@ -50,6 +50,7 @@
                     <h2 class="text" style="color: #01502D;">PENDISTRIBUSIAN</h2>
                     <hr class="divider divider-light" />
                     <div class="row">
+                        @foreach ($kabar as $distKabar)
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
                             <div class="card" style="border-radius: 15px;">
                                 <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt=""
@@ -66,7 +67,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
+                        @endforeach
+                        {{-- <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
                             <div class="card" style="border-radius: 15px;">
                                 <img src="{{ asset($distArtikel->gambar) }}" class="card-img-top" alt=""
                                     style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
@@ -96,7 +98,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div>&nbsp;</div>
                         <br>
                         <a href="#" style="color: black; margin-top: 3%;"><b>Lihat Lebih Banyak</b></a>
