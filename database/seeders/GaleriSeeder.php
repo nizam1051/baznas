@@ -26,7 +26,7 @@ class GaleriSeeder extends Seeder
             ],
             [
                 'judul' => 'Baznas',
-                'gambar' => 'assets/img/baznas.jpeg',
+                'gambar' => 'assets/img/baznas.jpg',
             ],
             [
                 'judul' => 'Gibran',

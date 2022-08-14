@@ -10,8 +10,10 @@ use App\Models\Rekening;
 use App\Models\Inspirasi;
 use App\Models\KabarZakat;
 use App\Models\CategoryData;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class BerandaController extends Controller
 {
@@ -29,7 +31,8 @@ class BerandaController extends Controller
         $infaq = DataZis::where('kategori', 2)->sum('price');
         $sedekah = DataZis::where('kategori', 3)->sum('price');
         $fidyah = DataZis::where('kategori', 4)->sum('price');
-        return view('index', compact('kabar', 'artikel', 'inspirasi', 'distArtikel', 'distKabar', 'distInspirasi', 'galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah'));
+        $bayar = Transaction::latest()->take(5)->get();
+        return view('index', compact('bayar', 'kabar', 'artikel', 'inspirasi', 'distArtikel', 'distKabar', 'distInspirasi', 'galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah'));
     }
 
     public function legalitas()
@@ -289,5 +292,62 @@ class BerandaController extends Controller
     {
         DataZis::find($id)->delete();
         return redirect()->back()->with('success', 'Laporan Zis Sukses Di Hapus');
+    }
+
+    public function terimaBayarZakat()
+    {
+        // if (empty(request('status'))) {
+        // $validator = Validator::make(request()->all(), [
+        //     'jenis' => 'required',
+        //     'nominal' => 'required|numeric|min:1',
+        //     'image' => 'nullable|max:10240|mimes:png,jpg,jpeg,svg,webp',
+        // ]);
+        // if ($validator->fails()) {
+        //     return redirect()->back();
+        // }
+        // $image = request()->file('image');
+        // // return $image;
+        // $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+        // // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
+
+        // $image->move(public_path('uploads/potensi'), $name_gen);
+        // $last_img = 'uploads/rekening/' . $name_gen;
+        // Transaction::create([
+        //     'jenis' => request('jenis'),
+        //     'nominal' => request('nominal'),
+        //     'image' => $last_img,
+        //     'name' => 'Hamba Allah',
+        //     'phone' => '12345678910',
+        //     'email' => 'hamba@mail.com',
+        // ]);
+        // } elseif (!empty(request('status'))) {
+        $validator = Validator::make(request()->all(), [
+            'jenis' => 'required',
+            'nominal' => 'required|numeric|min:1',
+            'image' => 'nullable|max:10240|mimes:png,jpg,jpeg,svg,webp',
+            'name' => 'required|string|max:255',
+            'phone' => 'required',
+            'email' => 'required|email',
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back();
+        }
+        $image = request()->file('image');
+        // return $image;
+        $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+        // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
+
+        $image->move(public_path('uploads/potensi'), $name_gen);
+        $last_img = 'uploads/rekening/' . $name_gen;
+        Transaction::create([
+            'jenis' => request('jenis'),
+            'nominal' => request('nominal'),
+            'image' => $last_img,
+            'name' => request('name'),
+            'phone' => request('phone'),
+            'email' => request('email'),
+        ]);
+        // }
+        return redirect()->back();
     }
 }

@@ -33,8 +33,8 @@ class LayananController extends Controller
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
         // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
 
-        $image->move(public_path('uploads/potensi'), $name_gen);
-        $last_img = 'uploads/potensi/' . $name_gen;
+        $image->move(public_path('uploads/rekening'), $name_gen);
+        $last_img = 'uploads/rekening/' . $name_gen;
         Rekening::create([
             'image' => $last_img,
             'no_rek' => request('no_rek')
@@ -70,8 +70,8 @@ class LayananController extends Controller
             $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
 
-            $image->move(public_path('uploads/potensi'), $name_gen);
-            $last_img = 'uploads/potensi/' . $name_gen;
+            $image->move(public_path('uploads/rekening'), $name_gen);
+            $last_img = 'uploads/rekening/' . $name_gen;
             $rek->update([
                 'image' => $last_img,
                 'no_rek' => request('no_rek')

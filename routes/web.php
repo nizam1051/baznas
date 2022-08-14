@@ -66,6 +66,7 @@ Route::get('artikel', [KabarController::class, 'Artikel']);
 Route::get('article-detail/{id}', [KabarController::class, 'detailArtikel']);
 Route::get('inspirasi', [KabarController::class, 'Inspirasi']);
 Route::get('inspirasi-detail/{id}', [KabarController::class, 'detailInspirasi']);
+Route::post('/bayar-zakat', [BerandaController::class, 'terimaBayarZakat']);
 
 // Backend
 Route::get('login', [AuthController::class, 'login'])->name('login');
