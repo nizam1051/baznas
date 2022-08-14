@@ -354,27 +354,27 @@
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Zakat Fitrah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$fitrah}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($fitrah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Infaq</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$infaq}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($infaq)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Sedekah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$sedekah}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($sedekah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Fidyah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$fidyah}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($fidyah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Total</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{$fidyah+$sedekah+$infaq+$fitrah}}</span>
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp. {{number_format($fidyah+$sedekah+$infaq+$fitrah)}}</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -495,11 +495,11 @@
                             style="width: 310px; height: 80px; position: absolute;
                         background-color: #2E3192; left:0;right:0;margin-left: auto;margin-right: auto; transform: translateY(-50%);">
                             <center>
-                                <h3 class="text-white mt-4"><b>BAYAR ZAKAT</b></h3>
+                                <h5 class="text-white mt-4"><b>Pembayar Zakat Terbaru</b></h5>
                             </center>
                         </div>
                         <div class="card-body" style="border: none; background-color: transparent;">
-                            <p class="text-dark" style="font-size:18px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            {{-- <p class="text-dark" style="font-size:18px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                             text-align: center; position: relative; position: relative;
                             top: 45%;
                             transform: translateY(-50%); margin-left: 3%; margin-right: 3%; margin-bottom: 10%;">
@@ -514,7 +514,37 @@
                                 <span class="input-group-text p-0" id="basic-addon2">
                                     <button class="btn btn-primary" style="width: 100%; height: 100%;">Zakat</button>
                                 </span>
+                            </div> --}}
+                            @if(sizeof($bayar) > 0)
+                            <div class="table-responsive mt-5">
+                                <table class="table table-bordered table-md" id="myTable">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Jenis Zakat</th>
+                                            <th scope="col">Nominal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($bayar as $key => $g)
+                                        <tr>
+                                            <th scope="row">{{ $key+1 }}</th>
+                                            <td>{{ $g->name }}</td>
+                                            <td>{{ $g->jenis }}</td>
+                                            <td>
+                                                {{ $g->nominal }}
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
+                            @else
+                            <center>
+                                <h3 class="mt-4 pt-4">Belum ada yang membayar zakat</h3>
+                            </center>
+                            @endif
                         </div>
                     </div>
                 </div>

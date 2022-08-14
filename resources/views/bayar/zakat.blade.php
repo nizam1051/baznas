@@ -36,27 +36,25 @@
                         </p>
                         <hr id="hr-form">
                     </div>
-                    <form action="">
+                    <form action="{{ url('bayar-zakat') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="form-group mt-4">
                             <label for="select-zakat" class="form-label">Jenis Zakat</label>
-                            <select class="form-select form-control text-muted" aria-label="Default select example" id="select-zakat">
-                                <option selected>Open this select menu</option>
-                                <option value="1">Fitrah</option>
-                                <option value="2">Maal</option>
-                                <option value="3">Fidyah</option>
-                                <option value="3">Qurban</option>
-                                <option value="3">Infaq</option>
+                            <select class="form-select form-control text-muted" aria-label="Default select example" id="select-zakat" name="jenis">
+                                <option value="Fitrah">Fitrah</option>
+                                <option value="Maal">Maal</option>
+                                <option value="Fidyah">Fidyah</option>
+                                <option value="Qurban">Qurban</option>
+                                <option value="Infaq">Infaq</option>
                             </select>
                         </div>
                         <div class="form-group mt-4">
                             <label for="nominal-zakat" class="form-label">Nominal Zakat</label>
-                            <input type="number" placeholder="Masukan nominal min Rp 10.000" class="form-control text-muted" id="nominal-zakat">
+                            <input type="number" min="1" placeholder="Masukan nominal min Rp 10.000" class="form-control text-muted" id="nominal-zakat" name="nominal">
                         </div>
                         <div class="form-group mt-4">
-                            <label for="metode-zakat" class="form-label">Metode Pembayaran</label>
-                            <br>
-                            <button type="button" class="btn btn-primary text-muted border-0" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="width: 100%; height: 58px; background-color: #E2E2E2;">Pilih Metode
-                                Pembayaran</button>
+                            <label for="nominal-zakat" class="form-label">Bukti Pembayaran</label>
+                            <input type="file" name="image" id="">
                         </div>
                         <div class="heading-form mt-5">
                             <p class="text-form">
@@ -65,40 +63,41 @@
                         </div>
                         <div class="form-group mt-4">
                             <label for="nama" class="form-label">Nama Lengkap</label>
-                            <input type="text" placeholder="Masukkan nama lengkap" class="form-control text-muted" id="nama">
+                            <input type="text" placeholder="Masukkan nama lengkap" class="form-control text-muted" id="nama" name="name">
                         </div>
                         <div class="form-group mt-4">
                             <label for="telp" class="form-label">Nomor Telefon</label>
-                            <input type="number" placeholder="Masukkan nomor WA" class="form-control text-muted" id="telp">
+                            <input type="number" placeholder="Masukkan nomor WA" class="form-control text-muted" id="telp" name="phone">
                         </div>
                         <div class="form-group mt-4">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" placeholder="Masukkan alamat email" class="form-control text-muted" id="email">
+                            <input type="email" placeholder="Masukkan alamat email" class="form-control text-muted" id="email" name="email">
                         </div>
-                        <div class="form-check mt-3">
+                        {{-- <div class="form-check mt-3">
                             <label class="form-check-label text-dark" for="flexCheckChecked">
                                 <strong>Jadikan Anonim (Hamba Allah)</strong>
                             </label>
-                            <input class="form-check-input bg-secondary border-0" type="checkbox" value="" id="flexCheckChecked">
+                            <input class="form-check-input bg-secondary border-0" type="checkbox" value="anonim" name="status" id="flexCheckChecked">
+                        </div> --}}
+                        <div class="footer-form" style="margin-top: 10%;">
+                            <p class="text-form">
+                                Niat Melakukan Zakat
+                            </p>
+                            <br>
+                            <center>
+                                <div class="arab">
+                                    نَوَيْتُ أَنْ أُخْرِجَ زَكَاةَ مَالِى فَرْضًا لِلَّهِ تَعَالَى
+                                </div>
+                                <div class="latin">
+                                    Nawaitu an Ukhrija Zakaata Maali Fardhon Lillaahi Ta’aala
+                                    <br><br>
+                                    “Saya berniat sengaja mengeluarkan zakat fardhu karena Allah Ta’ala”
+                                </div>
+                                {{-- <div class="btn mt-5 p-3 text-white" style="border-radius: 10px; background-color: #FF9900;" data-bs-toggle="modal" data-bs-target="#exampleModal">LANJUTKAN PEMBAYARAN</div> --}}
+                                <button type="submit" class="btn btn-success">Bayar Zakat</button>
+                            </center>
                         </div>
                     </form>
-                    <div class="footer-form" style="margin-top: 10%;">
-                        <p class="text-form">
-                            Niat Melakukan Zakat
-                        </p>
-                        <br>
-                        <center>
-                            <div class="arab">
-                                نَوَيْتُ أَنْ أُخْرِجَ زَكَاةَ مَالِى فَرْضًا لِلَّهِ تَعَالَى
-                            </div>
-                            <div class="latin">
-                                Nawaitu an Ukhrija Zakaata Maali Fardhon Lillaahi Ta’aala
-                                <br><br>
-                                “Saya berniat sengaja mengeluarkan zakat fardhu karena Allah Ta’ala”
-                            </div>
-                            <div class="btn mt-5 p-3 text-white" style="border-radius: 10px; background-color: #FF9900;" data-bs-toggle="modal" data-bs-target="#exampleModal">LANJUTKAN PEMBAYARAN</div>
-                        </center>
-                    </div>
                 </div>
             </div>
         </div>

@@ -62,7 +62,7 @@
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nominal</label>
                                                 <div class="col-sm-12 col-md-7">
-                                                    <input type="number" min="0" class="form-control" name="price"
+                                                    <input type="number" min="0" class="form-control" name="rupiah"
                                                         value="{{ $data->price }}">
                                                 </div>
                                             </div>

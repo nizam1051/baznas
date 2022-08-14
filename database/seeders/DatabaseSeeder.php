@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             PenyaluranSeeder::class,
             CategoryData::class,
             DataZisSeeder::class,
+            RekeningSeeder::class,
         ]);
     }
 }

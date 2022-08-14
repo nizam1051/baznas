@@ -17,9 +17,19 @@ class ArtikelSeeder extends Seeder
     {
         collect([
             [
-                'judul' => 'Ini adalah judul tapi masih pake kata dummy',
-                'deskripsi' => 'Ini adalah deskripsi tapi masih pake kata dummy dan ini nanti bisa di edit oleh administrator di halaman admin',
+                'judul' => 'BAZNAS Solo Salurkan Zakat, Infak, dan Sedekah ke Ratusan Warga',
+                'deskripsi' => 'IBadan Amil Zakat Nasional (BAZNAS) Kota Solo menyalurkan ZIS (Zakat, Infak dan Sedekah) kepada ratusan warga Solo di penghujung ramadan.',
                 'gambar' => 'assets/img/infaq.jpg',
+            ],
+            [
+                'judul' => 'Baznas Solo Pastikan Penyaluran Dana Transparan dan Tepat Sasaran',
+                'deskripsi' => 'Badan Amil Zakat Nasional (Baznas) Kota Solo memastikan penyaluran dana, baik zakat maupun infak, secara transparan dan tepat sasaran. Sejauh ini, Baznas fokus mengelola zakat dan infak dari aparatur sipil negara (ASN).',
+                'gambar' => 'assets/img/gibran.jpg',
+            ],
+            [
+                'judul' => 'Baznas Solo Tetapkan Zakat Fitrah 2,7 Kg Per Orang, Begini Penjelasannya',
+                'deskripsi' => 'Badan Amil Zakat Nasional (Baznas) Solo, Kantor Kementerian Agama (Kemenag) Solo, dan Pemkot Solo bersepakat menetapkan zakat fitrah sebesar 2,7 kg beras atau Rp 33 ribu per orang.',
+                'gambar' => 'assets/img/zakat.jpg',
             ],
             // [
             //     'judul' => 'Gaopo dik, ayu iku pilihan',
@@ -31,11 +41,11 @@ class ArtikelSeeder extends Seeder
             //     'deskripsi' => 'Gaopo tan, ayu iku pilihan',
             //     'gambar' => 'uploads/artikel/nathan.jpeg',
             // ],
-        ])->each(function($artikel){
-            for($i=0 ; $i<3 ; $i++)
-            {
-                Artikel::create($artikel);
-            }
+        ])->each(function ($artikel) {
+            // for ($i = 0; $i < 3; $i++) {
+            //     Artikel::create($artikel);
+            // }
+            Artikel::create($artikel);
         });
     }
 }
