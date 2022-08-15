@@ -93,6 +93,17 @@
                             <input type="text" placeholder="Masukkan nama lengkap" class="form-control text-muted"
                                 id="nama" name="name">
                         </div>
+                        <div class="form-check mt-3">
+                            <label class="form-check-label text-dark" for="flexCheckChecked">
+                                <strong>Wajib pakai nama asli...!</strong>
+                            </label>
+                            {{-- <input class="form-check-input bg-secondary border-0" type="checkbox" value="anonim" name="status" id="flexCheckChecked"> --}}
+                        </div>
+                        <div class="form-group mt-4">
+                            <label for="nama" class="form-label">NIK</label>
+                            <input type="text" placeholder="Masukkan NIK lengkap" class="form-control text-muted"
+                                id="nama" name="nik">
+                        </div>
                         <div class="form-group mt-4">
                             <label for="telp" class="form-label">Nomor Telefon</label>
                             <input type="number" placeholder="Masukkan nomor WA" class="form-control text-muted"
@@ -103,9 +114,15 @@
                             <input type="email" placeholder="Masukkan alamat email" class="form-control text-muted"
                                 id="email" name="email">
                         </div>
+                        <div class="form-check mt-3">
+                            <label class="form-check-label text-dark" for="flexCheckChecked">
+                                <strong>Wajib pakai email asli...!</strong>
+                            </label>
+                            {{-- <input class="form-check-input bg-secondary border-0" type="checkbox" value="anonim" name="status" id="flexCheckChecked"> --}}
+                        </div>
                         {{-- <div class="form-check mt-3">
                             <label class="form-check-label text-dark" for="flexCheckChecked">
-                                <strong>Jadikan Anonim (Hamba Allah)</strong>
+                                <strong>Wajib pakai nama asli...!</strong>
                             </label>
                             <input class="form-check-input bg-secondary border-0" type="checkbox" value="anonim" name="status" id="flexCheckChecked">
                         </div> --}}

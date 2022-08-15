@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nominal');
             $table->string('image');
             $table->string('name');
+            $table->string('nik');
             $table->string('email');
             $table->string('phone');
             $table->enum('status', ['SHOW', 'HIDDEN']);
