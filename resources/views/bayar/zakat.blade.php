@@ -124,7 +124,7 @@
                                     “Saya berniat sengaja mengeluarkan zakat fardhu karena Allah Ta’ala”
                                 </div>
                                 {{-- <div class="btn mt-5 p-3 text-white" style="border-radius: 10px; background-color: #FF9900;" data-bs-toggle="modal" data-bs-target="#exampleModal">LANJUTKAN PEMBAYARAN</div> --}}
-                                <button type="button" id="testzakat" class="btn btn-success">Bayar Zakat</button>
+                                <button type="submit" id="testzakat" class="btn btn-success">Bayar Zakat</button>
                             </center>
                         </div>
                     </form>
