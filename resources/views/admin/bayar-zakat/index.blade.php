@@ -69,7 +69,7 @@
                                                         <td>{{ $g->jenis }}</td>
                                                         <td>{{ $g->phone }}</td>
                                                         <td>{{ $g->email }}</td>
-                                                        <td>Rp. {{ $g->nominal }}</td>
+                                                        <td>{{ $g->nominal }}</td>
                                                         <td style="">
                                                             <img src="{{ asset($g->image) }}" alt=""
                                                                 style="height: 40px; width:70px;">                                                             
