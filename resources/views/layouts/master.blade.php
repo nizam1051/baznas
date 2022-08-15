@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Baznas Surakarta</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/portfolio/logo/logo3.png" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
@@ -54,7 +54,7 @@
         style="color: white; border-bottom: #01502D; border-style: solid;">
         <div class="container">
             <a class="navbar-brand" href="#"><img style="width: 60%;"
-                    src="{{ asset('assets/img/portfolio/logo/logo2.png') }}" /></a>
+                    src="{{ asset('assets/img/portfolio/logo/logo3.png') }}" /></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -174,7 +174,7 @@
                 </ul>
                 <div class="row">
                     <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="{{asset('assets/img/baznas.png')}}" class="imagefooter" alt="">
+                        <img src="{{asset('assets/img/portfolio/logo/logo3.png')}}" class="imagefooter" alt="">
                     </div>
                     <div class="col-3 col-sm-3 col-lg-3 col-md-3">
                         <img src="{{asset('assets/img/uns.png')}}" class="imagefooter" alt="">
