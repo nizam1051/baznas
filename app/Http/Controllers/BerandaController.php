@@ -308,7 +308,7 @@ class BerandaController extends Controller
             'email' => 'required|email',
         ]);
         if ($validator->fails()) {
-            return redirect()->back();
+            return redirect()->back()->withErrors($validator);
         }
         $image = request()->file('image');
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
