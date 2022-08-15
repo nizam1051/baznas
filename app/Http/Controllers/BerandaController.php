@@ -333,6 +333,7 @@ class BerandaController extends Controller
             'nominal' => 'required',
             'image' => 'required|max:10240|mimes:png,jpg,jpeg,svg,webp',
             'name' => 'required|string|max:255',
+            'nik' => 'required|string|min:16|max:16',
             'phone' => 'required',
             'email' => 'required|email',
         ]);
@@ -348,6 +349,7 @@ class BerandaController extends Controller
             'nominal' => request('nominal'),
             'image' => $last_img,
             'name' => request('name'),
+            'nik' => request('nik'),
             'phone' => request('phone'),
             'email' => request('email'),
             'status' => 'HIDDEN',
