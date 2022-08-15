@@ -103,12 +103,12 @@
                             <input type="email" placeholder="Masukkan alamat email" class="form-control text-muted"
                                 id="email" name="email">
                         </div>
-                        {{-- <div class="form-check mt-3">
+                        <div class="form-check mt-3">
                             <label class="form-check-label text-dark" for="flexCheckChecked">
                                 <strong>Jadikan Anonim (Hamba Allah)</strong>
                             </label>
                             <input class="form-check-input bg-secondary border-0" type="checkbox" value="anonim" name="status" id="flexCheckChecked">
-                        </div> --}}
+                        </div>
                         <div class="footer-form" style="margin-top: 10%;">
                             <p class="text-form">
                                 Niat Melakukan Zakat

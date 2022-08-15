@@ -299,6 +299,35 @@ class BerandaController extends Controller
 
     public function terimaBayarZakat()
     {
+        if (!empty(request('status'))) {
+            $validator = Validator::make(request()->all(), [
+                'jenis' => 'required',
+                'nominal' => 'required',
+                'image' => 'required|max:10240|mimes:png,jpg,jpeg,svg,webp',
+            ]);
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator);
+            }
+            $image = request()->file('image');
+            $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('uploads/bayar'), $name_gen);
+            $last_img = 'uploads/bayar/' . $name_gen;
+            $tf = Transaction::create([
+                'jenis' => request('jenis'),
+                'nominal' => request('nominal'),
+                'image' => $last_img,
+                'name' => 'Hamba Allah',
+                'phone' => '12345678910',
+                'email' => 'hamba@gmail.com',
+                'status' => 'HIDDEN',
+            ]);
+            // Mail::to(request()->email)->send(new Notifikasi($tf->email, 'Anda berhasil membayar zakat ' . request('jenis') . ' dengan nominal Rp.' . request('nominal')));
+            $users = User::role('admin')->get();
+            foreach ($users as $user) {
+                Mail::to($user->email)->send(new Notifikasi($user->email, 'Ada pembayar zakat baru dengan nama ' . $tf->name));
+            }
+            return redirect()->back();
+        }
         $validator = Validator::make(request()->all(), [
             'jenis' => 'required',
             'nominal' => 'required',
