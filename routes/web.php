@@ -1,14 +1,15 @@
 <?php
 
-use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\Admin\AdmKabarController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\AjaxController;
-use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KabarController;
-use App\Http\Controllers\KalkulatorController;
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\KalkulatorController;
+use App\Http\Controllers\Admin\AdmKabarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +68,7 @@ Route::get('article-detail/{id}', [KabarController::class, 'detailArtikel']);
 Route::get('inspirasi', [KabarController::class, 'Inspirasi']);
 Route::get('inspirasi-detail/{id}', [KabarController::class, 'detailInspirasi']);
 Route::post('/bayar-zakat', [BerandaController::class, 'terimaBayarZakat']);
+Route::post('/hubungi-kami', [MessageController::class, 'sendMessage']);
 
 // Backend
 Route::get('login', [AuthController::class, 'login'])->name('login');
