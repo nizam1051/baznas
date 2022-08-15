@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rekening;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -37,7 +38,8 @@ class LayananController extends Controller
         $last_img = 'uploads/rekening/' . $name_gen;
         Rekening::create([
             'image' => $last_img,
-            'no_rek' => request('no_rek')
+            'no_rek' => request('no_rek'),
+            // 'status' => 'HIDDEN',
         ]);
         return redirect('admin/layanan/rekening');
     }
@@ -99,5 +101,21 @@ class LayananController extends Controller
             Rekening::find($rekeningID)->delete();
             return redirect()->back()->with('success', 'Rekening Delete Successfully');
         }
+    }
+
+    public function indexBayarZakat()
+    {
+        $bayar = Transaction::all();
+        return view('admin.bayar-zakat.index', compact('bayar'));
+    }
+
+    public function updateStatusBayar($transID)
+    {
+        $trans = Transaction::find($transID);
+        if (!$trans) {
+            return redirect()->back()->with('success', 'Data tidak ditemukan');
+        }
+        $trans->status == 'HIDDEN' ? $trans->update(['status' => 'SHOW']) : $trans->update(['status' => 'HIDDEN']);
+        return redirect()->back()->with('success', 'Data berhasil ditampilkan');
     }
 }
