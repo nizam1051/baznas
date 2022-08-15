@@ -113,27 +113,27 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
                 <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5" style="background-color: white; border-radius: 15px; height: auto">
+                    <div class="mt-5" style="background-color: white; border-radius: 15px; height: 200px">
                         <div>&nbsp;</div>
                         <div class="mb-2"><img src="assets/img/portfolio/logo/penerima.png"
-                                style="max-width: 300px; max-height: autox;"><i class="fs-1 text-primary"></i></div>
+                                style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h5 mb-2" style="color: #FF9900;">PENERIMA</h3>
                         <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->penerima}}</b></p>
                         <div>&nbsp;</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5" style="background-color: white; border-radius: 15px; height: auto">
+                    <div class="mt-5" style="background-color: white; border-radius: 15px; height: 200px">
                         <div>&nbsp;</div>
                         <div class="mb-2"><img src="assets/img/portfolio/logo/himpunan.png"
-                                style="max-width: 300px; max-height: auto;"><i class="fs-1 text-primary"></i></div>
+                                style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h5 mb-2" style="color: #FF9900;">PENGHIMPUNAN</h3>
                         <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->penghimpun}}</b></p>
                         <div>&nbsp;</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5" style="background-color: white; border-radius: 15px; height: auto">
+                    <div class="mt-5" style="background-color: white; border-radius: 15px; height: 200px">
                         <div>&nbsp;</div>
                         <div class="mb-2"><img src="assets/img/portfolio/logo/dana.png"
                                 style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5" style="background-color: white; border-radius: 15px; height: auto">
+                    <div class="mt-5" style="background-color: white; border-radius: 15px; height: 200px">
                         <div>&nbsp;</div>
                         <div class="mb-2"><img src="assets/img/portfolio/logo/donatur.png"
                                 style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
