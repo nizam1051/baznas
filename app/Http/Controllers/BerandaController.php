@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+use App\Models\User;
 use App\Models\Galeri;
 use App\Models\Artikel;
 use App\Models\DataZis;
+use App\Mail\Notifikasi;
 use App\Models\Rekening;
 use App\Models\Inspirasi;
 use App\Models\KabarZakat;
-use App\Models\CategoryData;
 use App\Models\Transaction;
+use App\Models\CategoryData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class BerandaController extends Controller
@@ -31,7 +34,7 @@ class BerandaController extends Controller
         $infaq = DataZis::where('kategori', 2)->sum('price');
         $sedekah = DataZis::where('kategori', 3)->sum('price');
         $fidyah = DataZis::where('kategori', 4)->sum('price');
-        $bayar = Transaction::latest()->take(5)->get();
+        $bayar = Transaction::where('status', 'SHOW')->latest()->take(10)->get();
         return view('index', compact('bayar', 'kabar', 'artikel', 'inspirasi', 'distArtikel', 'distKabar', 'distInspirasi', 'galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah'));
     }
 
@@ -296,31 +299,6 @@ class BerandaController extends Controller
 
     public function terimaBayarZakat()
     {
-        // if (empty(request('status'))) {
-        // $validator = Validator::make(request()->all(), [
-        //     'jenis' => 'required',
-        //     'nominal' => 'required|numeric|min:1',
-        //     'image' => 'nullable|max:10240|mimes:png,jpg,jpeg,svg,webp',
-        // ]);
-        // if ($validator->fails()) {
-        //     return redirect()->back();
-        // }
-        // $image = request()->file('image');
-        // // return $image;
-        // $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-        // // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
-
-        // $image->move(public_path('uploads/potensi'), $name_gen);
-        // $last_img = 'uploads/rekening/' . $name_gen;
-        // Transaction::create([
-        //     'jenis' => request('jenis'),
-        //     'nominal' => request('nominal'),
-        //     'image' => $last_img,
-        //     'name' => 'Hamba Allah',
-        //     'phone' => '12345678910',
-        //     'email' => 'hamba@mail.com',
-        // ]);
-        // } elseif (!empty(request('status'))) {
         $validator = Validator::make(request()->all(), [
             'jenis' => 'required',
             'nominal' => 'required|numeric|min:1',
@@ -333,12 +311,9 @@ class BerandaController extends Controller
             return redirect()->back();
         }
         $image = request()->file('image');
-        // return $image;
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-        // Image::make($gambar)->resize(500, 300)->save('images/wilayah/' . $name_gen);
-
-        $image->move(public_path('uploads/potensi'), $name_gen);
-        $last_img = 'uploads/rekening/' . $name_gen;
+        $image->move(public_path('uploads/bayar'), $name_gen);
+        $last_img = 'uploads/bayar/' . $name_gen;
         Transaction::create([
             'jenis' => request('jenis'),
             'nominal' => request('nominal'),
@@ -346,8 +321,13 @@ class BerandaController extends Controller
             'name' => request('name'),
             'phone' => request('phone'),
             'email' => request('email'),
+            'status' => 'HIDDEN',
         ]);
-        // }
+        Mail::to(request()->email)->send(new Notifikasi(request()->email, 'Anda berhasil membayar zakat ' . request('jenis') . ' dengan nominal Rp.' . request('nominal')));
+        $users = User::role('admin')->get();
+        foreach ($users as $user) {
+            Mail::to($user->email)->send(new Notifikasi($user->email, 'Ada pembayar zakat baru dengan nama ' . request('name')));
+        }
         return redirect()->back();
     }
 }

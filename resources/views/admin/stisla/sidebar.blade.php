@@ -50,6 +50,9 @@
                     <li>
                         <a class="nav-link" href="{{ url('admin/layanan/rekening') }}"> <span>Rekening</span></a>
                     </li>
+                    <li>
+                        <a class="nav-link" href="{{ url('admin/layanan/pembayaran') }}"> <span>Daftar Pembayar</span></a>
+                    </li>
                 </ul>
             </li>
             @endif
