@@ -12,6 +12,28 @@
 <!--Form-->
 <section class="page-section p-0" id="about">
     <div class="container-fluid" style="padding-top: 6%;;">
+        @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-warning alert-dismissible show fade">
+            <div class="alert-body">
+                <button class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                </button>
+                {{ $error }}
+            </div>
+        </div>
+        @endforeach
+        @endif
+        @if (session('status'))
+        <div class="alert alert-info alert-dismissible show fade">
+            <div class="alert-body">
+                <button class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                </button>
+                {{ session('status') }}
+            </div>
+        </div>
+        @endif
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8 col-xl-6 text-center">
                 <h2 class="mt-0 mb-4">Kirim Pesan Anda</h2>
@@ -20,32 +42,34 @@
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-6">
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                {{-- <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="{{ url('hubungi-kami') }}" method="POST" enctype="multipart/form-data"> --}}
+                <form action="{{ url('hubungi-kami') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <!-- Name input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                         <label for="name">Full name</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                        <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" />
                         <label for="email">Email address</label>
                         <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                         <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                     </div>
                     <!-- Phone number input-->
                     <div class="form-group mb-3">
-                        <select class="form-select">
+                        <select class="form-select" name="kategori">
                             <option selected>Pilih Kategori</option>
-                            <option value="1">Aduan</option>
-                            <option value="2">Saran</option>
-                            <option value="3">Kritik</option>
+                            <option value="Aduan">Aduan</option>
+                            <option value="Saran">Saran</option>
+                            <option value="Kritik">Kritik</option>
                         </select>
                     </div>
                     <!-- Message input-->
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                        <textarea class="form-control" id="message" type="text" name="message" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                         <label for="message">Message</label>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
                         </div>
@@ -70,7 +94,7 @@
                         <div class="text-center text-danger mb-3">Error sending message!</div>
                     </div>
                     <!-- Submit Button-->
-                    <div class="d-grid"><button class="btn btn-xl disabled text-white" id="submitButton" style="background-color: #01502D;" type="submit">Submit</button></div>
+                    <button class="btn btn-xl text-white" id="submitButton" style="background-color: #01502D;" type="submit">Submit</button>
                 </form>
             </div>
         </div>
