@@ -1,4 +1,4 @@
-@extends('layouts/master')
+@extends('layouts.master')
 @section('content')
 <!--Form-->
 <section class="page-section pb-0 p-0" id="about">

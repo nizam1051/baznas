@@ -64,8 +64,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarOrganisasi"
                             data-bs-toggle="dropdown" aria-expanded="false">Tentang Kami</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarOrganisas"
-                            style="border-top: #01502D; border-style: solid;">
+                        <ul class="dropdown-menu bounce" aria-labelledby="navbarOrganisasi"
+                             id="subOrganisasi">
                             <li><a class="dropdown-item" href="/legalitas">Legalitas</a></li>
                             <li><a class="dropdown-item" href="/visi-misi">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a></li>
@@ -77,8 +77,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">Program</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
-                            style="border-top: #01502D; border-style: solid;">
+                        <ul class="dropdown-menu bounce" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ url('program-kkn') }}">Program KKN</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-santunan') }}">Program Santunan</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-pemberdayaan') }}">Program Pemberdayaan
@@ -94,8 +93,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarLayanan"
                             data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarLayanan"
-                            style="border-top: #01502D; border-style: solid;">
+                        <ul class="dropdown-menu bounce" aria-labelledby="navbarLayanan">
                             <li><a class="dropdown-item" href="/rekening-zakat">Rekening Zakat</a></li>
                             <li><a class="dropdown-item" href="/layanan-pembayaran">Layanan Pembayaran</a></li>
                         </ul>
@@ -103,8 +101,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar"
                             data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarKabar"
-                            style="border-top: #01502D; border-style: solid;">
+                        <ul class="dropdown-menu bounce" aria-labelledby="navbarKabar">
                             <li><a class="dropdown-item" href="{{ url('kabar-zakat') }}">Kabar Zakat</a></li>
                             <li><a class="dropdown-item" href="{{ url('artikel') }}">Artikel</a></li>
                             <li><a class="dropdown-item" href="{{ url('inspirasi') }}">Inspirasi</a></li>
@@ -118,8 +115,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar"
                             data-bs-toggle="dropdown" aria-expanded="false">Pilih Bahasa</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarKabar"
-                            style="border-top: #01502D; border-style: solid;">
+                        <ul class="dropdown-menu bounce" aria-labelledby="navbarKabar">
                             <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/ina.png') }}"
                                         class="border-0 border-circle"
                                         style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
@@ -283,7 +279,6 @@
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <script>
     var alert = '';
-
     function resetErrors() {
         $('#showErrors').empty();
         alert = '';
@@ -504,7 +499,6 @@
         rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
         return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
     }
-
 </script>
 @endif
 
