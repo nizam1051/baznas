@@ -24,7 +24,7 @@
                         <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
-            </div>          
+            </div>
             @endforeach
         </div>
         <nav aria-label="..." style="margin-top: 15%;">

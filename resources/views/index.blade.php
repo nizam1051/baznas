@@ -52,16 +52,16 @@
                     <div class="row">
                         @foreach ($kabar as $distKabar)
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
-                            <div class="card" style="border-radius: 15px;">
+                            <div class="card card-fill" style="border-radius: 15px;">
                                 <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt=""
                                     style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
                                 <div class="card-body"
-                                    style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 20vh;">
+                                    style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
                                     <a href="{{url('kabar-zakat-detail/'.$distKabar->id)}}"
                                         style="color: #2E3192; opacity: 0.7;">
                                         <h5 class="font-highlight">{{ $distKabar->judul }}</h5>
                                     </a>
-                                    <div class="card-text carrousel-preview">
+                                    <div class="carrousel-preview">
                                         {!! \Illuminate\Support\Str::words($distKabar->deskripsi, 10, $end='...') !!}
                                     </div>
                                 </div>
@@ -377,8 +377,7 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($kabar as $k)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card"
-                                            style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
+                                        <div class="card card-fill" style="border-radius: 15px;">
                                             <img src="{{ asset($k->gambar) }}" class="card-img-top" alt=""
                                                 style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body"
@@ -402,8 +401,7 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($artikel as $a)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card"
-                                            style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
+                                        <div class="card card-fill" style="border-radius: 15px; width: 100%;">
                                             <img src="{{ asset($a->gambar) }}" class="card-img-top" alt=""
                                                 style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
                                             <div class="card-body"
@@ -428,8 +426,7 @@
                                 <div class="row" style="margin-left: 9%; margin-right: 9%;">
                                     @foreach ($inspirasi as $i)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card"
-                                            style="border-radius: 15px; width: 100%; display: flex; flex-flow: column; height: 100%; flex: 1 1 auto;">
+                                        <div class="card card-fill" style="border-radius: 15px; width: 100%;">
                                             <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius:
                                             15px; height: 250px;">
                                             <div class="card-body"

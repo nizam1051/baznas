@@ -4527,6 +4527,12 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
+.card-fill{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    flex: 1 1 auto;
+}
 .card > hr {
   margin-right: 0;
   margin-left: 0;
