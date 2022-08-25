@@ -20,7 +20,8 @@
                     <img src="{{ asset($b->gambar) }}" class="card-img-top" alt=""
                         style="background-color: #FF9900; height: 40vh;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $b->judul }}</h5>
+                        <h6 class="font-highlight" style="text-align: left; color: #2E3192">{{ $b->judul }}
+                        </h6>
                         <p class="card-text">
                             {!! \Illuminate\Support\Str::words($b->deskripsi, 10, $end='...') !!}
                         </p>

@@ -16,16 +16,16 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{url('assets/img/korosel4.png')}}" class="d-block w-100" alt="...">
+                        <img src="{{url('assets/img/korosel4.png')}}" class="d-block" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{url('assets/img/korosel3.png')}}" class="d-block w-100" alt="...">
+                        <img src="{{url('assets/img/korosel3.png')}}" class="d-block" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{url('assets/img/korosel2.png')}}" class="d-block w-100" alt="...">
+                        <img src="{{url('assets/img/korosel2.png')}}" class="d-block" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="{{url('assets/img/korosel1.png')}}" class="d-block w-100" alt="...">
+                        <img src="{{url('assets/img/korosel1.png')}}" class="d-block" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -47,22 +47,20 @@
         <div class="container">
             <div class="justify-content-center">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text" style="color: #01502D;">PENDISTRIBUSIAN</h2>
-                    <hr class="divider divider-light" />
-                    <div class="row">
+                    <h2 class="text" style="color: #01502D; margin-top: 50px;">PENDISTRIBUSIAN</h2>
+                    <div class="row" style="margin-top: 20px;">
                         @foreach ($kabar as $distKabar)
-                        <div class="mt-3 col-sm-6 col-lg-4 col-md-4">
-                            <div class="card card-fill" style="border-radius: 15px;">
+                        <div class="mt-3 col-sm-6 col-lg-4 col-md-4 pendistribusian">
+                            <div class="card card-fill">
                                 <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt=""
-                                    style="background-color: #FF9900; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 37vh;">
-                                <div class="card-body"
-                                    style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+                                    style="height: 300px;">
+                                <div class="card-body">
                                     <a href="{{url('kabar-zakat-detail/'.$distKabar->id)}}"
-                                        style="color: #2E3192; opacity: 0.7;">
+                                        style="color: #2E3192;">
                                         <h5 class="font-highlight">{{ $distKabar->judul }}</h5>
                                     </a>
                                     <div class="carrousel-preview">
-                                        {!! \Illuminate\Support\Str::words($distKabar->deskripsi, 10, $end='...') !!}
+                                        {!! \Illuminate\Support\Str::words($distKabar->deskripsi, 30, $end='...') !!}
                                     </div>
                                 </div>
                             </div>
@@ -81,43 +79,39 @@
     <section class="page-section2" id="services" style="background-color: #01502D;">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-md-6 col-6 text-center">
                     <div class="mt-5" style="background-color: white; border-radius: 15px; height: 200px">
                         <div>&nbsp;</div>
-                        <div class="mb-2"><img src="assets/img/portfolio/logo/penerima.png"
-                                style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
-                        <h3 class="h5 mb-2" style="color: #FF9900;">PENERIMA</h3>
-                        <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->penerima}}</b></p>
+                        <div class="mb-2"><img src="assets/img/portfolio/logo/penerima.png" class="penyaluran-image"><i class="fs-1 text-primary"></i></div>
+                        <h6 class="mb-2" style="color: #FF9900;">PENERIMA</h6>
+                        <h2 class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->penerima}}</b></h2>
                         <div>&nbsp;</div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-md-6 col-6 text-center">
                     <div class="mt-5" style="background-color: white; border-radius: 15px; height: 200px">
                         <div>&nbsp;</div>
-                        <div class="mb-2"><img src="assets/img/portfolio/logo/himpunan.png"
-                                style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
-                        <h3 class="h5 mb-2" style="color: #FF9900;">PENGHIMPUNAN</h3>
-                        <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->penghimpun}}</b></p>
+                        <div class="mb-2"><img src="assets/img/portfolio/logo/himpunan.png" class="penyaluran-image"><i class="fs-1 text-primary"></i></div>
+                        <h6 class="mb-2" style="color: #FF9900;">PENGHIMPUNAN</h6>
+                        <h2 class="mb-2" style="color: #FF9900;"><b>{{$penyalur->penghimpun}}</b></h2>
                         <div>&nbsp;</div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-md-6 col-6 text-center">
                     <div class="mt-5" style="background-color: white; border-radius: 15px; height: 200px">
                         <div>&nbsp;</div>
-                        <div class="mb-2"><img src="assets/img/portfolio/logo/dana.png"
-                                style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
-                        <h3 class="h6 mb-2" style="color: #FF9900;">DANA YANG TERSALURKAN</h3>
-                        <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->dana_tersalurkan}}</b></p>
+                        <div class="mb-2"><img src="assets/img/portfolio/logo/dana.png" class="penyaluran-image"><i class="fs-1 text-primary"></i></div>
+                        <h6 class="mb-2" style="color: #FF9900;">DANA YANG TERSALURKAN</h6>
+                        <h2 class="mb-2" style="color: #FF9900;"><b>{{$penyalur->dana_tersalurkan}}</b></h2>
                         <div>&nbsp;</div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-md-6 col-6 text-center">
                     <div class="mt-5" style="background-color: white; border-radius: 15px; height: 200px">
                         <div>&nbsp;</div>
-                        <div class="mb-2"><img src="assets/img/portfolio/logo/donatur.png"
-                                style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
-                        <h3 class="h5 mb-2" style="color: #FF9900;">DONATUR</h3>
-                        <p class="h2 mb-2" style="color: #FF9900;"><b>{{$penyalur->donatur}}</b></p>
+                        <div class="mb-2"><img src="assets/img/portfolio/logo/donatur.png" class="penyaluran-image"><i class="fs-1 text-primary"></i></div>
+                        <h6 class="mb-2" style="color: #FF9900;">DONATUR</h6>
+                        <h2 class="mb-2" style="color: #FF9900;"><b>{{$penyalur->donatur}}</b></h2>
                         <div>&nbsp;</div>
                     </div>
                 </div>
@@ -282,17 +276,18 @@
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-6">
                     <center>
-                        <h3 class="text-white">Galeri Kegiatan</h3>
+                        <h3 class="text-white mb-3">Galeri Kegiatan</h3>
                     </center>
-                    <div class="card" style="background-color: transparent; border: none;">
+                    <div class="card" style="background-color: transparent; border: none;     display: flex;
+                    flex-flow: column;
+                    height: 100%;
+                    flex: 1 1 auto;">
                         <div class="card-body" style="border: none; background-color: transparent;">
-                            <div>&nbsp;</div>
                             <div class="row">
                                 @foreach ($galeri as $g)
-                                <div class="col-md-6 mt-2">
+                                <div class="col-md-6 col-6 mt-2">
                                     <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="{{ $g->gambar }}" alt="{{ $g->judul }}"
-                                            style="border-radius: 15px; height: 150px;">
+                                        <img src="{{ $g->gambar }}" alt="{{ $g->judul }}" class="galeri-image">
                                     </div>
                                 </div>
                                 @endforeach
@@ -300,12 +295,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 pb-3">
+                <div class="col-md-6">
                     <center>
-                        <h3 class="text-white">Video</h3>
+                        <h3 class="text-white mb-3">Video</h3>
                     </center>
-                    <div>&nbsp;</div>
-                    <iframe id='youtube' src="https://www.youtube.com/embed/RGZ9fCX7uU8" title="YouTube video player"
+                        <iframe id='youtube' style="    display: flex;
+                        flex-flow: row;
+                        height: 90%;
+                        flex: 1 1 auto;" src="https://www.youtube.com/embed/RGZ9fCX7uU8" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -325,31 +322,31 @@
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Zakat Fitrah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black; width: 150px;">Rp.
                             {{number_format($fitrah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Infaq</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black; width: 150px;">Rp.
                             {{number_format($infaq)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Sedekah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black; width: 150px;">Rp.
                             {{number_format($sedekah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Fidyah</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black; width: 150px;">Rp.
                             {{number_format($fidyah)}}</span>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text"
                             style="background-color: #01502D; color:#fff; width: 120px;">Total</span>
-                        <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp.
+                        <span class="input-group-text" style="background-color: #E5E5E5; color: black; width: 150px;">Rp.
                             {{number_format($fidyah+$sedekah+$infaq+$fitrah)}}</span>
                     </div>
                 </div>
@@ -359,35 +356,32 @@
                         alt="">
                 </div>
             </div>
-            <canvas id="myChart" class="mt-5" style="width:100%;max-width:700px"></canvas>
+            <canvas id="myChart" class="mt-5" style="width:100%;max-width:700px; height: 350px"></canvas>
         </div>
     </section>
     <section class="mb-5" id="about">
         <div class="container">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-12 text-center">
-                    <div>&nbsp;</div>
-                    <div>&nbsp;</div>
-                    <h2 class="text" style="color: #2E3192;">BERITA</h2>
-                    <hr class="divider divider-light" />
+                    <h2 class="text" style="color: #2E3192; margin-top: 70px;">BERITA</h2>
                     <div id="carouselExampleControls" class="carousel slide p-0" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!--Card-->
-                                <div class="row" style="margin-left: 9%; margin-right: 9%;">
+                                <div class="row row-carrousel">
                                     @foreach ($kabar as $k)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card card-fill" style="border-radius: 15px;">
-                                            <img src="{{ asset($k->gambar) }}" class="card-img-top" alt=""
-                                                style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
+                                        <div class="card card-fill">
+                                            <img src="{{ asset($k->gambar) }}" class="card-img-top" alt="{{$k->gambar}}"
+                                                style="background-color: #ECE8E8; height: 250px;">
                                             <div class="card-body"
-                                                style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
+                                                style="background-color: #ECE8E8;">
                                                 <a href="{{url('kabar-zakat-detail/'.$k->id)}}" style="color: #2E3192">
-                                                    <h5 class="font-highlight">{{ $k->judul }}</h5>
+                                                    <h6 class="font-highlight">{{ $k->judul }}</h6>
                                                 </a>
-                                                <p class="card-text"
-                                                    style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    {!! \Illuminate\Support\Str::words($k->deskripsi, 10, $end='...')
+                                                <p class="card-text mt-3"
+                                                    style="background-color: #ECE8E8; text-align: left;">
+                                                    {!! \Illuminate\Support\Str::words($k->deskripsi, 30, $end='...')
                                                     !!}
                                                 </p>
                                             </div>
@@ -398,21 +392,21 @@
                             </div>
                             <div class="carousel-item">
                                 <!--Card-->
-                                <div class="row" style="margin-left: 9%; margin-right: 9%;">
+                                <div class="row row-carrousel">
                                     @foreach ($artikel as $a)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card card-fill" style="border-radius: 15px; width: 100%;">
-                                            <img src="{{ asset($a->gambar) }}" class="card-img-top" alt=""
-                                                style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px;">
+                                        <div class="card card-fill">
+                                            <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="{{$a->gambar}}"
+                                                style="background-color: #ECE8E8; height: 250px;">
                                             <div class="card-body"
-                                                style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
+                                                style="background-color: #ECE8E8;">
                                                 <a href="{{url('article-detail/'.$a->id)}}" style="color: #2E3192">
-                                                    <h5 class="font-highlight" style="text-align: left;">{{ $a->judul }}
-                                                    </h5>
+                                                    <h6 class="font-highlight" style="text-align: left;">{{ $a->judul }}
+                                                    </h6>
                                                 </a>
                                                 <p class="card-text"
-                                                    style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    {!! \Illuminate\Support\Str::words($a->deskripsi, 10, $end='...')
+                                                    style="background-color: #ECE8E8; text-align: left;">
+                                                    {!! \Illuminate\Support\Str::words($a->deskripsi, 30, $end='...')
                                                     !!}
                                                 </p>
                                             </div>
@@ -423,21 +417,20 @@
                             </div>
                             <div class="carousel-item">
                                 <!--Card-->
-                                <div class="row" style="margin-left: 9%; margin-right: 9%;">
+                                <div class="row row-carrousel">
                                     @foreach ($inspirasi as $i)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card card-fill" style="border-radius: 15px; width: 100%;">
-                                            <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="background-color: #ECE8E8; border-top-left-radius: 15px; border-top-right-radius:
-                                            15px; height: 250px;">
+                                        <div class="card card-fill">
+                                            <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="{{$i->gambar}}" style="background-color: #ECE8E8; height: 250px;">
                                             <div class="card-body"
-                                                style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
+                                                style="background-color: #ECE8E8;">
                                                 <a href="{{url('inspirasi-detail/'.$i->id)}}" style="color: #2E3192">
-                                                    <h5 class="font-highlight" style="text-align: left;">{{ $i->judul }}
-                                                    </h5>
+                                                    <h6 class="font-highlight" style="text-align: left;">{{ $i->judul }}
+                                                    </h6>
                                                 </a>
                                                 <p class="card-text"
-                                                    style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    {!! \Illuminate\Support\Str::words($i->deskripsi, 10, $end='...')
+                                                    style="background-color: #ECE8E8; text-align: left;">
+                                                    {!! \Illuminate\Support\Str::words($i->deskripsi, 30, $end='...')
                                                     !!}
                                                 </p>
                                             </div>
