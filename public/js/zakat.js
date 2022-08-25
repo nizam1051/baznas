@@ -36,13 +36,13 @@ $(document).on('change', '#countzakat', function () {
             '<input type="text" class="form-control" id="gajiPokok" name="gaji" required>' +
             '</div>' +
             '</div>' +
-            '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>'+
-            '<div class="col-auto">'+
-            '<div class="input-group">'+
-            '<div class="input-group-text">Rp</div>'+
-            '<input type="text" class="form-control" name="tunjangan" id="tunjangan" required>'+
-            '</div>'+
-            '</div>'+
+            '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>' +
+            '<div class="col-auto">' +
+            '<div class="input-group">' +
+            '<div class="input-group-text">Rp</div>' +
+            '<input type="text" class="form-control" name="tunjangan" id="tunjangan" required>' +
+            '</div>' +
+            '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Hutang/Cicilan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
@@ -73,13 +73,13 @@ $(document).on('change', '#countzakat', function () {
             '<input type="number" min="1" class="form-control" id="day" name="hari">' +
             '</div>' +
             '</div>' +
-            ' <p class="card-text" style="color: white; text-align: left;">Total jiwa</p>'+
-            ' <div class="col-auto">'+
-            '<div class="input-group">'+
-            '<div class="input-group-text">Jiwa</div>'+
-            '<input type="number" min="1" class="form-control" id="soul" name="jiwa">'+
-            '</div>'+
-            '</div>'+
+            ' <p class="card-text" style="color: white; text-align: left;">Total jiwa</p>' +
+            ' <div class="col-auto">' +
+            '<div class="input-group">' +
+            '<div class="input-group-text">Jiwa</div>' +
+            '<input type="number" min="1" class="form-control" id="soul" name="jiwa">' +
+            '</div>' +
+            '</div>' +
             ' <p class="card-text" style="color: white; text-align: left;">Harga Zakat Fidyah(Per hari dan Per jiwa)</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
@@ -144,3 +144,27 @@ $(document).on('change', '#countzakat', function () {
     }
     $('#showform').html(form);
 });
+
+// Zakat Fitrah
+$(document).on('click', '#rek', function () {
+    var jenis = $(this).data('jenis');
+    $(document).ready(function () {
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "/datajax",
+            method: 'POST',
+            data: {
+                jenis: jenis
+            },
+            success: function (response) {
+                $('#listrek').html(response)
+            }
+        })
+    });
+})
+
+function handleClick(number) {
+    navigator.clipboard.writeText(number);
+}

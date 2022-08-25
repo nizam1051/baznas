@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DataZis;
+use App\Models\Rekening;
 use Illuminate\Http\Request;
 
 class AjaxController extends Controller
@@ -40,6 +41,26 @@ class AjaxController extends Controller
             ';
         }
 
+        return $output;
+    }
+
+    public function getDataRekening(Request $request){
+        $jenis = $request->get('jenis');
+        $data = Rekening::where('jenis', $jenis)->get();
+        $output = '';
+        $no = 1;
+        foreach($data as $r){
+            $output .= '
+            <tr>
+                <th scope="row">'.$no++.'</th>
+                <td><img src="'.$r->image.'" width="135px" height="45px" alt=""></td>
+                <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly value="'.$r->no_rek.'"></td>
+                <td>
+                    <center><button type="button" onclick="handleClick('.$r->no_rek.')"><i class="fas fa-copy"></i></button></center>
+                </td>
+            </tr>
+            ';
+        }
         return $output;
     }
 }

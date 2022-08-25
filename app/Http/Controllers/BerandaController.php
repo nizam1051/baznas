@@ -98,9 +98,9 @@ class BerandaController extends Controller
         return view('404');
     }
 
-    public function rekeningZakat()
+    public function rekening()
     {
-        $rek = Rekening::all();
+        $rek = Rekening::where('jenis', 'zakat')->get();
         return view('layanan.rekening-zakat', compact('rek'));
     }
 

@@ -64,8 +64,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarOrganisasi"
                             data-bs-toggle="dropdown" aria-expanded="false">Tentang Kami</a>
-                        <ul class="dropdown-menu bounce" aria-labelledby="navbarOrganisasi"
-                             id="subOrganisasi">
+                        <ul class="dropdown-menu bounce" aria-labelledby="navbarOrganisasi" id="subOrganisasi">
                             <li><a class="dropdown-item" href="/legalitas">Legalitas</a></li>
                             <li><a class="dropdown-item" href="/visi-misi">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a></li>
@@ -94,7 +93,7 @@
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarLayanan"
                             data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
                         <ul class="dropdown-menu bounce" aria-labelledby="navbarLayanan">
-                            <li><a class="dropdown-item" href="/rekening-zakat">Rekening Zakat</a></li>
+                            <li><a class="dropdown-item" href="/rekening">Rekening Zakat</a></li>
                             <li><a class="dropdown-item" href="/layanan-pembayaran">Layanan Pembayaran</a></li>
                         </ul>
                     </li>
@@ -279,14 +278,16 @@
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <script>
     var alert = '';
+
     function resetErrors() {
         $('#showErrors').empty();
         alert = '';
     }
+
     // Zakat Fitrah
     $(document).ready(function () {
         $(document).on('click', '#hitungFitrah', function () {
-            var price = $('#priceFitrah').val().replace(/[^0-9]/g,'');
+            var price = $('#priceFitrah').val().replace(/[^0-9]/g, '');
             var weight = 2.5;
             $.ajax({
                 headers: {
@@ -308,9 +309,9 @@
     // Zakat Maal
     $(document).ready(function () {
         $(document).on('click', '#hitungMaal', function () {
-            var gajiPokok = $('#gajiPokok').val().replace(/[^0-9]/g,'');
-            var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g,'');
-            var hutang = $('#hutang').val().replace(/[^0-9]/g,'');
+            var gajiPokok = $('#gajiPokok').val().replace(/[^0-9]/g, '');
+            var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g, '');
+            var hutang = $('#hutang').val().replace(/[^0-9]/g, '');
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -401,12 +402,11 @@
             })
         });
     });
-
     // Infaq
     $(document).ready(function () {
         $(document).on('click', '#hitungInfaq', function () {
-            var gaji = $('#gaji').val().replace(/[^0-9]/g,'');
-            var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g,'');
+            var gaji = $('#gaji').val().replace(/[^0-9]/g, '');
+            var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g, '');
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -438,7 +438,15 @@
 @if (!empty($fitrah) && !empty($infaq) && !empty($sedekah) && !empty($fidyah))
 <script>
     var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
-    var yValues = [{!!$fitrah!!}, {!!$infaq!!}, {!!$sedekah!!}, {!!$fidyah!!}];
+    var yValues = [{
+        !!$fitrah!!
+    }, {
+        !!$infaq!!
+    }, {
+        !!$sedekah!!
+    }, {
+        !!$fidyah!!
+    }];
     var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
     new Chart("myChart", {
         type: "pie",
@@ -499,6 +507,7 @@
         rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
         return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
     }
+
 </script>
 @endif
 

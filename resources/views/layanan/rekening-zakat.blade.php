@@ -40,10 +40,10 @@
                         Pilih Jenis Rekening
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="/rekening-zakat">Zakat</a></li>
-                        <li><a class="dropdown-item" href="/rekening-infak">Infaq</a></li>
-                        <li><a class="dropdown-item" href="/rekening-sedekah">Sedekah</a></li>
-                        <li><a class="dropdown-item" href="/rekening-fidyah">Fidyah</a></li>
+                        <li><a class="dropdown-item" data-jenis="zakat" href="#" id="rek">Zakat</a></li>
+                        <li><a class="dropdown-item" data-jenis="infaq" href="#" id="rek">Infaq</a></li>
+                        <li><a class="dropdown-item" data-jenis="sedekah" href="#" id="rek">Sedekah</a></li>
+                        <li><a class="dropdown-item" data-jenis="fidyah" href="#" id="rek">Fidyah</a></li>
                     </ul>
                 </div>
                 <div class="header-table" style="width: 100%; height: auto; padding: 7px; background-color: #FF9900;">
@@ -63,14 +63,14 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="listrek">
                             @foreach ($rek as $key => $r)
                             <tr>
                                 <th scope="row">{{ $key+1 }}</th>
                                 <td><img src="{{ $r->image }}" width="135px" height="45px" alt=""></td>
                                 <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly value="{{ $r->no_rek }}"></td>
                                 <td>
-                                    <center><a href="" onclick="handleClick()"><i class="fas fa-copy"></i></a></center>
+                                    <center><button type="button" onclick="handleClick({{$r->no_rek}})"><i class="fas fa-copy"></i></button></center>
                                 </td>
                             </tr>
                             @endforeach
@@ -81,11 +81,4 @@
         </div>
     </div>
 </section>
-<script>
-    function handleClick() {
-        /* Save value of myText to input variable */
-        var input = document.getElementById("myText").value;
-        /* Copy the text inside the text field */
-        navigator.clipboard.writeText(input);
-    }
-</script>
+@endsection

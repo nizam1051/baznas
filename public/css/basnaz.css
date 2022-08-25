@@ -105,9 +105,16 @@
         padding-left: 35px;
         padding-right: 35px;
     }
+
+    .judul-card{
+        width: 310px;
+        height: 80px;
+        position: absolute;
+        background-color: #2E3192; left:0;right:0;margin-left: auto;margin-right: auto; transform: translateY(-50%);
+    }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .row-zakat {
         padding: 0;
     }
@@ -182,8 +189,21 @@
         display: none;
     }
 
-    #bayar-zakat {
+    /* #bayar-zakat {
         display: none;
+    } */
+
+    .judul-card{
+        width: 50%;
+        height: auto;
+        padding-bottom: 10px;
+        position: absolute;
+        background-color: #2E3192; left:0;right:0;margin-left: auto;margin-right: auto; transform: translateY(-50%);
+    }
+
+    .judul-card h5{
+        font-size: smaller;
+        position: relative;
     }
 }
 
