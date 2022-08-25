@@ -1,15 +1,37 @@
 /* Preview Bacaan */
 .carrousel-preview {
-    background-color: #FF9900;
+    background-color: #ECE8E8;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     font-size: clamp(1rem, 1vw, 3rem);
+}
+/* End */
+.card-fill .card-body{
+    background-color: #ECE8E8;
+}
+.galeri-image{
+    border-radius: 15px;
+    height: 150px;
 }
 
 /*Bagian tentang kami*/
 .text-content {
     text-align: justify;
     font-size: clamp(11px, 1vw, 24px);
+}
+
+/* Bagian Carrousel Berita */
+@media(min-width: 920px){
+    .row-carrousel{
+        margin-left: 9%;
+        margin-right: 9%;
+    }
+}
+@media(max-width: 719px){
+    .row-carrousel{
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /*Hero Section*/
@@ -297,8 +319,8 @@
 }
 
 .card-title {
-    font-size: clamp(10px, 2vw, 24px);
-    font-weight: 600;
+    font-size: clamp(10px, 1vw, 24px);
+    font-weight: bold;
 }
 
 .card-text {
