@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('image');
             $table->string('no_rek')->unique();
+            $table->enum('jenis',['zakat','infaq', 'sedekah', 'fidyah', 'inactive'])->default('inactive');
             $table->timestamps();
         });
     }

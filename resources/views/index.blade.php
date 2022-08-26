@@ -460,9 +460,7 @@
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-12">
                     <div class="card" style="background-color: #E2E2E2; border: #E2E2E2; height: 300px;">
-                        <div class="judul-card"
-                            style="width: 310px; height: 80px; position: absolute;
-                        background-color: #2E3192; left:0;right:0;margin-left: auto;margin-right: auto; transform: translateY(-50%);">
+                        <div class="judul-card">
                             <center>
                                 <h5 class="text-white mt-4"><b>Pembayar Zakat Terbaru</b></h5>
                             </center>
@@ -482,11 +480,11 @@
                                     <tbody>
                                         @foreach ($bayar as $key => $g)
                                         <tr>
-                                            <th scope="row">{{ $key+1 }}</th>
-                                            <td>{{ $g->name }}</td>
-                                            <td>{{ $g->jenis }}</td>
+                                            <th scope="row"><p>{{ $key+1 }}</p></th>
+                                            <td><p>{{ $g->name }}</p></td>
+                                            <td><p>{{ $g->jenis }}</p></td>
                                             <td>
-                                                {{ $g->nominal }}
+                                                <p>{{ $g->nominal }}</p>
                                             </td>
                                         </tr>
                                         @endforeach
@@ -495,7 +493,7 @@
                             </div>
                             @else
                             <center>
-                                <h3 class="mt-4 pt-4">Belum ada yang membayar zakat</h3>
+                                <h3 class="mt-4 pt-4" style="font-weight: 800">Belum ada yang membayar zakat</h3>
                             </center>
                             @endif
                         </div>

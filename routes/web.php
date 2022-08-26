@@ -38,10 +38,7 @@ Route::controller(BerandaController::class)->group(function () {
     Route::get('/video-kegiatan', 'videoKegiatan');
     Route::get('/hubungi-kami', 'hubungiKami');
     Route::get('/404', 'notFound');
-    Route::get('/rekening-zakat', 'rekeningZakat');
-    Route::get('/rekening-infak', 'rekeningInfak');
-    Route::get('/rekening-fidyah', 'rekeningFidyah');
-    Route::get('/rekening-sedekah', 'rekeningSedekah');
+    Route::get('/rekening', 'rekening');
     Route::get('/layanan-pembayaran', 'layananPembayaran');
     Route::get('/index-fitrah', 'indexFitrah');
     Route::get('/index-maal', 'indexMaal');
@@ -55,6 +52,8 @@ Route::controller(BerandaController::class)->group(function () {
     Route::get('/program-santunan', 'programSantunan');
     Route::get('/program-subsidi', 'programSubsidi');
 });
+
+Route::post('datajax/', [AjaxController::class, 'getDataRekening']);
 
 Route::post('/index-fitrah', [KalkulatorController::class, 'calcFitrah']);
 Route::post('/index-maal', [KalkulatorController::class, 'calcMaal']);

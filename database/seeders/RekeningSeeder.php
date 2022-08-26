@@ -19,10 +19,12 @@ class RekeningSeeder extends Seeder
             [
                 'image' => 'assets/img/bj.png',
                 'no_rek' => '5023036655',
+                'jenis' => 'zakat',
             ],
             [
                 'image' => 'assets/img/bsi.png',
                 'no_rek' => '158158587',
+                'jenis' => 'zakat',
             ],
         ])->each(function ($rek) {
             Rekening::create($rek);
