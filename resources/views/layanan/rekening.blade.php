@@ -1,11 +1,27 @@
 @extends('layouts/master')
+<style>
+    @media(max-width: 920px){
+        .row .table-responsive.catatan{
+            margin-top: 50px;
+        }
+
+        .container.px-4.px-lg-5{
+            margin-top: 100px;
+        }
+    }
+    @media(min-width:921px){
+        .container.px-4.px-lg-5{
+            margin-top: 150px; margin-bottom: 5%;
+        }
+    }
+</style>
 @section('content')
 <!--Content-->
 <section class="" id="about">
-    <div class="container px-4 px-lg-5" style="margin-top: 10%; margin-bottom: 5%;">
+    <div class="container px-4 px-lg-5">
         <div class="row">
-            <div class="col-md-3" style="padding-right: 3%;">
-                <table class="table mr-5" style="margin-top: 50%;">
+            <div class="col-md-3 col-12 table-responsive catatan" style="padding-right: 3%;">
+                <table class="table mr-5">
                     <thead>
                         <tr>
                             <th scope="col"><b>Catatan</b></th>
@@ -30,7 +46,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 col-12">
                 <center>
                     <h3 style="color: #01502D;">REKENING ZAKAT</h3>
                     <h6>(a.n. BAZNAS (BAZIS) Provinsi Surakarta)</h6>
@@ -51,7 +67,7 @@
                         <h4 class="text-white"><b>Daftar Rekening</b></h4>
                     </center>
                 </div>
-                <div class="table-content border-top border-dark mt-4">
+                <div class="table-responsive table-content border-top border-dark mt-4">
                     <table class="table">
                         <thead>
                             <tr>

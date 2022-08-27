@@ -168,3 +168,34 @@ $(document).on('click', '#rek', function () {
 function handleClick(number) {
     navigator.clipboard.writeText(number);
 }
+
+// Layanan Zakat
+$(document).on('click', '.btn-check', function () {
+    var jenis = $(this).data('id')
+    var layanan1 = ''
+    var layanan2 = ''
+    var image1 = ''
+    var image2 = ''
+    if(jenis == 'perbankan'){
+        layanan1 = 'Layanan Perbankan';
+        layanan2 = 'Bank Mitras Baznas';
+        image1 = 'assets/img/korosel4.png';
+        image2 = 'assets/img/list-bank/dumy bank.jpg';
+    }else if(jenis == 'langsung'){
+        layanan1 = 'Layanan Langsung';
+        layanan2 = 'Bank Mitras Baznas';
+        image1 = 'assets/img/korosel2.png';
+        image2 = 'assets/img/list-bank/dumy bank.jpg';
+    }else{
+        layanan1 = 'Layanan Digital';
+        layanan2 = 'Bank Mitras Baznas';
+        image1 = 'assets/img/korosel3.png';
+        image2 = 'assets/img/list-bank/dumy bank.jpg';
+    }
+    var output = '<h4 class="mb-3 header-layanan">'+layanan1+'</h4>'+
+    '<p style="text-align: center; font-weight: bolder;" class="mb-4">BAZNAS bekerjasama dengan mitra perbankan dalam menyediakan berbagai fasilitas pembayaran zakat, infak, dan sedekah.</p>'+
+    '<img src="'+image1+'" alt="pembayaran perbankan" class="image-layanan">'+
+    '<h4 class="mb-4 mt-5 header-layanan">'+layanan2+'</h4>'+
+    '<img src="'+image2+'" class="image-layanan bank" alt="pembayaran perbankan">';
+    $(".show-content-layanan").fadeOut(0).html(output).fadeIn(1500)
+})

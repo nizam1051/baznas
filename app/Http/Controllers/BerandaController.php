@@ -101,7 +101,7 @@ class BerandaController extends Controller
     public function rekening()
     {
         $rek = Rekening::where('jenis', 'zakat')->get();
-        return view('layanan.rekening-zakat', compact('rek'));
+        return view('layanan.rekening', compact('rek'));
     }
 
     public function rekeningInfak()
