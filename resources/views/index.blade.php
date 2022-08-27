@@ -2,7 +2,7 @@
     @section('content')
     <!-- Masthead-->
     <header class="masthead">
-        <div class="container mt-5">
+        <div class="container-fluid p-0">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -15,17 +15,17 @@
                         aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{url('assets/img/korosel4.png')}}" class="d-block" alt="...">
+                    <div class="carousel-item card active">
+                        <img src="{{url('assets/img/korosel4.png')}}" style="height: 100%" class="d-block" alt="...">
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{url('assets/img/korosel3.png')}}" class="d-block" alt="...">
+                    <div class="carousel-item card">
+                        <img src="{{url('assets/img/korosel3.png')}}" style="height: 100%" class="d-block" alt="...">
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{url('assets/img/korosel2.png')}}" class="d-block" alt="...">
+                    <div class="carousel-item card">
+                        <img src="{{url('assets/img/korosel2.png')}}" style="height: 100%" class="d-block" alt="...">
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{url('assets/img/korosel1.png')}}" class="d-block" alt="...">
+                    <div class="carousel-item card">
+                        <img src="{{url('assets/img/korosel1.png')}}" style="height: 100%" class="d-block" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -379,8 +379,7 @@
                                                 <a href="{{url('kabar-zakat-detail/'.$k->id)}}" style="color: #2E3192">
                                                     <h6 class="font-highlight">{{ $k->judul }}</h6>
                                                 </a>
-                                                <p class="card-text mt-3"
-                                                    style="background-color: #ECE8E8; text-align: left;">
+                                                <p class="card-text mt-3">
                                                     {!! \Illuminate\Support\Str::words($k->deskripsi, 30, $end='...')
                                                     !!}
                                                 </p>
@@ -404,8 +403,7 @@
                                                     <h6 class="font-highlight" style="text-align: left;">{{ $a->judul }}
                                                     </h6>
                                                 </a>
-                                                <p class="card-text"
-                                                    style="background-color: #ECE8E8; text-align: left;">
+                                                <p class="card-text">
                                                     {!! \Illuminate\Support\Str::words($a->deskripsi, 30, $end='...')
                                                     !!}
                                                 </p>
@@ -428,8 +426,7 @@
                                                     <h6 class="font-highlight" style="text-align: left;">{{ $i->judul }}
                                                     </h6>
                                                 </a>
-                                                <p class="card-text"
-                                                    style="background-color: #ECE8E8; text-align: left;">
+                                                <p class="card-text">
                                                     {!! \Illuminate\Support\Str::words($i->deskripsi, 30, $end='...')
                                                     !!}
                                                 </p>

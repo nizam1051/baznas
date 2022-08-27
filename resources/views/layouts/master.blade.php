@@ -249,7 +249,8 @@
                 </ul>
             </div>
             <div class="col-md-4 mt-2 pb-2">
-                <img src="{{asset('assets/img/map.png')}}" style="width: 100%; height: auto;">
+                {{-- <img src="{{asset('assets/img/map.png')}}" style="width: 100%; height: auto;"> --}}
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="516" height="389" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Kahuripan%20Utara%20Raya%20No.10,%20Sumber,%20Kec.%20Banjarsari,%20Kota%20Surakarta,%20Jawa%20Tengah%2057138&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://maps.google.com/maps?q=Jl.%20Kahuripan%20Utara%20Raya%20No.10,%20Sumber,%20Kec.%20Banjarsari,%20Kota%20Surakarta,%20Jawa%20Tengah%2057138&t=&z=17&ie=UTF8&iwloc=&output=embed"></a><br><style>.mapouter{position:relative;text-align:center;height:400px;width:auto;}</style><a href="https://www.embedgooglemap.net">Lokasi Kantor Baznas Surakarta</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:auto;}</style></div></div>
             </div>
         </div>
     </div>
