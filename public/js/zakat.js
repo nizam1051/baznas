@@ -53,7 +53,7 @@ $(document).on('change', '#countzakat', function () {
             '<p class="card-text" style="color: white; text-align: left;">Besaran Zakat Maal</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
-            '<div class="input-group-text">%</div>' +
+            '<div class="input-group-text">% 2,5</div>' +
             '<input type="number" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
             '</div>' +
             '</div>' +
@@ -143,6 +143,95 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     }
     $('#showform').html(form);
+});
+$(document).on('change', '#countzakat', function () {
+    var select = $(this).val();
+    var desc = '';
+    if (select == 'fitrah') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+            'Zakat fitrah adalah zakat yang harus ditunaikan bagi seorang muzakki yang telah memiliki'+
+            'kemampuan untuk menunaikannya. Zakat fitrah adalah zakat wajib yang harus dikeluarkan sekali'+
+            'setahun yaitu saat bulan ramadhan menjelang idul fitri. Pada prinsipnya, zakat fitrah haruslah'+ 
+            'dikeluarkan sebelum sholat idul fitri dilangsungkan. Hal tersebut yang menjadi pembeda zakat fitrah'+ 
+        'dengan zakat lainnya.</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'maal') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT MAAL</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+        'Zakat yang dikenakan atas harta yang secara substansi perolehannya tidak bertentangan dengan ketentuan agama. Zakat mal terdiri atas simpanan kekayaan seperti uang, emas, surat berharga, penghasilan profesi, aset perdagangan, hasil barang tambang atau laut, hasil sewa aset, dan lain sebagainya.'+ 
+        '</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'fidyah') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+        'Fidyah diambil dari kata “fadaa” artinya mengganti atau menebus. Bagi beberapa orang yang tidak mampu menjalankan ibadah puasa dengan kriteria tertentu, diperbolehkan tidak berpuasa serta tidak harus menggantinya di lain waktu. Namun, sebagai gantinya diwajibkan untuk membayar fidyah.</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'qurban') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+            'Zakat fitrah adalah zakat yang harus ditunaikan bagi seorang muzakki yang telah memiliki'+
+            'kemampuan untuk menunaikannya. Zakat fitrah adalah zakat wajib yang harus dikeluarkan sekali'+
+            'setahun yaitu saat bulan ramadhan menjelang idul fitri. Pada prinsipnya, zakat fitrah haruslah'+ 
+            'dikeluarkan sebelum sholat idul fitri dilangsungkan. Hal tersebut yang menjadi pembeda zakat fitrah'+ 
+        'dengan zakat lainnya.</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'infaq') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+        'Infaq adalah harta yang dikeluarkan oleh seseorang atau badan usaha di luar zakat untuk kemaslahatan umum (Menurut Undang-Undang Nomor 23 Tahun 2011 tentang Pengelolaan Zakat pada BAB I Pasal 1). infak merupakan amalan yang tak bisa lepas dari kehidupan sehari-hari seorang Muslim. infak berasal dari Bahasa Arab, "anfaqa" yang berarti membelanjakan harta atau memberikan harta. Sedangkan infak berarti keluarkanlah harta.</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Infaq</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else {
+        desc = '<div class="alert alert-danger" role="alert">' +
+            '<b>Ooops!</b>pilih jenis zakat' +
+            '</div>';
+    }
+    $('#showdesc').html(desc);
 });
 
 // Zakat Fitrah

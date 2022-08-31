@@ -24,7 +24,7 @@
                             <div class="col-12" style="width: 100%;">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Tabel Rekening</h4>
+                                        <h4>Tabel Pembayar Zakat</h4>
                                     </div>
                                     <div class="card-body">
                                         @if (session('success'))
@@ -71,13 +71,11 @@
                                                         <td>{{ $g->email }}</td>
                                                         <td>{{ $g->nominal }}</td>
                                                         <td style="">
-                                                            <img src="{{ asset($g->image) }}" alt=""
-                                                                style="height: 40px; width:70px;">                                                             
+                                                            <img src="{{ asset($g->image) }}" alt="" style="height: 40px; width:70px;">
                                                         </td>
                                                         <td>{{ $g->status }}</td>
                                                         <td>
-                                                            <a href="{{ url('admin/layanan/pembayaran/'.$g->id.'/status') }}"
-                                                                class="btn btn-transparent text-center text-dark">
+                                                            <a href="{{ url('admin/layanan/pembayaran/'.$g->id.'/status') }}" class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-edit fa-2x"></i>
                                                             </a>
                                                         </td>
@@ -106,9 +104,9 @@
 </body>
 
 <script type="text/javascript">
-    $(document).ready( function () {
-    $('#myTable').DataTable();
-} );
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    });
 </script>
 
 </html>
