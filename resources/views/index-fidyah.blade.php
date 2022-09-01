@@ -5,14 +5,10 @@
         <div class="container mt-5">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -28,13 +24,11 @@
                         <img src="assets/img/korosel1.png" class="d-block w-100" alt="...">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -56,7 +50,8 @@
                                 <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
                                     <h5 class="card-title">{{ $distKabar->judul }}</h5>
                                     <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        {{ $distKabar->deskripsi }}</p>
+                                        {{ $distKabar->deskripsi }}
+                                    </p>
                                     <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
                                 </div>
                             </div>
@@ -67,7 +62,8 @@
                                 <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
                                     <h5 class="card-title">{{ $distArtikel->judul }}</h5>
                                     <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        {{ $distArtikel->deskripsi }}</p>
+                                        {{ $distArtikel->deskripsi }}
+                                    </p>
                                     <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
                                 </div>
                             </div>
@@ -78,7 +74,8 @@
                                 <div class="card-body" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; ">
                                     <h5 class="card-title">{{ $distInspirasi->judul }}</h5>
                                     <p class="card-text" style="background-color: #FF9900; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                        {{ $distInspirasi->deskripsi }}</p>
+                                        {{ $distInspirasi->deskripsi }}
+                                    </p>
                                     <a href="#" class="btn btn-primary2" style="color: black;">Selengkapnya</a>
                                 </div>
                             </div>
@@ -99,8 +96,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5" style="background-color: white; border-radius: 15px; height: auto">
                         <div>&nbsp;</div>
-                        <div class="mb-2"><img src="assets/img/portfolio/logo/penerima.png"
-                                style="max-width: 300px; max-height: autox;"><i class="fs-1 text-primary"></i></div>
+                        <div class="mb-2"><img src="assets/img/portfolio/logo/penerima.png" style="max-width: 300px; max-height: autox;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h5 mb-2" style="color: #FF9900;">PENERIMA</h3>
                         <p class="h2 mb-2" style="color: #FF9900;"><b>*</b></p>
                         <div>&nbsp;</div>
@@ -109,8 +105,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5" style="background-color: white; border-radius: 15px; height: auto">
                         <div>&nbsp;</div>
-                        <div class="mb-2"><img src="assets/img/portfolio/logo/himpunan.png"
-                                style="max-width: 300px; max-height: auto;"><i class="fs-1 text-primary"></i></div>
+                        <div class="mb-2"><img src="assets/img/portfolio/logo/himpunan.png" style="max-width: 300px; max-height: auto;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h5 mb-2" style="color: #FF9900;">PENGHIMPUNAN</h3>
                         <p class="h2 mb-2" style="color: #FF9900;"><b>*</b></p>
                         <div>&nbsp;</div>
@@ -119,8 +114,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5" style="background-color: white; border-radius: 15px; height: auto">
                         <div>&nbsp;</div>
-                        <div class="mb-2"><img src="assets/img/portfolio/logo/dana.png"
-                                style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
+                        <div class="mb-2"><img src="assets/img/portfolio/logo/dana.png" style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h6 mb-2" style="color: #FF9900;">DANA YANG TERSALURKAN</h3>
                         <p class="h2 mb-2" style="color: #FF9900;"><b>*</b></p>
                         <div>&nbsp;</div>
@@ -129,8 +123,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5" style="background-color: white; border-radius: 15px; height: auto">
                         <div>&nbsp;</div>
-                        <div class="mb-2"><img src="assets/img/portfolio/logo/donatur.png"
-                                style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
+                        <div class="mb-2"><img src="assets/img/portfolio/logo/donatur.png" style="max-width: 300px; max-height: 200px;"><i class="fs-1 text-primary"></i></div>
                         <h3 class="h5 mb-2" style="color: #FF9900;">DONATUR</h3>
                         <p class="h2 mb-2" style="color: #FF9900;"><b>*</b></p>
                         <div>&nbsp;</div>
@@ -158,24 +151,21 @@
                                     <p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai
                                         dengan hutang puasa anda</p>
                                     <div>&nbsp;</div>
-                                    <form action="{{ url('index-fidyah') }}" method="POST"
-                                        enctype="multipart/form-data">
+                                    <form action="{{ url('index-fidyah') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <p class="card-text" style="color: white; text-align: left;">Total hari tidak
                                             berpuasa</p>
                                         <div class="col-auto">
                                             <div class="input-group">
                                                 <div class="input-group-text">Hari</div>
-                                                <input type="number" min="1" class="form-control"
-                                                    id="autoSizingInputGroup" name="hari">
+                                                <input type="number" min="1" class="form-control" id="autoSizingInputGroup" name="hari">
                                             </div>
                                         </div>
                                         <p class="card-text" style="color: white; text-align: left;">Total jiwa</p>
                                         <div class="col-auto">
                                             <div class="input-group">
                                                 <div class="input-group-text">Jiwa</div>
-                                                <input type="number" min="1" class="form-control"
-                                                    id="autoSizingInputGroup" name="jiwa">
+                                                <input type="number" min="1" class="form-control" id="autoSizingInputGroup" name="jiwa">
                                             </div>
                                         </div>
                                         <p class="card-text" style="color: white; text-align: left;">Harga Zakat Fidyah
@@ -183,8 +173,7 @@
                                         <div class="col-auto">
                                             <div class="input-group">
                                                 <div class="input-group-text">Rp</div>
-                                                <input type="text" class="form-control" id="autoSizingInputGroup"
-                                                    value="50.000" readonly>
+                                                <input type="text" class="form-control" id="autoSizingInputGroup" value="50.000" readonly>
                                             </div>
                                         </div>
                                         {{-- <p class="card-text" style="color: white; text-align: left;">Hutang/Cicilan bulanan
@@ -196,8 +185,7 @@
                                             </div>
                                         </div> --}}
                                         <div>&nbsp;</div>
-                                        <button type="submit" class="btn btn-primary2"
-                                            style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>
+                                        <button type="submit" class="btn btn-primary2" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>
                                     </form>
                                 </div>
                             </div>
@@ -228,17 +216,14 @@
                                 <div class="col-auto">
                                     <div class="input-group">
                                         <div class="input-group-text">Rp</div>
-                                        <input type="text" class="form-control"
-                                            value="{{ number_format(session('total')) }}" id="autoSizingInputGroup"
-                                            readonly>
+                                        <input type="text" class="form-control" value="{{ number_format(session('total')) }}" id="autoSizingInputGroup" readonly>
                                     </div>
                                 </div>
                                 @else
                                 <div class="col-auto">
                                     <div class="input-group">
                                         <div class="input-group-text">Rp</div>
-                                        <input type="text" class="form-control" value="0" id="autoSizingInputGroup"
-                                            readonly>
+                                        <input type="text" class="form-control" value="0" id="autoSizingInputGroup" readonly>
                                     </div>
                                 </div>
                                 @endif
@@ -257,13 +242,10 @@
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6">
                     <div class="card border-0">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
-                            <div class="container"
-                                style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D;">
-                                <img src="assets/img/portfolio/logo/kantonguang.png" style="max-height: 120px;"
-                                    class="card-img-top" alt="...">
+                            <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D;">
+                                <img src="assets/img/portfolio/logo/kantonguang.png" style="max-height: 120px;" class="card-img-top" alt="...">
                             </div>
-                            <div class="container text-white text-center pt-2 pb-2"
-                                style="border:none; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color:#FF9900; font-size: clamp(10px, 2vw, 14px);">
+                            <div class="container text-white text-center pt-2 pb-2" style="border:none; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color:#FF9900; font-size: clamp(10px, 2vw, 14px);">
                                 ZAKAT
                             </div>
                         </div>
@@ -272,13 +254,10 @@
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6">
                     <div class="card border-0">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
-                            <div class="container"
-                                style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
-                                <img src="assets/img/portfolio/logo/iconinfaq.png" style="max-height: 120px;"
-                                    class="card-img-top" alt="...">
+                            <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
+                                <img src="assets/img/portfolio/logo/iconinfaq.png" style="max-height: 120px;" class="card-img-top" alt="...">
                             </div>
-                            <div class="container text-white text-center pt-2 pb-2"
-                                style="border:none; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color:#FF9900; font-size: clamp(10px, 2vw, 14px);">
+                            <div class="container text-white text-center pt-2 pb-2" style="border:none; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color:#FF9900; font-size: clamp(10px, 2vw, 14px);">
                                 INFAQ
                             </div>
                         </div>
@@ -287,13 +266,10 @@
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6">
                     <div class="card border-0">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
-                            <div class="container"
-                                style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
-                                <img src="assets/img/portfolio/logo/iconsedekah.png" style="max-height: 120px;"
-                                    class="card-img-top" alt="...">
+                            <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
+                                <img src="assets/img/portfolio/logo/iconsedekah.png" style="max-height: 120px;" class="card-img-top" alt="...">
                             </div>
-                            <div class="container text-white text-center pt-2 pb-2"
-                                style="border:none; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color:#FF9900; font-size: clamp(10px, 2vw, 14px);">
+                            <div class="container text-white text-center pt-2 pb-2" style="border:none; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color:#FF9900; font-size: clamp(10px, 2vw, 14px);">
                                 SEDEKAH
                             </div>
                         </div>
@@ -302,13 +278,10 @@
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6">
                     <div class="card border-0">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
-                            <div class="container"
-                                style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
-                                <img src="assets/img/portfolio/logo/iconfidya.png" style="max-height: 120px;"
-                                    class="card-img-top" alt="...">
+                            <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
+                                <img src="assets/img/portfolio/logo/iconfidya.png" style="max-height: 120px;" class="card-img-top" alt="...">
                             </div>
-                            <div class="container text-white text-center pt-2 pb-2"
-                                style="border:none; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color:#FF9900; font-size: clamp(10px, 2vw, 14px);">
+                            <div class="container text-white text-center pt-2 pb-2" style="border:none; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color:#FF9900; font-size: clamp(10px, 2vw, 14px);">
                                 FIDYAH
                             </div>
                         </div>
@@ -359,35 +332,28 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-group mt-2">
-                        <span class="input-group-text"
-                            style="background-color: #01502D; color:#fff; width: 120px;">Zakat Fitrah</span>
+                        <span class="input-group-text" style="background-color: #01502D; color:#fff; width: 120px;">Zakat Fitrah</span>
                         <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
                     </div>
                     <div class="input-group mt-2">
-                        <span class="input-group-text"
-                            style="background-color: #01502D; color:#fff; width: 120px;">Infaq</span>
+                        <span class="input-group-text" style="background-color: #01502D; color:#fff; width: 120px;">Infaq</span>
                         <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
                     </div>
                     <div class="input-group mt-2">
-                        <span class="input-group-text"
-                            style="background-color: #01502D; color:#fff; width: 120px;">Sedekah</span>
+                        <span class="input-group-text" style="background-color: #01502D; color:#fff; width: 120px;">Sedekah</span>
                         <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
                     </div>
                     <div class="input-group mt-2">
-                        <span class="input-group-text"
-                            style="background-color: #01502D; color:#fff; width: 120px;">Fidyah</span>
+                        <span class="input-group-text" style="background-color: #01502D; color:#fff; width: 120px;">Fidyah</span>
                         <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
                     </div>
                     <div class="input-group mt-2">
-                        <span class="input-group-text"
-                            style="background-color: #01502D; color:#fff; width: 120px;">Total</span>
+                        <span class="input-group-text" style="background-color: #01502D; color:#fff; width: 120px;">Total</span>
                         <span class="input-group-text" style="background-color: #E5E5E5; color: black;">Rp</span>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="./assets/img/1.png" class="image-infaq"
-                        style="width: 615px; height: 635px; position: absolute; transform: translate(-5%, -15%);"
-                        alt="">
+                    <img src="./assets/img/1.png" class="image-infaq" style="width: 615px; height: 635px; position: absolute; transform: translate(-5%, -15%);" alt="">
                 </div>
             </div>
             <canvas id="myChart" class="mt-5" style="width:100%;max-width:700px"></canvas>
@@ -413,7 +379,8 @@
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
                                                 <h5 class="card-title" style="text-align: left;">{{ $k->judul }}</h5>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    {{ $k->deskripsi }}</p>
+                                                    {{ $k->deskripsi }}
+                                                </p>
                                                 <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
                                             </div>
                                         </div>
@@ -431,7 +398,8 @@
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
                                                 <h5 class="card-title" style="text-align: left;">{{ $a->judul }}</h5>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    {{ $a->deskripsi }}</p>
+                                                    {{ $a->deskripsi }}
+                                                </p>
                                                 <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
                                             </div>
                                         </div>
@@ -449,7 +417,8 @@
                                             <div class="card-body" style="background-color: #ECE8E8; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; max-height: 170px;">
                                                 <h5 class="card-title" style="text-align: left;">{{ $i->judul }}</h5>
                                                 <p class="card-text" style="background-color: #ECE8E8; text-align: left; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
-                                                    {{ $i->deskripsi }}</p>
+                                                    {{ $i->deskripsi }}
+                                                </p>
                                                 <a href="#" class="btn btn-primary" style="color: white; font-size: 13px;">Selengkapnya</a>
                                             </div>
                                         </div>
@@ -476,8 +445,7 @@
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-12">
                     <div class="card" style="background-color: #E2E2E2; border: #E2E2E2; height: 300px;">
-                        <div class="judul-card"
-                            style="width: 310px; height: 80px; position: absolute;
+                        <div class="judul-card" style="width: 310px; height: 80px; position: absolute;
                         background-color: #2E3192; left:0;right:0;margin-left: auto;margin-right: auto; transform: translateY(-50%);">
                             <center>
                                 <h3 class="text-white mt-4"><b>BAYAR ZAKAT</b></h3>
@@ -493,9 +461,7 @@
                                 yang telah disiapkan oleh BAZNAS BAZIS SURAKARTA
                             </p>
                             <div class="input-group mt-5 mb-3" style="padding-left: 20%; padding-right: 20%;">
-                                <input type="text" style="height: 58px;" class="form-control border-0 bg-white"
-                                    placeholder="Rp. Masukan Nominal" aria-label="Recipient's username"
-                                    aria-describedby="basic-addon2">
+                                <input type="text" style="height: 58px;" class="form-control border-0 bg-white" placeholder="Rp. Masukan Nominal" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <span class="input-group-text p-0" id="basic-addon2">
                                     <button class="btn btn-primary" style="width: 100%; height: 100%;">Zakat</button>
                                 </span>

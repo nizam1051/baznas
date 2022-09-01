@@ -182,7 +182,7 @@ $(document).on('change', '#countzakat', function () {
         ;
     } else if (select == 'fidyah') {
         desc = 
-        '<h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>'+
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT FIDYAH</b></h6>'+
         '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
         'Fidyah diambil dari kata “fadaa” artinya mengganti atau menebus. Bagi beberapa orang yang tidak mampu menjalankan ibadah puasa dengan kriteria tertentu, diperbolehkan tidak berpuasa serta tidak harus menggantinya di lain waktu. Namun, sebagai gantinya diwajibkan untuk membayar fidyah.</p>'+
         '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
@@ -196,7 +196,7 @@ $(document).on('change', '#countzakat', function () {
         ;
     } else if (select == 'qurban') {
         desc = 
-        '<h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>'+
+        '<h6 style="color: black; text-align: left;"><b>QURBAN</b></h6>'+
         '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
             'Zakat fitrah adalah zakat yang harus ditunaikan bagi seorang muzakki yang telah memiliki'+
             'kemampuan untuk menunaikannya. Zakat fitrah adalah zakat wajib yang harus dikeluarkan sekali'+
@@ -214,7 +214,7 @@ $(document).on('change', '#countzakat', function () {
         ;
     } else if (select == 'infaq') {
         desc = 
-        '<h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>'+
+        '<h6 style="color: black; text-align: left;"><b>INFAQ</b></h6>'+
         '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
         'Infaq adalah harta yang dikeluarkan oleh seseorang atau badan usaha di luar zakat untuk kemaslahatan umum (Menurut Undang-Undang Nomor 23 Tahun 2011 tentang Pengelolaan Zakat pada BAB I Pasal 1). infak merupakan amalan yang tak bisa lepas dari kehidupan sehari-hari seorang Muslim. infak berasal dari Bahasa Arab, "anfaqa" yang berarti membelanjakan harta atau memberikan harta. Sedangkan infak berarti keluarkanlah harta.</p>'+
         '<h6 style="color: black; text-align: left;"><b>Nilai Infaq</b></h6>' +

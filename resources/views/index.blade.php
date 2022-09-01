@@ -367,7 +367,18 @@
                                     @foreach ($kabar as $k)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
                                         <div class="card card-fill">
-                                            <img src="{{ asset($k->gambar) }}" class="card-img-top" alt="{{$k->gambar}}" style="background-color: #ECE8E8;" style="height: 10em; width: 100%; object-fit: contain">
+                                            <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
+                                            <div class="card-body">
+                                                <a href="{{url('kabar-zakat-detail/'.$distKabar->id)}}" style="color: #2E3192;">
+                                                    <h5 class="font-highlight">{{ $distKabar->judul }}</h5>
+                                                </a>
+                                                <div class="carrousel-preview">
+                                                    {!! \Illuminate\Support\Str::words($distKabar->deskripsi, 30, $end='...') !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="card card-fill">
+                                            <img src="{{ asset($k->gambar) }}" class="card-img-top" alt="{{$k->gambar}}" style="background-color: #ECE8E8; object-fit: contain;">
                                             <div class="card-body" style="background-color: #ECE8E8;">
                                                 <a href="{{url('kabar-zakat-detail/'.$k->id)}}" style="color: #2E3192">
                                                     <h6 class="font-highlight">{{ $k->judul }}</h6>
@@ -377,7 +388,7 @@
                                                     !!}
                                                 </p>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     @endforeach
                                 </div>
@@ -389,7 +400,18 @@
                                     @foreach ($artikel as $a)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
                                         <div class="card card-fill">
-                                            <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="{{$a->gambar}}" style="background-color: #ECE8E8;" style="height: 10em; width: 100%; object-fit: contain">
+                                            <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
+                                            <div class="card-body">
+                                                <a href="{{url('kabar-zakat-detail/'.$a->id)}}" style="color: #2E3192;">
+                                                    <h5 class="font-highlight">{{ $a->judul }}</h5>
+                                                </a>
+                                                <div class="carrousel-preview">
+                                                    {!! \Illuminate\Support\Str::words($a->deskripsi, 30, $end='...') !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="card card-fill">
+                                            <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="{{$a->gambar}}" style="background-color: #ECE8E8; object-fit: contain;">
                                             <div class="card-body" style="background-color: #ECE8E8;">
                                                 <a href="{{url('article-detail/'.$a->id)}}" style="color: #2E3192">
                                                     <h6 class="font-highlight" style="text-align: left;">{{ $a->judul }}
@@ -400,7 +422,7 @@
                                                     !!}
                                                 </p>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     @endforeach
                                 </div>
@@ -412,7 +434,18 @@
                                     @foreach ($inspirasi as $i)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
                                         <div class="card card-fill">
-                                            <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="{{$i->gambar}}" style="background-color: #ECE8E8;" style="height: 10em; width: 100%; object-fit: contain">
+                                            <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
+                                            <div class="card-body">
+                                                <a href="{{url('kabar-zakat-detail/'.$i->id)}}" style="color: #2E3192;">
+                                                    <h5 class="font-highlight">{{ $i->judul }}</h5>
+                                                </a>
+                                                <div class="carrousel-preview">
+                                                    {!! \Illuminate\Support\Str::words($i->deskripsi, 30, $end='...') !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="card card-fill">
+                                            <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="{{$i->gambar}}" style="background-color: #ECE8E8; object-fit: contain;">
                                             <div class="card-body" style="background-color: #ECE8E8;">
                                                 <a href="{{url('inspirasi-detail/'.$i->id)}}" style="color: #2E3192">
                                                     <h6 class="font-highlight" style="text-align: left;">{{ $i->judul }}
@@ -423,7 +456,7 @@
                                                     !!}
                                                 </p>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     @endforeach
                                 </div>
