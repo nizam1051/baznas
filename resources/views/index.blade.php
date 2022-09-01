@@ -94,7 +94,7 @@
                         <div>&nbsp;</div>
                         <div class="mb-2"><img src="assets/img/portfolio/logo/dana.png" class="penyaluran-image"><i class="fs-1 text-primary"></i></div>
                         <h6 class="mb-2" style="color: #FF9900;">DANA YANG TERSALURKAN</h6>
-                        <h2 class="mb-2" style="color: #FF9900;font-size: 1.7rem;"><b>Rp {{ number_format($penyalur->dana_tersalurkan, 0, '.', '.') }}</b></h2>
+                        <h2 class="mb-2" style="color: #FF9900;font-size: 1.25rem;"><b>Rp {{ number_format($penyalur->dana_tersalurkan, 0, '.', '.') }}</b></h2>
                         <div>&nbsp;</div>
                     </div>
                 </div>
