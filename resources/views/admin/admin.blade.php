@@ -19,7 +19,7 @@
                         <h1>Admin Page</h1>
                     </div>
                     <div class="section-body">
-                        <h2 class="section-title">Hi, {{ auth()->user()->name }}</h2>
+                        <h2 class="section-title">{{ auth()->user()->name }}</h2>
                         <p class="section-lead">
                             Welcome to admin page
                         </p>

@@ -10,14 +10,14 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" id="priceFitrah" data-price = 0>' +
+            '<input type="text" style="font-size: 15px" class="form-control" id="priceFitrah" data-price = 0>' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Besaran Zakat Fitrah</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Kg</div>' +
-            '<input type="text" class="form-control" value="2,5" readonly>' +
+            '<input type="text" style="font-size: 15px" class="form-control" value="2,5" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -33,28 +33,28 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" id="gajiPokok" name="gaji" required>' +
+            '<input type="text" style="font-size: 15px" class="form-control" id="gajiPokok" name="gaji" required>' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" name="tunjangan" id="tunjangan" required>' +
+            '<input type="text" style="font-size: 15px" class="form-control" name="tunjangan" id="tunjangan" required>' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Hutang/Cicilan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" id="hutang" name="hutang" required>' +
+            '<input type="text" style="font-size: 15px" class="form-control" id="hutang" name="hutang" required>' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Besaran Zakat Maal</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
-            '<div class="input-group-text">%</div>' +
-            '<input type="number" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
+            '<div class="input-group-text">% 2,5</div>' +
+            '<input type="numbe style="font-size: 15px"r" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -70,21 +70,21 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Hari</div>' +
-            '<input type="number" min="1" class="form-control" id="day" name="hari">' +
+            '<input type="numbe style="font-size: 15px"r" min="1" class="form-control" id="day" name="hari">' +
             '</div>' +
             '</div>' +
             ' <p class="card-text" style="color: white; text-align: left;">Total jiwa</p>' +
             ' <div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Jiwa</div>' +
-            '<input type="number" min="1" class="form-control" id="soul" name="jiwa">' +
+            '<input type="numbe style="font-size: 15px"r" min="1" class="form-control" id="soul" name="jiwa">' +
             '</div>' +
             '</div>' +
             ' <p class="card-text" style="color: white; text-align: left;">Harga Zakat Fidyah(Per hari dan Per jiwa)</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" value="50.000" readonly>' +
+            '<input type="text" style="font-size: 15px" class="form-control" value="50.000" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -117,21 +117,21 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" min="0" class="form-control" id="gaji" name="gaji">' +
+            '<input type="text" style="font-size: 15px" min="0" class="form-control" id="gaji" name="gaji">' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" min="0" class="form-control" id="tunjangan" name="tunjangan">' +
+            '<input type="text" style="font-size: 15px" min="0" class="form-control" id="tunjangan" name="tunjangan">' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Besaran Infaq Perbulan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">%</div>' +
-            '<input type="text" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
+            '<input type="text" style="font-size: 15px" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -143,6 +143,95 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     }
     $('#showform').html(form);
+});
+$(document).on('change', '#countzakat', function () {
+    var select = $(this).val();
+    var desc = '';
+    if (select == 'fitrah') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+            'Zakat fitrah adalah zakat yang harus ditunaikan bagi seorang muzakki yang telah memiliki'+
+            'kemampuan untuk menunaikannya. Zakat fitrah adalah zakat wajib yang harus dikeluarkan sekali'+
+            'setahun yaitu saat bulan ramadhan menjelang idul fitri. Pada prinsipnya, zakat fitrah haruslah'+ 
+            'dikeluarkan sebelum sholat idul fitri dilangsungkan. Hal tersebut yang menjadi pembeda zakat fitrah'+ 
+        'dengan zakat lainnya.</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'maal') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT MAAL</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+        'Zakat yang dikenakan atas harta yang secara substansi perolehannya tidak bertentangan dengan ketentuan agama. Zakat mal terdiri atas simpanan kekayaan seperti uang, emas, surat berharga, penghasilan profesi, aset perdagangan, hasil barang tambang atau laut, hasil sewa aset, dan lain sebagainya.'+ 
+        '</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'fidyah') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT FIDYAH</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+        'Fidyah diambil dari kata “fadaa” artinya mengganti atau menebus. Bagi beberapa orang yang tidak mampu menjalankan ibadah puasa dengan kriteria tertentu, diperbolehkan tidak berpuasa serta tidak harus menggantinya di lain waktu. Namun, sebagai gantinya diwajibkan untuk membayar fidyah.</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'qurban') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>QURBAN</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+            'Zakat fitrah adalah zakat yang harus ditunaikan bagi seorang muzakki yang telah memiliki'+
+            'kemampuan untuk menunaikannya. Zakat fitrah adalah zakat wajib yang harus dikeluarkan sekali'+
+            'setahun yaitu saat bulan ramadhan menjelang idul fitri. Pada prinsipnya, zakat fitrah haruslah'+ 
+            'dikeluarkan sebelum sholat idul fitri dilangsungkan. Hal tersebut yang menjadi pembeda zakat fitrah'+ 
+        'dengan zakat lainnya.</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'infaq') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>INFAQ</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+        'Infaq adalah harta yang dikeluarkan oleh seseorang atau badan usaha di luar zakat untuk kemaslahatan umum (Menurut Undang-Undang Nomor 23 Tahun 2011 tentang Pengelolaan Zakat pada BAB I Pasal 1). infak merupakan amalan yang tak bisa lepas dari kehidupan sehari-hari seorang Muslim. infak berasal dari Bahasa Arab, "anfaqa" yang berarti membelanjakan harta atau memberikan harta. Sedangkan infak berarti keluarkanlah harta.</p>'+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Infaq</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+                '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else {
+        desc = '<div class="alert alert-danger" role="alert">' +
+            '<b>Ooops!</b>pilih jenis zakat' +
+            '</div>';
+    }
+    $('#showdesc').html(desc);
 });
 
 // Zakat Fitrah

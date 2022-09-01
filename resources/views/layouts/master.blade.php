@@ -14,12 +14,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
-        rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
     <!--Pihak Ke 3-->
@@ -29,8 +27,7 @@
     <!--Icon-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -39,7 +36,6 @@
                 autoDisplay: false
             }, 'google_translate_element');
         }
-
     </script>
     {{-- Style --}}
     <link href="{{ asset('css/basnaz.css') }}" rel="stylesheet">
@@ -50,20 +46,15 @@
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" id="mainNav"
-        style="color: white; border-bottom: #01502D; border-style: solid;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" id="mainNav" style="color: white; border-bottom: #01502D; border-style: solid;">
         <div class="container">
-            <a class="navbar-brand" href="#"><img style="width: 60%;"
-                    src="{{ asset('assets/img/portfolio/logo/logo3.png') }}" /></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand" href="#"><img style="width: 60%;" src="{{ asset('assets/img/portfolio/logo/logo3.png') }}" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav my-2 col-lg-12">
                     <li class="nav-item"><a class="nav-link text-dark" href="/">Beranda</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarOrganisasi"
-                            data-bs-toggle="dropdown" aria-expanded="false">Tentang Kami</a>
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarOrganisasi" data-bs-toggle="dropdown" aria-expanded="false">Tentang Kami</a>
                         <ul class="dropdown-menu bounce" aria-labelledby="navbarOrganisasi" id="subOrganisasi">
                             <li><a class="dropdown-item" href="/legalitas">Legalitas</a></li>
                             <li><a class="dropdown-item" href="/visi-misi">Visi Misi</a></li>
@@ -74,8 +65,7 @@
                     </li>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">Program</a>
+                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
                         <ul class="dropdown-menu bounce" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ url('program-kkn') }}">Program KKN</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-santunan') }}">Program Santunan</a></li>
@@ -90,16 +80,14 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarLayanan"
-                            data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
+                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarLayanan" data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
                         <ul class="dropdown-menu bounce" aria-labelledby="navbarLayanan">
                             <li><a class="dropdown-item" href="/rekening">Rekening Zakat</a></li>
                             <li><a class="dropdown-item" href="/layanan-pembayaran">Layanan Pembayaran</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar"
-                            data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
+                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
                         <ul class="dropdown-menu bounce" aria-labelledby="navbarKabar">
                             <li><a class="dropdown-item" href="{{ url('kabar-zakat') }}">Kabar Zakat</a></li>
                             <li><a class="dropdown-item" href="{{ url('artikel') }}">Artikel</a></li>
@@ -107,30 +95,16 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link text-dark" href="/hubungi-kami">Hubungi</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="/zakat"><button class=" btn btn-primary"
-                                style="border-radius: 10px;">
+                    <li class="nav-item"><a class="nav-link text-dark" href="/zakat"><button class=" btn btn-primary" style="border-radius: 10px; width:9em">
                                 <i class="fas fa-wallet"></i> Bayar Zakat</button>
                         </a></li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar"
-                            data-bs-toggle="dropdown" aria-expanded="false">Pilih Bahasa</a>
+                        <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Pilih Bahasa</a>
                         <ul class="dropdown-menu bounce" aria-labelledby="navbarKabar">
-                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/ina.png') }}"
-                                        class="border-0 border-circle"
-                                        style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
-                                        alt="">ID</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/en.png') }}"
-                                        class="border-0 border-circle"
-                                        style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
-                                        alt="">Arab</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/en.png') }}"
-                                        class="border-0 border-circle"
-                                        style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
-                                        alt="">EN</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/chin.png') }}"
-                                        class="border-0 border-circle"
-                                        style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;"
-                                        alt="">CHI</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/ina.png') }}" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">ID</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/arab.png') }}" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">Arab</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/en.png') }}" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">EN</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/chin.png') }}" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">CHI</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -186,25 +160,19 @@
                 <ul>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
-                            <input style="background-color: white;" checked
-                                class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1"
-                                value="option1" />
+                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1" value="option1" />
                             <label class="form-check-label" for="inlineCheckbox1">Kebijakan Privasi</label>
                         </div>
                     </li>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
-                            <input style="background-color: white;" checked
-                                class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1"
-                                value="option1" />
+                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1" value="option1" />
                             <label class="form-check-label" for="inlineCheckbox1">Syarat & Ketentuan</label>
                         </div>
                     </li>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
-                            <input style="background-color: white;" checked
-                                class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1"
-                                value="option1" />
+                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1" value="option1" />
                             <label class="form-check-label" for="inlineCheckbox1">FAQ</label>
                         </div>
                     </li>
@@ -250,7 +218,26 @@
             </div>
             <div class="col-md-4 mt-2 pb-2">
                 {{-- <img src="{{asset('assets/img/map.png')}}" style="width: 100%; height: auto;"> --}}
-                <div class="mapouter"><div class="gmap_canvas"><iframe width="516" height="389" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Kahuripan%20Utara%20Raya%20No.10,%20Sumber,%20Kec.%20Banjarsari,%20Kota%20Surakarta,%20Jawa%20Tengah%2057138&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://maps.google.com/maps?q=Jl.%20Kahuripan%20Utara%20Raya%20No.10,%20Sumber,%20Kec.%20Banjarsari,%20Kota%20Surakarta,%20Jawa%20Tengah%2057138&t=&z=17&ie=UTF8&iwloc=&output=embed"></a><br><style>.mapouter{position:relative;text-align:center;height:400px;width:auto;}</style><a href="https://www.embedgooglemap.net">Lokasi Kantor Baznas Surakarta</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:auto;}</style></div></div>
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="516" height="389" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Kahuripan%20Utara%20Raya%20No.10,%20Sumber,%20Kec.%20Banjarsari,%20Kota%20Surakarta,%20Jawa%20Tengah%2057138&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://maps.google.com/maps?q=Jl.%20Kahuripan%20Utara%20Raya%20No.10,%20Sumber,%20Kec.%20Banjarsari,%20Kota%20Surakarta,%20Jawa%20Tengah%2057138&t=&z=17&ie=UTF8&iwloc=&output=embed"></a><br>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: center;
+                                height: 400px;
+                                width: auto;
+                            }
+                        </style><a href="https://www.embedgooglemap.net">Lokasi Kantor Baznas Surakarta</a>
+                        <style>
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 400px;
+                                width: auto;
+                            }
+                        </style>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -262,9 +249,7 @@
         </center>
     </div>
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- SimpleLightbox plugin JS-->
@@ -286,8 +271,8 @@
     }
 
     // Zakat Fitrah
-    $(document).ready(function () {
-        $(document).on('click', '#hitungFitrah', function () {
+    $(document).ready(function() {
+        $(document).on('click', '#hitungFitrah', function() {
             var price = $('#priceFitrah').val().replace(/[^0-9]/g, '');
             var weight = 2.5;
             $.ajax({
@@ -300,16 +285,27 @@
                     price: price,
                     weight: weight,
                 },
-                success: function (response) {
-                    $('#resultFitrah').val(response);
+                success: function(response) {
+                    resetErrors()
+                    if (response.errors) {
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert +=
+                                '<div class="alert alert-warning fade show mt-3" role="alert">' +
+                                response.errors[i] + '</div>'
+                        }
+                        $('#showErrors').html(alert);
+                        // alert(response.errors);
+                    } else {
+                        $('#resultFitrah').val(response);
+                    }
                 }
             })
         });
     });
 
     // Zakat Maal
-    $(document).ready(function () {
-        $(document).on('click', '#hitungMaal', function () {
+    $(document).ready(function() {
+        $(document).on('click', '#hitungMaal', function() {
             var gajiPokok = $('#gajiPokok').val().replace(/[^0-9]/g, '');
             var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g, '');
             var hutang = $('#hutang').val().replace(/[^0-9]/g, '');
@@ -324,7 +320,7 @@
                     tunjangan: tunjangan,
                     hutang: hutang,
                 },
-                success: function (response) {
+                success: function(response) {
                     resetErrors()
                     if (response.errors) {
                         for (let i = 0; i < response.errors.length; i++) {
@@ -343,8 +339,8 @@
     });
 
     // Zakat Fidyah
-    $(document).ready(function () {
-        $(document).on('click', '#hitungFidyah', function () {
+    $(document).ready(function() {
+        $(document).on('click', '#hitungFidyah', function() {
             var day = $('#day').val()
             var soul = $('#soul').val()
             $.ajax({
@@ -357,7 +353,7 @@
                     hari: day,
                     jiwa: soul,
                 },
-                success: function (response) {
+                success: function(response) {
                     resetErrors()
                     if (response.errors) {
                         for (let i = 0; i < response.errors.length; i++) {
@@ -375,8 +371,8 @@
     });
 
     // Qurban
-    $(document).ready(function () {
-        $(document).on('click', '#hitungQurban', function () {
+    $(document).ready(function() {
+        $(document).on('click', '#hitungQurban', function() {
             var qurban = $('#qurban').val();
             $.ajax({
                 headers: {
@@ -387,7 +383,7 @@
                 data: {
                     jenisQurban: qurban,
                 },
-                success: function (response) {
+                success: function(response) {
                     resetErrors()
                     if (response.errors) {
                         for (let i = 0; i < response.errors.length; i++) {
@@ -404,8 +400,8 @@
         });
     });
     // Infaq
-    $(document).ready(function () {
-        $(document).on('click', '#hitungInfaq', function () {
+    $(document).ready(function() {
+        $(document).on('click', '#hitungInfaq', function() {
             var gaji = $('#gaji').val().replace(/[^0-9]/g, '');
             var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g, '');
             $.ajax({
@@ -418,7 +414,7 @@
                     gaji: gaji,
                     tunjangan: tunjangan,
                 },
-                success: function (response) {
+                success: function(response) {
                     resetErrors()
                     if (response.errors) {
                         for (let i = 0; i < response.errors.length; i++) {
@@ -434,7 +430,6 @@
             })
         });
     });
-
 </script>
 @if (!empty($fitrah) && !empty($infaq) && !empty($sedekah) && !empty($fidyah))
 <script>
@@ -446,42 +441,51 @@
         data: {
             labels: xValues,
             datasets: [{
+                label: xValues,
                 backgroundColor: barColors,
                 data: yValues
-            }]
+            }],
         },
         options: {
             title: {
                 display: true,
                 text: "Laporan Data"
-            }
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(t, d) {
+                        var xLabel = d.labels[t.index];
+                        var yLabel = d.datasets[t.datasetIndex].data[t.index] >= 1000 ? 'Rp. ' + d.datasets[t.datasetIndex].data[t.index].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") : 'Rp. ' + d.datasets[t.datasetIndex].data[t.index];
+                        return xLabel + ': ' + yLabel;
+                    },
+                },
+            },
         }
     })
-
 </script>
 <script type="text/javascript">
     // Fitrah
-    $(document).on('keyup', '#priceFitrah', function () {
+    $(document).on('keyup', '#priceFitrah', function() {
         rupiah = $('#priceFitrah').val();
-        $('#priceFitrah').val(formatRupiah(rupiah, 'Rp. '));
+        $('#priceFitrah').val(formatRupiah(rupiah, '.', '.'));
     });
     // Maal
-    $(document).on('keyup', '#gajiPokok', function () {
+    $(document).on('keyup', '#gajiPokok', function() {
         rupiah = $('#gajiPokok').val();
-        $('#gajiPokok').val(formatRupiah(rupiah, 'Rp. '));
+        $('#gajiPokok').val(formatRupiah(rupiah, '.', '.'));
     });
-    $(document).on('keyup', '#tunjangan', function () {
+    $(document).on('keyup', '#tunjangan', function() {
         rupiah = $('#tunjangan').val();
-        $('#tunjangan').val(formatRupiah(rupiah, 'Rp. '));
+        $('#tunjangan').val(formatRupiah(rupiah, '.', '.'));
     });
-    $(document).on('keyup', '#hutang', function () {
+    $(document).on('keyup', '#hutang', function() {
         rupiah = $('#hutang').val();
-        $('#hutang').val(formatRupiah(rupiah, 'Rp. '));
+        $('#hutang').val(formatRupiah(rupiah, '.', '.'));
     });
     // Infaq
-    $(document).on('keyup', '#gaji', function () {
+    $(document).on('keyup', '#gaji', function() {
         rupiah = $('#gaji').val();
-        $('#gaji').val(formatRupiah(rupiah, 'Rp. '));
+        $('#gaji').val(formatRupiah(rupiah, '.', '.'));
     });
 
     function formatRupiah(angka, prefix) {
@@ -498,9 +502,8 @@
         }
 
         rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
-        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+        return prefix == undefined ? rupiah : (rupiah ? '' + rupiah : '');
     }
-
 </script>
 @endif
 
