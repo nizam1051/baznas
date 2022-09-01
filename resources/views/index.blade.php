@@ -165,14 +165,14 @@
                                     <div class="col-auto">
                                         <div class="input-group">
                                             <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="priceFitrah" data-price=0>
+                                            <input type="text" class="form-control" id="priceFitrah" data-price=0 style="font-size: 15px">
                                         </div>
                                     </div>
                                     <p class="card-text" style="color: white; text-align: left;">Besaran Zakat Fitrah</p>
                                     <div class="col-auto">
                                         <div class="input-group">
                                             <div class="input-group-text">Kg</div>
-                                            <input type="text" class="form-control" value="2,5" readonly>
+                                            <input type="text" class="form-control" value="2,5" readonly style="font-size: 15px">
                                         </div>
                                     </div>
                                     <div>&nbsp;</div>
@@ -207,7 +207,7 @@
                                     <div class="col-auto">
                                         <div class="input-group">
                                             <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="resultFitrah">
+                                            <input type="text" class="form-control" id="resultFitrah" style="font-size: 15px">
                                         </div>
                                     </div>
                                 </div>

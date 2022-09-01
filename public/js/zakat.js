@@ -10,14 +10,14 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" id="priceFitrah" data-price = 0>' +
+            '<input type="text" style="font-size: 15px" class="form-control" id="priceFitrah" data-price = 0>' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Besaran Zakat Fitrah</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Kg</div>' +
-            '<input type="text" class="form-control" value="2,5" readonly>' +
+            '<input type="text" style="font-size: 15px" class="form-control" value="2,5" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -33,28 +33,28 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" id="gajiPokok" name="gaji" required>' +
+            '<input type="text" style="font-size: 15px" class="form-control" id="gajiPokok" name="gaji" required>' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" name="tunjangan" id="tunjangan" required>' +
+            '<input type="text" style="font-size: 15px" class="form-control" name="tunjangan" id="tunjangan" required>' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Hutang/Cicilan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" id="hutang" name="hutang" required>' +
+            '<input type="text" style="font-size: 15px" class="form-control" id="hutang" name="hutang" required>' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Besaran Zakat Maal</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">% 2,5</div>' +
-            '<input type="number" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
+            '<input type="numbe style="font-size: 15px"r" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -70,21 +70,21 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Hari</div>' +
-            '<input type="number" min="1" class="form-control" id="day" name="hari">' +
+            '<input type="numbe style="font-size: 15px"r" min="1" class="form-control" id="day" name="hari">' +
             '</div>' +
             '</div>' +
             ' <p class="card-text" style="color: white; text-align: left;">Total jiwa</p>' +
             ' <div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Jiwa</div>' +
-            '<input type="number" min="1" class="form-control" id="soul" name="jiwa">' +
+            '<input type="numbe style="font-size: 15px"r" min="1" class="form-control" id="soul" name="jiwa">' +
             '</div>' +
             '</div>' +
             ' <p class="card-text" style="color: white; text-align: left;">Harga Zakat Fidyah(Per hari dan Per jiwa)</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" class="form-control" value="50.000" readonly>' +
+            '<input type="text" style="font-size: 15px" class="form-control" value="50.000" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -117,21 +117,21 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" min="0" class="form-control" id="gaji" name="gaji">' +
+            '<input type="text" style="font-size: 15px" min="0" class="form-control" id="gaji" name="gaji">' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Rp</div>' +
-            '<input type="text" min="0" class="form-control" id="tunjangan" name="tunjangan">' +
+            '<input type="text" style="font-size: 15px" min="0" class="form-control" id="tunjangan" name="tunjangan">' +
             '</div>' +
             '</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Besaran Infaq Perbulan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">%</div>' +
-            '<input type="text" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
+            '<input type="text" style="font-size: 15px" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -160,7 +160,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
                 '</div>'+
             '</div>'+
         '</div>'
@@ -175,7 +175,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
                 '</div>'+
             '</div>'+
         '</div>'
@@ -189,7 +189,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
                 '</div>'+
             '</div>'+
         '</div>'
@@ -207,7 +207,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
                 '</div>'+
             '</div>'+
         '</div>'
@@ -221,7 +221,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
                 '</div>'+
             '</div>'+
         '</div>'
