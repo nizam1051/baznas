@@ -59,9 +59,6 @@
                         </div>
                         @endforeach
                         <div>&nbsp;</div>
-                        <br>
-                        <a href="#" style="color: black; margin-top: 3%;"><b>Lihat Lebih Banyak</b></a>
-                        <div>&nbsp;</div>
                     </div>
                 </div>
             </div>

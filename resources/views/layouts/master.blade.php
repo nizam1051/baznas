@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Baznas Surakarta</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/portfolio/logo/logo3.png" />
+    <link rel="icon" type="image/x-icon" href="/public/assets/img/portfolio/logo/logo3.png" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
@@ -123,9 +123,9 @@
                     <li class="mt-3">
                         <p class="heading-left">Alamat Kantor :</p>
                         <p class="content-left">
-                            Sumber, Banjarsari, Kota Surakarta,
+                            Jl. Dr. Moewardi, Kel. Penumping, Kec. Laweyan, Kota Surakarta,
                             <br>
-                            Jawa Tengah 57138
+                            Jawa Tengah 57141
                         </p>
                     </li>
                     <li class="mt-3">
@@ -466,6 +466,7 @@
 <script type="text/javascript">
     // Fitrah
     $(document).on('keyup', '#priceFitrah', function() {
+        console.log("Masuk sini")
         rupiah = $('#priceFitrah').val();
         $('#priceFitrah').val(formatRupiah(rupiah, '.', '.'));
     });
