@@ -4,7 +4,7 @@
 <header class="masthead">
     <div class="container-fluid hero-section" style="width: 100%;height: 350px;">
         <div class="heading">
-            PROGRAM SANTUNAN
+            PENDIDIKAN
             <hr id="hr-hero">
         </div>
     </div>
@@ -14,10 +14,9 @@
     <div class="container visi-misi">
         <h3 class="heading-content">Penjelasan Program</h3>
         <p class="text-content">
-            Program santunan untuk imam dan marbot masjid yang telah menjadi UPZ BAZNAS, dengan syarat dan ketentuan
-            yang berlaku.<br><br>
-            Program santunan guru TPA dan TPQ merupakan program subsidi bantuan yang diberikan kepada
-            guru TPA dan TPQ dengan syarat dan ketentuan berlaku.
+            Program beasiswa yatim piatu korban covid adalah program penguatan
+            keterampilan atau keilmuan terhadap anak-anak yatim piatu yang orang tuanya meninggal
+            karena covid 19.
         </p>
     </div>
 </section>

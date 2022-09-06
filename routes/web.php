@@ -45,6 +45,11 @@ Route::controller(BerandaController::class)->group(function () {
     Route::get('/index-fidyah', 'indexFidyah');
     Route::get('/index-qurban', 'indexQurban');
     Route::get('/index-infaq', 'indexInfaq');
+    Route::get('/program-kemanusiaan', 'programKemanusiaan');
+    Route::get('/program-pendidikan', 'programPendidikan');
+    Route::get('/program-kesehatan', 'programKesehatan');
+    Route::get('/program-advokasi-dakwah', 'programAdvokasiDakwah');
+    Route::get('/program-ekonomi-produktif', 'programEkonomiProduktif');
     Route::get('/program-kkn', 'programKKN');
     Route::get('/program-beasiswa', 'programBeasiswa');
     Route::get('/program-distribusi', 'programDistribusi');
