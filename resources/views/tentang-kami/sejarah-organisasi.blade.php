@@ -12,8 +12,8 @@
 <!--Crew-->
 <section class="page-section pt-5 pb-0" id="about">
     <div class="container visi-misi">
-        <h3 class="heading-content">SEJARAH ORGANISASI BAZNAS (PROVINSI SURAKARTA)</h3>
-        <p class="text-content">
+        <!-- <h3 class="heading-content">SEJARAH ORGANISASI BAZNAS (Kota SURAKARTA)</h3> -->
+        <p class="text-content mb-3" style="line-height:1.8em;">
             &emsp;&emsp;&emsp;&emsp;BAZNAS Kota Surakarta sudah beroperasi sejak Januari 2017. Selama ini kegiatan
             utama BAZNAS Kota
             Surakarta yakni mengumpulkan dana Zakat, Infaq dan Shodaqoh dari ASN, Pegawai BUMD, Anggota TNI dan
@@ -27,8 +27,10 @@
             diperbarui dengan SE Walikota Surakarta No. 451.12/072 tanggal 13 Januari tahun 2021 Tentang
             Optimalisasi Pungutan Zakat, Infaq dan Sedekah. Kemudian dana ZIS tersebut disalurkan kepada masyarakat
             yang berhak menerimanya di wilayah Kota Surakarta.
-            <br><br>
-            &emsp;&emsp;&emsp;&emsp;Salah satu upaya yang dilakukan untuk mengoptimalkan pengelolaan dana ZIS, BAZNAS Kota Surakarta
+        </p>
+        <p class="text-content mb-3" style="line-height:1.8em;">
+            &emsp;&emsp;&emsp;&emsp;Salah satu upaya yang dilakukan untuk mengoptimalkan pengelolaan dana ZIS, BAZNAS
+            Kota Surakarta
             membentuk Unit Pengumpulan Zakat (UPZ). Adapun jumlah UPZ sampai bulan Desember 2020 yang sudah
             mendapatkan SK dari BAZNAS sejumlah 372 UPZ yang terdiri atas UPZ dari OPD Pemerintah Kota Surakarta,
             UPZ Masjid dan UPZ swasta atau kelompok masyarakat. Sedangkan dalam internal BAZNAS Kota Surakarta,

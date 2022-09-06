@@ -42,21 +42,24 @@
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-6">
-                {{-- <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="{{ url('hubungi-kami') }}" method="POST" enctype="multipart/form-data"> --}}
+                {{-- <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="{{ url('hubungi-kami') }}"
+                method="POST" enctype="multipart/form-data"> --}}
                 <form action="{{ url('hubungi-kami') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <!-- Name input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                        <label for="name">Full name</label>
-                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."
+                            data-sb-validations="required" />
+                        <label class="text-muted" for="name">Nama Lengkap</label>
+                        <div class="invalid-feedback" data-sb-feedback="name:required">Nama diperlukan.</div>
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                        <label for="email">Email address</label>
-                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com"
+                            data-sb-validations="required,email" />
+                        <label class="text-muted" for="email">Alamat Email</label>
+                        <div class="invalid-feedback" data-sb-feedback="email:required">Alamat email diperlukan</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Email tidak valid</div>
                     </div>
                     <!-- Phone number input-->
                     <div class="form-group mb-3">
@@ -69,8 +72,10 @@
                     </div>
                     <!-- Message input-->
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" id="message" type="text" name="message" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                        <label for="message">Message</label>
+                        <textarea class="form-select" id="message" type="text" name="message"
+                            placeholder="Enter your message here..." style="height: 10rem"
+                            data-sb-validations="required"></textarea>
+                        <label class="text-muted" for="message">Pesan</label>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
                         </div>
                     </div>
@@ -83,7 +88,8 @@
                             <div class="fw-bolder">Form submission successful!</div>
                             To activate this form, sign up at
                             <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            <a
+                                href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
                     </div>
                     <!-- Submit error message-->
@@ -94,7 +100,10 @@
                         <div class="text-center text-danger mb-3">Error sending message!</div>
                     </div>
                     <!-- Submit Button-->
-                    <button class="btn btn-xl text-white" id="submitButton" style="background-color: #01502D;" type="submit">Submit</button>
+                    <center>
+                        <button class="btn btn-success rounded-pill text-white px-5" id="submitButton"
+                            style="background-color: #01502D;" type="submit">Submit</button>
+                    </center>
                 </form>
             </div>
         </div>

@@ -12,16 +12,19 @@
 <!--Crew-->
 <section class="page-section pt-5 pb-0" id="about">
     <div class="container visi-misi">
-        <h3 class="heading-content">BAZNAS KOTA SURAKARTA</h3>
-    </br>
-        <p class="text-content">
-            Badan Amil Zakat Nasional (BAZNAS) merupakan badan resmi dan satu-satunya yang dibentuk oleh pemerintah berdasarkan Keputusan Presiden RI No. 8 Tahun 2001 yang memiliki tugas dan fungsi menghimpun dan menyalurkan zakat, infaq, dan sedekah (ZIS) pada tingkat nasional. Lahirnya Undang-Undang Nomor 23 Tahun 2011 tentang Pengelolaan Zakat semakin mengukuhkan peran BAZNAS sebagai lembaga yang berwenang melakukan pengelolaan zakat secara nasional. Dalam UU tersebut, BAZNAS dinyatakan sebagai lembaga pemerintah nonstruktural yang bersifat mandiri dan bertanggung jawab kepada Presiden melalui Menteri Agama.
+        <h3 class="heading-content mb-3">BAZNAS KOTA SURAKARTA</h3>
+        <p class="text-content mb-5" style="line-height: 180%;">
+            Badan Amil Zakat Nasional (BAZNAS) merupakan badan resmi dan satu-satunya yang dibentuk oleh pemerintah
+            berdasarkan Keputusan Presiden RI No. 8 Tahun 2001 yang memiliki tugas dan fungsi menghimpun dan menyalurkan
+            zakat, infaq, dan sedekah (ZIS) pada tingkat nasional. Lahirnya Undang-Undang Nomor 23 Tahun 2011 tentang
+            Pengelolaan Zakat semakin mengukuhkan peran BAZNAS sebagai lembaga yang berwenang melakukan pengelolaan
+            zakat secara nasional. Dalam UU tersebut, BAZNAS dinyatakan sebagai lembaga pemerintah nonstruktural yang
+            bersifat mandiri dan bertanggung jawab kepada Presiden melalui Menteri Agama.
         </p>
-        <br><br><br>
-        <h3 class="heading-content">TUGAS dan FUNGSI</h3>
-    </br>
-        <p class="text-content">
-            Dengan demikian, BAZNAS bersama Pemerintah bertanggung jawab untuk mengawal pengelolaan zakat yang berasaskan: syariat Islam, amanah, kemanfaatan, keadilan, kepastian hukum, terintegrasi dan akuntabilitas.
+        <h3 class="heading-content mb-3">TUGAS dan FUNGSI</h3>
+        <p class="text-content" style="line-height: 180%;">
+            Dengan demikian, BAZNAS bersama Pemerintah bertanggung jawab untuk mengawal pengelolaan zakat yang
+            berasaskan: syariat Islam, amanah, kemanfaatan, keadilan, kepastian hukum, terintegrasi dan akuntabilitas.
         </p>
     </div>
     <br><br>

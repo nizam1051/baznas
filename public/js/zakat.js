@@ -267,24 +267,34 @@ $(document).on('click', '.btn-check', function () {
     var image2 = ''
     if(jenis == 'perbankan'){
         layanan1 = 'Layanan Perbankan';
-        layanan2 = 'Bank Mitras Baznas';
+        layanan2 = 'Bank Mitra Baznas';
         image1 = 'assets/img/korosel4.png';
-        image2 = 'assets/img/list-bank/dumy bank.jpg';
+        imagebsi = 'assets/img/list-bank/bsi.png';
+        imagebj = 'assets/img/list-bank/bj.png';
     }else if(jenis == 'langsung'){
         layanan1 = 'Layanan Langsung';
-        layanan2 = 'Bank Mitras Baznas';
+        layanan2 = 'Bank Mitra Baznas';
         image1 = 'assets/img/korosel2.png';
-        image2 = 'assets/img/list-bank/dumy bank.jpg';
+        imagebsi = 'assets/img/list-bank/bsi.png';
+        imagebj = 'assets/img/list-bank/bj.png';
     }else{
         layanan1 = 'Layanan Digital';
-        layanan2 = 'Bank Mitras Baznas';
+        layanan2 = 'Bank Mitra Baznas';
         image1 = 'assets/img/korosel3.png';
-        image2 = 'assets/img/list-bank/dumy bank.jpg';
+        imagebsi = 'assets/img/list-bank/bsi.png';
+        imagebj = 'assets/img/list-bank/bj.png';
     }
     var output = '<h4 class="mb-3 header-layanan">'+layanan1+'</h4>'+
     '<p style="text-align: center; font-weight: bolder;" class="mb-4">BAZNAS bekerjasama dengan mitra perbankan dalam menyediakan berbagai fasilitas pembayaran zakat, infak, dan sedekah.</p>'+
     '<img src="'+image1+'" alt="pembayaran perbankan" class="image-layanan">'+
     '<h4 class="mb-4 mt-5 header-layanan">'+layanan2+'</h4>'+
-    '<img src="'+image2+'" class="image-layanan bank" alt="pembayaran perbankan">';
+    '<div class="d-flex justify-content-center">'+
+        '<div class="col-md-auto">'+
+            '<img src="'+imagebsi+'" height="150px" alt="pembayaran perbankan">'+
+        '</div>'+
+        '<div class="col-md-auto">'+
+            '<img src="'+imagebj+'" height="150px" alt="pembayaran perbankan">'+
+        '</div>'+
+    '</div>';
     $(".show-content-layanan").fadeOut(0).html(output).fadeIn(1500)
 })
