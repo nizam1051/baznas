@@ -34,18 +34,21 @@ class KabarController extends Controller
         return view('galeri', compact('galeri'));
     }
 
-    public function DetailKabarZakat($id){
+    public function DetailKabarZakat($id)
+    {
         $data = KabarZakat::find($id);
         // return $data;
         return view('kabar.kabar-zakat-detail', compact('data'));
     }
 
-    public function detailArtikel($id){
+    public function detailArtikel($id)
+    {
         $data = Artikel::find($id);
         return view('kabar.article-detail', compact('data'));
     }
 
-    public function detailInspirasi($id){
+    public function detailInspirasi($id)
+    {
         $data = Inspirasi::find($id);
         return view('kabar.inspirasi-detail', compact('data'));
     }

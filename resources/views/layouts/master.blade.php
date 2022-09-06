@@ -67,15 +67,13 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
                         <ul class="dropdown-menu bounce" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{ url('program-kkn') }}">Program KKN</a></li>
-                            <li><a class="dropdown-item" href="{{ url('program-santunan') }}">Program Santunan</a></li>
-                            <li><a class="dropdown-item" href="{{ url('program-pemberdayaan') }}">Program Pemberdayaan
-                                    Ekonomi</a></li>
-                            <li><a class="dropdown-item" href="{{ url('program-beasiswa') }}">Program Beasiswa</a></li>
-                            <li><a class="dropdown-item" href="{{ url('program-subsidi') }}">Program Bantuan Subsidi</a>
+                            <li><a class="dropdown-item" href="{{ url('program-kemanusiaan') }}">Kemanusiaan</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-pendidikan') }}">Pendidikan</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-kesehatan') }}">Kesehatan</a>
                             </li>
-                            <li><a class="dropdown-item" href="{{ url('program-distribusi') }}">Program Pendistribusian
-                                    Zakat</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-advokasi-dakwah') }}">Advokasi & Dakwah</a></li>
+                            <li><a class="dropdown-item" href="{{ url('program-ekonomi-produktif') }}">Ekonomi Produktif</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

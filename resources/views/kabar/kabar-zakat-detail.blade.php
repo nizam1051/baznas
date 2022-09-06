@@ -1,16 +1,17 @@
 @extends('layouts/master')
 @section('content')
-    <section class="page-section" id="about">
-        <center>
-            <h1 style="font-weight: bold; opacity: 0.7;">{{$data->judul}}</h1>
-        </center>
-        <div class="container mb-5 mt-5">
-            <img src="{{asset(''.$data->gambar.'')}}" alt="" style="width: 100%; height: 50vh;">
+<section class="page-section" id="about">
+    <center>
+        <h3 style="font-weight:900;">{{$data->judul}}</h3>
+    </center>
+    <div class=" container mb-5 mt-5 d-flex justify-content-center">
+        <img class="img-fluid" alt="" src="{{asset(''.$data->gambar.'')}}" style="width:100%; object-fit:cover;"
+            style="background-color:red;">
+    </div>
+    <div class="container visi-misi">
+        <div class="text-content">
+            {!! $data->deskripsi !!}
         </div>
-        <div class="container visi-misi">
-            <div class="text-content">
-                {!! $data->deskripsi !!}
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 @endsection
