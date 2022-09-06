@@ -16,12 +16,12 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Admin Page</h1>
+                        <h1>Halaman Admin</h1>
                     </div>
                     <div class="section-body">
                         <h2 class="section-title">{{ auth()->user()->name }}</h2>
                         <p class="section-lead">
-                            Welcome to admin page
+                            Selamat Datang di Halaman Admin
                         </p>
                         <!-- This is where your code ends -->
                     </div>

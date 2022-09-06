@@ -58,9 +58,9 @@
                         <ul class="dropdown-menu bounce" aria-labelledby="navbarOrganisasi" id="subOrganisasi">
                             <li><a class="dropdown-item" href="/legalitas">Legalitas</a></li>
                             <li><a class="dropdown-item" href="/visi-misi">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="/organisasi">Latar Belakang</a></li>
                             <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a></li>
-                            <li><a class="dropdown-item" href="/organisasi">Organisasi</a></li>
-                            <li><a class="dropdown-item" href="/sejarah-organisasi">Sejarah Organisasi</a></li>
+                            <li><a class="dropdown-item" href="/sejarah-organisasi">Sejarah Baznas</a></li>
                         </ul>
                     </li>
                     </li>
@@ -70,8 +70,7 @@
                             <li><a class="dropdown-item" href="{{ url('program-kkn') }}">Program KKN</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-santunan') }}">Program Santunan</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-pemberdayaan') }}">Program Pemberdayaan
-                                    Ekonomi</a>
-                            </li>
+                                    Ekonomi</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-beasiswa') }}">Program Beasiswa</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-subsidi') }}">Program Bantuan Subsidi</a>
                             </li>
