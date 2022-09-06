@@ -1,19 +1,21 @@
 @extends('layouts/master')
 <style>
-    @media(max-width: 920px){
-        .row .table-responsive.catatan{
-            margin-top: 50px;
-        }
+@media(max-width: 920px) {
+    .row .table-responsive.catatan {
+        margin-top: 50px;
+    }
 
-        .container.px-4.px-lg-5{
-            margin-top: 100px;
-        }
+    .container.px-4.px-lg-5 {
+        margin-top: 100px;
     }
-    @media(min-width:921px){
-        .container.px-4.px-lg-5{
-            margin-top: 150px; margin-bottom: 5%;
-        }
+}
+
+@media(min-width:921px) {
+    .container.px-4.px-lg-5 {
+        margin-top: 150px;
+        margin-bottom: 5%;
     }
+}
 </style>
 @section('content')
 <!--Content-->
@@ -30,7 +32,8 @@
                     <tbody>
                         <tr>
                             <td style="font-size: 14px;">
-                                Salin nomor rekening sesuai jenis dana (zakat, infak/sedekah, program tematik atau kurban).
+                                Salin nomor rekening sesuai jenis dana (zakat, infak/sedekah, program tematik atau
+                                kurban).
                             </td>
                         </tr>
                         <tr>
@@ -40,7 +43,8 @@
                         </tr>
                         <tr>
                             <td style="font-size: 14px;">
-                                Simpan bukti transfer,kemudian konfirmasi melalui form di <a href="https://wa.me/081393055550">Sini</a> atau klik https://bit.ly/WhatsApp-081393055550
+                                Simpan bukti transfer,kemudian konfirmasi melalui kontak kami di <a
+                                    href="https://wa.me/081393055550"><button class="btn btn-primary">Sini</button></a>
                             </td>
                         </tr>
                     </tbody>
@@ -52,7 +56,8 @@
                     <h6>(a.n. Baznas Kota Surakarta)</h6>
                 </center>
                 <div class="dropdown mb-3 mt-3">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Pilih Jenis Rekening
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -84,9 +89,11 @@
                             <tr>
                                 <th scope="row">{{ $key+1 }}</th>
                                 <td><img src="{{ $r->image }}" width="135px" height="45px" alt=""></td>
-                                <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly value="{{ $r->no_rek }}"></td>
+                                <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly
+                                        value="{{ $r->no_rek }}"></td>
                                 <td>
-                                    <center><button type="button" onclick="handleClick({{$r->no_rek}})"><i class="fas fa-copy"></i></button></center>
+                                    <center><button type="button" onclick="handleClick({{$r->no_rek}})"><i
+                                                class="fas fa-copy"></i></button></center>
                                 </td>
                             </tr>
                             @endforeach

@@ -17,5 +17,22 @@
             Program Kemanusiaan merupakan kegiatan pembagian bantuan bagi korban bencana alam ban pemberian bantuan
             biaya hidup.
         </p>
+
+        <h3 class="heading-content mt-4">Persyaratan Pengajuan</h3>
+        <p class="text-content">
+        <ol>
+            <li>Surat Permohonan Yang Ditujukan ke ketua Baznas</li>
+            <li>Fc KTP,Fc KK </li>
+            <li>SKTM (Surat Keterangan Tidak
+                Mampu)/Surat Keterangan permohonan Bantuan ke Baznas Dari Kelurahan</li>
+        </ol>
+        </p>
+        <h3 class="heading-content mt-4">Sasaran</h3>
+        <p class="text-content">
+        <ul>
+            <li>Fakir & Miskin</li>
+        </ul>
+
+        </p>
     </div>
 </section>
