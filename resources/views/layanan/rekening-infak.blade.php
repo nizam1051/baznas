@@ -33,7 +33,7 @@
             <div class="col-md-9">
                 <center>
                     <h3 style="color: #01502D;">REKENING INFAK</h3>
-                    <h6>(a.n. BAZNAS (BAZIS) Provinsi Surakarta)</h6>
+                    <h6>(a.n. Baznas Kota Surakarta)</h6>
                 </center>
                 <div class="dropdown mb-3 mt-3">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
