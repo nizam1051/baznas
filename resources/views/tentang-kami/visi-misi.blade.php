@@ -14,58 +14,21 @@
     <div class="container visi-misi">
         <h3 class="heading-content">VISI</h3>
         <p class="text-content">
-            Menjadi lembaga utama menyejahterakan ummat.
+            &emsp;&emsp;Menjadi lembaga utama menyejahterakan ummat.
         </p>
         <br>
         <h3 class="heading-content">MISI</h3>
-        <ul>
-            <li>
-                <p class="text-content">
-                    Membangun BAZNAS yang kuat, terpercaya, dan modern sebagai lembaga Pemerintah non-struktural
-                    yang berwenang dalam Pengelolaan zakat.
-                </p>
-            </li>
-            <li>
-                <p class="text-content">
-                    Memaksimalkan literasi zakat nasional dan peningkatan pengumpulan ZIS-DKSL secara masif dan terukur
-                </p>
-            </li>
-            <li>
-                <p class="text-content">
-                    Memaksimalkan Pendistribusian dan pendayagunaan ZIS-DKSL untuk mengentaskan kemiskinan, meningkatkan kesejahteraan ummat,
-                    dan mengurangi kesenjangan sosial.
-                </p>
-            </li>
-            <li>
-                <p class="text-content">
-                    Memperkuat kompetensi, profesionalisme, integritas, dan kesejahteraan amil zakat nasional secara berkelanjutan.
-                </p>
-            </li>
-            <li>
-                <p class="text-content">
-                    Modernisasi dan digitalisasi pengelolaan zakat nasional dengan sistem manajemen berbasis data yang kokoh dan teratur.
-                </p>
-            </li>
-            <li>
-                <p class="text-content">
-                    Memperkuat sistem perencanaan, pengendalian, pelaporan, pertanggungjawaban, dan koordinasi pengelolaan zakat secara nasional.
-                </p>
-            </li>
-            <li>
-                <p class="text-content">
-                    Membangun kemitraan antara muzakki dan mustahik dengan semangat tolong-menolong dalam kebaikan dan ketakwaan.
-                </p>
-            </li>
-            <li>
-                <p class="text-content">
-                    Meningkatkan sinergi dan kolaborasi seluruh pemangku kepentingan terkait untuk penbangunan zakat nasional.
-                </p>
-            </li>
-            <li>
-                <p class="text-content">
-                    Berperan aktif dan menjadi referensi bagi gerakan zakat nasional.
-                </p>
-            </li>
-        </ul>
+        <ol style="1">
+            <li>Membangun BAZNAS yang kuat, terpercaya, dan modern sebagai lembaga Pemerintah non-struktural
+                    yang berwenang dalam Pengelolaan zakat.</li>
+            <li>Memaksimalkan literasi zakat nasional dan peningkatan pengumpulan ZIS-DKSL secara masif dan terukur.</li>
+            <li>Memaksimalkan Pendistribusian dan pendayagunaan ZIS-DKSL untuk mengentaskan kemiskinan, meningkatkan kesejahteraan ummat, dan mengurangi kesenjangan sosial.</li>
+            <li>Memperkuat kompetensi, profesionalisme, integritas, dan kesejahteraan amil zakat nasional secara berkelanjutan.</li>
+            <li>Modernisasi dan digitalisasi pengelolaan zakat nasional dengan sistem manajemen berbasis data yang kokoh dan teratur.</li>
+            <li>Memperkuat sistem perencanaan, pengendalian, pelaporan, pertanggungjawaban, dan koordinasi pengelolaan zakat secara nasional.</li>
+            <li>Membangun kemitraan antara muzakki dan mustahik dengan semangat tolong-menolong dalam kebaikan dan ketakwaan.</li>
+            <li>Meningkatkan sinergi dan kolaborasi seluruh pemangku kepentingan terkait untuk penbangunan zakat nasional.</li>
+            <li>Berperan aktif dan menjadi referensi bagi gerakan zakat nasional.</li>
+        </ol>
     </div>
 </section>
