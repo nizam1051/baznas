@@ -4,7 +4,7 @@
 <header class="masthead">
     <div class="container-fluid hero-section" style="width: 100%;height: 350px;">
         <div class="heading">
-            SEJARAH ORGANISASI
+            Sejarah Baznas Surakarta
             <hr id="hr-hero">
         </div>
     </div>

@@ -59,8 +59,8 @@
                             <li><a class="dropdown-item" href="/legalitas">Legalitas</a></li>
                             <li><a class="dropdown-item" href="/visi-misi">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="/organisasi">Latar Belakang</a></li>
-                            <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a></li>
-                            <li><a class="dropdown-item" href="/sejarah-organisasi">Sejarah Baznas</a></li>
+                            <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Kepengurusan</a></li>
+                            <li><a class="dropdown-item" href="/sejarah-organisasi">Sejarah</a></li>
                         </ul>
                     </li>
                     </li>
@@ -128,13 +128,17 @@
                     <li class="mt-3">
                         <p class="heading-left">Telepon :</p>
                         <p class="content-left">
-                            <a href="https://wa.me/6281393055550">08139-3055-550</a>
+                            <a href="https://wa.me/681393055550" target="_blank">
+                                <ion-icon name="logo-whatsapp"></ion-icon>&nbsp 081393055550
+                            </a>
                         </p>
                     </li>
                     <li class="mt-3">
                         <p class="heading-left">Email :</p>
                         <p class="content-left">
-                            baznaskota.surakarta@baznas.go.id
+                            <a href="mailto:baznaskota.surakarta@baznas.go.id" target="_blank">
+                                <ion-icon name="mail-outline"></ion-icon>&nbsp baznaskota.surakarta@baznas.go.id
+                            </a>
                         </p>
                     </li>
                 </ul>
@@ -178,38 +182,34 @@
                 <ul>
                     <li class="mt-2">
                         <p class="content-left">
-                            <a href="https://www.facebook.com/baznaskotasurakarta">
+                            <a href="https://www.facebook.com/baznaskotasurakarta" target="_blank">
                                 <ion-icon name="logo-facebook"></ion-icon>&nbsp baznaskotasurakarta
                             </a>
                         </p>
                     </li>
                     <li class="mt-2">
                         <p class="content-left">
-                            <a href="https://www.instagram.com/baznaskota.surakarta/">
+                            <a href="https://www.instagram.com/baznaskota.surakarta/" target="_blank">
                                 <ion-icon name="logo-instagram"></ion-icon>&nbsp baznaskota.surakarta
                             </a>
                         </p>
                     </li>
                     <li class="mt-2">
                         <p class="content-left">
-                            <a href="https://twitter.com/BaznaskotaS">
+                            <a href="https://twitter.com/BaznaskotaS" target="_blank">
                                 <ion-icon name="logo-twitter"></ion-icon>&nbsp @BaznaskotaS
                             </a>
                         </p>
                     </li>
                     <li class="mt-2">
                         <p class="content-left">
-                            <a href="https://www.youtube.com/channel/UChgLCY6zG-hdIWVupT9apVg">
+                            <a href="https://www.youtube.com/channel/UChgLCY6zG-hdIWVupT9apVg" target="_blank">
                                 <ion-icon name="logo-youtube"></ion-icon>&nbsp BAZNAS Kota Surakarta
                             </a>
                         </p>
                     </li>
                     <li class="mt-2">
-                        <p class="content-left">
-                            <a href="http://wa.me/081393055550">
-                                <ion-icon name="logo-whatsapp"></ion-icon>&nbsp 081393055550
-                            </a>
-                        </p>
+
                     </li>
                 </ul>
             </div>

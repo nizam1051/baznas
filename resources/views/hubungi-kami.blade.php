@@ -70,7 +70,9 @@
                     </div>
                     <!-- Message input-->
                     <div class="form-floating mb-3">
-                        <textarea class="form-select" id="message" type="text" name="message" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                        <textarea class="form-select" id="message" type="text" name="message"
+                            placeholder="Enter your message here..." style="height: 10rem"
+                            data-sb-validations="required"></textarea>
                         <label class="text-muted" for="message">Pesan</label>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
                         </div>
@@ -84,7 +86,8 @@
                             <div class="fw-bolder">Form submission successful!</div>
                             To activate this form, sign up at
                             <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            <a
+                                href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
                     </div>
                     <!-- Submit error message-->
@@ -96,15 +99,27 @@
                     </div>
                     <!-- Submit Button-->
                     <center>
-                        <button class="btn btn-success rounded-pill text-white px-5" id="submitButton" style="background-color: #01502D;" type="submit">Submit</button>
+                        <button class="btn btn-success rounded-pill text-white px-5" id="submitButton"
+                            style="background-color: #01502D;" type="submit">Submit</button>
                     </center>
                 </form>
             </div>
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                <a href="https://wa.me/6281393055550"><i class="bi-phone fs-2 mb-3 text-muted"></i></a>
-                <div><a href="https://wa.me/6281393055550">0813-9305-5550</a></div>
+                <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                <div>
+                    <img src="assets/img/whatsapp.png" alt="">
+                    <button a href="http://wa.me/6281393055550">
+                        081393055550
+                    </button>
+                    <p class="content-left">
+                        <a href="http://wa.me/081393055550">
+                            <ion-icon name="logo-whatsapp"></ion-icon>&nbsp 081393055550
+                        </a>
+                    </p>
+
+                </div>
             </div>
         </div>
     </div>
