@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td style="font-size: 14px;">
-                                Simpan bukti transfer,kemudian konfirmasi melalui form di <a href="https://bit.ly/WhatsApp-081393055550">Sini</a> atau klik https://bit.ly/WhatsApp-081393055550
+                                Simpan bukti transfer,kemudian konfirmasi melalui form di <Sini href="https://wa.me/6281393055550">Sini</a> atau klik <a href="https://wa.me/6281393055550">0813-9305-5550</a>
                             </td>
                         </tr>
                     </tbody>

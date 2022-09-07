@@ -128,7 +128,7 @@
                     <li class="mt-3">
                         <p class="heading-left">Telepon :</p>
                         <p class="content-left">
-                            081393055550
+                            <a href="https://wa.me/6281393055550">08139-3055-550</a>
                         </p>
                     </li>
                     <li class="mt-3">
@@ -214,9 +214,11 @@
                 </ul>
             </div>
             <div class="col-md-4 mt-2 pb-2">
-                {{-- <img src="{{asset('assets/img/map.png')}}" style="width: 100%; height: auto;"> --}}
+                <!-- <iframe width="516" height="389" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=-7.562494,110.806940&hl=id&z=14&amp;output=embed">
+                </iframe> -->
                 <div class="mapouter">
-                    <div class="gmap_canvas"><iframe width="516" height="389" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Kahuripan%20Utara%20Raya%20No.10,%20Sumber,%20Kec.%20Banjarsari,%20Kota%20Surakarta,%20Jawa%20Tengah%2057138&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://maps.google.com/maps?q=Jl.%20Kahuripan%20Utara%20Raya%20No.10,%20Sumber,%20Kec.%20Banjarsari,%20Kota%20Surakarta,%20Jawa%20Tengah%2057138&t=&z=17&ie=UTF8&iwloc=&output=embed"></a><br>
+                    <div class="gmap_canvas"><iframe width="516" height="389" id="gmap_canvas" src="https://maps.google.com/maps?q=-7.562494,110.806940&hl=id&z=16&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://maps.google.com/maps?q=-7.562494,110.806940&hl=id&z=16&amp;output=embed"></a><br>
                         <style>
                             .mapouter {
                                 position: relative;
@@ -431,7 +433,15 @@
 @if (!empty($fitrah) && !empty($infaq) && !empty($sedekah) && !empty($fidyah))
 <script>
     var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
-    var yValues = [{!!$fitrah!!}, {!!$infaq!!}, {!!$sedekah!!}, {!!$fidyah!!}];
+    var yValues = [{
+        !!$fitrah!!
+    }, {
+        !!$infaq!!
+    }, {
+        !!$sedekah!!
+    }, {
+        !!$fidyah!!
+    }];
     var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
     new Chart("myChart", {
         type: "pie",

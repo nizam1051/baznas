@@ -173,7 +173,7 @@
                                         </div>
                                     </div>
                                     <div>&nbsp;</div>
-                                    <button type="button" class="btn btn-primary2" id="hitungFitrah" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>
+                                    <a type="button" class="btn btn-primary2" id="hitungFitrah" href="#countzakat" style="background-color: #FF9900; border-color: #FF9900;">Hitung</a>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
     <section class="page-section2">
         <div class="container">
             <div class="row">
-                <div class="col-6 col-md-3 col-lg-3 col-sm-6">
+                <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0">
                     <div class="card border-0">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
                             <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D;">
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 col-lg-3 col-sm-6">
+                <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0">
                     <div class="card border-0">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
                             <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
@@ -243,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 col-lg-3 col-sm-6">
+                <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0">
                     <div class="card border-0">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
                             <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
@@ -255,7 +255,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 col-lg-3 col-sm-6">
+                <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0">
                     <div class="card border-0">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
                             <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">

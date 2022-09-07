@@ -290,10 +290,10 @@ $(document).on('click', '.btn-check', function () {
     '<h4 class="mb-4 mt-5 header-layanan">'+layanan2+'</h4>'+
     '<div class="d-flex justify-content-center">'+
         '<div class="col-md-auto">'+
-            '<img src="'+imagebsi+'" height="150px" alt="pembayaran perbankan">'+
+            '<img src="'+imagebsi+'" height="150px" alt="pembayaran perbankan" class="image-layanan">'+
         '</div>'+
         '<div class="col-md-auto">'+
-            '<img src="'+imagebj+'" height="150px" alt="pembayaran perbankan">'+
+            '<img src="'+imagebj+'" height="150px" alt="pembayaran perbankan" class="image-layanan">'+
         '</div>'+
     '</div>';
     $(".show-content-layanan").fadeOut(0).html(output).fadeIn(1500)
