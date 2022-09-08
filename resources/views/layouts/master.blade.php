@@ -59,7 +59,7 @@
                             <li><a class="dropdown-item" href="/legalitas">Legalitas</a></li>
                             <li><a class="dropdown-item" href="/visi-misi">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="/organisasi">Latar Belakang</a></li>
-                            <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Kepengurusan</a></li>
+                            <li><a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a></li>
                             <li><a class="dropdown-item" href="/sejarah-organisasi">Sejarah</a></li>
                         </ul>
                     </li>
