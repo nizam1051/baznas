@@ -48,20 +48,22 @@
                     @csrf
                     <!-- Name input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                        <input class="form-control bg-light" id="name" name="name" type="text"
+                            placeholder="Enter your name..." data-sb-validations="required" />
                         <label class="text-muted" for="name">Nama Lengkap</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">Nama diperlukan.</div>
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                        <input class="form-control bg-light" id="email" type="email" name="email"
+                            placeholder="name@example.com" data-sb-validations="required,email" />
                         <label class="text-muted" for="email">Alamat Email</label>
                         <div class="invalid-feedback" data-sb-feedback="email:required">Alamat email diperlukan</div>
                         <div class="invalid-feedback" data-sb-feedback="email:email">Email tidak valid</div>
                     </div>
                     <!-- Phone number input-->
                     <div class="form-group mb-3">
-                        <select class="form-select" name="kategori">
+                        <select class="form-select border-none" name="kategori">
                             <option selected>Pilih Kategori</option>
                             <option value="Aduan">Aduan</option>
                             <option value="Saran">Saran</option>
@@ -70,9 +72,8 @@
                     </div>
                     <!-- Message input-->
                     <div class="form-floating mb-3">
-                        <textarea class="form-select" id="message" type="text" name="message"
-                            placeholder="Enter your message here..." style="height: 10rem"
-                            data-sb-validations="required"></textarea>
+                        <textarea class="form-control bg-light" id="message" type="textarea" name="message"
+                            placeholder="" style="height: 10rem" data-sb-validations="required"></textarea>
                         <label class="text-muted" for="message">Pesan</label>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
                         </div>
@@ -107,15 +108,17 @@
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                <i class="bi-phone fs-2 mb-3 text-muted"></i>
                 <div>
-                    <img src="assets/img/whatsapp.png" alt="">
+                    <i class="bi-phone fs-2 mb-5 text-muted"></i>
+                    <!-- <img src="assets/img/whatsapp.png" width="50" alt="">
                     <button a href="http://wa.me/6281393055550">
                         081393055550
-                    </button>
-                    <p class="content-left">
-                        <a href="http://wa.me/081393055550">
-                            <ion-icon name="logo-whatsapp"></ion-icon>&nbsp 081393055550
+                    </button> -->
+                    <p class="content-left text-dark">
+                        <a href="http://wa.me/081393055550" style="font-size: 25px;">
+                            Atau Hubungi kami melalui<br>
+                            Whatapps&nbsp <ion-icon name="logo-whatsapp">
+                            </ion-icon> 081393055550
                         </a>
                     </p>
 
