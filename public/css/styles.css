@@ -192,6 +192,13 @@ ul ol {
   margin-bottom: 0;
 }
 
+ol li{
+  margin-bottom: 0.8em;
+}
+ul li{
+  margin-bottom: 0.8em;
+}
+
 dt {
   font-weight: 700;
 }

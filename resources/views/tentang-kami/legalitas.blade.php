@@ -14,7 +14,7 @@
     <div class="container visi-misi">
         <h3 class="heading-content">PRODUK HUKUM</h3>
         <p class="text-content">
-        <ol type="1" style="line-height: 300%;">
+        <ol type="1">
             <li>Undang-Undang No. 23 Tahun 2011 tentang Pengelolaan Zakat.</li>
             <li>Peraturan Pemerintah No. 14 Tahun 2014 tentang Pengelolaan Zakat.</li>
             <li>Keputusan Menteri Agama Nomor 186 Tahun 2016 tentang Pembentukan

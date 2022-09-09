@@ -14,7 +14,8 @@
     <div class="container visi-misi">
         <h3 class="heading-content mb-3">BAZNAS KOTA SURAKARTA</h3>
         <p class="text-content mb-5" style="line-height: 180%;">
-            &emsp;&emsp;&emsp;&emsp;Badan Amil Zakat Nasional (BAZNAS) merupakan badan resmi dan satu-satunya yang dibentuk oleh pemerintah
+            &emsp;&emsp;&emsp;&emsp;Badan Amil Zakat Nasional (BAZNAS) merupakan badan resmi dan satu-satunya yang
+            dibentuk oleh pemerintah
             berdasarkan Keputusan Presiden RI No. 8 Tahun 2001 yang memiliki tugas dan fungsi menghimpun dan menyalurkan
             zakat, infaq, dan sedekah (ZIS) pada tingkat nasional. Lahirnya Undang-Undang Nomor 23 Tahun 2011 tentang
             Pengelolaan Zakat semakin mengukuhkan peran BAZNAS sebagai lembaga yang berwenang melakukan pengelolaan
@@ -23,7 +24,8 @@
         </p>
         <h3 class="heading-content mb-3">TUGAS dan FUNGSI</h3>
         <p class="text-content" style="line-height: 180%;">
-            &emsp;&emsp;&emsp;&emsp;Dengan demikian, BAZNAS bersama Pemerintah bertanggung jawab untuk mengawal pengelolaan zakat yang
+            &emsp;&emsp;&emsp;&emsp;Dengan demikian, BAZNAS bersama Pemerintah bertanggung jawab untuk mengawal
+            pengelolaan zakat yang
             berasaskan: syariat Islam, amanah, kemanfaatan, keadilan, kepastian hukum, terintegrasi dan akuntabilitas.
         </p>
     </div>

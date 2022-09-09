@@ -2,7 +2,8 @@
 @section('content')
 <!--Form-->
 <section class="page-section pb-0 p-0" id="about">
-    <div class="container-fluid" style="background-image:url('assets/img/kraton-2.png'); padding-top:5%;">
+    <div class="container-fluid"
+        style="background-image:url('assets/img/kraton-2.png');background-size:cover; padding-top:5%;">
         @if ($errors->any())
         @foreach ($errors->all() as $error)
         <div class="alert alert-warning alert-dismissible show fade">
@@ -29,32 +30,37 @@
             <div class="col-md-5" id='hide-content'>
                 <div class="right-content mt-5"
                     style="padding-left: 10%; padding-right: 10%; width: 100%; height: auto; position: relative; transform: translateY(8%);">
-                    <div class="latin text-white" style="text-align: left; font-size: clamp(14px, 3vw, 18px);">
+                    <div class="latin text-dark" style="text-align: left; font-size: clamp(14px, 3vw, 18px);">
                         Selamat datang di platform ZIS online BAZNAS
                         <br>
                         Kota Surakarta
                     </div>
-                    <div class="latin text-white mt-5"
+                    <div class="latin text-dark mt-5"
                         style="text-align: left; font-size: clamp(20px, 3vw, 36px); font-weight: 700;">
                         SIAP BAYAR ZAKAT <br>
                         SEKARANG?
                     </div>
-                    <div class="latin text-white" style="text-align: left; font-size: clamp(14px, 3vw, 18px);">
+                    <div style="text-align: left; font-size: clamp(10px, 3vw, 15px);" class="latin text-dark"
+                        style="text-align: left; font-size: clamp(14px, 3vw, 18px);">
                         Bersihkan diri dengan membayar zakat <br>
                         bersama BAZNAS Surakarta melalui media <br>
                         online
                     </div>
-                    <div class="latin text-white"
-                        style="text-align: left; font-size: clamp(10px, 3vw, 15px); margin-top: 100px;">
-                        Periode
-                    </div>
-                    <h3 class="text-warning mt-3"><strong>2021/2022</strong></h3>
-                    <h5 class="text-white mt-4">Jumlah Donatur : *</h5>
-                    <h5 class="text-white mt-4">Jumlah Penerima : *</h5>
+                    <h3 class="latin text-dark"
+                        style="text-align: left; font-size: clamp(20px, 3vw, 36px); font-weight: 700;margin-top:100px;">
+                        PERIODE
+                    </h3>
+                    <span class="badge">
+                        <h3 class="text-warning p-1 mt-3 bg-dark"><strong>2021/2022</strong></h3>
+                    </span>
+                    <h5 style="text-align: left; font-size: clamp(10px, 3vw, 15px);" class="text-dark mt-4">Jumlah
+                        Donatur : *</h5>
+                    <h5 style="text-align: left; font-size: clamp(10px, 3vw, 15px);" class="text-dark mt-4">Jumlah
+                        Penerima : *</h5>
                 </div>
             </div>
             <div class="col-md-7">
-                <div class="form-zakat bg-white">
+                <div class="form-zakat shadow border border-light bg-white">
                     <div class="heading-form">
                         <p class="text-form">
                             Mulai Bayar Zakat
@@ -65,8 +71,8 @@
                         @csrf
                         <div class="form-group mt-4">
                             <label for="select-zakat" class="form-label">Jenis Zakat</label>
-                            <select class="form-select form-control text-muted" aria-label="Default select example"
-                                id="select-zakat" name="jenis">
+                            <select class="form-select text-muted bg-light border-none"
+                                aria-label="Default select example" id="select-zakat" name="jenis">
                                 <option value="Fitrah">Fitrah</option>
                                 <option value="Maal">Maal</option>
                                 <option value="Fidyah">Fidyah</option>
@@ -77,11 +83,12 @@
                         <div class="form-group mt-4">
                             <label for="nominal-zakat" class="form-label">Nominal Zakat</label>
                             <input type="text" min="1" placeholder="Masukan nominal min Rp 10.000"
-                                class="form-control text-muted" id="nominalzakat" name="nominal">
+                                class="form-control bg-light text-muted" id="nominalzakat" name="nominal">
                         </div>
                         <div class="form-group mt-4">
-                            <label for="nominal-zakat" class="form-label">Bukti Pembayaran</label>
-                            <input type="file" name="image" id="">
+                            <label for="bukti-pembayaran" class="form-label">Bukti Pembayaran</label>
+                            <input type="file" class="form-control form-control-sm bg-light" name="image"
+                                id="bukti-pembayaran">
                         </div>
                         <div class="heading-form mt-5">
                             <p class="text-form">
@@ -90,8 +97,8 @@
                         </div>
                         <div class="form-group mt-4">
                             <label for="nama" class="form-label">Nama Lengkap</label>
-                            <input type="text" placeholder="Masukkan nama lengkap" class="form-control text-muted"
-                                id="nama" name="name">
+                            <input type="text" placeholder="Masukkan nama lengkap"
+                                class="form-control bg-light text-muted" id="nama" name="name">
                         </div>
                         <div class="form-check mt-3">
                             <label class="form-check-label text-dark" for="flexCheckChecked">
@@ -101,18 +108,18 @@
                         </div>
                         <div class="form-group mt-4">
                             <label for="nama" class="form-label">NIK</label>
-                            <input type="text" placeholder="Masukkan NIK lengkap" class="form-control text-muted"
-                                id="nama" name="nik">
+                            <input type="text" placeholder="Masukkan NIK lengkap"
+                                class="form-control bg-light text-muted" id="nama" name="nik">
                         </div>
                         <div class="form-group mt-4">
                             <label for="telp" class="form-label">Nomor Telefon</label>
-                            <input type="number" placeholder="Masukkan nomor WA" class="form-control text-muted"
-                                id="telp" name="phone">
+                            <input type="number" placeholder="Masukkan nomor WA"
+                                class="form-control bg-light text-muted" id="telp" name="phone">
                         </div>
                         <div class="form-group mt-4">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" placeholder="Masukkan alamat email" class="form-control text-muted"
-                                id="email" name="email">
+                            <input type="email" placeholder="Masukkan alamat email"
+                                class="form-control bg-light text-muted" id="email" name="email">
                         </div>
                         <div class="form-check mt-3">
                             <label class="form-check-label text-dark" for="flexCheckChecked">
@@ -393,23 +400,23 @@
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    $(document).on('keyup', '#nominalzakat', function () {
-        rupiah = $('#nominalzakat').val();
-        $('#nominalzakat').val(formatRupiah(rupiah, 'Rp. '));
-    });
+$(document).on('keyup', '#nominalzakat', function() {
+    rupiah = $('#nominalzakat').val();
+    $('#nominalzakat').val(formatRupiah(rupiah, 'Rp. '));
+});
 
-    function formatRupiah(angka, prefix) {
-        var number_string = angka.replace(/[^,\d]/g, '').toString(),
-            split = number_string.split(','),
-            sisa = split[0].length % 3,
-            rupiah = split[0].substr(0, sisa),
-            ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-        if (ribuan) {
-            separator = sisa ? '.' : '';
-            rupiah += separator + ribuan.join('.');
-        }
-
-        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
-        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+function formatRupiah(angka, prefix) {
+    var number_string = angka.replace(/[^,\d]/g, '').toString(),
+        split = number_string.split(','),
+        sisa = split[0].length % 3,
+        rupiah = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+    if (ribuan) {
+        separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
     }
+
+    rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+    return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+}
 </script>
