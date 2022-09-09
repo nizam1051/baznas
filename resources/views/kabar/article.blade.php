@@ -16,11 +16,11 @@
             @foreach ($artikel as $b)
             @if ($b->status == 'ACTIVE')
             <div class="col-sm-12 col-lg-4 col-md-4 col-12" style="padding: 2%;">
-                <div class="card card-fill">
+                <div class="card shadow rounded">
                     <img src="{{ asset($b->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; height: 40vh;">
                     <div class="card-body">
-                        <h6 class="font-highlight" style="text-align: left; color: #2E3192">{{ $b->judul }}
-                        </h6>
+                        <a href="{{url('kabar-zakat-detail/'.$b->id)}}" class="font-highlight" style="text-align: left; color: #2E3192">{{ $b->judul }}
+                        </a>
                         <p class="card-text">
                             {!! \Illuminate\Support\Str::words($b->deskripsi, 10, $end='...') !!}
                         </p>
