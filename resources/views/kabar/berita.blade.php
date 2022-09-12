@@ -16,11 +16,12 @@
             @foreach ($berita as $b)
             <div class="mb-4 col-sm-12 col-lg-4 col-md-4">
                 <div class="card" style="max-height: 400px;">
-                    <img src="{{ asset($b->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900; min-height: 250px; max-height: 300px;">
+                    <img src="{{ asset($b->gambar) }}" class="card-img-top" alt="" style="background-color: #FF9900;  object-fit: cover;">
                     <div class="card-body" style="background-color: #FF9900;">
                         <h5 class="card-title">{{ $b->judul }}</h5>
                         <p class="card-text">
-                            {{ $b->deskripsi }}</p>
+                            {{ $b->deskripsi }}
+                        </p>
                         <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>

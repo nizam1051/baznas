@@ -48,15 +48,13 @@
                     @csrf
                     <!-- Name input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control bg-light" id="name" name="name" type="text"
-                            placeholder="Enter your name..." data-sb-validations="required" />
+                        <input class="form-control bg-light" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                         <label class="text-muted" for="name">Nama Lengkap</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">Nama diperlukan.</div>
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control bg-light" id="email" type="email" name="email"
-                            placeholder="name@example.com" data-sb-validations="required,email" />
+                        <input class="form-control bg-light" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" />
                         <label class="text-muted" for="email">Alamat Email</label>
                         <div class="invalid-feedback" data-sb-feedback="email:required">Alamat email diperlukan</div>
                         <div class="invalid-feedback" data-sb-feedback="email:email">Email tidak valid</div>
@@ -72,8 +70,7 @@
                     </div>
                     <!-- Message input-->
                     <div class="form-floating mb-3">
-                        <textarea class="form-control bg-light" id="message" type="textarea" name="message"
-                            placeholder="" style="height: 10rem" data-sb-validations="required"></textarea>
+                        <textarea class="form-control bg-light" id="message" type="textarea" name="message" placeholder="" style="height: 10rem" data-sb-validations="required"></textarea>
                         <label class="text-muted" for="message">Pesan</label>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
                         </div>
@@ -87,8 +84,7 @@
                             <div class="fw-bolder">Form submission successful!</div>
                             To activate this form, sign up at
                             <br />
-                            <a
-                                href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
                     </div>
                     <!-- Submit error message-->
@@ -100,8 +96,7 @@
                     </div>
                     <!-- Submit Button-->
                     <center>
-                        <button class="btn btn-success rounded-pill text-white px-5" id="submitButton"
-                            style="background-color: #01502D;" type="submit">Submit</button>
+                        <button class="btn btn-success rounded-pill text-white px-5" id="submitButton" style="background-color: #01502D;" type="submit">Submit</button>
                     </center>
                 </form>
             </div>

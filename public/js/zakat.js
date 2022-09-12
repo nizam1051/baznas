@@ -256,6 +256,9 @@ $(document).on('click', '#rek', function () {
 
 function handleClick(number) {
     navigator.clipboard.writeText(number);
+
+    document.getElementById('alert').setAttribute("style", "display: true");
+    document.getElementById('alert').innerHTML = "Nomor Rekening <b>"+ number +"</b> telah tersalin!";
 }
 
 // Layanan Zakat

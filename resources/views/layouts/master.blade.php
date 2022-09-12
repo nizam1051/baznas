@@ -115,14 +115,12 @@
 <footer class="footer-clean main-footer">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-6 col-sm-6 col-md-5 item mt-2" style="padding-left: 5%; padding-right: 5%;">
+            <div class="col-6 col-sm-6 col-md-5 item mt-2" style="padding-right: 5%;">
                 <ul>
                     <li class="mt-3">
                         <p class="heading-left">Alamat Kantor :</p>
                         <p class="content-left">
-                            Jl. Dr. Moewardi, Kel. Penumping, Kec. Laweyan, Kota Surakarta,
-                            <br>
-                            Jawa Tengah 57141
+                            Jl. Dr. Moewardi, Kel. Penumping, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57141
                         </p>
                     </li>
                     <li class="mt-3">
@@ -446,7 +444,10 @@
             }],
         },
         options: {
+            maintainAspectRatio: 2,
+            responsive: true,
             title: {
+                fontSize: 18,
                 display: true,
                 text: "Laporan Data"
             },
