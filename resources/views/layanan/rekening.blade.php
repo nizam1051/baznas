@@ -1,21 +1,21 @@
 @extends('layouts/master')
 <style>
-@media(max-width: 920px) {
-    .row .table-responsive.catatan {
-        margin-top: 50px;
+    @media(max-width: 920px) {
+        .row .table-responsive.catatan {
+            margin-top: 50px;
+        }
+
+        .container.px-4.px-lg-5 {
+            margin-top: 100px;
+        }
     }
 
-    .container.px-4.px-lg-5 {
-        margin-top: 100px;
+    @media(min-width:921px) {
+        .container.px-4.px-lg-5 {
+            margin-top: 150px;
+            margin-bottom: 5%;
+        }
     }
-}
-
-@media(min-width:921px) {
-    .container.px-4.px-lg-5 {
-        margin-top: 150px;
-        margin-bottom: 5%;
-    }
-}
 </style>
 @section('content')
 <!--Content-->
@@ -43,8 +43,7 @@
                         </tr>
                         <tr>
                             <td style="font-size: 14px;">
-                                Simpan bukti transfer,kemudian konfirmasi melalui kontak kami di <a
-                                    href="https://wa.me/081393055550"><button class="btn btn-primary">Sini</button></a>
+                                Simpan bukti transfer,kemudian konfirmasi melalui kontak kami di <a href="https://wa.me/081393055550"><button class="btn btn-primary">Sini</button></a>
                             </td>
                         </tr>
                     </tbody>
@@ -56,21 +55,22 @@
                     <h6>(a.n. Baznas Kota Surakarta)</h6>
                 </center>
                 <div class="dropdown mb-3 mt-3">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Pilih Jenis Rekening
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" data-jenis="zakat" href="#" id="rek">Zakat</a></li>
                         <li><a class="dropdown-item" data-jenis="infaq" href="#" id="rek">Infaq</a></li>
-                        <li><a class="dropdown-item" data-jenis="sedekah" href="#" id="rek">Sedekah</a></li>
-                        <li><a class="dropdown-item" data-jenis="fidyah" href="#" id="rek">Fidyah</a></li>
+                        <!-- <li><a class="dropdown-item" data-jenis="sedekah" href="#" id="rek">Sedekah</a></li> -->
+                        <!-- <li><a class="dropdown-item" data-jenis="fidyah" href="#" id="rek">Fidyah</a></li> -->
                     </ul>
                 </div>
                 <div class="header-table" style="width: 100%; height: auto; padding: 7px; background-color: #FF9900;">
                     <center>
                         <h4 class="text-white"><b>Daftar Rekening</b></h4>
                     </center>
+                </div>
+                <div class="alert alert-info my-2" role="alert" id="alert" style="display: none;">
                 </div>
                 <div class="table-responsive table-content border-top border-dark mt-4">
                     <table class="table">
@@ -86,14 +86,12 @@
                         </thead>
                         <tbody id="listrek">
                             @foreach ($rek as $key => $r)
-                            <tr>
+                            <tr class="align-middle">
                                 <th scope="row">{{ $key+1 }}</th>
-                                <td><img src="{{ $r->image }}" width="135px" height="45px" alt=""></td>
-                                <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly
-                                        value="{{ $r->no_rek }}"></td>
+                                <td><img src="{{ $r->image }}" height="150px" alt=""></td>
+                                <td><input type="text" id="myText" class="form-control bg-transparent border-0" readonly value="{{ $r->no_rek }}"></td>
                                 <td>
-                                    <center><button type="button" onclick="handleClick({{$r->no_rek}})"><i
-                                                class="fas fa-copy"></i></button></center>
+                                    <button class="btn" type="button" onclick="handleClick({{$r->no_rek}})"><i class="fas fa-copy"></i></button>
                                 </td>
                             </tr>
                             @endforeach

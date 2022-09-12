@@ -24,6 +24,7 @@ class LayananController extends Controller
     {
         $validator = Validator::make(request()->all(), [
             'no_rek' => 'required|numeric|unique:rekenings,no_rek',
+            'jenis_rek' => 'required|string',
             'image' => 'required|max:10240|mimes:png,jpg,jpeg,svg,webp',
         ]);
         if ($validator->fails()) {
@@ -38,6 +39,7 @@ class LayananController extends Controller
         $last_img = 'uploads/rekening/' . $name_gen;
         Rekening::create([
             'image' => $last_img,
+            'jenis' => request('jenis_rek'),
             'no_rek' => request('no_rek'),
             // 'status' => 'HIDDEN',
         ]);
@@ -59,9 +61,11 @@ class LayananController extends Controller
         if (!$rek) {
             return redirect()->back()->with('status', 'Data tidak ditemukan');
         }
+
         $validator = Validator::make(request()->all(), [
             'no_rek' => 'required|numeric|unique:rekenings,no_rek,' . $rekeningID,
-            'image' => 'nullable|max:10240|mimes:png,jpg,jpeg,svg,webp',
+            'jenis_rek' => 'required|string',
+            'image' => 'required|max:10240|mimes:png,jpg,jpeg,svg,webp',
         ]);
         if ($validator->fails()) {
             return redirect()->back()->withInput()->withErrors($validator);
@@ -76,6 +80,7 @@ class LayananController extends Controller
             $last_img = 'uploads/rekening/' . $name_gen;
             $rek->update([
                 'image' => $last_img,
+                'jenis' => request('jenis_rek'),
                 'no_rek' => request('no_rek')
             ]);
             return redirect('admin/layanan/rekening')->with('success', 'Data berhasil diupdate');
