@@ -66,7 +66,7 @@
             <a href="/" style="font-family: Arial; font-weight:bold; font-size: 1.7em"><img style="width: 3em;" src="http://localhost:8000/assets/img/portfolio/logo/logo3.png"> BAZNAS</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <img style="width: 60%;" src="http://localhost:8000/assets/img/portfolio/logo/logo3.png">
+            <img style="width: 50%;" src="http://localhost:8000/assets/img/portfolio/logo/logo3.png">
         </div>
         <ul class="sidebar-menu">
 

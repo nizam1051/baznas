@@ -126,45 +126,9 @@
                     <div class="row">
                         <div class="col-md-6 mt-5">
                             <div class="card" id="showform">
-                                <!-- <div class="card-body" style="background-color: #01502D;">
-                                    <h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b>
-                                    </h5>
-                                    <div>&nbsp;</div>
-                                    <p class="card-text" style="color: white; text-align: left;">Silahkan diisi dengan
-                                        pendapatan bulanan Anda. Perhitungan Nishob tetap didasarkan pada nishob emas 85
-                                        gr yang dihitung bulanan</p>
-                                    <div>&nbsp;</div>
-                                    <p class="card-text" style="color: white; text-align: left;">Pendapatan(Gaji
-                                        Bulanan)</p>
-                                    <div class="col-auto">
-                                        <div class="input-group">
-                                            <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="priceFitrah">
-                                        </div>
-                                    </div>
-                                    <p class="card-text" style="color: white; text-align: left;">Pendapatan lain bulanan
-                                        (optional)</p>
-                                    <div class="col-auto">
-                                        <div class="input-group">
-                                            <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="autoSizingInputGroup">
-                                        </div>
-                                    </div>
-                                    <p class="card-text" style="color: white; text-align: left;">Hutang/Cicilan bulanan
-                                        (opsional)</p>
-                                    <div class="col-auto">
-                                        <div class="input-group">
-                                            <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="autoSizingInputGroup">
-                                        </div>
-                                    </div>
-                                    <div>&nbsp;</div>
-                                    <a href="#" class="btn btn-primary2" style="background-color: #FF9900; border-color: #FF9900;">Hitung</a>
-                                </div> -->
                                 <div class="card-body" style="background-color: #01502D;">
-                                    <h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat
+                                    <h5 class="text-bold mb-3" style="color:white; text-align: left;">Komponen Zakat
                                     </h5>
-                                    <div>&nbsp;</div>
                                     <p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai
                                         dengan harga beras 1 Kg di kota anda</p>
                                     <p class="card-text" style="color: white; text-align: left;">Harga Beras (1 Kg)</p>
@@ -203,16 +167,9 @@
                                 <div id="showdesc">
                                     <h6 style="color: black; text-align: left;"><b>ZAKAT FITRAH</b></h6>
                                     <p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">
-                                        Zakat
-                                        fitrah adalah zakat yang harus ditunaikan
-                                        bagi seorang muzakki yang telah memiliki kemampuan untuk menunaikannya. Zakat
-                                        fitrah
-                                        adalah zakat wajib yang harus dikeluarkan sekali setahun yaitu saat bulan
-                                        ramadhan
-                                        menjelang idul fitri. Pada prinsipnya, zakat fitrah haruslah dikeluarkan sebelum
-                                        sholat
-                                        idul fitri dilangsungkan. Hal tersebut yang menjadi pembeda zakat fitrah dengan
-                                        zakat
+                                        Zakat fitrah adalah zakat yang harus ditunaikan bagi seorang muzakki yang telah memiliki kemampuan untuk menunaikannya. Zakat
+                                        fitrah adalah zakat wajib yang harus dikeluarkan sekali setahun yaitu saat bulan ramadhan menjelang idul fitri. Pada prinsipnya, zakat fitrah haruslah dikeluarkan sebelum
+                                        sholat idul fitri dilangsungkan. Hal tersebut yang menjadi pembeda zakat fitrah dengan zakat
                                         lainnya.</p>
                                     <h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>
                                     <div class="col-auto">

@@ -3,8 +3,7 @@ $(document).on('change', '#countzakat', function () {
     var form = '';
     if (select == 'fitrah') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat</h5>' +
-            '<div>&nbsp;</div>' +
+            '<h5 class="text-bold mb-3" style="color:white; text-align: left;">Komponen Zakat</h5>' +
             '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan harga beras 1 Kg di kota anda</p>' +
             '<p class="card-text" style="color: white; text-align: left;">Harga Beras (1 Kg)</p>' +
             '<div class="col-auto">' +
@@ -25,10 +24,8 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     } else if (select == 'maal') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat</h5>' +
-            '<div>&nbsp;</div>' +
+            '<h5 class="text-bold mb-3" style="color:white; text-align: left;">Komponen Zakat</h5>' +
             '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan gaji anda perbulan</p>' +
-            '<div>&nbsp;</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Gaji Pokok Perbulan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
@@ -62,10 +59,8 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     } else if (select == 'fidyah') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat</h5>' +
-            '<div>&nbsp;</div>' +
+            '<h5 class="text-bold mb-3" style="color:white; text-align: left;">Komponen Zakat</h5>' +
             '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan hutang puasa anda</p>' +
-            '<div>&nbsp;</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Total hari tidak berpuasa</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
@@ -92,8 +87,7 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     } else if (select == 'qurban') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Qurban</h5>' +
-            '<div>&nbsp;</div>' +
+            '<h5 class="text-bold mb-3" style="color:white; text-align: left;">Komponen Qurban</h5>' +
             '<p class="card-text" style="color: white; text-align: left;">Pilih Jenis Qurban</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
@@ -109,10 +103,8 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     } else if (select == 'infaq') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Infaq</h5>' +
-            '<div>&nbsp;</div>' +
+            '<h5 class="text-bold mb-3" style="color:white; text-align: left;">Komponen Infaq</h5>' +
             '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan gaji anda perbulan</p>' +
-            '<div>&nbsp;</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Gaji Pokok Perbulan</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
@@ -139,10 +131,8 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
         } else if (select == 'penghasilan') {
             form = '<div class="card-body" style="background-color: #01502D;">' +
-                '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat</h5>' +
-                '<div>&nbsp;</div>' +
+                '<h5 class="text-bold mb-3" style="color:white; text-align: left;">Komponen Zakat</h5>' +
                 '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan gaji anda perbulan</p>' +
-                '<div>&nbsp;</div>' +
                 '<p class="card-text" style="color: white; text-align: left;">Gaji Pokok Perbulan</p>' +
                 '<div class="col-auto">' +
                 '<div class="input-group">' +

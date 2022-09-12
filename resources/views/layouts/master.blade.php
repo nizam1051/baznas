@@ -48,7 +48,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" id="mainNav" style="color: white; border-bottom: #01502D; border-style: solid;">
         <div class="container">
-            <a class="navbar-brand" href="#"><img style="width: 60%;" src="{{ asset('assets/img/portfolio/logo/logo3.png') }}" /></a>
+            <a class="navbar-brand" href="#"><img style="width: 50%;" src="{{ asset('assets/img/portfolio/logo/logo3.png') }}" /></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav my-2 col-lg-12">
@@ -452,12 +452,12 @@
                         }
                         $('#showErrors').html(alert);
                     } else {
-                        if(response['status'] == true){
+                        if (response['status'] == true) {
                             $('#resultFitrah').val(response);
-                        }else{
+                        } else {
                             $('#resultFitrah').val(0);
                             $('#resultPesan').attr('style', 'display:true');
-                            $('#resultPesan').html("Anda belum wajib zakat karena belum memenuhi Nishab sebesar Rp. "+response['nishab']);
+                            $('#resultPesan').html("Anda belum wajib zakat karena belum memenuhi Nishab sebesar Rp. " + response['nishab']);
                         }
                     }
                 }
@@ -468,7 +468,15 @@
 @if (!empty($fitrah) && !empty($infaq) && !empty($sedekah) && !empty($fidyah))
 <script>
     var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
-    var yValues = [{!!$fitrah!!}, {!!$infaq!!}, {!!$sedekah!!}, {!!$fidyah!!}];
+    var yValues = [{
+        !!$fitrah!!
+    }, {
+        !!$infaq!!
+    }, {
+        !!$sedekah!!
+    }, {
+        !!$fidyah!!
+    }];
     var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
     new Chart("myChart", {
         type: "pie",
