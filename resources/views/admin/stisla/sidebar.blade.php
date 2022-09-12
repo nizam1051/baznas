@@ -116,6 +116,10 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a class="nav-link" href="http://localhost:8000/admin/pesan"><i class="fas fa-envelope"></i>
+                    <span>Pesan</span></a>
+            </li>
         </ul>
 
     </aside>

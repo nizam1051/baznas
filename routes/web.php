@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\KalkulatorController;
 use App\Http\Controllers\Admin\AdmKabarController;
+use App\Http\Controllers\Admin\AdmMessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -140,6 +141,8 @@ Route::middleware('auth')->group(function () {
 
             Route::get('/layanan/pembayaran', [LayananController::class, 'indexBayarZakat']);
             Route::get('/layanan/pembayaran/{transID}/status', [LayananController::class, 'updateStatusBayar']);
+
+            Route::get('/pesan', [AdmMessageController::class, 'indexMessage']);
         });
     });
 });
