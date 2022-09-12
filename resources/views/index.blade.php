@@ -194,9 +194,10 @@
                                     <!-- <option value="#" disabled>Pilih Jenis Zakat</option> -->
                                     <option value="fitrah" selected>Zakat Fitrah</option>
                                     <option value="maal">Zakat Maal</option>
+                                    <option value="penghasilan">Zakat Penghasilan</option>
                                     <option value="fidyah">Zakat Fidyah</option>
                                     <!-- <option value="qurban">Qurban</option> -->
-                                    <option value="infaq">Infaq</option>
+                                    <!-- <option value="infaq">Infaq</option> -->
                                 </select>
                                 <div>&nbsp;</div>
                                 <div id="showdesc">
@@ -217,7 +218,7 @@
                                     <div class="col-auto">
                                         <div class="input-group">
                                             <div class="input-group-text">Rp</div>
-                                            <input type="text" class="form-control" id="resultFitrah" style="font-size: 15px">
+                                            <input type="text" class="form-control" id="resultFitrah" style="font-size: 15px; border: 1px solid #ced4da" readonly>
                                         </div>
                                     </div>
                                 </div>

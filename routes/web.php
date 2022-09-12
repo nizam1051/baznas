@@ -65,6 +65,7 @@ Route::post('/index-maal', [KalkulatorController::class, 'calcMaal']);
 Route::post('/index-fidyah', [KalkulatorController::class, 'calcFidyah']);
 Route::post('/index-qurban', [KalkulatorController::class, 'calcQurban']);
 Route::post('/index-infaq', [KalkulatorController::class, 'calcInfaq']);
+Route::post('/index-penghasilan', [KalkulatorController::class, 'calcPenghasilan']);
 Route::get('kabar-zakat', [KabarController::class, 'KabarZakat']);
 Route::get('kabar-zakat-detail/{id}', [KabarController::class, 'DetailKabarZakat']);
 Route::get('artikel', [KabarController::class, 'Artikel']);

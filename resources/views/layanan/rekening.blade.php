@@ -51,7 +51,7 @@
             </div>
             <div class="col-md-9 col-12">
                 <center>
-                    <h3 style="color: #01502D;">REKENING ZAKAT</h3>
+                    <h3 style="color: #01502D;">REKENING BAZNAS</h3>
                     <h6>(a.n. Baznas Kota Surakarta)</h6>
                 </center>
                 <div class="dropdown mb-3 mt-3">
@@ -66,9 +66,7 @@
                     </ul>
                 </div>
                 <div class="header-table" style="width: 100%; height: auto; padding: 7px; background-color: #FF9900;">
-                    <center>
-                        <h4 class="text-white"><b>Daftar Rekening</b></h4>
-                    </center>
+                    <h4 class="text-white text-bold text-center" id="title">Daftar Rekening Zakat</h4>
                 </div>
                 <div class="alert alert-info my-2" role="alert" id="alert" style="display: none;">
                 </div>

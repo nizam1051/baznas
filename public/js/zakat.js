@@ -3,7 +3,7 @@ $(document).on('change', '#countzakat', function () {
     var form = '';
     if (select == 'fitrah') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b></h5>' +
+            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat</h5>' +
             '<div>&nbsp;</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan harga beras 1 Kg di kota anda</p>' +
             '<p class="card-text" style="color: white; text-align: left;">Harga Beras (1 Kg)</p>' +
@@ -25,7 +25,7 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     } else if (select == 'maal') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b></h5>' +
+            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat</h5>' +
             '<div>&nbsp;</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan gaji anda perbulan</p>' +
             '<div>&nbsp;</div>' +
@@ -53,7 +53,7 @@ $(document).on('change', '#countzakat', function () {
             '<p class="card-text" style="color: white; text-align: left;">Besaran Zakat Maal</p>' +
             '<div class="col-auto">' +
             '<div class="input-group">' +
-            '<div class="input-group-text">% 2,5</div>' +
+            '<div class="input-group-text">%</div>' +
             '<input type="numbe style="font-size: 15px"r" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
             '</div>' +
             '</div>' +
@@ -62,7 +62,7 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     } else if (select == 'fidyah') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Zakat</b></h5>' +
+            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat</h5>' +
             '<div>&nbsp;</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan hutang puasa anda</p>' +
             '<div>&nbsp;</div>' +
@@ -92,7 +92,7 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     } else if (select == 'qurban') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Qurban</b></h5>' +
+            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Qurban</h5>' +
             '<div>&nbsp;</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Pilih Jenis Qurban</p>' +
             '<div class="col-auto">' +
@@ -109,7 +109,7 @@ $(document).on('change', '#countzakat', function () {
             '</div>';
     } else if (select == 'infaq') {
         form = '<div class="card-body" style="background-color: #01502D;">' +
-            '<h5 class="card-title" style="color:white; text-align: left;"><b>Komponen Infaq</b></h5>' +
+            '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Infaq</h5>' +
             '<div>&nbsp;</div>' +
             '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan gaji anda perbulan</p>' +
             '<div>&nbsp;</div>' +
@@ -137,8 +137,38 @@ $(document).on('change', '#countzakat', function () {
             '<div>&nbsp;</div>' +
             '<button type="submit" class="btn btn-primary2" id="hitungInfaq" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>' +
             '</div>';
-    } else {
-        form = '<div class="alert alert-danger" role="alert">' +
+        } else if (select == 'penghasilan') {
+            form = '<div class="card-body" style="background-color: #01502D;">' +
+                '<h5 class="text-bold" style="color:white; text-align: left;">Komponen Zakat</h5>' +
+                '<div>&nbsp;</div>' +
+                '<p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai dengan gaji anda perbulan</p>' +
+                '<div>&nbsp;</div>' +
+                '<p class="card-text" style="color: white; text-align: left;">Gaji Pokok Perbulan</p>' +
+                '<div class="col-auto">' +
+                '<div class="input-group">' +
+                '<div class="input-group-text">Rp</div>' +
+                '<input type="text" style="font-size: 15px" min="0" class="form-control" id="gaji" name="gaji">' +
+                '</div>' +
+                '</div>' +
+                '<p class="card-text" style="color: white; text-align: left;">Tunjangan Tambahan</p>' +
+                '<div class="col-auto">' +
+                '<div class="input-group">' +
+                '<div class="input-group-text">Rp</div>' +
+                '<input type="text" style="font-size: 15px" min="0" class="form-control" id="tunjangan" name="tunjangan">' +
+                '</div>' +
+                '</div>' +
+                '<p class="card-text" style="color: white; text-align: left;">Kadar Zakat Penghasilan</p>' +
+                '<div class="col-auto">' +
+                '<div class="input-group">' +
+                '<div class="input-group-text">%</div>' +
+                '<input type="text" style="font-size: 15px" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
+                '</div>' +
+                '</div>' +
+                '<div>&nbsp;</div>' +
+                '<button type="submit" class="btn btn-primary2" id="hitungPenghasilan" style="background-color: #FF9900; border-color: #FF9900;">Hitung</button>' +
+                '</div>';
+        } else {
+            form = '<div class="alert alert-danger" role="alert">' +
             '<b>Ooops!</b>pilih jenis zakat' +
             '</div>';
     }
@@ -160,7 +190,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px; border: 1px solid #ced4da" class="form-control" id="resultFitrah" readonly>'+
                 '</div>'+
             '</div>'+
         '</div>'
@@ -175,7 +205,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px; border: 1px solid #ced4da" class="form-control" id="resultFitrah" readonly>'+
                 '</div>'+
             '</div>'+
         '</div>'
@@ -189,7 +219,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px; border: 1px solid #ced4da" class="form-control" id="resultFitrah" readonly>'+
                 '</div>'+
             '</div>'+
         '</div>'
@@ -207,7 +237,7 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px; border: 1px solid #ced4da" class="form-control" id="resultFitrah" readonly>'+
                 '</div>'+
             '</div>'+
         '</div>'
@@ -221,8 +251,24 @@ $(document).on('change', '#countzakat', function () {
         '<div class="col-auto">'+
             '<div class="input-group">'+
                 '<div class="input-group-text">Rp</div>'+
-        '           <input type="text" style="font-size: 15px" class="form-control" id="resultFitrah">'+
+        '           <input type="text" style="font-size: 15px; border: 1px solid #ced4da" class="form-control" id="resultFitrah" readonly>'+
                 '</div>'+
+            '</div>'+
+        '</div>'
+        ;
+    } else if (select == 'penghasilan') {
+        desc = 
+        '<h6 style="color: black; text-align: left;"><b>ZAKAT PENGHASILAN</b></h6>'+
+        '<p style="color: black; text-align: justify; font-size: clamp(13px, 1vw, 17px);">'+
+        "Zakat penghasilan atau yang dikenal juga sebagai zakat profesi adalah bagian dari zakat maal yang wajib dikeluarkan atas harta yang berasal dari pendapatan / penghasilan rutin dari pekerjaan yang tidak melanggar syariah. Nishab zakat penghasilan sebesar 85 gram emas per tahun. Kadar zakat penghasilan senilai 2,5%. Dalam praktiknya, zakat penghasilan dapat ditunaikan setiap bulan dengan nilai nishab per bulannya adalah setara dengan nilai seperduabelas dari 85 gram emas, dengan kadar 2,5%. Jadi apabila penghasilan setiap bulan telah melebihi nilai nishab bulanan, maka wajib dikeluarkan zakatnya sebesar 2,5% dari penghasilannya tersebut. (Sumber: Al Qur'an Surah Al Baqarah ayat 267, Peraturan Menteri Agama Nomer 31 Tahun 2019, Fatwa MUI Nomer 3 Tahun 2003, dan pendapat Shaikh Yusuf Qardawi).</p>"+
+        '<h6 style="color: black; text-align: left;"><b>Nilai Zakat</b></h6>' +
+        '<div class="col-auto">'+
+            '<div class="input-group">'+
+                '<div class="input-group-text">Rp</div>'+
+        '           <input type="text" style="font-size: 15px; border: 1px solid #ced4da" class="form-control" id="resultFitrah" readonly>'+
+                '</div>'+
+            '</div>'+
+            '<div id="resultPesan" class="alert alert-danger" style="display: none">'+
             '</div>'+
         '</div>'
         ;
@@ -237,6 +283,7 @@ $(document).on('change', '#countzakat', function () {
 // Zakat Fitrah
 $(document).on('click', '#rek', function () {
     var jenis = $(this).data('jenis');
+    var namaTabel = jenis.charAt(0).toUpperCase() + jenis.slice(1);
     $(document).ready(function () {
         $.ajax({
             headers: {
@@ -248,6 +295,7 @@ $(document).on('click', '#rek', function () {
                 jenis: jenis
             },
             success: function (response) {
+                $('#title').html("Daftar Rekening " + namaTabel)
                 $('#listrek').html(response)
             }
         })
@@ -272,20 +320,23 @@ $(document).on('click', '.btn-check', function () {
         layanan1 = 'Layanan Perbankan';
         layanan2 = 'Bank Mitra Baznas';
         image1 = 'assets/img/korosel4.png';
-        imagebsi = 'assets/img/list-bank/bsi.png';
-        imagebj = 'assets/img/list-bank/bj.png';
+        image2 = 'assets/img/list-bank/bsi.png';
+        image3 = 'assets/img/list-bank/bj.png';
+        style = ''
     }else if(jenis == 'langsung'){
         layanan1 = 'Layanan Langsung';
         layanan2 = 'Bank Mitra Baznas';
         image1 = 'assets/img/korosel2.png';
-        imagebsi = 'assets/img/list-bank/bsi.png';
-        imagebj = 'assets/img/list-bank/bj.png';
+        image2 = 'assets/img/list-bank/bsi.png';
+        image3 = 'assets/img/list-bank/bj.png';
+        style = ''
     }else{
         layanan1 = 'Layanan Digital';
-        layanan2 = 'Bank Mitra Baznas';
+        layanan2 = 'Pembayaran Melalui QRIS';
         image1 = 'assets/img/korosel3.png';
-        imagebsi = 'assets/img/list-bank/bsi.png';
-        imagebj = 'assets/img/list-bank/bj.png';
+        image2 = 'assets/img/QRIS Infaq Baznas.png';
+        image3 = 'assets/img/QRIS Zakat Baznas.png';
+        style = 'height: 400px; width: auto;'
     }
     var output = '<h4 class="mb-3 header-layanan">'+layanan1+'</h4>'+
     '<p style="text-align: center; font-weight: bolder;" class="mb-4">BAZNAS bekerjasama dengan mitra perbankan dalam menyediakan berbagai fasilitas pembayaran zakat, infak, dan sedekah.</p>'+
@@ -293,10 +344,10 @@ $(document).on('click', '.btn-check', function () {
     '<h4 class="mb-4 mt-5 header-layanan">'+layanan2+'</h4>'+
     '<div class="d-flex justify-content-center">'+
         '<div class="col-md-auto">'+
-            '<img src="'+imagebsi+'" height="150px" alt="pembayaran perbankan" class="image-layanan">'+
+            '<img src="'+image2+'" style="'+style+'" height="150px" alt="pembayaran perbankan" class="image-layanan mx-1">'+
         '</div>'+
         '<div class="col-md-auto">'+
-            '<img src="'+imagebj+'" height="150px" alt="pembayaran perbankan" class="image-layanan">'+
+            '<img src="'+image3+'" style="'+style+'" height="150px" alt="pembayaran perbankan" class="image-layanan mx-1">'+
         '</div>'+
     '</div>';
     $(".show-content-layanan").fadeOut(0).html(output).fadeIn(1500)

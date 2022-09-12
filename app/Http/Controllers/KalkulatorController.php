@@ -100,4 +100,33 @@ class KalkulatorController extends Controller
         $total = $harga * 2.5 / 100;
         return number_format($total, 2, ',', '.');
     }
+
+    public function calcPenghasilan(Request $request)
+    {
+        $validator = Validator::make(request()->all(), [
+            'gaji' => 'required|numeric|min:1000',
+            'tunjangan' => 'required|numeric|min:0',
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->all()]);
+        }
+        $gaji = $request->get('gaji');
+        $tunjangan = $request->get('tunjangan');
+        $penghasilan = $gaji * 12 + $tunjangan;
+        $nishab = 819000; // ! Harga Emas 1 Gram
+        if ($penghasilan >= $nishab) {
+            $total = $penghasilan * 2.5 / 1000;
+            $data = [
+                'nishab' => number_format($nishab, 2, ',', '.'),
+                'status' => true,
+            ];
+            return $data;
+        } else {
+            $data = [
+                'nishab' => number_format($nishab, 2, ',', '.'),
+                'status' => false,
+            ];
+            return $data;
+        }
+    }
 }

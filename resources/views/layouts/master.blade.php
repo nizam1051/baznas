@@ -427,6 +427,43 @@
             })
         });
     });
+    // Penghasilan
+    $(document).ready(function() {
+        $(document).on('click', '#hitungPenghasilan', function() {
+            var gaji = $('#gaji').val().replace(/[^0-9]/g, '');
+            var tunjangan = $('#tunjangan').val().replace(/[^0-9]/g, '');
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "{{ url('/index-penghasilan') }}",
+                method: 'POST',
+                data: {
+                    gaji: gaji,
+                    tunjangan: tunjangan,
+                },
+                success: function(response) {
+                    resetErrors()
+                    if (response.errors) {
+                        for (let i = 0; i < response.errors.length; i++) {
+                            alert +=
+                                '<div class="alert alert-warning fade show mt-3" role="alert">' +
+                                response.errors[i] + '</div>'
+                        }
+                        $('#showErrors').html(alert);
+                    } else {
+                        if(response['status'] == true){
+                            $('#resultFitrah').val(response);
+                        }else{
+                            $('#resultFitrah').val(0);
+                            $('#resultPesan').attr('style', 'display:true');
+                            $('#resultPesan').html("Anda belum wajib zakat karena belum memenuhi Nishab sebesar Rp. "+response['nishab']);
+                        }
+                    }
+                }
+            })
+        });
+    });
 </script>
 @if (!empty($fitrah) && !empty($infaq) && !empty($sedekah) && !empty($fidyah))
 <script>
