@@ -353,9 +353,9 @@ class BerandaController extends Controller
             'nominal' => 'required',
             'image' => 'required|max:10240|mimes:png,jpg,jpeg,svg,webp',
             'name' => 'required|string|max:255',
-            'nik' => 'required|string|min:16|max:16',
+            'nik' => 'string|min:16|max:16',
             'phone' => 'required',
-            'email' => 'required|email',
+            'email' => 'email',
         ]);
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator);

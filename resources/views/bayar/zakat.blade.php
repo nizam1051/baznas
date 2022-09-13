@@ -73,10 +73,10 @@
                             <label for="select-zakat" class="form-label">Jenis Zakat</label>
                             <select class="form-select text-muted bg-light border-none"
                                 aria-label="Default select example" id="select-zakat" name="jenis">
-                                <option value="Fitrah">Fitrah</option>
+                                <option disabled value="Fitrah">Fitrah</option>
                                 <option value="Maal">Maal</option>
-                                <option value="Fidyah">Fidyah</option>
-                                <option value="Qurban">Qurban</option>
+                                <option disabled value="Fidyah">Fidyah</option>
+                                <option disabled value="Qurban">Qurban</option>
                                 <option value="Infaq">Infaq</option>
                             </select>
                         </div>
@@ -96,7 +96,7 @@
                             </p>
                         </div>
                         <div class="form-group mt-4">
-                            <label for="nama" class="form-label">Nama Lengkap</label>
+                            <label for="nama" class="form-label">Nama Lengkap <i style="color:red;">*</i></label>
                             <input type="text" placeholder="Masukkan nama lengkap"
                                 class="form-control bg-light text-muted" id="nama" name="name">
                         </div>
@@ -112,7 +112,7 @@
                                 class="form-control bg-light text-muted" id="nama" name="nik">
                         </div>
                         <div class="form-group mt-4">
-                            <label for="telp" class="form-label">Nomor Telefon</label>
+                            <label for="telp" class="form-label">Nomor Telefon <i style="color:red;">*</i></label>
                             <input type="number" placeholder="Masukkan nomor WA"
                                 class="form-control bg-light text-muted" id="telp" name="phone">
                         </div>
