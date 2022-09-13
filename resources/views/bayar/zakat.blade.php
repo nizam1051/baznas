@@ -30,24 +30,24 @@
             <div class="col-md-5" id='hide-content'>
                 <div class="right-content mt-5"
                     style="padding-left: 10%; padding-right: 10%; width: 100%; height: auto; position: relative; transform: translateY(8%);">
-                    <div class="latin text-dark" style="text-align: left; font-size: clamp(14px, 3vw, 18px);">
+                    <div class="latin text-dark mb-3" style="text-align: left; font-size: clamp(14px, 3vw, 18px);">
                         Selamat datang di platform ZIS online BAZNAS
                         <br>
                         Kota Surakarta
                     </div>
-                    <div class="latin text-dark mt-5"
+                    <h3 lass="latin text-dark mt-5"
                         style="text-align: left; font-size: clamp(20px, 3vw, 36px); font-weight: 700;">
                         SIAP BAYAR ZAKAT <br>
                         SEKARANG?
-                    </div>
+                    </h3>
                     <div style="text-align: left; font-size: clamp(10px, 3vw, 15px);" class="latin text-dark"
                         style="text-align: left; font-size: clamp(14px, 3vw, 18px);">
                         Bersihkan diri dengan membayar zakat <br>
                         bersama BAZNAS Surakarta melalui media <br>
                         online
                     </div>
-                    <h3 class="latin text-dark"
-                        style="text-align: left; font-size: clamp(20px, 3vw, 36px); font-weight: 700;margin-top:100px;">
+                    <h3 class="latin text-dark mt-3"
+                        style="text-align: left; font-size: clamp(20px, 3vw, 36px); font-weight: 700;">
                         PERIODE
                     </h3>
                     <span class="badge">

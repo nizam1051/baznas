@@ -50,6 +50,7 @@
 
 .hero-section {
     background-image: url('../assets/img/kraton.png');
+    background-size: cover;
 }
 
 .nav-link {
