@@ -467,9 +467,12 @@
 </script>
 @if (!empty($fitrah) && !empty($infaq) && !empty($sedekah) && !empty($fidyah))
 <script>
-    var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
-    var yValues = [{!!$fitrah!!}, {!!$infaq!!}, {!!$sedekah!!}, {!!$fidyah!!}];
-    var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
+    // var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
+    // var yValues = [{!!$fitrah!!}, {!!$infaq!!}, {!!$sedekah!!}, {!!$fidyah!!}];
+    // var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
+    var xValues = [ "Infaq", "Sedekah"];
+    var yValues = [ {!!$infaq!!}, {!!$sedekah!!}];
+    var barColors = [ "#FF9900", "#C4C4C4", "#2E3192"];
     new Chart("myChart", {
         type: "pie",
         data: {
