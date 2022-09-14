@@ -20,7 +20,7 @@
         <h3 class="heading-content mt-4">Persyaratan Pengajuan</h3>
         <p class="">
         <ol type="1">
-            <li>Surat Permohonan Yang Ditujukan ke ketua Baznas</li>
+            <li>Surat Permohonan Yang Ditujukan ke ketua Baznas. Template unduh <a href="assets/file/Format Surat Permohonan Bantuan Perorangan.docx" style="font-weight:bold; font-color:blue; text-decoration: underline">disini</a> </li>
             <li>Fotocopy Kartu Tanda Penduduk(KTP) ,Fotocopy Kartu Keluarga(KK) </li>
             <li>Surat Keterangan Tidak
                 Mampu(SKTM) / Surat Keterangan permohonan Bantuan ke Baznas Dari Kelurahan</li>
