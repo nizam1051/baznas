@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Baznas Surakarta</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="/public/assets/img/portfolio/logo/logo3.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/portfolio/logo/logo3.png" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
@@ -470,9 +470,13 @@
     // var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
     // var yValues = [{!!$fitrah!!}, {!!$infaq!!}, {!!$sedekah!!}, {!!$fidyah!!}];
     // var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
-    var xValues = [ "Infaq", "Sedekah"];
-    var yValues = [ {!!$infaq!!}, {!!$sedekah!!}];
-    var barColors = [ "#FF9900", "#C4C4C4", "#2E3192"];
+    var xValues = ["Infaq", "Sedekah"];
+    var yValues = [{
+        !!$infaq!!
+    }, {
+        !!$sedekah!!
+    }];
+    var barColors = ["#FF9900", "#C4C4C4", "#2E3192"];
     new Chart("myChart", {
         type: "pie",
         data: {
