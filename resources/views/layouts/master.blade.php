@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Baznas Surakarta</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="/assets/img/portfolio/logo/logo3.png" />
+    <link rel="icon" type="image/x-icon" href="assets/img/portfolio/logo/logo3.png" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
@@ -37,7 +37,6 @@
             }, 'google_translate_element');
         }
     </script>
-    {{-- Style --}}
     <link href="{{ asset('css/basnaz.css') }}" rel="stylesheet">
     <!--Chart-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
@@ -92,7 +91,7 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link text-dark" href="/hubungi-kami">Hubungi</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="/zakat"><button class=" btn btn-primary" style="border-radius: 10px; width:9em">
+                    <li class="nav-item"><a class="nav-link text-dark" href="/bayarzakat"><button class=" btn btn-primary" style="border-radius: 10px; width:9em">
                                 <i class="fas fa-wallet"></i> Bayar Zakat</button>
                         </a></li>
                     <li class="nav-item dropdown">
@@ -140,22 +139,8 @@
                         </p>
                     </li>
                 </ul>
-                <div class="row">
-                    <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="{{asset('assets/img/portfolio/logo/logo3.png')}}" class="imagefooter" alt="">
-                    </div>
-                    <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="{{asset('assets/img/uns.png')}}" class="imagefooter" alt="">
-                    </div>
-                    <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="{{asset('assets/img/logo-sv.png')}}" class="imagefooter" alt="">
-                    </div>
-                    <div class="col-3 col-sm-3 col-lg-3 col-md-3">
-                        <img src="{{asset('assets/img/solo2.png')}}" class="imagefooter" alt="">
-                    </div>
-                </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-3 item-menu mt-2">
+            <div class="col-6 col-sm-6 col-md-3 mt-2">
                 <ul>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
@@ -176,7 +161,7 @@
                         </div>
                     </li>
                 </ul>
-                <p class="heading-center">IKUTI KAMI DI :</p>
+                <p class="heading-left mt-3">Ikuti Kami :</p>
                 <ul>
                     <li class="mt-2">
                         <p class="content-left">
@@ -206,10 +191,8 @@
                             </a>
                         </p>
                     </li>
-                    <li class="mt-2">
-
-                    </li>
                 </ul>
+
             </div>
             <div class="col-md-4 mt-2 pb-2">
                 <!-- <iframe width="516" height="389" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=-7.562494,110.806940&hl=id&z=14&amp;output=embed">
@@ -470,13 +453,9 @@
     // var xValues = ["Zakat Fitrah", "Infaq", "Sedekah", "Fidyah"];
     // var yValues = [{!!$fitrah!!}, {!!$infaq!!}, {!!$sedekah!!}, {!!$fidyah!!}];
     // var barColors = ["#01502D", "#FF9900", "#C4C4C4", "#2E3192", "#2E3192"];
-    var xValues = ["Infaq", "Sedekah"];
-    var yValues = [{
-        !!$infaq!!
-    }, {
-        !!$sedekah!!
-    }];
-    var barColors = ["#FF9900", "#C4C4C4", "#2E3192"];
+    var xValues = ["Fakir", "Miskin", "Fisabilillah", "Ibnu Sabil", "Ghorim", "Mu'alaf", "Amil"];
+    var yValues = [80274000, 1089055450, 341455611, 11926500, 15175000, 96736436, 248925827];
+    var barColors = ["#E3B505", "#BC6709", "#95190C", "#610345", "#107E7D", "#0a657e", "#044B7F", ];
     new Chart("myChart", {
         type: "pie",
         data: {

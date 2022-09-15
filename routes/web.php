@@ -32,7 +32,7 @@ Route::controller(BerandaController::class)->group(function () {
     Route::get('/struktur-organisasi', 'strukturOrganisasi');
     Route::get('/organisasi', 'organisasi');
     Route::get('/sejarah-organisasi', 'sejarahOrganisasi');
-    Route::get('/zakat', 'zakat');
+    Route::get('/bayarzakat', 'zakat');
     Route::get('/inspirasi', 'inspirasi');
     Route::get('/article', 'article');
     Route::get('/pendistribusian', 'pendistribusian');

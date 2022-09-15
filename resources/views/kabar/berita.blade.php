@@ -22,7 +22,7 @@
                         <p class="card-text">
                             {{ $b->deskripsi }}
                         </p>
-                        <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="#" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>

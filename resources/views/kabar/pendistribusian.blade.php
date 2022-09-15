@@ -21,7 +21,7 @@
                         <p class="card-text">
                             Baznas Surakarta adalah Badan Amil Zakat Nasional (BAZNAS) yang dibentuk di kota
                             Surakarta</p>
-                        <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="#" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                         <h5 class="card-title">Kegiatan Zakat</h5>
                         <p class="card-text">
                             Potret kegiatan Baznas Surakarta dalam hal zakat bersama masyarakat</p>
-                        <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="#" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                         <h5 class="card-title">Bayar Infaq</h5>
                         <p class="card-text">
                             Pembayaran infaq yang dilakukan bersama Baznas Surakarta</p>
-                        <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="#" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                         <p class="card-text">
                             Baznas Surakarta adalah Badan Amil Zakat Nasional (BAZNAS) yang dibentuk di kota
                             Surakarta</p>
-                        <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="#" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                         <h5 class="card-title">Kegiatan Zakat</h5>
                         <p class="card-text">
                             Potret kegiatan Baznas Surakarta dalam hal zakat bersama masyarakat</p>
-                        <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="#" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                         <h5 class="card-title">Bayar Infaq</h5>
                         <p class="card-text">
                             Pembayaran infaq yang dilakukan bersama Baznas Surakarta</p>
-                        <a href="#" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="#" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>

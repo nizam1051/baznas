@@ -35,6 +35,19 @@ class BerandaController extends Controller
         $sedekah = DataZis::where('kategori', 3)->sum('price');
         $fidyah = DataZis::where('kategori', 4)->sum('price');
         $bayar = Transaction::where('status', 'SHOW')->latest()->take(10)->get();
+
+        // Menyamarkan nama pembayar zakat
+        foreach ($bayar as $key => $g) {
+            $name = $g->name = explode(" ", $g->name);
+            $new_name = [];
+            foreach ($name as $n => $a) {
+                $a = strrev($a);
+                $a = str_repeat("*", strlen($a) - 2) . substr($a, -2);
+                $a = strrev($a);
+                array_push($new_name, $a);
+            }
+            $g->name = implode(" ", $new_name);
+        }
         return view('index', compact('bayar', 'kabar', 'artikel', 'inspirasi', 'distArtikel', 'distKabar', 'distInspirasi', 'galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah'));
     }
 

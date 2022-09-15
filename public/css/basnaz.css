@@ -25,7 +25,7 @@
 .text-content {
     text-align: justify;
     font-size: clamp(11px, 1vw, 24px);
-    line-height: 400%;
+    line-height: 150%;
 }
 
 

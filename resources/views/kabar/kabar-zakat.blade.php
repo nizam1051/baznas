@@ -24,7 +24,7 @@
                         <p class="card-text">
                             {!! \Illuminate\Support\Str::words($b->deskripsi, 10, $end='...') !!}
                         </p>
-                        <a href="{{url('kabar-zakat-detail/'.$b->id)}}" class="btn btn-primary2 text-secondary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="{{url('kabar-zakat-detail/'.$b->id)}}" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>
