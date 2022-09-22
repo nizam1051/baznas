@@ -140,13 +140,14 @@
                             <br>
                             <center>
                                 <div class="arab">
-                                    نَوَيْتُ أَنْ أُخْرِجَ زَكَاةَ مَالِى فَرْضًا لِلَّهِ تَعَالَى
+                                    نَوَيْتُ أَنْ أُخْرِجَ زَكَاةَ فَرْضًا لِلَّهِ تَعَالَى
                                 </div>
                                 <div class="latin">
-                                    Nawaitu an Ukhrija Zakaata Maali Fardhon Lillaahi Ta’aala
+                                    Nawaitu an Ukhrija Zakaata Fardhon Lillaahi Ta’aala
                                     <br><br>
                                     “Saya berniat sengaja mengeluarkan zakat fardhu karena Allah Ta’ala”
                                 </div>
+                                <br><br>
                                 {{-- <div class="btn mt-5 p-3 text-white" style="border-radius: 10px; background-color: #FF9900;" data-bs-toggle="modal" data-bs-target="#exampleModal">LANJUTKAN PEMBAYARAN</div> --}}
                                 <button type="submit" id="testzakat" class="btn btn-success">Bayar Zakat</button>
                             </center>
