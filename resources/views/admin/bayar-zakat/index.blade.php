@@ -31,7 +31,6 @@
                                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                                             <strong>{{ session('success') }}</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         @endif
@@ -39,7 +38,6 @@
                                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                                             <strong>{{ session('status') }}</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         @endif
@@ -67,10 +65,21 @@
                                                         <th scope="row">{{ $no++ }}</th>
                                                         <td>{{ $g->name }}</td>
                                                         <td>{{ $g->jenis }}</td>
-                                                        <td>{{ $g->phone }}</td>
+                                                        @php
+                                                        $phone = $g->phone;
+                                                        if (substr($phone, 0, 2) != "62") {
+                                                        $sufix = substr($phone, 1);
+                                                        $phone = "62" . $sufix;
+                                                        } else if (substr($phone, 0, 2) == "62") {
+                                                        $phone = $phone;
+                                                        };
+                                                        @endphp
+                                                        <td><a href="https://wa.me/{{$phone}}" target="_blank">
+                                                                {{$g->phone}}
+                                                            </a></td>
                                                         <td>{{ $g->email }}</td>
                                                         <td>{{ $g->nominal }}</td>
-                                                        <td style="">
+                                                        <td>
                                                             <img src="{{ asset($g->image) }}" alt="" style="height: 40px; width:70px;">
                                                         </td>
                                                         <td>{{ $g->status }}</td>

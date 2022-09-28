@@ -342,3 +342,22 @@ $(document).on('click', '.btn-check', function () {
     '</div>';
     $(".show-content-layanan").fadeOut(0).html(output).fadeIn(1500)
 })
+
+function countChars(obj) {
+    var maxLength = 16;
+    var strLength = obj.value.length;
+
+    if (obj.value == '') {
+    } else if (!(/\D/.test(obj.value)) && strLength < maxLength) {
+        document.getElementById("nik").innerHTML = 'NIK <span class="text-danger"> [' + strLength + '/' + maxLength + '] </span>';
+    } else if (!(/\D/.test(obj.value)) && strLength == maxLength) {
+        document.getElementById("nik").innerHTML = 'NIK';
+    }
+}
+
+$(function() {
+    $('input[name="nik"]').bind('keypress', function(e) {
+        var keyCode = (e.which) ? e.which : event.keyCode
+        return !(keyCode > 31 && (keyCode < 48 || keyCode > 57));
+    });
+});

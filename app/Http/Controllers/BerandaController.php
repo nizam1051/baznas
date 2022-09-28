@@ -336,7 +336,7 @@ class BerandaController extends Controller
             $validator = Validator::make(request()->all(), [
                 'jenis' => 'required',
                 'nominal' => 'required',
-                'image' => 'required|max:10240|mimes:png,jpg,jpeg,svg,webp',
+                'image' => 'required|max:1024|mimes:png,jpg,jpeg',
             ]);
             if ($validator->fails()) {
                 return redirect()->back()->withErrors($validator);

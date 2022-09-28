@@ -12,9 +12,7 @@
             @foreach ($errors->all() as $error)
             <div class="alert alert-warning alert-dismissible show fade">
                 <div class="alert-body">
-                    <button class="close" data-dismiss="alert">
-                        <span>&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     {{ $error }}
                 </div>
             </div>
@@ -23,9 +21,7 @@
             @if (session('status'))
             <div class="alert alert-info alert-dismissible show fade">
                 <div class="alert-body">
-                    <button class="close" data-dismiss="alert">
-                        <span>&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     {{ session('status') }}
                 </div>
             </div>
