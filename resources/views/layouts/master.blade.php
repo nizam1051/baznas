@@ -94,6 +94,7 @@
                     <li class="nav-item"><a class="nav-link text-dark" href="/bayarzakat"><button class=" btn btn-primary" style="border-radius: 10px; width:9em">
                                 <i class="fas fa-wallet"></i> Bayar Zakat</button>
                         </a></li>
+
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Pilih Bahasa</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarKabar">

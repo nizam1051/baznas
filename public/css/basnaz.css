@@ -297,7 +297,7 @@
 }
 
 .end-copyright .copyright {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     opacity: 1;
     font-weight: normal;
     color: white;
@@ -311,27 +311,27 @@
 
 .heading-left {
     color: #FF9900;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: clamp(13px, 3vw, 18px);
 }
 
 .content-left {
     color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: clamp(14px, 1vw, 15px);
 }
 
 .form-check-label {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     font-size: clamp(12px, 3vw, 14px);
     font-weight: normal;
     color: white;
 }
 
 .heading-center {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     font-size: clamp(10px, 2vw, 24px);
     font-weight: 600;
     color: #FF9900;
@@ -353,7 +353,7 @@
 }
 
 .form-check-label {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     font-size: clamp(12px, 3vw, 14px);
     font-weight: normal;
     color: white;
@@ -374,7 +374,7 @@
 
 .text-form {
     font-size: clamp(15px, 2vw, 24px);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -387,13 +387,13 @@
 
 .arab {
     font-size: clamp(15px, 2vw, 36px);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 
 .latin {
-    font-size: 1.1rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(12px, 1vw, 18px);
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: normal;
     text-align: center;
     margin-top: 30px;
@@ -408,7 +408,7 @@
 @media (max-width: 767px) {
     .font-highlight {
         font-size: clamp(18px, 2vw, 21px);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
         font-weight: bold;
         text-align: center;
     }
@@ -417,7 +417,7 @@
 @media (min-width: 767px) {
     .font-highlight {
         font-size: clamp(18px, 2vw, 21px);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
         font-weight: bold;
         text-align: left;
     }
@@ -427,94 +427,108 @@
     background-repeat: no-repeat;
     background-position: 0 0%;
     -webkit-animation-name: backgroundWalkY;
-            animation-name: backgroundWalkY;
+    animation-name: backgroundWalkY;
     -webkit-animation-duration: 70s;
-            animation-duration: 70s;
+    animation-duration: 70s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
-            animation-direction: alternate;
+    animation-direction: alternate;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
     -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    background-size: 100%; 
+    animation-timing-function: linear;
+    background-size: 100%;
 }
 
 @media (max-width: 1199.98px) {
     .background-walk-y {
-      background-size: cover; } }
-  
-  .background-walk-x {
+        background-size: cover;
+    }
+}
+
+.background-walk-x {
     background-repeat: no-repeat;
     background-position: 0 0%;
     -webkit-animation-name: backgroundWalkX;
-            animation-name: backgroundWalkX;
+    animation-name: backgroundWalkX;
     -webkit-animation-duration: 70s;
-            animation-duration: 70s;
+    animation-duration: 70s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
-            animation-direction: alternate;
+    animation-direction: alternate;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
     -webkit-animation-timing-function: linear;
-            animation-timing-function: linear; }
-  
-  @-webkit-keyframes backgroundWalkY {
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes backgroundWalkY {
     0% {
-      background-position: 0 0%; }
+        background-position: 0 0%;
+    }
     100% {
-      background-position: 0 100%; } }
-  
-  @keyframes backgroundWalkY {
+        background-position: 0 100%;
+    }
+}
+
+@keyframes backgroundWalkY {
     0% {
-      background-position: 0 0%; }
+        background-position: 0 0%;
+    }
     100% {
-      background-position: 0 100%; } }
-  
-  @-webkit-keyframes backgroundWalkX {
+        background-position: 0 100%;
+    }
+}
+
+@-webkit-keyframes backgroundWalkX {
     0% {
-      background-position: 0 0%; }
+        background-position: 0 0%;
+    }
     100% {
-      background-position: 100% 0; } }
-  
-  @keyframes backgroundWalkX {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes backgroundWalkX {
     0% {
-      background-position: 0 0%; }
+        background-position: 0 0%;
+    }
     100% {
-      background-position: 100% 0; } }
-
-      input[type="radio"] {
-        font: inherit;
-        color: #01502D;
-        width: 1.15em;
-        height: 1.15em;
-        border: 0.15em solid #01502D;
-        border-radius: 50%;
-        transform: translateY(-0.075em);
-
-        display: grid;
-        place-content: center;
+        background-position: 100% 0;
     }
+}
 
-    input[type="radio"]::before {
-        content: "";
-        width: 0.65em;
-        height: 0.65em;
-        border-radius: 50%;
-        transform: scale(0);
-        transition: 120ms transform ease-in-out;
-        /* Windows High Contrast Mode */
-        background-color: CanvasText;
-    }
+input[type="radio"] {
+    font: inherit;
+    color: #01502D;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid #01502D;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
 
-    input[type="radio"]:checked {
-        transform: scale(1);
-        border-color: #01502D;
-    }
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
 
-    input[type="radio"]:checked::before {
-        transform: scale(1);
-        border-color: #01502D;
-    }
+input[type="radio"]:checked {
+    transform: scale(1);
+    border-color: #01502D;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+    border-color: #01502D;
+}
