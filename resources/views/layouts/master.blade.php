@@ -54,7 +54,7 @@
                     <li class="nav-item"><a class="nav-link text-dark" href="/">Beranda</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarOrganisasi" data-bs-toggle="dropdown" aria-expanded="false">Tentang Kami</a>
-                        <ul class="dropdown-menu bounce" aria-labelledby="navbarOrganisasi" id="subOrganisasi">
+                        <ul class="dropdown-menu" aria-labelledby="navbarOrganisasi" id="subOrganisasi">
                             <li><a class="dropdown-item" href="/legalitas">Legalitas</a></li>
                             <li><a class="dropdown-item" href="/visi-misi">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="/organisasi">Latar Belakang</a></li>
@@ -65,7 +65,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
-                        <ul class="dropdown-menu bounce" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ url('program-kemanusiaan') }}">Kemanusiaan</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-pendidikan') }}">Pendidikan</a></li>
                             <li><a class="dropdown-item" href="{{ url('program-kesehatan') }}">Kesehatan</a>
@@ -77,14 +77,14 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarLayanan" data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
-                        <ul class="dropdown-menu bounce" aria-labelledby="navbarLayanan">
+                        <ul class="dropdown-menu" aria-labelledby="navbarLayanan">
                             <li><a class="dropdown-item" href="/rekening">Rekening Zakat</a></li>
                             <li><a class="dropdown-item" href="/layanan-pembayaran">Layanan Pembayaran</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
-                        <ul class="dropdown-menu bounce" aria-labelledby="navbarKabar">
+                        <ul class="dropdown-menu" aria-labelledby="navbarKabar">
                             <li><a class="dropdown-item" href="{{ url('kabar-zakat') }}">Kabar Zakat</a></li>
                             <li><a class="dropdown-item" href="{{ url('artikel') }}">Artikel</a></li>
                             <li><a class="dropdown-item" href="{{ url('inspirasi') }}">Inspirasi</a></li>
@@ -96,7 +96,7 @@
                         </a></li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Pilih Bahasa</a>
-                        <ul class="dropdown-menu bounce" aria-labelledby="navbarKabar">
+                        <ul class="dropdown-menu" aria-labelledby="navbarKabar">
                             <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/ina.png') }}" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">ID</a></li>
                             <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/arab.png') }}" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">Arab</a></li>
                             <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/img/en.png') }}" class="border-0 border-circle" style="max-width: 20px; max-height: 20px; margin-right: 4%; margin-bottom: 2%;" alt="">EN</a></li>

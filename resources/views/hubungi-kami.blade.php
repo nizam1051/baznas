@@ -16,9 +16,7 @@
         @foreach ($errors->all() as $error)
         <div class="alert alert-warning alert-dismissible show fade">
             <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 {{ $error }}
             </div>
         </div>
@@ -27,9 +25,7 @@
         @if (session('status'))
         <div class="alert alert-info alert-dismissible show fade">
             <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                    <span>&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 {{ session('status') }}
             </div>
         </div>
@@ -44,25 +40,25 @@
             <div class="col-lg-6">
                 {{-- <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="{{ url('hubungi-kami') }}"
                 method="POST" enctype="multipart/form-data"> --}}
-                <form action="{{ url('hubungi-kami') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('hubungi-kami') }}" method="POST" enctype="multipart/form-data" autocomplete="off">
                     @csrf
                     <!-- Name input-->
                     <div class="form-floating mb-3">
                         <input class="form-control bg-light" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                        <label class="text-muted" for="name">Nama Lengkap</label>
+                        <label class=" text-muted" for="name">Nama Lengkap</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">Nama diperlukan.</div>
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
                         <input class="form-control bg-light" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                        <label class="text-muted" for="email">Alamat Email</label>
+                        <label class=" text-muted" for="email">Alamat Email</label>
                         <div class="invalid-feedback" data-sb-feedback="email:required">Alamat email diperlukan</div>
                         <div class="invalid-feedback" data-sb-feedback="email:email">Email tidak valid</div>
                     </div>
                     <!-- Phone number input-->
                     <div class="form-group mb-3">
-                        <select class="form-select border-none" name="kategori">
-                            <option selected>Pilih Kategori</option>
+                        <select class="form-control form-select bg-light" name="kategori">
+                            <option selected disabled>Pilih Kategori</option>
                             <option value="Aduan">Aduan</option>
                             <option value="Saran">Saran</option>
                             <option value="Kritik">Kritik</option>
@@ -70,10 +66,8 @@
                     </div>
                     <!-- Message input-->
                     <div class="form-floating mb-3">
-                        <textarea class="form-control bg-light" id="message" type="textarea" name="message" placeholder="" style="height: 10rem" data-sb-validations="required"></textarea>
-                        <label class="text-muted" for="message">Pesan</label>
-                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                        </div>
+                        <textarea class="form-control bg-light" name="message" placeholder="Tulis pesan Anda di sini" id="message" style="height: 10rem"></textarea>
+                        <label for="message">Pesan</label>
                     </div>
                     <!-- Submit success message-->
                     <!---->
