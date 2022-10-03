@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="col-md-7">
-                <div class="form-zakat shadow border border-light bg-white">
+                <div class="form-zakat shadow border border-white bg-white">
                     <div class="heading-form">
                         <p class="text-form">
                             Mulai Bayar Zakat
@@ -62,7 +62,7 @@
                         @csrf
                         <div class="form-group mt-4">
                             <label for="select-zakat" class="form-label">Jenis Zakat</label>
-                            <select class="form-control form-select bg-light" name="jenis" id="select-zakat">
+                            <select class="form-control form-select bg-white" name="jenis" id="select-zakat">
                                 <option value="Maal">Maal</option>
                                 <option value="Infaq">Infaq</option>
                                 <option disabled value="Fidyah" class="text-muted">Fidyah</option>
@@ -72,54 +72,61 @@
                         </div>
                         <div class="form-group mt-4">
                             <label for="nominal-zakat" class="form-label">Nominal Zakat</label>
-                            <input type="text" min="1" placeholder="Masukan nominal min Rp 10.000" class="form-control bg-light" id="nominalzakat" name="nominal" autocomplete="no">
+                            <input type="text" min="1" placeholder="Masukan nominal" class="form-control bg-white" id="nominalzakat" name="nominal" autocomplete="no">
+                        </div>
+                        <div class="form-check mt-3">
+                            <label class="form-check-label text-dark" for="flexCheckChecked">
+                                <p>*Minimal Rp 10.000</p>
+                            </label>
+                            {{-- <input class="form-check-input bg-secondary border-0" type="checkbox" value="anonim" name="status" id="flexCheckChecked"> --}}
                         </div>
                         <div class="form-group mt-4">
                             <label for="bukti-pembayaran" class="form-label">Bukti Pembayaran</label>
-                            <input type="file" class="form-control bg-light" name="image" id="bukti-pembayaran" autocomplete="no" style="height: auto;">
+                            <input type="file" class="form-control bg-white" name="image" id="bukti-pembayaran" autocomplete="no" style="height: auto;">
                         </div>
                         <div class="heading-form mt-5">
                             <p class="text-form">
                                 Lengkapi Data Diri
                             </p>
+
                         </div>
                         <div class="form-group mt-4">
                             <label for="nama" class="form-label">Nama Lengkap <i style="color:red;">*</i></label>
-                            <input type="text" placeholder="Masukkan nama lengkap" class="form-control bg-light" id="nama" name="name" autocomplete="no">
+                            <input type="text" placeholder="Masukkan nama lengkap" class="form-control bg-white" id="name" name="name" autocomplete="no">
                         </div>
                         <div class="form-group mt-4">
                             <label for="nik" class="form-label" id="nik">NIK</label>
-                            <input type="text" placeholder="Masukkan NIK lengkap" class="form-control bg-light" id="nama" name="nik" autocomplete="no" onkeyup="countChars(this)" maxlength="16" minlength="16">
+                            <input type="text" placeholder="Masukkan NIK lengkap" class="form-control bg-white" id="nama" name="nik" autocomplete="no" onkeyup="countChars(this)" maxlength="16" minlength="16">
                         </div>
                         <div class="form-group mt-4 row">
                             <label for="jenis-kelamin" class="form-label">Jenis Kelamin</label>
                             <div class="form-check col ms-3">
-                                <input type="radio" class="form-check-input bg-light" id="male" value="laki-laki" name="gender" autocomplete="no">
+                                <input type="radio" class="form-check-input bg-white" id="male" value="laki-laki" name="gender" autocomplete="no">
                                 <label for="male" class="text-black">Laki-laki</label>
                             </div>
                             <div class="form-check col ms-3">
-                                <input type="radio" class="form-check-input bg-light" id="female" value="perempuan" name="gender" autocomplete="no">
+                                <input type="radio" class="form-check-input bg-white" id="female" value="perempuan" name="gender" autocomplete="no">
                                 <label for="female" class="text-black">Perempuan</label>
                             </div>
                         </div>
                         <div class="form-group mt-4">
                             <label for="telp" class="form-label">Nomor Telepon <i style="color:red;">*</i></label>
-                            <input type="number" placeholder="Masukkan nomor WA" class="form-control bg-light" id="telp" name="phone" autocomplete="no">
+                            <input type="number" placeholder="Masukkan nomor WA" class="form-control bg-white" id="telp" name="phone" autocomplete="no">
                         </div>
                         <div class="form-group mt-4">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" placeholder="Masukkan alamat email" class="form-control bg-light" id="email" name="email" autocomplete="no">
+                            <input type="email" placeholder="Masukkan alamat email" class="form-control bg-white" id="email" name="email" autocomplete="no">
                         </div>
                         <div class="form-group mt-4">
                             <label for="alamat">Alamat</label>
                             <div class="row">
                                 <div class="col">
-                                    <select class="form-control form-select bg-light" name="alamat" id="kecamatan" onchange="pilihKec(this.value)">
+                                    <select class="form-control form-select bg-white" name="alamat" id="kecamatan" onchange="pilihKec(this.value)">
                                         <option class="form-option" value="" disabled selected>Pilih Kecamatan</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <select class="form-control form-select bg-light" name="alamat" id="kelurahan">
+                                    <select class="form-control form-select bg-white" name="alamat" id="kelurahan">
                                         <option class="form-option" value="" disabled selected>Pilih Kelurahan</option>
                                     </select>
                                 </div>
@@ -131,13 +138,14 @@
                                     Niat Melakukan Zakat
                                 </p>
                                 <div class="arab">
-                                    نَوَيْتُ أَنْ أُخْرِجَ زَكَاةَ مَالِى فَرْضًا لِلَّهِ تَعَالَى
+                                    نَوَيْتُ أَنْ أُخْرِجَ زَكَاةَ فَرْضًا لِلَّهِ تَعَالَى
                                 </div>
                                 <div class="latin">
-                                    Nawaitu an Ukhrija Zakaata Maali Fardhon Lillaahi Ta’aala
-                                    <br>
+                                    Nawaitu an Ukhrija Zakaata Fardhon Lillaahi Ta’aala
+                                    <br><br>
                                     “Saya berniat sengaja mengeluarkan zakat fardhu karena Allah Ta’ala”
                                 </div>
+                                <br><br>
                                 {{-- <div class="btn mt-5 p-3 text-white" style="border-radius: 10px; background-color: #FF9900;" data-bs-toggle="modal" data-bs-target="#exampleModal">LANJUTKAN PEMBAYARAN</div> --}}
                                 <button type="submit" id="testzakat" class="btn btn-success mt-4" style="font-size: 20px;">Bayar Zakat</button>
                             </div>
