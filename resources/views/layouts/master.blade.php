@@ -41,6 +41,8 @@
     <!--Chart-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
+    <!-- Aos CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body id="page-top">
@@ -85,9 +87,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarKabar">
-                            <li><a class="dropdown-item" href="{{ url('kabar-zakat') }}">Kabar Zakat</a></li>
-                            <li><a class="dropdown-item" href="{{ url('artikel') }}">Artikel</a></li>
-                            <li><a class="dropdown-item" href="{{ url('inspirasi') }}">Inspirasi</a></li>
+                            <x-category />
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link text-dark" href="/hubungi-kami">Hubungi</a></li>
@@ -110,6 +110,11 @@
     </nav>
     @yield('content')
     <!--Content-->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 <!-- Footer-->
 <footer class="footer-clean main-footer">
