@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\KabarController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\MessageController;
@@ -67,6 +68,10 @@ Route::post('/index-fidyah', [KalkulatorController::class, 'calcFidyah']);
 Route::post('/index-qurban', [KalkulatorController::class, 'calcQurban']);
 Route::post('/index-infaq', [KalkulatorController::class, 'calcInfaq']);
 Route::post('/index-penghasilan', [KalkulatorController::class, 'calcPenghasilan']);
+// POST
+Route::get('category/{id}', [PostController::class, 'Post']);
+Route::get('post/{id}', [PostController::class, 'detailPost']);
+Route::get('kabar-zakat-detail/{id}', [KabarController::class, 'DetailKabarZakat']);
 Route::get('kabar-zakat', [KabarController::class, 'KabarZakat']);
 Route::get('kabar-zakat-detail/{id}', [KabarController::class, 'DetailKabarZakat']);
 Route::get('artikel', [KabarController::class, 'Artikel']);
