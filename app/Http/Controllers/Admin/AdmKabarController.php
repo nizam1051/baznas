@@ -7,12 +7,24 @@ use App\Models\Galeri;
 use App\Models\Artikel;
 use App\Models\Inspirasi;
 use App\Models\KabarZakat;
+use App\Models\Post;
+use App\Models\CategoryPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
 
 class AdmKabarController extends Controller
 {
+
+    public function listPost($category)
+    {
+        $category_name = ucwords(str_replace('-', ' ', $category));
+        $post = Post::join('category_post', 'category_post.id', '=', 'post.category_id')->where('name', $category_name)->latest()->paginate(6);
+        // $category = CategoryPost::all();
+        // return view('post.post', compact('post', 'category', 'category_name'));
+        return view('admin.post.index', compact('post', 'category_name'));
+    }
+
     public function indexBerita()
     {
         $berita = Berita::latest()->paginate(10);
