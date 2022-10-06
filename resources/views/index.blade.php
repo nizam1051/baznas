@@ -263,9 +263,9 @@
                         <div class="card-body" style="border: none; background-color: transparent;">
                             <div class="row">
                                 @foreach ($galeri as $g)
-                                <div class="col-md-6 col-6 mt-2">
+                                <div class="col-md-6 col-6 mt-4">
                                     <div class="card" style="border-radius: 15px; height: auto;">
-                                        <img src="{{ $g->gambar }}" alt="{{ $g->judul }}" class="galeri-image" style="height: 100%; width: 100%; object-fit: contain">
+                                        <img src="{{ $g->gambar }}" alt="{{ $g->judul }}" class="galeri-image" style="object-fit: cover">
                                     </div>
                                 </div>
                                 @endforeach
@@ -587,7 +587,8 @@
     </style>
     <style>
         /* Style the Image Used to Trigger the Modal */
-        .card-zoom img {
+        .card-zoom img,
+        .galeri-image {
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
@@ -693,7 +694,7 @@
 
         var span = document.getElementsByClassName("close")[0];
 
-        $(".card-zoom img").click(function() {
+        $(".card-zoom img, .galeri-image").click(function() {
             modal.style.display = "block";
             modalImg.src = this.src;
         })
