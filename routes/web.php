@@ -43,11 +43,14 @@ Route::controller(BerandaController::class)->group(function () {
     Route::get('/404', 'notFound');
     Route::get('/rekening', 'rekening');
     Route::get('/layanan-pembayaran', 'layananPembayaran');
+    /*
+    ! Tidak dipakai
     Route::get('/index-fitrah', 'indexFitrah');
     Route::get('/index-maal', 'indexMaal');
     Route::get('/index-fidyah', 'indexFidyah');
     Route::get('/index-qurban', 'indexQurban');
     Route::get('/index-infaq', 'indexInfaq');
+    */
     Route::get('/program-kemanusiaan', 'programKemanusiaan');
     Route::get('/program-pendidikan', 'programPendidikan');
     Route::get('/program-kesehatan', 'programKesehatan');
@@ -63,13 +66,25 @@ Route::controller(BerandaController::class)->group(function () {
 
 Route::post('datajax/', [AjaxController::class, 'getDataRekening']);
 
+/*
+====================
+| Kalkulator Zakat |
+====================
+Digunakan di index.blade.php untuk mendapatkan respon hasil perhitungan kalkulasi zakat
+*/
 Route::post('/index-fitrah', [KalkulatorController::class, 'calcFitrah']);
 Route::post('/index-maal', [KalkulatorController::class, 'calcMaal']);
 Route::post('/index-fidyah', [KalkulatorController::class, 'calcFidyah']);
 Route::post('/index-qurban', [KalkulatorController::class, 'calcQurban']);
 Route::post('/index-infaq', [KalkulatorController::class, 'calcInfaq']);
 Route::post('/index-penghasilan', [KalkulatorController::class, 'calcPenghasilan']);
-// POST
+
+/*
+====================
+| Postingan |
+====================
+Digunakan di untuk mendapatkan data post berdsarkan kategori dan id (detail postingan)
+*/
 Route::get('category/{slug}', [PostController::class, 'Post']);
 Route::get('post/{id}', [PostController::class, 'detailPost']);
 
@@ -80,6 +95,14 @@ Route::get('artikel', [KabarController::class, 'Artikel']);
 Route::get('article-detail/{id}', [KabarController::class, 'detailArtikel']);
 Route::get('inspirasi', [KabarController::class, 'Inspirasi']);
 Route::get('inspirasi-detail/{id}', [KabarController::class, 'detailInspirasi']);
+
+
+/*
+====================
+| Client Post Route |
+====================
+Digunakan untuk mengirimkan data bayar zakat dan pesan pada fitur di Navigasi Bar
+*/
 Route::post('/bayar-zakat', [BerandaController::class, 'terimaBayarZakat']);
 Route::post('/hubungi-kami', [MessageController::class, 'sendMessage']);
 
