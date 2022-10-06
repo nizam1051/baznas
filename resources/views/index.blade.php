@@ -41,7 +41,7 @@
         <div class="container">
             <div class="justify-content-center">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text" style="color: #01502D; margin-top: 50px;">Pendistribusian</h2>
+                    <h2 class="text" style="color: #01502D; margin-top: 50px;">PENDISTRIBUSIAN</h2>
                     <div class="row" style="margin-top: 20px;">
                         @foreach ($kabar as $distKabar)
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4 pendistribusian">
@@ -49,7 +49,7 @@
                                 <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover;">
                                 <div class="card-body">
                                     <a href="{{url('kabar-zakat-detail/'.$distKabar->id)}}" style="color: #2E3192;">
-                                        <h5 class="font-highlight">{{ $distKabar->judul }}</h5>
+                                        <h5 class="font-highlight post-title">{{ $distKabar->judul }}</h5>
                                     </a>
                                     <div class="carrousel-preview bg-white">
                                         {!! \Illuminate\Support\Str::words($distKabar->deskripsi, 30, $end='...') !!}
@@ -199,7 +199,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0" data-aos="fade-up" data-aos-duration="500">
-                    <div class="card border-0">
+                    <div class="card border-0 zoom">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
                             <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D;">
                                 <img src="assets/img/portfolio/logo/kantonguang.png" style="height: 10em; width: 100%; object-fit: contain" class="card-img-top" alt="...">
@@ -211,7 +211,7 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card border-0">
+                    <div class="card border-0 zoom">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
                             <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
                                 <img src="assets/img/portfolio/logo/iconinfaq.png" style="height: 10em; width: 100%; object-fit: contain" class="card-img-top" alt="...">
@@ -223,7 +223,7 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card border-0">
+                    <div class="card border-0 zoom">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
                             <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
                                 <img src="assets/img/portfolio/logo/iconsedekah.png" style="height: 10em; width: 100%; object-fit: contain" class="card-img-top" alt="...">
@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0" data-aos="fade-up" data-aos-duration="2000">
-                    <div class="card border-0">
+                    <div class="card border-0 zoom">
                         <div class="card-body p-3" style="border-radius:30px; border:none;">
                             <div class="container" style="height: auto; border-top-left-radius: 30px; border-top-right-radius: 30px; padding-bottom:4%; padding-top:4%; background-color:#01502D">
                                 <img src="assets/img/portfolio/logo/iconfidya.png" style="height: 10em; width: 100%; object-fit: contain" class="card-img-top" alt="...">
@@ -287,13 +287,13 @@
     </section>
     <div>&nbsp;</div>
     <div>&nbsp;</div>
-    <section class="" id="about" data-aos="fade-in">
+    <section class="" id="about">
         <center>
             <h2 class="mb-4" style="color: #01502D;">LAPORAN PENTASARUFAN BAZNAS KOTA SURAKARTA TAHUN 2021</h2>
         </center>
         <div class="d-flex justify-content-center">
             <div class="container">
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center" data-aos="fade-in">
                     <div class="col-md-auto mx-lg-5">
                         <div class="input-group mt-2">
                             <span class="input-group-text" style="background-color: #01502D; color:#fff; width: 120px;">Fakir</span>
@@ -368,30 +368,30 @@
                     </div>
                     <img src="./assets/img/1.png" class="image-infaq" style="width: 15em;" alt="">
                 </div>
-                <div class="chart-container">
+                <div class="chart-container" data-aos="fade-in">
                     <canvas id="myChart" class="mt-2"></canvas>
                 </div>
             </div>
         </div>
     </section>
-    <section class="mb-5" id="about" data-aos="fade-in">
+    <section class="mb-5" id="about">
         <div class="container">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-12 text-center">
                     <h2 class="text" style="color: #2E3192; margin-top: 70px;">BERITA</h2>
-                    <div id="carouselExampleControls" class="carousel slide p-0" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide p-0" data-bs-ride="carousel" data-aos="fade-up">
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="height: auto; width: 100%; object-fit: contain">
                                 <!--Card-->
                                 <div class="row row-carrousel">
-                                    <span class="btn btn-round btn-primary mt-5">Kabar</span>
+                                    <span class="btn btn-round btn-primary">Kabar</span>
                                     @foreach ($kabar as $k)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card">
+                                        <div class="card card-zoom">
                                             <img src="{{ asset($k->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
                                             <div class="card-body">
                                                 <a href="{{url('kabar-zakat-detail/'.$k->id)}}" style="color: #2E3192;">
-                                                    <h5 class="font-highlight">{{ $k->judul }}</h5>
+                                                    <h5 class="font-highlight post-title">{{ $k->judul }}</h5>
                                                 </a>
                                                 <div class="carrousel-preview bg-white">
                                                     {!! \Illuminate\Support\Str::words($k->deskripsi, 30,
@@ -399,18 +399,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="card card-fill">
-                                            <img src="{{ asset($k->gambar) }}" class="card-img-top" alt="{{$k->gambar}}" style="background-color: #ECE8E8; object-fit: contain;">
-                                            <div class="card-body" style="background-color: #ECE8E8;">
-                                                <a href="{{url('kabar-zakat-detail/'.$k->id)}}" style="color: #2E3192">
-                                                    <h6 class="font-highlight">{{ $k->judul }}</h6>
-                                                </a>
-                                                <p class="card-text mt-3">
-                                                    {!! \Illuminate\Support\Str::words($k->deskripsi, 30, $end='...')
-                                                    !!}
-                                                </p>
-                                            </div>
-                                        </div> -->
                                     </div>
                                     @endforeach
                                 </div>
@@ -418,14 +406,14 @@
                             <div class="carousel-item">
                                 <!--Card-->
                                 <div class="row row-carrousel">
-                                    <span class="btn btn-round btn-primary mt-5">Artikel</span>
+                                    <span class="btn btn-round btn-primary">Artikel</span>
                                     @foreach ($artikel as $a)
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3 ">
-                                        <div class="card">
+                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
+                                        <div class="card card-zoom">
                                             <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
                                             <div class="card-body">
                                                 <a href="{{url('article-detail/'.$a->id)}}" style="color: #2E3192;">
-                                                    <h5 class="font-highlight">{{ $a->judul }}</h5>
+                                                    <h5 class="font-highlight post-title">{{ $a->judul }}</h5>
                                                 </a>
                                                 <div class="carrousel-preview bg-white">
                                                     {!! \Illuminate\Support\Str::words($a->deskripsi, 30, $end='...')
@@ -433,19 +421,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="card card-fill">
-                                            <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="{{$a->gambar}}" style="background-color: #ECE8E8; object-fit: contain;">
-                                            <div class="card-body" style="background-color: #ECE8E8;">
-                                                <a href="{{url('article-detail/'.$a->id)}}" style="color: #2E3192">
-                                                    <h6 class="font-highlight" style="text-align: left;">{{ $a->judul }}
-                                                    </h6>
-                                                </a>
-                                                <p class="card-text">
-                                                    {!! \Illuminate\Support\Str::words($a->deskripsi, 30, $end='...')
-                                                    !!}
-                                                </p>
-                                            </div>
-                                        </div> -->
                                     </div>
                                     @endforeach
                                 </div>
@@ -453,14 +428,14 @@
                             <div class="carousel-item">
                                 <!--Card-->
                                 <div class="row row-carrousel">
-                                    <span class="btn btn-round btn-primary mt-5">Inspirasi</span>
+                                    <span class="btn btn-round btn-primary">Inspirasi</span>
                                     @foreach ($inspirasi as $i)
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3 ">
-                                        <div class="card">
+                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
+                                        <div class="card card-zoom">
                                             <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
                                             <div class="card-body">
                                                 <a href="{{url('inspirasi-detail/'.$i->id)}}" style="color: #2E3192;">
-                                                    <h5 class="font-highlight">{{ $i->judul }}</h5>
+                                                    <h5 class="font-highlight post-title">{{ $i->judul }}</h5>
                                                 </a>
                                                 <div class="carrousel-preview bg-white">
                                                     {!! \Illuminate\Support\Str::words($i->deskripsi, 30, $end='...')
@@ -468,19 +443,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="card card-fill">
-                                            <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="{{$i->gambar}}" style="background-color: #ECE8E8; object-fit: contain;">
-                                            <div class="card-body" style="background-color: #ECE8E8;">
-                                                <a href="{{url('inspirasi-detail/'.$i->id)}}" style="color: #2E3192">
-                                                    <h6 class="font-highlight" style="text-align: left;">{{ $i->judul }}
-                                                    </h6>
-                                                </a>
-                                                <p class="card-text">
-                                                    {!! \Illuminate\Support\Str::words($i->deskripsi, 30, $end='...')
-                                                    !!}
-                                                </p>
-                                            </div>
-                                        </div> -->
                                     </div>
                                     @endforeach
                                 </div>
@@ -554,7 +516,7 @@
     </section>
     <section id="kerja-sama" class="mt-5">
         <div class="container">
-            <h1 class="text-center" style="color: #01502D" data-aos="fade-up">KERJA SAMA</h1>
+            <h2 class="text-center" style="color: #01502D" data-aos="fade-up">KERJA SAMA</h2>
             <div class="row text-center">
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0" data-aos="fade-left" data-aos-delay="300">
                     <div class="card border-0">
@@ -590,6 +552,13 @@
     <section class="page-section" style="padding: 0%;">
         <img src="assets/img/backgroundbawah.png" style="width: 100%;">
     </section>
+    <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="modal-image">
+    </div>
     <style>
         .card-zoom {
             -webkit-transform: scale(1);
@@ -612,7 +581,128 @@
 
         .zoom:hover {
             transition: .3s ease-in-out;
-            transform: scale(1.07);
+            transform: scale(1.05);
             overflow: hidden;
         }
     </style>
+    <style>
+        /* Style the Image Used to Trigger the Modal */
+        img {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* img:hover {
+            opacity: 0.7;
+        } */
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (Image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image (Image Text) - Same Width as the Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+        .modal-content,
+        #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .post-title:hover {
+            color: #01502D;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var modal = document.getElementById("myModal");
+
+        var modalImg = document.getElementById("modal-image");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        $(".card-zoom img").click(function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        })
+
+        modal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>

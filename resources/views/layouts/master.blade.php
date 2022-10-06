@@ -156,14 +156,14 @@
                     </li>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
-                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1" value="option1" />
-                            <label class="form-check-label" for="inlineCheckbox1">Syarat & Ketentuan</label>
+                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox2" value="option1" />
+                            <label class="form-check-label" for="inlineCheckbox2">Syarat & Ketentuan</label>
                         </div>
                     </li>
                     <li class="mt-2">
                         <div class="form-check form-check-inline">
-                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox1" value="option1" />
-                            <label class="form-check-label" for="inlineCheckbox1">FAQ</label>
+                            <input style="background-color: white;" checked class="form-check-input bg-secondary border-0" type="checkbox" id="inlineCheckbox3" value="option1" />
+                            <label class="form-check-label" for="inlineCheckbox3">FAQ</label>
                         </div>
                     </li>
                 </ul>
