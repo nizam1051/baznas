@@ -51,7 +51,7 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">%</div>' +
-            '<input type="numbe style="font-size: 15px"r" class="form-control" id="autoSizingInputGroup" value="2,5" readonly>' +
+            '<input type="number"style="font-size: 15px" class="form-control" id="autoSizingInputGroup" value="2.5" readonly>' +
             '</div>' +
             '</div>' +
             '<div>&nbsp;</div>' +
@@ -65,14 +65,14 @@ $(document).on('change', '#countzakat', function () {
             '<div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Hari</div>' +
-            '<input type="numbe style="font-size: 15px"r" min="1" class="form-control" id="day" name="hari">' +
+            '<input type="number" style="font-size: 15px" min="1" class="form-control" id="day" name="hari">' +
             '</div>' +
             '</div>' +
             ' <p class="card-text" style="color: white; text-align: left;">Total jiwa</p>' +
             ' <div class="col-auto">' +
             '<div class="input-group">' +
             '<div class="input-group-text">Jiwa</div>' +
-            '<input type="numbe style="font-size: 15px"r" min="1" class="form-control" id="soul" name="jiwa">' +
+            '<input type="number" style="font-size: 15px" min="1" class="form-control" id="soul" name="jiwa">' +
             '</div>' +
             '</div>' +
             ' <p class="card-text" style="color: white; text-align: left;">Harga Zakat Fidyah(Per hari dan Per jiwa)</p>' +
@@ -361,3 +361,11 @@ $(function() {
         return !(keyCode > 31 && (keyCode < 48 || keyCode > 57));
     });
 });
+
+window.onload = () => {
+    myInput = document.getElementsByTagName('input');
+    for (let index = 0; index < myInput.length; index++) {
+        const element = myInput[index];
+        element.onpaste = e => e.preventDefault();
+    }
+}

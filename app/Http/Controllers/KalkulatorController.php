@@ -112,13 +112,15 @@ class KalkulatorController extends Controller
         }
         $gaji = $request->get('gaji');
         $tunjangan = $request->get('tunjangan');
-        $penghasilan = $gaji * 12 + $tunjangan;
-        $nishab = 819000; // ! Harga Emas 1 Gram
+        $penghasilan = $gaji + $tunjangan;
+        $harga_emas = 841000;
+        $nishab = $harga_emas / 12 * 85; // ! Harga Emas 1 Gram
         if ($penghasilan >= $nishab) {
-            $total = $penghasilan * 2.5 / 1000;
+            $total = $penghasilan * 2.5 / 100;
             $data = [
                 'nishab' => number_format($nishab, 2, ',', '.'),
                 'status' => true,
+                'zakat' => number_format($total, 2, ',', '.')
             ];
             return $data;
         } else {

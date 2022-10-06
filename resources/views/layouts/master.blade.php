@@ -442,8 +442,15 @@
                         $('#showErrors').html(alert);
                     } else {
                         if (response['status'] == true) {
-                            $('#resultFitrah').val(response);
+                            if (response['zakat'] != null) {
+                                console.log(response)
+                                $('#resultFitrah').val(response['zakat']);
+                                $('#resultPesan').attr('class', '');
+                                $('#resultPesan').html('');
+                            }
                         } else {
+                            console.log(response)
+                            $('#resultPesan').attr('class', 'alert alert-danger');
                             $('#resultFitrah').val(0);
                             $('#resultPesan').attr('style', 'display:true');
                             $('#resultPesan').html("Anda belum wajib zakat karena belum memenuhi Nishab sebesar Rp. " + response['nishab']);
