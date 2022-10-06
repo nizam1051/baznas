@@ -129,8 +129,8 @@
                     <h2 class="text" style="color: #01502D;">KALKULATOR ZAKAT</h2>
                     <div class="row">
                         <div class="col-md-6 mt-5">
-                            <div class="card" id="showform">
-                                <div class="card-body" style="background-color: #01502D;">
+                            <div class="card" id="showform" style="border-radius: 20px;">
+                                <div class="card-body" style="background-color: #01502D; border-radius: 20px;">
                                     <h5 class="text-bold mb-3" style="color:white; text-align: left;">Komponen Zakat
                                     </h5>
                                     <p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai
@@ -581,13 +581,13 @@
 
         .zoom:hover {
             transition: .3s ease-in-out;
-            transform: scale(1.05);
+            transform: scale(1.1);
             overflow: hidden;
         }
     </style>
     <style>
         /* Style the Image Used to Trigger the Modal */
-        img {
+        .card-zoom img {
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
