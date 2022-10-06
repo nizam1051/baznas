@@ -384,7 +384,7 @@
                             <div class="carousel-item active" style="height: auto; width: 100%; object-fit: contain">
                                 <!--Card-->
                                 <div class="row row-carrousel">
-                                    <span class="btn btn-round btn-primary">Kabar</span>
+                                    <span class="btn btn-round btn-primary">Kabar Zakat</span>
                                     @foreach ($kabar as $k)
                                     <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
                                         <div class="card card-zoom">

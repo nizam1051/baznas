@@ -1,13 +1,14 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Navbar;
 
 use Illuminate\View\Component;
 use Illuminate\Support\Str;
 use App\Models\CategoryPost;
+// use App\Models\CategoryPost;
 
 
-class Category extends Component
+class NavbarCategoryPost extends Component
 {
     /**
      * Create a new component instance.
@@ -33,6 +34,6 @@ class Category extends Component
             array_push($arr, $slug);
         }
         $lenght = count($arr) - 1;
-        return view('components.navbar.category', compact('category', 'arr', 'lenght'));
+        return view('components.navbar.category-post', compact('category', 'arr', 'lenght'));
     }
 }

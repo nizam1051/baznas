@@ -87,7 +87,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-dark" id="navbarKabar" data-bs-toggle="dropdown" aria-expanded="false">Kabar</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarKabar">
-                            <x-category />
+                            <x-navbar.navbarcategorypost />
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link text-dark" href="/hubungi-kami">Hubungi</a></li>
