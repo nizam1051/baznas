@@ -23,19 +23,35 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Edit Galeri</h4>
+                                        <h4>Edit Berita</h4>
                                     </div>
                                     <div class="card-body">
-                                        <form action="{{ url('admin/galeri/update/'.$galeri->id) }}" method="POST"
+                                        @if (session('success'))
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <strong>{{ session('success') }}</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        @endif
+                                        <form action="{{ url('admin/post/update/'.$post->id) }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
-                                            <input type="hidden" name="old_image[]" value="{{ $galeri->gambar }}">
+                                            <input type="hidden" name="old_image" value="{{ $post->image }}">
                                             <div class="form-group row mb-4">
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
                                                 <div class="col-sm-12 col-md-7">
                                                     <input type="text" class="form-control" name="judul"
-                                                        value="{{ $galeri->judul }}">
+                                                        value="{{ $post->title }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row mb-4">
+                                                <label
+                                                    class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Deskripsi</label>
+                                                <div class="col-sm-12 col-md-7">
+                                                    <textarea style="height: 150px;" name="deskripsi"
+                                                        class="form-control summernote-simple">{{ $post->content }}</textarea>
                                                 </div>
                                             </div>
 
@@ -43,14 +59,10 @@
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar</label>
                                                 <div class="col-sm-12 col-md-7">
-                                                    <input type="file" class="form-control" name="gambar[]" multiple>
-
-                                                    @foreach (explode('|', $galeri->gambar) as $image)
-                                                    <img src="{{ asset($image) }}" alt="" @endforeach
-                                                        style="width:400px;" class="mt-4">
+                                                    <input type="file" class="form-control" name="gambar">
+                                                    <img src="{{ asset($post->image) }}" alt=""
+                                                        style="height: 200px; width:400px;" class="mt-4">
                                                 </div>
-                                                {{-- <img src="{{ asset($image) }}" alt=""
-                                                style="height: 40px; width:70px;"> --}}
                                             </div>
 
                                             <div class="form-group row mb-4">
@@ -74,8 +86,10 @@
             </footer>
         </div>
     </div>
-
     @include('admin.stisla.script')
+    <script>
+    CKEDITOR.replace('deskripsi');
+    </script>
 </body>
 
 </html>

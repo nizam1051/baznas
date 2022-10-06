@@ -18,7 +18,8 @@
                     <div class="section-header">
                         <h1>Admin Page</h1>
                     </div>
-                    <a href="{{ route('add.inspirasi') }}" class="btn btn-success mb-1"><i class="fa fa-plus" aria-hidden="true"></i> Input Inspirasi </a>
+                    <a href="{{ route('add.inspirasi') }}" class="btn btn-success mb-1"><i class="fa fa-plus"
+                            aria-hidden="true"></i> Input Inspirasi </a>
                     <div class="section-body">
                         <div class="row">
                             <div class="col-12 ">
@@ -30,7 +31,8 @@
                                         @if (session('success'))
                                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                                             <strong>{{ session('success') }}</strong>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                aria-label="Close"></button>
                                         </div>
                                         @endif
                                         <div class="table-responsive">
@@ -54,7 +56,8 @@
                                                         <th scope="row">{{ $no++ }}</th>
                                                         <td>{{ $b->judul }}</td>
                                                         <td>{{ $b->deskripsi }}</td>
-                                                        <td><img src="{{ asset($b->gambar) }}" alt="" style="height: 40px; width:70px;">
+                                                        <td><img src="{{ asset($b->gambar) }}" alt=""
+                                                                style="height: 40px; width:70px;">
                                                         </td>
                                                         <td style="text-align: center">
                                                             @if ($b->status == 'ACTIVE')
@@ -64,13 +67,16 @@
                                                             @endif
                                                         </td>
                                                         <td>
-                                                            <a href="{{ url('admin/inspirasi/edit/'.$b->id) }}" class="btn btn-transparent text-center text-dark">
+                                                            <a href="{{ url('admin/inspirasi/edit/'.$b->id) }}"
+                                                                class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-edit fa-2x"></i>
                                                             </a>
-                                                            <a href="{{ url('admin/inspirasi/status/'.$b->id) }}" class="btn btn-transparent text-center text-dark">
+                                                            <a href="{{ url('admin/inspirasi/status/'.$b->id) }}"
+                                                                class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-power-off"></i>
                                                             </a>
-                                                            <a href="{{ url('admin/inspirasi/delete/'.$b->id) }}" class="btn btn-transparent text-center text-dark">
+                                                            <a href="{{ url('admin/inspirasi/delete/'.$b->id) }}"
+                                                                class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-trash-alt fa-2x"></i>
                                                             </a>
                                                         </td>
@@ -98,9 +104,9 @@
     @include('admin.stisla.script')
 </body>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#myTable').DataTable();
-    });
+$(document).ready(function() {
+    $('#myTable').DataTable();
+});
 </script>
 
 </html>

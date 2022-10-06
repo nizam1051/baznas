@@ -16,16 +16,16 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Table Media</h1>
+                        <h1>Table <?= $category_name; ?></h1>
                     </div>
-                    <a href="{{ route('add.galeri') }}" class="btn btn-success mb-4"><i class="fa fa-plus"
-                            aria-hidden="true"></i> Input Galeri </a>
+                    <a href="{{ route('add.post') }}" class="btn btn-success mb-4"><i class="fa fa-plus"
+                            aria-hidden="true"></i> Tambah Post </a>
                     <div class="section-body">
                         <div class="row">
-                            <div class="col-12" style="width: 100%;">
+                            <div class="col-12 ">
                                 <div class="card">
                                     <!-- <div class="card-header">
-                                        <h4>Tabel Galeri</h4>
+                                        <h4>Tabel </?= $category_name ?></h4>
                                     </div> -->
                                     <div class="card-body">
                                         @if (session('success'))
@@ -36,68 +36,56 @@
                                             </button>
                                         </div>
                                         @endif
-
-                                        <div class="row">
-                                            @foreach ($galeri as $g)
-                                            <div style="height:10rem" class="card shadow-none  px-3 col-3">
-                                                @foreach (explode('|', $g->gambar) as $image)
-                                                <a href="{{ url('admin/galeri/edit/'.$g->id) }}">
-                                                    <div style="height:10rem;background-image: url('{{ asset($image) }}');background-size:cover;"
-                                                        class="card-body container ml-1 p-0 rounded row align-items-end ">
-                                                        <div style="background-color:red;background: linear-gradient(0deg, rgba(2,0,36,1), rgba(2,0,36,0.6197829473586309), rgba(2,0,36,0));height:3.4rem;"
-                                                            width="100%" class="col text-light p-3 ">
-                                                            <h5>
-                                                                <?= $g->judul ?></h5>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                @endforeach
-                                            </div>
-                                            @endforeach
-                                        </div>
-
-
                                         <div class="table-responsive">
                                             <table class="table table-striped" id="table-1">
-                                                <thead class="thead-dark">
+                                                <thead>
                                                     <tr>
-                                                        <th scrope="col" width="5%">No</th>
-                                                        <th scrope="col" width="15%">Judul</th>
-                                                        <th scrope="col" width="35%">Gambar</th>
-                                                        <th scrope="col" width="10%">Action</th>
+                                                        <th scope="col" style="width: 5%">No</th>
+                                                        <th scope="col">Judul</th>
+                                                        <th scope="col" width="">Deskripsi</th>
+                                                        <th scope="col" style="width: 10%">Gambar</th>
+                                                        <th scope="col" style="width: 5%">Status</th>
+                                                        <th scope="col" style="width: 15%">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     @php
                                                     $no=1;
                                                     @endphp
-                                                    @foreach ($galeri as $g)
+                                                    @foreach ($post as $p)
                                                     <tr>
                                                         <th scope="row">{{ $no++ }}</th>
-                                                        <td>{{ $g->judul }}</td>
-                                                        <td>
-                                                            @foreach (explode('|', $g->gambar) as $image)
-                                                            <img src="{{ asset($image) }}" alt=""
+                                                        <td>{{ $p->title }}</td>
+                                                        <td>{{ $p->content }}</td>
+                                                        <td><img src="{{ asset($p->image) }}" alt=""
                                                                 style="height: 40px; width:70px;">
-                                                            @endforeach
+                                                        </td>
+                                                        <td style="text-align: center">
+                                                            @if ($p->status == 'ACTIVE')
+                                                            <span class="badge badge-success">Aktif</span>
+                                                            @else
+                                                            <span class="badge badge-danger">Nonaktif</span>
+                                                            @endif
                                                         </td>
                                                         <td>
-                                                            <a href="{{ url('admin/galeri/edit/'.$g->id) }}"
+                                                            <a href="{{ url('admin/post/edit/'.$p->id) }}"
                                                                 class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-edit fa-2x"></i>
                                                             </a>
-                                                            <a href="{{ url('admin/galeri/delete/'.$g->id) }}"
+                                                            <a href="{{ url('admin/kabarzakat/status/'.$p->id) }}"
+                                                                class="btn btn-transparent text-center text-dark">
+                                                                <i class="fas fa-power-off"></i>
+                                                            </a>
+                                                            <a href="{{ url('admin/kabarzakat/delete/'.$p->id) }}"
                                                                 class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-trash-alt fa-2x"></i>
                                                             </a>
                                                         </td>
                                                     </tr>
                                                     @endforeach
-                                                </tbody>
                                             </table>
-                                            {{ $galeri->links() }}
-                                        </div>
 
+                                        </div>
                                     </div>
                                     <!-- This is where your code ends -->
                                 </div>
@@ -114,7 +102,6 @@
 
     @include('admin.stisla.script')
 </body>
-
 <script type="text/javascript">
 $(document).ready(function() {
     $('#myTable').DataTable();

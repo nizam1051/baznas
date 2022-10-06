@@ -18,7 +18,8 @@
                     <div class="section-header">
                         <h1>Admin Page</h1>
                     </div>
-                    <a href="{{ route('add.kabarzakat') }}" class="btn btn-success mb-1"><i class="fa fa-plus" aria-hidden="true"></i> Input Kabar Zakat </a>
+                    <a href="{{ route('add.kabarzakat') }}" class="btn btn-success mb-1"><i class="fa fa-plus"
+                            aria-hidden="true"></i> Input Kabar Zakat </a>
                     <div class="section-body">
                         <div class="row">
                             <div class="col-12 ">
@@ -72,11 +73,11 @@
                                                                 <i class="fas fa-edit fa-2x"></i>
                                                             </a>
                                                             <a href="{{ url('admin/kabarzakat/status/'.$b->id) }}"
-                                                            class="btn btn-transparent text-center text-dark" >
-                                                            <i class="fas fa-power-off"></i>
+                                                                class="btn btn-transparent text-center text-dark">
+                                                                <i class="fas fa-power-off"></i>
                                                             </a>
-                                                            <a  href="{{ url('admin/kabarzakat/delete/'.$b->id) }}"
-                                                                class="btn btn-transparent text-center text-dark" >
+                                                            <a href="{{ url('admin/kabarzakat/delete/'.$b->id) }}"
+                                                                class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-trash-alt fa-2x"></i>
                                                             </a>
                                                         </td>
@@ -101,8 +102,9 @@
     @include('admin.stisla.script')
 </body>
 <script type="text/javascript">
-    $(document).ready( function () {
+$(document).ready(function() {
     $('#myTable').DataTable();
-} );
+});
 </script>
+
 </html>
