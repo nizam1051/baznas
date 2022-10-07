@@ -43,16 +43,16 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="text" style="color: #01502D; margin-top: 50px;">PENDISTRIBUSIAN</h2>
                     <div class="row" style="margin-top: 20px;">
-                        @foreach ($kabar as $distKabar)
+                        @foreach ($post['Kabar Zakat'] as $p)
                         <div class="mt-3 col-sm-6 col-lg-4 col-md-4 pendistribusian">
                             <div class="card shadow-sm rounded card-zoom">
-                                <img src="{{ asset($distKabar->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover;">
+                                <img src="{{ asset($p->image) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover;">
                                 <div class="card-body">
-                                    <a href="{{url('kabar-zakat-detail/'.$distKabar->id)}}" style="color: #2E3192;">
-                                        <h5 class="font-highlight post-title">{{ $distKabar->judul }}</h5>
+                                    <a href="post/{{$p->id}}" style="color: #2E3192;">
+                                        <h5 class="font-highlight post-title">{{ $p->title }}</h5>
                                     </a>
                                     <div class="carrousel-preview bg-white">
-                                        {!! \Illuminate\Support\Str::words($distKabar->deskripsi, 30, $end='...') !!}
+                                        {!! \Illuminate\Support\Str::words($p->content, 30, $end='...') !!}
                                     </div>
                                 </div>
                             </div>
@@ -264,7 +264,7 @@
                             <div class="row">
                                 @foreach ($galeri as $g)
                                 <div class="col-md-6 col-6 mt-4">
-                                    <div class="card" style="border-radius: 15px; height: auto;">
+                                    <div class="card zoom" style="border-radius: 15px; height: auto;">
                                         <img src="{{ $g->gambar }}" alt="{{ $g->judul }}" class="galeri-image" style="object-fit: cover">
                                     </div>
                                 </div>
@@ -381,72 +381,33 @@
                     <h2 class="text" style="color: #2E3192; margin-top: 70px;">BERITA</h2>
                     <div id="carouselExampleControls" class="carousel slide p-0" data-bs-ride="carousel" data-aos="fade-up">
                         <div class="carousel-inner">
-                            <div class="carousel-item active" style="height: auto; width: 100%; object-fit: contain">
-                                <!--Card-->
-                                <div class="row row-carrousel">
-                                    <span class="btn btn-round btn-primary">Kabar Zakat</span>
-                                    @foreach ($kabar as $k)
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card card-zoom">
-                                            <img src="{{ asset($k->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
-                                            <div class="card-body">
-                                                <a href="{{url('kabar-zakat-detail/'.$k->id)}}" style="color: #2E3192;">
-                                                    <h5 class="font-highlight post-title">{{ $k->judul }}</h5>
-                                                </a>
-                                                <div class="carrousel-preview bg-white">
-                                                    {!! \Illuminate\Support\Str::words($k->deskripsi, 30,
-                                                    $end='...') !!}
+                            <?php for ($i = 0; $i < count($category); $i++) { ?>
+                                <div class="carousel-item <?php if ($i == 0) {
+                                                                echo "active";
+                                                            } ?>" style="height: auto; width: 100%; object-fit: contain">
+                                    <!--Card-->
+                                    <div class="row row-carrousel">
+                                        <span class="btn btn-round btn-primary"><?= $category[$i]['name'] ?></span>
+                                        <?php foreach ($post[$category[$i]['name']] as $p) { ?>
+                                            <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
+                                                <div class="card card-zoom">
+                                                    <img src="{{ asset($p->image) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
+                                                    <div class="card-body">
+                                                        <a href="{{url('kabar-zakat-detail/'.$p->id)}}" style="color: #2E3192;">
+                                                            <h5 class="font-highlight post-title">{{ $p->title }}</h5>
+                                                        </a>
+                                                        <div class="carrousel-preview bg-white">
+                                                            {!! \Illuminate\Support\Str::words($p->content, 30,
+                                                            $end='...') !!}
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        <?php } ?>
                                     </div>
-                                    @endforeach
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <!--Card-->
-                                <div class="row row-carrousel">
-                                    <span class="btn btn-round btn-primary">Artikel</span>
-                                    @foreach ($artikel as $a)
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card card-zoom">
-                                            <img src="{{ asset($a->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
-                                            <div class="card-body">
-                                                <a href="{{url('article-detail/'.$a->id)}}" style="color: #2E3192;">
-                                                    <h5 class="font-highlight post-title">{{ $a->judul }}</h5>
-                                                </a>
-                                                <div class="carrousel-preview bg-white">
-                                                    {!! \Illuminate\Support\Str::words($a->deskripsi, 30, $end='...')
-                                                    !!}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <!--Card-->
-                                <div class="row row-carrousel">
-                                    <span class="btn btn-round btn-primary">Inspirasi</span>
-                                    @foreach ($inspirasi as $i)
-                                    <div class="col-md-4 col-sm-12 col-lg-4 mt-3">
-                                        <div class="card card-zoom">
-                                            <img src="{{ asset($i->gambar) }}" class="card-img-top" alt="" style="height: 300px; object-fit: cover">
-                                            <div class="card-body">
-                                                <a href="{{url('inspirasi-detail/'.$i->id)}}" style="color: #2E3192;">
-                                                    <h5 class="font-highlight post-title">{{ $i->judul }}</h5>
-                                                </a>
-                                                <div class="carrousel-preview bg-white">
-                                                    {!! \Illuminate\Support\Str::words($i->deskripsi, 30, $end='...')
-                                                    !!}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
+                            <?php } ?>
+
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
@@ -521,7 +482,7 @@
                 <div class="col-6 col-md-3 col-lg-3 col-sm-6 p-0 m-0" data-aos="fade-left" data-aos-delay="300">
                     <div class="card border-0">
                         <div class="card-body">
-                            <img src="{{asset('assets/img/section/logo-baznas.png')}}" style="width: 100%; object-fit: contain" alt="...">
+                            <img src="{{asset('assets/img/section/logo-baznas-baru.png')}}" style="width: 100%; object-fit: contain" alt="...">
                         </div>
                     </div>
                 </div>
