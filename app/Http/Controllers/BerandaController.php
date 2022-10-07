@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Galeri;
 use App\Models\Artikel;
 use App\Models\DataZis;
+use App\Models\Post;
+use App\Models\CategoryPost;
 use App\Mail\Notifikasi;
 use App\Models\Rekening;
 use App\Models\Inspirasi;
@@ -22,6 +24,14 @@ class BerandaController extends Controller
 {
     public function index()
     {
+        $category = CategoryPost::all();
+        foreach ($category as $c) {
+            $post[$c['name']] = Post::join('category_post', 'category_post.id', '=', 'post.category_id')->where('name', $c['name'])->latest()->take(3)->select(
+                'post.*',
+                'category_post.id as category_post_id',
+                'category_post.name'
+            )->get();
+        }
         $kabar = KabarZakat::latest()->take(3)->get();
         $artikel = Artikel::latest()->take(3)->get();
         $inspirasi = Inspirasi::latest()->take(3)->get();
@@ -48,7 +58,8 @@ class BerandaController extends Controller
             }
             $g->name = implode(" ", $new_name);
         }
-        return view('index', compact('bayar', 'kabar', 'artikel', 'inspirasi', 'distArtikel', 'distKabar', 'distInspirasi', 'galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah'));
+
+        return view('index', compact('bayar', 'kabar', 'artikel', 'inspirasi', 'distArtikel', 'distKabar', 'distInspirasi', 'galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah', 'post', 'category'));
     }
 
     public function legalitas()
