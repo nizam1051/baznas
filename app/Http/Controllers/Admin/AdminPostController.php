@@ -14,11 +14,7 @@ class AdminPostController extends Controller
     public function listPost($category)
     {
         $category_name = ucwords(str_replace('-', ' ', $category));
-        // $post = Post::table('post')->get();
         $post = Post::Join('category_post', 'category_post.id', '=', 'post.category_id')->where('name', $category_name)->select('post.*', 'category_post.name')->get();
-        // dd($post);
-        // $category = CategoryPost::all();
-        // return view('post.post', compact('post', 'category', 'category_name'));
         return view('admin.post.index', compact('post', 'category_name'));
     }
 
@@ -49,14 +45,10 @@ class AdminPostController extends Controller
         $name_gen = hexdec(uniqid()) . '.' . $gambar->getClientOriginalExtension();
         $gambar->move(public_path('uploads/post'), $name_gen);
         $last_img = 'uploads/post/' . $name_gen;
-        $slug_kategori = $request->category;
-        if ($slug_kategori == "1") {
-            $slug_kategori = 'kabar-zakat';
-        } else if ($slug_kategori == "2") {
-            $slug_kategori = 'artikel';
-        } else {
-            $slug_kategori = 'inspirasi';
-        }
+
+        $category_name = CategoryPost::find($request->category)->select('name');
+        $slug_category = ucwords(str_replace('-', ' ', $category_name));
+
         Post::insert(
             [
                 'title' => $request->title,
@@ -68,6 +60,6 @@ class AdminPostController extends Controller
             ]
         );
 
-        return redirect('/admin/post/' . $slug_kategori)->with('success', 'Post berhasil ditambahkan');
+        return redirect('/admin/post/' . $slug_category)->with('success', 'Post berhasil ditambahkan');
     }
 }
