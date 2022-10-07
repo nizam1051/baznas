@@ -19,12 +19,12 @@
                 <div class="card shadow rounded ">
                     <img src="{{ asset($b->image) }}" class="card-img-top" alt="" style="background-color: #FF9900; height: 40vh; object-fit:cover">
                     <div class="card-body">
-                        <a href="{{url('kabar-zakat-detail/'.$b->id)}}" class="font-highlight" style="text-align: left; color: #2E3192">{{ $b->title }}
+                        <a href="{{url('post/'.$b->id)}}" class="font-highlight" style="text-align: left; color: #2E3192">{{ $b->title }}
                         </a>
                         <p class="card-text">
                             {!! \Illuminate\Support\Str::words($b->content, 10, $end='...') !!}
                         </p>
-                        <a href="{{url('kabar-zakat-detail/'.$b->id)}}" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
+                        <a href="{{url('post/'.$b->id)}}" class="btn btn-primary" style="float:right; border-radius: 30px; font-size:clamp(10px, 1vw, 18px);">Selengkapnya</a>
                     </div>
                 </div>
             </div>
