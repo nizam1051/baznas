@@ -92,6 +92,7 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-newspaper"></i> <span>Kabar</span></a>
                 <ul class="dropdown-menu">
                     <x-admin.sidebar.post />
+                    <li><a href="{{url('/admin/category')}}" class="nav-item"><i class="fas fa-cog"></i><span>Kategori</span></a></li>
                 </ul>
             </li>
             <li class="dropdown">
