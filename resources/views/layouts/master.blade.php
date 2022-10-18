@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Baznas Surakarta</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/portfolio/logo/logo3.png" />
+    <link rel="icon" type="image/png" href="{{asset('assets/img/portfolio/logo/logo3.png')}}" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->

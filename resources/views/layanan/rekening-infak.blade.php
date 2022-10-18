@@ -89,3 +89,4 @@
         navigator.clipboard.writeText(input);
     }
 </script>
+@endsection

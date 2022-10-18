@@ -23,8 +23,7 @@
         <div class="row my-3">
             <div class="d-flex justify-content-start">
                 <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                    <img class="img-rounded" src="/assets/img/profile/pak-qoyim.png"
-                        style="height:15em; border-radius:20px;" alt="">
+                    <img class="img-rounded" src="/assets/img/profile/pak-qoyim.png" style="height:15em; border-radius:20px;" alt="">
                 </div>
                 <div class="d-flex flex-column justify-content-center">
                     <div class="p-3 col-md-auto">
@@ -42,8 +41,7 @@
             <div class="d-flex justify-content-start">
                 <div class="d-flex" style=" width:auto;background-color:#01502D; border-radius:20px;">
                     <div style="background-color: yellow;"></div>
-                    <img class="img-rounded" src="/assets/img/profile/pak-bambang.png"
-                        style="height:15em; border-radius:20px;" alt="">
+                    <img class="img-rounded" src="/assets/img/profile/pak-bambang.png" style="height:15em; border-radius:20px;" alt="">
                 </div>
                 <div class="d-flex flex-column justify-content-center">
                     <div class="p-3 col-md-auto">
@@ -60,8 +58,7 @@
         <div class="row my-3">
             <div class="d-flex justify-content-start">
                 <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                    <img class="img-rounded" src="/assets/img/profile/pak-anwar.png"
-                        style="height:15em; border-radius:20px;" alt="">
+                    <img class="img-rounded" src="/assets/img/profile/pak-anwar.png" style="height:15em; border-radius:20px;" alt="">
                 </div>
                 <div class="d-flex flex-column justify-content-center">
                     <div class="p-3 col-md-auto">
@@ -78,8 +75,7 @@
         <div class="row my-3">
             <div class="d-flex justify-content-start">
                 <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                    <img class="img-rounded" src="/assets/img/profile/pak-almunawar.png"
-                        style="height:15em; border-radius:20px;" alt="">
+                    <img class="img-rounded" src="/assets/img/profile/pak-almunawar.png" style="height:15em; border-radius:20px;" alt="">
                 </div>
                 <div class="d-flex flex-column justify-content-center">
                     <div class="p-3 col-md-auto">
@@ -96,8 +92,7 @@
         <div class="row my-3">
             <div class="d-flex justify-content-start">
                 <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                    <img class="img-rounded" src="/assets/img/profile/bu-dian.png"
-                        style="height:15em; border-radius:20px;" alt="">
+                    <img class="img-rounded" src="/assets/img/profile/bu-dian.png" style="height:15em; border-radius:20px;" alt="">
                 </div>
                 <div class="d-flex flex-column justify-content-center">
                     <div class="p-3 col-md-auto">
@@ -117,8 +112,7 @@
             <div class="col">
                 <div class="d-flex justify-content-start">
                     <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                        <img class="img-rounded" src="/assets/img/profile/mas-hanafi.png"
-                            style="height:15em; border-radius:20px;" alt="">
+                        <img class="img-rounded" src="/assets/img/profile/mas-hanafi.png" style="height:15em; border-radius:20px;" alt="">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                         <div class="p-3 col-md-auto">
@@ -134,8 +128,7 @@
             <div class="col">
                 <div class="d-flex justify-content-start">
                     <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                        <img class="img-rounded" src="/assets/img/profile/mba-kiki.png"
-                            style="height:15em; border-radius:20px;" alt="">
+                        <img class="img-rounded" src="/assets/img/profile/mba-kiki.png" style="height:15em; border-radius:20px;" alt="">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                         <div class="p-3 col-md-auto">
@@ -155,8 +148,7 @@
             <div class="col">
                 <div class="d-flex justify-content-start">
                     <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                        <img class="img-rounded" src="/assets/img/profile/mas-anggam.png"
-                            style="height:15em; border-radius:20px;" alt="">
+                        <img class="img-rounded" src="/assets/img/profile/mas-anggam.png" style="height:15em; border-radius:20px;" alt="">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                         <div class="p-3 col-md-auto">
@@ -172,8 +164,7 @@
             <div class="col">
                 <div class="d-flex justify-content-start">
                     <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                        <img class="img-rounded" src="/assets/img/profile/mas-hamdan.png"
-                            style="height:15em; border-radius:20px;" alt="">
+                        <img class="img-rounded" src="/assets/img/profile/mas-hamdan.png" style="height:15em; border-radius:20px;" alt="">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                         <div class="p-3 col-md-auto">
@@ -193,8 +184,7 @@
             <div class="col">
                 <div class="d-flex justify-content-start">
                     <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                        <img class="img-rounded" src="/assets/img/profile/mas-miftahul.png"
-                            style="height:15em; border-radius:20px;" alt="">
+                        <img class="img-rounded" src="/assets/img/profile/mas-miftahul.png" style="height:15em; border-radius:20px;" alt="">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                         <div class="p-3 col-md-auto">
@@ -210,8 +200,7 @@
             <div class="col">
                 <div class="d-flex justify-content-start">
                     <div style=" width:auto;background-color:#01502D; border-radius:20px;">
-                        <img class="img-rounded" src="/assets/img/profile/mas-syarif.png"
-                            style="height:15em; border-radius:20px;" alt="">
+                        <img class="img-rounded" src="/assets/img/profile/mas-syarif.png" style="height:15em; border-radius:20px;" alt="">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                         <div class="p-3 col-md-auto">
@@ -230,3 +219,4 @@
     <!-- end container -->
 </section>
 <br><br><br>
+@endsection

@@ -34,3 +34,4 @@
         <img src="assets/img/backgroundbawah.png" style="width: 100%; height: auto;" alt="">
     </div>
 </section>
+@endsection

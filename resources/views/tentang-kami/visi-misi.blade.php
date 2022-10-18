@@ -19,9 +19,9 @@
         <br>
         <h3 class="heading-content">MISI</h3>
         <style>
-        ol li {
-            margin: 18px;
-        }
+            ol li {
+                margin: 18px;
+            }
         </style>
         <ol>
             <li>Membangun BAZNAS yang kuat, terpercaya, dan modern sebagai lembaga Pemerintah non-struktural
@@ -44,3 +44,4 @@
         </ol>
     </div>
 </section>
+@endsection

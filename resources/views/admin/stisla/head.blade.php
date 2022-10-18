@@ -25,3 +25,4 @@
 <!-- Template CSS -->
 <link rel="stylesheet" href="{{ asset('Stisla/assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('Stisla/assets/css/components.css') }}">
+<link rel="icon" type="image/png" href="{{asset('assets/img/portfolio/logo/logo3.png')}}">
