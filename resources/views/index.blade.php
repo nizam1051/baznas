@@ -135,14 +135,14 @@
                                 </h5>
                                 <p class="card-text" style="color: white; text-align: left;">Silahkan diisi sesuai
                                     dengan harga beras 1 Kg di kota anda</p>
-                                <p class="card-text" style="color: white; text-align: left;">Harga Beras (1 Kg)</p>
+                                <p class="card-text mb-1 pt-3" style="color: white; text-align: left;">Harga Beras (1 Kg)</p>
                                 <div class="col-auto">
                                     <div class="input-group">
                                         <div class="input-group-text">Rp</div>
                                         <input type="text" class="form-control" id="priceFitrah" data-price=0 style="font-size: 15px">
                                     </div>
                                 </div>
-                                <p class="card-text" style="color: white; text-align: left;">Besaran Zakat Fitrah
+                                <p class="card-text mb-1 pt-3" style="color: white; text-align: left;">Besaran Zakat Fitrah
                                 </p>
                                 <div class="col-auto">
                                     <div class="input-group">
