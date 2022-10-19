@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdmCategoryController;
 use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\KabarController;
 use App\Http\Controllers\PostController;
@@ -138,11 +139,16 @@ Route::middleware('auth')->group(function () {
             // Route::post('inspirasi/update/{inspirasiID}', [AdmKabarController::class, 'updateInspirasi']);
             // Route::get('inspirasi/delete/{inspirasiID}', [AdmKabarController::class, 'destroyInspirasi']);
             // Route::get('inspirasi/status/{inspirasiID}', [AdmKabarController::class, 'statusInspirasi']);
+            Route::get('category/', [AdmCategoryController::class, 'listCategoryPost']);
+            Route::post('category/store', [AdmCategoryController::class, 'storeCategoryPost'])->name('store.category');
+            Route::post('category/update', [AdmCategoryController::class, 'updateCategoryPost'])->name('update.category');
+            Route::get('category/delete/{id}', [AdmCategoryController::class, 'destroyCategoryPost'])->name('destroy.category');
 
             Route::get('post/add', [AdminPostController::class, 'createPost'])->name('add.post');
             Route::post('post/store', [AdminPostController::class, 'storePost'])->name('store.post');
             Route::get('post/{slug}', [AdminPostController::class, 'listPost']);
             Route::get('post/edit/{id}', [AdminPostController::class, 'editPost']);
+            Route::get('post/delete/{id}', [AdminPostController::class, 'destroyPost']);
             Route::post('kabarzakat/update/{kabarzakatID}', [AdmKabarController::class, 'updateKabarZakat']);
             Route::get('kabarzakat/delete/{kabarzakatID}', [AdmKabarController::class, 'destroyKabarZakat']);
             Route::get('kabarzakat/status/{kabarzakatID}', [AdmKabarController::class, 'statusKabarZakat']);
