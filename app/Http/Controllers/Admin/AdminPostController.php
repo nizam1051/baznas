@@ -41,25 +41,39 @@ class AdminPostController extends Controller
             ]
         );
 
-        $gambar = $request->file('image');
-        $name_gen = hexdec(uniqid()) . '.' . $gambar->getClientOriginalExtension();
-        $gambar->move(public_path('uploads/post'), $name_gen);
-        $last_img = 'uploads/post/' . $name_gen;
+        if ($validated) {
+            $gambar = $request->file('image');
+            $name_gen = hexdec(uniqid()) . '.' . $gambar->getClientOriginalExtension();
+            $gambar->move(public_path('uploads/post'), $name_gen);
+            $last_img = 'uploads/post/' . $name_gen;
 
-        $category_name = CategoryPost::find($request->category)->select('name');
-        $slug_category = ucwords(str_replace('-', ' ', $category_name));
+            $category_name = CategoryPost::where('id', $request->category)->select('name')->first();
+            $slug_category = strtolower(str_replace('-', ' ', $category_name->name));
 
-        Post::insert(
-            [
-                'title' => $request->title,
-                'author' => 'Admin',
-                'content' => $request->content,
-                'category_id' => $request->category,
-                'image' => $last_img,
-                'created_at' => Carbon::now()
-            ]
-        );
+            Post::insert(
+                [
+                    'title' => $request->title,
+                    'author' => 'Admin',
+                    'content' => $request->content,
+                    'category_id' => $request->category,
+                    'image' => $last_img,
+                    'created_at' => Carbon::now()
+                ]
+            );
+            return redirect('/admin/post/' . $slug_category)->with('success', 'Post berhasil ditambahkan');
+        }
+    }
 
-        return redirect('/admin/post/' . $slug_category)->with('success', 'Post berhasil ditambahkan');
+    public function destroyPost($postID)
+    {
+        $post = Post::find($postID);
+        if (file_exists($post->image)) {
+            unlink($post->image);
+            Post::find($postID)->delete();
+            return redirect()->back()->with('success', 'Post berhasil dihapus');
+        } else {
+            Post::find($postID)->delete();
+            return redirect()->back()->with('success', 'Post berhasil dihapus');
+        }
     }
 }
