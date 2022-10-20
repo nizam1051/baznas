@@ -32,12 +32,6 @@ class BerandaController extends Controller
                 'category_post.name'
             )->get();
         }
-        $kabar = KabarZakat::latest()->take(3)->get();
-        $artikel = Artikel::latest()->take(3)->get();
-        $inspirasi = Inspirasi::latest()->take(3)->get();
-        $distKabar = KabarZakat::latest()->first();
-        $distArtikel = Artikel::latest()->first();
-        $distInspirasi = Inspirasi::latest()->first();
         $galeri = Galeri::latest()->take(4)->get();
         $penyalur = DB::table('penyaluran')->latest('id')->first();
         $fitrah = DataZis::where('kategori', 1)->sum('price');
@@ -59,7 +53,17 @@ class BerandaController extends Controller
             $g->name = implode(" ", $new_name);
         }
 
-        return view('index', compact('bayar', 'kabar', 'artikel', 'inspirasi', 'distArtikel', 'distKabar', 'distInspirasi', 'galeri', 'penyalur', 'fitrah', 'infaq', 'sedekah', 'fidyah', 'post', 'category'));
+        return view('index', compact(
+            'bayar',
+            'galeri',
+            'penyalur',
+            'fitrah',
+            'infaq',
+            'sedekah',
+            'fidyah',
+            'post',
+            'category'
+        ));
     }
 
     public function legalitas()

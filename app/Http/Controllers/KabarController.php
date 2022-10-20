@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Artikel;
 use App\Models\Berita;
 use App\Models\Galeri;
@@ -36,7 +37,7 @@ class KabarController extends Controller
 
     public function DetailKabarZakat($id)
     {
-        $data = KabarZakat::find($id);
+        $data = Post::find($id);
         // return $data;
         return view('kabar.kabar-zakat-detail', compact('data'));
     }

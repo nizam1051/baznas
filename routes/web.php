@@ -116,29 +116,7 @@ Route::middleware('auth')->group(function () {
         Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
             Route::get('logout', [AuthController::class, 'logout'])->name('logout');
             Route::get('/', [HomeController::class, 'index']);
-            // Route::get('berita', [AdmKabarController::class, 'indexBerita'])->name('index.berita');
-            // Route::get('berita/add', [AdmKabarController::class, 'createBerita'])->name('add.berita');
-            // Route::post('berita/store', [AdmKabarController::class, 'storeBerita'])->name('store.berita');
-            // Route::get('berita/edit/{beritaID}', [AdmKabarController::class, 'editBerita']);
-            // Route::post('berita/update/{beritaID}', [AdmKabarController::class, 'updateBerita']);
-            // Route::get('berita/delete/{beritaID}', [AdmKabarController::class, 'destroyBerita']);
-            // Route::get('berita/status/{beritaID}', [AdmKabarController::class, 'statusBerita']);
 
-            // Route::get('artikel', [AdmKabarController::class, 'indexArtikel'])->name('index.artikel');
-            // Route::get('artikel/add', [AdmKabarController::class, 'createArtikel'])->name('add.artikel');
-            // Route::post('artikel/store', [AdmKabarController::class, 'storeArtikel'])->name('store.artikel');
-            // Route::get('artikel/edit/{artikelID}', [AdmKabarController::class, 'editArtikel']);
-            // Route::post('artikel/update/{artikelID}', [AdmKabarController::class, 'updateArtikel']);
-            // Route::get('artikel/delete/{artikelID}', [AdmKabarController::class, 'destroyArtikel']);
-            // Route::get('artikel/status/{artikelID}', [AdmKabarController::class, 'statusArtikel']);
-
-            // Route::get('inspirasi', [AdmKabarController::class, 'indexInspirasi'])->name('index.inspirasi');
-            // Route::get('inspirasi/add', [AdmKabarController::class, 'createInspirasi'])->name('add.inspirasi');
-            // Route::post('inspirasi/store', [AdmKabarController::class, 'storeInspirasi'])->name('store.inspirasi');
-            // Route::get('inspirasi/edit/{inspirasiID}', [AdmKabarController::class, 'editInspirasi']);
-            // Route::post('inspirasi/update/{inspirasiID}', [AdmKabarController::class, 'updateInspirasi']);
-            // Route::get('inspirasi/delete/{inspirasiID}', [AdmKabarController::class, 'destroyInspirasi']);
-            // Route::get('inspirasi/status/{inspirasiID}', [AdmKabarController::class, 'statusInspirasi']);
             Route::get('category/', [AdmCategoryController::class, 'listCategoryPost']);
             Route::post('category/store', [AdmCategoryController::class, 'storeCategoryPost'])->name('store.category');
             Route::post('category/update', [AdmCategoryController::class, 'updateCategoryPost'])->name('update.category');
@@ -148,10 +126,9 @@ Route::middleware('auth')->group(function () {
             Route::post('post/store', [AdminPostController::class, 'storePost'])->name('store.post');
             Route::get('post/{slug}', [AdminPostController::class, 'listPost']);
             Route::get('post/edit/{id}', [AdminPostController::class, 'editPost']);
+            Route::post('post/update/{id}', [AdminPostController::class, 'updatedPost']);
             Route::get('post/delete/{id}', [AdminPostController::class, 'destroyPost']);
-            Route::post('kabarzakat/update/{kabarzakatID}', [AdmKabarController::class, 'updateKabarZakat']);
-            Route::get('kabarzakat/delete/{kabarzakatID}', [AdmKabarController::class, 'destroyKabarZakat']);
-            Route::get('kabarzakat/status/{kabarzakatID}', [AdmKabarController::class, 'statusKabarZakat']);
+            Route::get('post/status/{id}', [AdminPostController::class, 'statusPost']);
 
             Route::get('galeri', [AdmKabarController::class, 'indexGaleri'])->name('index.galeri');
             Route::get('galeri/add', [AdmKabarController::class, 'createGaleri'])->name('add.galeri');
