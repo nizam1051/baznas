@@ -16,15 +16,15 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Halaman Daftar Pesan</h1>
+                        <h1>Tabel Pesan Masyarakat</h1>
                     </div>
                     <div class="section-body">
                         <div class="row">
                             <div class="col-12" style="width: 100%;">
                                 <div class="card">
-                                    <div class="card-header">
+                                    <!-- <div class="card-header">
                                         <h4>Tabel Pesan Masyarakat</h4>
-                                    </div>
+                                    </div> -->
                                     <div class="card-body">
                                         @if (session('success'))
                                         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -60,7 +60,10 @@
                                                     @foreach ($message as $r)
                                                     <tr>
                                                         <th scope="row">{{ $no++ }}</th>
-                                                        <td>{{ $r->name }} <span class="text-primary d-block">{{$r->email}}</span></td>
+                                                        <td>
+                                                            <h6 class="m-0 pb-0">{{ $r->name }} </h6><span
+                                                                class="text-primary d-block">{{$r->email}}</span>
+                                                        </td>
                                                         <td>{{ $r->kategori }}</td>
                                                         <td>{{ $r->message }}</td>
                                                         <td>{{ $r->created_at }}</td>
@@ -88,9 +91,9 @@
 </body>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#myTable').DataTable();
-    });
+$(document).ready(function() {
+    $('#myTable').DataTable();
+});
 </script>
 
 </html>

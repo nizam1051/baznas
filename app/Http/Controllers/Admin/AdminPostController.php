@@ -20,8 +20,10 @@ class AdminPostController extends Controller
 
     public function editPost($id)
     {
+        $categories = CategoryPost::all();
+        $category = Post::where('id', $id)->first();
         $post = Post::find($id);
-        return view('admin.post.edit', compact('post'));
+        return view('admin.post.edit', compact('post', 'category', 'categories'));
     }
 
     public function createPost()
@@ -75,5 +77,46 @@ class AdminPostController extends Controller
             Post::find($postID)->delete();
             return redirect()->back()->with('success', 'Post berhasil dihapus');
         }
+    }
+
+    public function updatedPost(Request $request, $postID)
+    {
+        $post = Post::find($postID);
+
+        $old_image = $request->old_image;
+        $post_image = $request->file('gambar');
+        $category_name = CategoryPost::where('id', $request->category)->select('name')->first();
+        $slug_category = strtolower(str_replace('-', ' ', $category_name->name));
+        if ($post_image) {
+            $name_gen = hexdec(uniqid()) . '.' . $post_image->getClientOriginalExtension();
+            $post_image->move(public_path('uploads/post'), $name_gen);
+            $last_img = 'uploads/post/' . $name_gen;
+            if (file_exists($old_image)) {
+                unlink($old_image);
+            }
+            $post->update([
+                'title' => $request->title,
+                'category_id' => $request->category,
+                'content' => $request->content,
+                'image' => $last_img,
+            ]);
+
+            return redirect('/admin/post/' . $slug_category)->with('success', 'Post Updated Successfully');
+        } else {
+            $post->update([
+                'title' => $request->title,
+                'category_id' => $request->category,
+                'content' => $request->content,
+            ]);
+            return redirect('/admin/post/' . $slug_category)->with('success', 'Post Updated Successfully');
+        }
+    }
+
+    public function statusPost($id)
+    {
+        $post = Post::find($id);
+        $post->status == 'ACTIVE' ? $post->update(['status' => 'INACTIVE']) :
+            $post->update(['status' => 'ACTIVE']);
+        return redirect()->back()->with('success', 'Status Data Post berhasil diubah');
     }
 }

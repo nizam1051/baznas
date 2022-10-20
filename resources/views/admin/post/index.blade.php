@@ -18,7 +18,8 @@
                     <div class="section-header">
                         <h1>Table <?= $category_name; ?></h1>
                     </div>
-                    <a href="{{ route('add.post') }}" class="btn btn-success mb-4"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Post </a>
+                    <a href="{{ route('add.post') }}" class="btn btn-success mb-4"><i class="fa fa-plus"
+                            aria-hidden="true"></i> Tambah Post </a>
                     <div class="section-body">
                         <div class="row">
                             <div class="col-12 ">
@@ -56,7 +57,8 @@
                                                         <th scope="row">{{ $no++ }}</th>
                                                         <td>{{ $p->title }}</td>
                                                         <td>{{ $p->content }}</td>
-                                                        <td><img src="{{ asset($p->image) }}" alt="" style="height: 40px; width:70px;">
+                                                        <td><img src="{{ asset($p->image) }}" alt=""
+                                                                style="height: 40px; width:70px;">
                                                         </td>
                                                         <td style="text-align: center">
                                                             @if ($p->status == 'ACTIVE')
@@ -66,13 +68,16 @@
                                                             @endif
                                                         </td>
                                                         <td>
-                                                            <a href="{{ url('admin/post/edit/'.$p->id) }}" class="btn btn-transparent text-center text-dark">
+                                                            <a href="{{ url('admin/post/edit/'.$p->id) }}"
+                                                                class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-edit fa-2x"></i>
                                                             </a>
-                                                            <a href="{{ url('admin/post/status/'.$p->id) }}" class="btn btn-transparent text-center text-dark">
+                                                            <a href="{{ url('admin/post/status/'.$p->id) }}"
+                                                                class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-power-off"></i>
                                                             </a>
-                                                            <a href="{{ url('admin/post/delete/'.$p->id) }}" class="btn btn-transparent text-center text-dark">
+                                                            <a href="{{ url('admin/post/delete/'.$p->id) }}"
+                                                                class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-trash-alt fa-2x"></i>
                                                             </a>
                                                         </td>
@@ -98,9 +103,9 @@
     @include('admin.stisla.script')
 </body>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#myTable').DataTable();
-    });
+$(document).ready(function() {
+    $('#myTable').DataTable();
+});
 </script>
 
 </html>

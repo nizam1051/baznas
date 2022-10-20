@@ -42,15 +42,33 @@
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
                                                 <div class="col-sm-12 col-md-7">
-                                                    <input type="text" class="form-control" name="judul"
+                                                    <input type="text" class="form-control" name="title"
                                                         value="{{ $post->title }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row mb-4">
+                                                <label
+                                                    class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kategori</label>
+                                                <div class="col-sm-12 col-md-7">
+                                                    <select type="select" class="form-control" name="category">
+                                                        @php
+                                                        @foreach ($categories as $c)
+                                                        @if($category->category_id == $c->id)
+                                                        <option selected value="{{ $c->id }}">{{ $c->name }}
+                                                        </option>
+                                                        @else
+                                                        <option value="{{ $c->id }}">{{ $c->name }}
+                                                        </option>
+                                                        @endif
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row mb-4">
                                                 <label
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Deskripsi</label>
                                                 <div class="col-sm-12 col-md-7">
-                                                    <textarea style="height: 150px;" name="deskripsi"
+                                                    <textarea style="height: 150px;" name="content"
                                                         class="form-control summernote-simple">{{ $post->content }}</textarea>
                                                 </div>
                                             </div>
@@ -60,8 +78,8 @@
                                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar</label>
                                                 <div class="col-sm-12 col-md-7">
                                                     <input type="file" class="form-control" name="gambar">
-                                                    <img src="{{ asset($post->image) }}" alt=""
-                                                        style="height: 200px; width:400px;" class="mt-4">
+                                                    <img src="{{ asset($post->image) }}" alt="" style="width:400px;"
+                                                        class="mt-4">
                                                 </div>
                                             </div>
 

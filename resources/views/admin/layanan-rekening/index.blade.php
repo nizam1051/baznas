@@ -18,7 +18,8 @@
                     <div class="section-header">
                         <h1>Halaman Daftar Rekening</h1>
                     </div>
-                    <a href="{{ url('admin/layanan/rekening/add') }}" class="btn btn-success mb-1"><i class="fa fa-plus" aria-hidden="true"></i> Input Rekening </a>
+                    <a href="{{ url('admin/layanan/rekening/add') }}" class="btn btn-success mb-1"><i class="fa fa-plus"
+                            aria-hidden="true"></i> Input Rekening </a>
                     <div class="section-body">
                         <div class="row">
                             <div class="col-12" style="width: 100%;">
@@ -47,10 +48,10 @@
                                             <table class="table table-bordered table-md" id="myTable">
                                                 <thead class="thead-dark">
                                                     <tr>
-                                                        <th scope="col">No</th>
+                                                        <th scope="col" width="3%">No</th>
                                                         <th scope="col">Gambar</th>
                                                         <th scope="col">Nomor Rekening</th>
-                                                        <th scope="col">Action</th>
+                                                        <th scope="col" width="15%">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -60,9 +61,9 @@
                                                     @foreach ($rek as $g)
                                                     <tr>
                                                         <th scope="row">{{ $no++ }}</th>
-                                                        <td style="">
+                                                        <td>
                                                             <img src="{{ asset($g->image) }}" alt=""
-                                                                style="height: 40px; width:70px;">                                                             
+                                                                style="height: 5rem; ">
                                                         </td>
                                                         <td>{{ $g->no_rek }}</td>
                                                         <td>
@@ -70,8 +71,8 @@
                                                                 class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-edit fa-2x"></i>
                                                             </a>
-                                                            <a  href="{{ url('admin/layanan/rekening/'.$g->id.'/delete') }}"
-                                                                class="btn btn-transparent text-center text-dark" >
+                                                            <a href="{{ url('admin/layanan/rekening/'.$g->id.'/delete') }}"
+                                                                class="btn btn-transparent text-center text-dark">
                                                                 <i class="fas fa-trash-alt fa-2x"></i>
                                                             </a>
                                                         </td>
@@ -100,9 +101,9 @@
 </body>
 
 <script type="text/javascript">
-    $(document).ready( function () {
+$(document).ready(function() {
     $('#myTable').DataTable();
-} );
+});
 </script>
 
 </html>

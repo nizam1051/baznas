@@ -15,16 +15,6 @@ use App\Http\Controllers\Controller;
 
 class AdmKabarController extends Controller
 {
-
-    public function listPost($category)
-    {
-        $category_name = ucwords(str_replace('-', ' ', $category));
-        $post = Post::join('category_post', 'category_post.id', '=', 'post.category_id')->where('name', $category_name)->latest()->paginate(6);
-        // $category = CategoryPost::all();
-        // return view('post.post', compact('post', 'category', 'category_name'));
-        return view('admin.post.index', compact('post', 'category_name'));
-    }
-
     public function indexBerita()
     {
         $berita = Berita::latest()->paginate(10);
@@ -472,7 +462,8 @@ class AdmKabarController extends Controller
     {
         $galeri = Galeri::find($galeriID);
 
-        $old_image[] = $request->old_image;
+        $old_image = $request->old_image;
+        // dd($old_image);
         $galeri_image = $request->file('gambar');
 
 
@@ -484,9 +475,10 @@ class AdmKabarController extends Controller
                 $name_gen = hexdec(uniqid()) . '.' . $multi_img->getClientOriginalExtension();
                 $multi_img->move(public_path('uploads/galeri'), $name_gen);
                 $last_img[] = 'uploads/galeri/' . $name_gen;
-                // foreach($old_image as $multi_old){
+                // unlink($old_image);
+                // foreach ($old_image as $multi_old) {
                 //     if (file_exists($multi_old)) {
-                //         @unlink($multi_old);
+                //         unlink($multi_old);
                 //     }
                 // }
             }
@@ -495,7 +487,7 @@ class AdmKabarController extends Controller
                 'gambar' => implode("|", $last_img),
             ]);
 
-            return redirect()->back()->with('success', 'Galeri Updated Successfully');
+            return redirect('/admin/galeri')->with('success', 'Galeri Updated Successfully');
         } else {
             $galeri->update([
                 'judul' => $request->judul,
