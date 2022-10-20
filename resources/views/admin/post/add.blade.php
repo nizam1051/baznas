@@ -120,7 +120,7 @@
     }
     </script>
     <script>
-    CKEDITOR.replace('deskripsi');
+    CKEDITOR.replace('content');
     </script>
 </body>
 
