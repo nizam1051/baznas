@@ -137,12 +137,14 @@
                                 <p class="text-form">
                                     Niat Melakukan Zakat
                                 </p>
-                                <div class="arab">
+                                <div class="niat-arab" style="font-size: 30px">
                                     نَوَيْتُ أَنْ أُخْرِجَ زَكَاةَ فَرْضًا لِلَّهِ تَعَالَى
                                 </div>
-                                <div class="latin">
+                                <div class="niat-latin">
                                     Nawaitu an Ukhrija Zakaata Fardhon Lillaahi Ta’aala
-                                    <br><br>
+                                </div>
+                                <br>
+                                <div class="niat-arti">
                                     “Saya berniat sengaja mengeluarkan zakat fardhu karena Allah Ta’ala”
                                 </div>
                                 <br><br>
@@ -427,5 +429,59 @@
             console.log(kelurahan[index][i])
         }
     }
+</script>
+
+<!-- Niat Zakat -->
+<script type="text/javascript">
+    let niat = {
+        "fitrah": {
+            'arab': 'ﻧَﻮَﻳْﺖُ أَﻥْ أُﺧْﺮِﺝَ ﺯَﻛَﺎﺓَ ﺍﻟْﻔِﻄْﺮِ ﻋَﻦْ ﻧَﻔْسيْ ﻓَﺮْﺿًﺎ ِﻟﻠﻪِ ﺗَﻌَﺎﻟَﻰ',
+            'latin': 'Nawaytu an ukhrija zakaata al-fitri ‘an nafsi fardhan lillahi ta’ala',
+            'arti': 'Aku niat mengeluarkan zakat fitrah untuk diriku sendiri fardhu karena Allah ta’ala'
+        },
+        "maal": {
+            'arab': 'نَوَيْتُ أَنْ أُخْرِجَ زَكاَةَ اْللَالِ عَنْ نَفْسِيْ فَرْضًالِلهِ تَعَالَى',
+            'latin': 'Nawaitu an ukhrija zakatadz dzahabi/zakatal fidhdhati/zakatal mali’an nafsi fardhan lillahi ta’ala',
+            'arti': 'Aku niat mengeluarkan zakat berupa harta dari diri sendiri karena Allah ta’ala'
+        },
+        "fidyah": {
+            'arab': 'نَوَيْتُ أَنْ أُخْرِجَ هَذِهِ الْفِدْيَةَ لإِفْطَارِ صَوْمِ رَمَضَانَ فَرْضًا لِلهِ تَعَالَى',
+            'latin': 'Nawaitu an ukhrija hadzihil fidyata liifthari shaumi ramadhana fardhan lillahi ta’ala',
+            'arti': 'Aku niat mengeluarkan fidyah ini karena berbuka puasa di bulan Ramadhan, fardu karena Allah ta’ala'
+        },
+    }
+
+    $("#select-zakat").change(function() {
+        let arab = "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم"
+        let latin = 'Bismillahirrahmanirrahim'
+        let arti = 'Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang'
+        let selectZakat = $(this).val()
+        switch (selectZakat) {
+            case "Fitrah":
+                arab = niat.fitrah.arab
+                latin = niat.fitrah.latin
+                arti = niat.fitrah.arti
+                break;
+            case "Maal":
+                arab = niat.maal.arab
+                latin = niat.maal.latin
+                arti = niat.maal.arti
+                break;
+            case "Fidyah":
+                arab = niat.fidyah.arab
+                latin = niat.fidyah.latin
+                arti = niat.fidyah.arti
+                break;
+            case "Qurban":
+                // arab = niat.qurban
+                break;
+            default:
+                break;
+        }
+        $(".niat-arab").html(arab)
+        $(".niat-latin").html(latin)
+        $(".niat-arti").html(arti)
+
+    })
 </script>
 @endsection
