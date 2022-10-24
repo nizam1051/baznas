@@ -47,7 +47,16 @@
                                                     <tr>
                                                         <th scope="col">No</th>
                                                         <th scope="col">Nama</th>
-                                                        <th scope="col">Jenis Zakat</th>
+                                                        <th scope="col">Jenis Zakat
+                                                            <select class="form-control form-control-sm" id='filterText' style='display:inline-block' onchange='filterText()'>
+                                                                <option value='all' selected>Semua</option>
+                                                                <option value='Maal'>Maal</option>
+                                                                <option value='Infaq'>Infaq</option>
+                                                                <option value='Fitrah'>Fitrah</option>
+                                                                <option value='Fidyah'>Fidyah</option>
+                                                                <option value='Qurban'>Qurban</option>
+                                                            </select>
+                                                        </th>
                                                         <th scope="col">No Telp</th>
                                                         <th scope="col">Email</th>
                                                         <th scope="col">Nominal</th>
@@ -61,7 +70,7 @@
                                                     $no=1;
                                                     @endphp
                                                     @foreach ($bayar as $g)
-                                                    <tr>
+                                                    <tr class="content">
                                                         <th scope="row">{{ $no++ }}</th>
                                                         <td>{{ $g->name }}</td>
                                                         <td>{{ $g->jenis }}</td>
@@ -116,6 +125,26 @@
     $(document).ready(function() {
         $('#myTable').DataTable();
     });
+</script>
+
+<script>
+    function filterText() {
+        var rex = RegExp($('#filterText').val());
+        console.log(rex);
+        if (rex == "/all/") {
+            clearFilter()
+        } else {
+            $('.content').hide();
+            $('.content').filter(function() {
+                return rex.test($(this).text());
+            }).show();
+        }
+    }
+
+    function clearFilter() {
+        $('.filterText').val('');
+        $('.content').show();
+    }
 </script>
 
 </html>
